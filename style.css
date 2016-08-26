@@ -156,3 +156,23 @@ ul .fa {
 		padding-left: 0;
 	}
 }
+
+@media print {
+	
+#social-icons li {
+	display: block;
+}
+
+a:after {
+	content:" - [" attr(href) "] ";
+	font-size:0.8em;
+	font-weight:normal;
+	text-transform: lowercase;
+}
+
+#gists {
+	display: none;
+}
+
+}
+}
