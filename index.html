@@ -77,22 +77,17 @@
 
 	<div id="carepos" class="section">
 		<h3>open-source projects (in Caffeina)</h3>
-		<ul></ul>
+		<ul data-ajax></ul>
 	</div>
 
 	<div id="repos" class="section">
 		<h3>personal open-source projects</h3>
-		<ul></ul>
+		<ul data-ajax></ul>
 	</div>
 
-	<div id="articles" class="section">
+	<div id="posts" class="section">
 		<h3>Press</h3>
-		<ul>
-			<li><a target="_blank" href="https://medium.com/@destefanoflavio/what-i-learned-hacking-facebook-messenger-soccer-game-3c882ea8537d#.wrpvx6rvi">What I learned hacking Facebook Messenger Soccer game</a></li>
-			<li><a target="_blank" href="https://medium.com/@destefanoflavio/deal-with-titanium-modules-and-its-missing-support-for-android-multidex-546de5486d13#.xzbmlk54t">Deal with Titanium modules and its missing support for Android multidex</a></li>
-			<li><a target="_blank" href="https://medium.com/@destefanoflavio/kata-resolution-next-bigger-number-with-the-same-digits-4eab491852d2#.yc7wd4wtu">Kata resolution: Next bigger number with the same digits</a></li>
-			<li><a target="_blank" href="http://caffeina.com/blog/mobile-workflow-con-appcelerator-titanium">Mobile Workflow: Appcelerator Titanium</a></li>
-		</ul>
+		<ul data-ajax></ul>
 	</div>
 
 	<div id="gists" class="section">
@@ -126,7 +121,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	
 	<script type="text-template" id="list-tpl">
-		<li><a target="_blank" href="<%= link %>"><%= name %></a> - <i><%= type === 'gists' ? date : description %></i></li>
+		<li><a target="_blank" href="<%= link %>"><%= name %></a> - <i><%= (type == 'gists' || type == 'posts') ? date : description %></i></li>
 	</script>
 
 	<script src="script.js"></script>

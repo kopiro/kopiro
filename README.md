@@ -1,1 +1,0 @@
-# www.kopiro.it (portfolio)
