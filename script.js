@@ -1,6 +1,6 @@
 var liTpl = _.template( $('#list-tpl').html() );
 
-$.getJSON('http://api.kopiro.it', function(data) {
+$.getJSON('//api.kopiro.it', function(data) {
 	_.each([ 'repos', 'carepos', 'gists', 'posts' ], function(type) {
 		var $section = $('#' + type + ' > ul');
 		var html = '';
