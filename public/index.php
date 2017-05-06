@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php 
+
+require_once __DIR__ . '/../app.php';
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
@@ -9,8 +13,6 @@
 	<meta name="author" content="Flavio De Stefano">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet" />
-	<link href="/styles/index.css" rel="stylesheet" />
 
 	<!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -33,14 +35,14 @@
 	<section id="moved">
 
 		<ul id="social-icons">
-			<li><a target="_blank" rel="noopener" href="/mail">mail</a></li>
+			<li><a target="_blank" rel="noopener" href="/mail">Mail</a></li>
 			<li>|</li> 
-			<li><a target="_blank" rel="noopener" href="/github">github</a></li>
-			<li><a target="_blank" rel="noopener" href="/stackoverflow">stackoverflow</a></li>
+			<li><a target="_blank" rel="noopener" href="/github">Github</a></li>
+			<li><a target="_blank" rel="noopener" href="/stackoverflow">Stackoverflow</a></li>
 			<li>|</li> 
-			<li><a target="_blank" rel="noopener" href="/medium">medium</a></li>
-			<li><a target="_blank" rel="noopener" href="/twitter">twitter</a></li>
-			<li><a target="_blank" rel="noopener" href="/facebook">facebook</a></li>
+			<li><a target="_blank" rel="noopener" href="/medium">Medium</a></li>
+			<li><a target="_blank" rel="noopener" href="/twitter">Twitter</a></li>
+			<li><a target="_blank" rel="noopener" href="/facebook">Facebook</a></li>
 			<li><a target="_blank" rel="noopener" href="/500px">500px</a></li>
 		</ul>
 
@@ -73,17 +75,29 @@
 
 		<div id="carepos" class="section">
 			<h3>Caffeina Open source projects</h3>
-			<ul data-ajax></ul>
+			<ul>
+				<?php foreach (get_ca_repos() as $r) : ?>
+					<li><a target="_blank" rel="noopener" href="<?= $r->link ?>"><?= $r->name ?></a> - <i><?= $r->description ?></i></li>
+				<?php endforeach; ?>
+			</ul>
 		</div>
 
 		<div id="repos" class="section">
 			<h3>Personal open source projects</h3>
-			<ul data-ajax></ul>
+			<ul>
+				<?php foreach (get_repos() as $r) : ?>
+					<li><a target="_blank" rel="noopener" href="<?= $r->link ?>"><?= $r->name ?></a> - <i><?= $r->description ?></i></li>
+				<?php endforeach; ?>
+			</ul>
 		</div>
 
 		<div id="posts" class="section">
 			<h3>Press</h3>
-			<ul data-ajax></ul>
+			<ul>
+				<?php foreach (get_medium_posts() as $r) : ?>
+					<li><a target="_blank" rel="noopener" href="<?= $r->link ?>"><?= $r->name ?></a> - <i><?= $r->date ?></i></li>
+				<?php endforeach; ?>
+			</ul>
 		</div>
 
 		<div id="projects" class="section">
@@ -104,19 +118,13 @@
 			</ul>
 		</div>
 		<footer id="footer">
-			<div><a href="https://pgp.mit.edu/pks/lookup?op=get&search=0xEDE51005D982268E">GPG Key (0xEDE51005D982268E)</a></div>
+			<div><a target="_blank" rel="noopener" href="https://pgp.mit.edu/pks/lookup?op=get&search=0xEDE51005D982268E">GPG Key (0xEDE51005D982268E)</a></div>
 		</footer>
 
 	</section>
 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-	
-	<script type="text-template" id="list-tpl">
-		<li><a target="_blank" rel="noopener" href="<%= link %>"><%= name %></a> - <i><%= (type == 'gists' || type == 'posts') ? date : description %></i></li>
-	</script>
-
-	<script src="/scripts/index.js"></script>
+	<link href="/bundle.css" rel="stylesheet" />
+	<script src="/bundle.js"></script>
 
 </body>
 </html>
