@@ -100,6 +100,15 @@ require_once __DIR__ . '/../app.php';
 			</ul>
 		</div>
 
+		<div id="tweets" class="section">
+			<h3>Latest</h3>
+			<ul style="list-style: bullet">
+				<?php foreach (get_tweets() as $r) : ?>
+					<li><?= $r->text ?> - <i><?= $r->date ?></i> - <a target="_blank" rel="noopener" href="<?= $r->link ?>">link</a></li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
+
 		<div id="projects" class="section">
 			<h3>Personal projects</h3>
 			<ul>
@@ -117,6 +126,7 @@ require_once __DIR__ . '/../app.php';
 				<li><a target="_blank" rel="noopener" href="http://25hours.apps.kopiro.it">25 hours</a></li>
 			</ul>
 		</div>
+
 		<footer id="footer">
 			<div><a target="_blank" rel="noopener" href="https://pgp.mit.edu/pks/lookup?op=get&search=0xEDE51005D982268E">GPG Key (0xEDE51005D982268E)</a></div>
 		</footer>

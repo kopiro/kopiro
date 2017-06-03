@@ -1,6 +1,8 @@
 <?php
 
 require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/vendor/autoload.php';
+
 ini_set('display_errors', 0);
 
 function http_request($url, $ttl = 86400, $decode = true) {
@@ -10,7 +12,7 @@ function http_request($url, $ttl = 86400, $decode = true) {
 
 	if ($r == null || (filemtime($file) + (24 * 60 * 60) < time())) {
 		$ch = curl_init($url);
-		
+
 		curl_setopt($ch, CURLOPT_PORT , 443);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_USERAGENT, 'kopiro.it');
@@ -84,4 +86,44 @@ function get_medium_posts() {
 		];
 	}
 	return $medium;
+}
+
+function get_tweets() {
+	$file = __DIR__ . '/cache/twitter.json';
+	$r = file_get_contents($file);
+
+	if (true || $r == null || (filemtime($file) + (1 * 60 * 60) < time())) {
+
+		$settings = [
+		'oauth_access_token' => TWITTER_TOKEN,
+		'oauth_access_token_secret' => TWITTER_SECRET,
+		'consumer_key' => TWITTER_CONSUMER_TOKEN,
+		'consumer_secret' => TWITTER_CONSUMER_SECRET
+		];
+		$twitter = new TwitterAPIExchange($settings);
+
+		$r = $twitter->setGetfield('?screen_name=destefanoflavio&count=50')
+		->buildOauth('https://api.twitter.com/1.1/statuses/user_timeline.json', 'GET')
+		->performRequest();
+
+		$tweets = [];
+		foreach (json_decode($r) as $t) {
+			if ($t->retweeted) continue;
+			if (strpos($t->text, "I'm") === 0) continue;
+			if (strpos($t->text, "I liked a") === 0) continue;
+			if (strpos($t->text, "http") === 0) continue;
+			if (count($tweets) >= 10) break;
+			$tweets[] = (object)[
+				'text' => $t->text,
+				'id' => $t->id_str,
+				'link' => 'http://twitter.com/destefanoflavio/status/' . $t->id_str,
+				'date' => date('Y, M d', strtotime($t->created_at))
+			];
+		}
+
+		file_put_contents($file, json_encode($tweets));
+		return $tweets;
+	}
+
+	return json_decode($r);
 }
