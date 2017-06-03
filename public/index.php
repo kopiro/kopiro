@@ -134,7 +134,7 @@ require_once __DIR__ . '/../app.php';
 	</section>
 
 	<link href="/bundle.css" rel="stylesheet" />
-	<script src="/bundle.js"></script>
+	<script async src="/bundle.js"></script>
 
 </body>
 </html>
