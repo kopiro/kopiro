@@ -1,14 +1,14 @@
 {
-  "name": "kopiro.it",
+  "name": "kopiro",
   "version": "1.0.0",
-  "description": "kopiro.it personal site",
+  "description": "kopiro personal site",
   "main": "index.js",
   "scripts": {
     "build": "webpack --optimize-minimize --define process.env.NODE_ENV=\"'production'\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kopiro/kopiro.github.io.git"
+    "url": "git+https://github.com/kopiro/kopiro.git"
   },
   "keywords": [
     "kopiro"
@@ -16,14 +16,15 @@
   "author": "Flavio De Stefano",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kopiro/kopiro.github.io/issues"
+    "url": "https://github.com/kopiro/kopiro/issues"
   },
-  "homepage": "https://github.com/kopiro/kopiro.github.io#readme",
+  "homepage": "https://github.com/kopiro/kopiro#readme",
   "dependencies": {
-    "jquery": "^3.2.1",
-    "underscore": "^1.8.3",
     "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "jquery": "^3.2.1",
     "style-loader": "^0.17.0",
-    "extract-text-webpack-plugin": "^2.1.0"
+    "underscore": "^1.8.3",
+    "webpack": "^3.10.0"
   }
 }

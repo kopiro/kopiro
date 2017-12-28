@@ -1,13 +1,12 @@
 <?php
 
-require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/vendor/autoload.php';
 
 ini_set('display_errors', 0);
 
 function http_request($url, $ttl = 86400, $decode = true) {
-	$key = sha1($url);
-	$file = __DIR__ . '/cache/' . $key;
+	$key = 'kopiro_' . sha1($url);
+	$file = sys_get_temp_dir() . $key;
 	$r = file_get_contents($file);
 
 	if ($r == null || (filemtime($file) + (24 * 60 * 60) < time())) {
@@ -30,7 +29,7 @@ function http_request($url, $ttl = 86400, $decode = true) {
 
 function get_ca_repos() {
 	$carepos = [];
-	foreach (http_request('https://api.github.com/users/caffeinalab/repos?per_page=200&&access_token='.GITHUB_TOKEN) as $k => $r) {
+	foreach (http_request('https://api.github.com/users/caffeinalab/repos?per_page=200&&access_token=' . getenv('GITHUB_TOKEN')) as $k => $r) {
 		if ($r->fork) continue;
 		if (substr($r->description, -1) !== '.') continue;
 		$carepos[] = (object)[
@@ -47,7 +46,7 @@ function get_ca_repos() {
 
 function get_repos() {
 	$repos = [];
-	foreach (http_request('https://api.github.com/users/kopiro/repos?per_page=200&&access_token='.GITHUB_TOKEN) as $k => $r) {
+	foreach (http_request('https://api.github.com/users/kopiro/repos?per_page=200&&access_token=' . getenv('GITHUB_TOKEN')) as $k => $r) {
 		if ($r->fork) continue;
 		$repos[] = (object)[
 		'link' => $r->html_url,
@@ -63,7 +62,7 @@ function get_repos() {
 
 function get_gists() {
 	$gists = [];
-	foreach (array_slice(http_request('https://api.github.com/gists?per_page=200&&access_token='.GITHUB_TOKEN), 0, 30) as $k => $r) {
+	foreach (array_slice(http_request('https://api.github.com/gists?per_page=200&&access_token=' . getenv('GITHUB_TOKEN')), 0, 30) as $k => $r) {
 		if (!$r->public) continue;
 		if (!$r->description) continue;
 		$gists[] = (object)[
@@ -89,16 +88,16 @@ function get_medium_posts() {
 }
 
 function get_tweets() {
-	$file = __DIR__ . '/cache/twitter.json';
+	$file = sys_get_temp_dir() . '/kopiro_twitter.json';
 	$r = file_get_contents($file);
 
 	if (true || $r == null || (filemtime($file) + (1 * 60 * 60) < time())) {
 
 		$settings = [
-		'oauth_access_token' => TWITTER_TOKEN,
-		'oauth_access_token_secret' => TWITTER_SECRET,
-		'consumer_key' => TWITTER_CONSUMER_TOKEN,
-		'consumer_secret' => TWITTER_CONSUMER_SECRET
+		'oauth_access_token' => getenv('TWITTER_TOKEN'),
+		'oauth_access_token_secret' => getenv('TWITTER_SECRET'),
+		'consumer_key' => getenv('TWITTER_CONSUMER_TOKEN'),
+		'consumer_secret' => getenv('TWITTER_CONSUMER_SECRET')
 		];
 		$twitter = new TwitterAPIExchange($settings);
 

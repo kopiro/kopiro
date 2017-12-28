@@ -27,6 +27,9 @@ require_once __DIR__ . '/../app.php';
 		})();
 	</script>
 
+	<link href="/bundle.css" rel="stylesheet" />
+	<script async src="/bundle.js"></script>
+
 </head>
 <body>
 
@@ -38,6 +41,7 @@ require_once __DIR__ . '/../app.php';
 			<li><a target="_blank" rel="noopener" href="/mail">Mail</a></li>
 			<li>|</li> 
 			<li><a target="_blank" rel="noopener" href="/github">Github</a></li>
+			<li><a target="_blank" rel="noopener" href="/linkedin">Linkedin</a></li>
 			<li><a target="_blank" rel="noopener" href="/stackoverflow">Stackoverflow</a></li>
 			<li>|</li> 
 			<li><a target="_blank" rel="noopener" href="/medium">Medium</a></li>
@@ -132,9 +136,6 @@ require_once __DIR__ . '/../app.php';
 		</footer>
 
 	</section>
-
-	<link href="/bundle.css" rel="stylesheet" />
-	<script async src="/bundle.js"></script>
 
 </body>
 </html>
