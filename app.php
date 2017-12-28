@@ -6,7 +6,7 @@ ini_set('display_errors', 0);
 
 function http_request($url, $ttl = 86400, $decode = true) {
 	$key = 'kopiro_' . sha1($url);
-	$file = sys_get_temp_dir() . $key;
+	$file = sys_get_temp_dir() . '/' . $key;
 	$r = file_get_contents($file);
 
 	if ($r == null || (filemtime($file) + (24 * 60 * 60) < time())) {
