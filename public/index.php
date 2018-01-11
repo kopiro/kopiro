@@ -51,13 +51,15 @@ require_once __DIR__ . '/../app.php';
 		</ul>
 
 		<div id="intro">
-			<p>Hello,<br>I studied computer engineering and I work as a developer for Caffeina in Parma, Italy.</p>
+			<p>Hello, I'm Flavio.</p>
+			<p>I studied computer engineering and I'm currently a Backend and Mobile coordinator for Caffeina in Parma, Italy.</p>
 			<p>I started to learn how to code at 16 (C, C++ and .NET), and soon it became my passion, not just my work.</p>
-			<p>I started as a full-stack developer using PHP + classical web techs (HTML + JS + CSS) as main technologies,<br>studying at the same time the canvas JS API to make beautiful and low-level animations.</p>
-			<p>After that, I specialized building API using Laravel and making some experience with high-scalable Node.js application,<br>other than simple CLI scripts.</p>
-			<p>Then I started to learn Titanium since 3.x release, becoming a core contributor of this awesome framework.</p>
+			<p>I specialized as full-stack developer using PHP + classical web techs as main technologies.</p>
+			<p>After that, I specialized building API using Laravel and making some experience with NodeJS applications.</p>
+			<p>Using MySQL for DBMS most of the time, I have also Oracle and MongoDB knowledge.</p>
+			<p>For mobile apps, I started to learn Titanium since 3.x release, becoming a core contributor of this awesome framework.</p>
+			<p>I usally build project with security in mind and I do a full pen-testing; in the free time I usally play CTF competitions.</p>
 			<p>I actively contribute to open source projects, view <a href="https://github.com/kopiro?tab=activity" target="_blank">my public activity</a>.</p>
-			<p>The project of which I am most proud of is <a href="https://github.com/caffeinalab/trimethyl" target="_blank">Trimethyl</a>, an open-source Titanium toolchain.</p>
 			<p><i>I believe that one of the greatest satisfactions in this life is to create something on your own,<br>and my best way to do so is by coding.</i></p>
 		</div>
 
