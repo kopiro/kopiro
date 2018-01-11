@@ -64,29 +64,6 @@ require_once __DIR__ . '/../app.php';
 
 		<hr/>
 
-		<div class="section">
-			<h3>Skills</h3>
-			<p>I list all my acknowledges, but remember that <i>Imagination is more important than knowledge</i>.</p>
-			<ul>
-				<li><b>ECMAScript 5/6</b> in its main essence and <b>NodeJS</b>.</li>
-				<li><b>iOS</b> and <b>Android</b> mobile development with <b>Titanium/Alloy</b>.</li>
-				<li><b>PHP</b>, used primarily as OOP language.</li>
-				<li><b>Laravel</b> and <b>WordPress</b> full knowledges.</li>
-				<li><b>MySQL</b> for DBMS, <b>Redis</b> for in-memory databases and caching.</li>
-				<li>Minor knowledged in <b>C / C++</b>, <b>Java</b> and <b>.NET</b></li>
-				<li>UNIX basic knowledges and server administrations, Java and C#, basic usage of Adobe Photoshop,<br>bases of Informatic Security, project management, computer graphics with OpenGL and Unity.</small></li>
-			</ul>
-		</div>
-
-		<div id="carepos" class="section">
-			<h3>Caffeina Open source projects</h3>
-			<ul>
-				<?php foreach (get_ca_repos() as $r) : ?>
-					<li><a target="_blank" rel="noopener" href="<?= $r->link ?>"><?= $r->name ?></a> - <i><?= $r->description ?></i></li>
-				<?php endforeach; ?>
-			</ul>
-		</div>
-
 		<div id="repos" class="section">
 			<h3>Personal open source projects</h3>
 			<ul>
@@ -105,11 +82,11 @@ require_once __DIR__ . '/../app.php';
 			</ul>
 		</div>
 
-		<div id="tweets" class="section">
-			<h3>Latest</h3>
-			<ul style="list-style: bullet">
-				<?php foreach (get_tweets() as $r) : ?>
-					<li><?= $r->text ?> - <i><?= $r->date ?></i> - <a target="_blank" rel="noopener" href="<?= $r->link ?>">link</a></li>
+		<div id="carepos" class="section">
+			<h3>Caffeina Open source projects</h3>
+			<ul>
+				<?php foreach (get_ca_repos() as $r) : ?>
+					<li><a target="_blank" rel="noopener" href="<?= $r->link ?>"><?= $r->name ?></a> - <i><?= $r->description ?></i></li>
 				<?php endforeach; ?>
 			</ul>
 		</div>
@@ -129,6 +106,15 @@ require_once __DIR__ . '/../app.php';
 				<li><a target="_blank" rel="noopener" href="http://bbyn.apps.kopiro.it">Breaking-badize your name</a></li>
 				<li><a target="_blank" rel="noopener" href="http://intersect.apps.kopiro.it">Intersect</a></li>
 				<li><a target="_blank" rel="noopener" href="http://25hours.apps.kopiro.it">25 hours</a></li>
+			</ul>
+		</div>
+
+		<div id="tweets" class="section">
+			<h3>Latest</h3>
+			<ul style="list-style: bullet">
+				<?php foreach (get_tweets() as $r) : ?>
+					<li><?= $r->text ?> - <i><?= $r->date ?></i> - <a target="_blank" rel="noopener" href="<?= $r->link ?>">link</a></li>
+				<?php endforeach; ?>
 			</ul>
 		</div>
 
