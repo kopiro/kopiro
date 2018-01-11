@@ -52,11 +52,10 @@ require_once __DIR__ . '/../app.php';
 
 		<div id="intro">
 			<p>Hello, I'm Flavio.</p>
-			<p>I studied computer engineering and I'm currently a Backend and Mobile coordinator for Caffeina in Parma, Italy.</p>
-			<p>I started to learn how to code at 16 (C, C++ and .NET), and soon it became my passion, not just my work.</p>
-			<p>I specialized as full-stack developer using PHP + classical web techs as main technologies.</p>
-			<p>After that, I specialized building API using Laravel and making some experience with NodeJS applications.</p>
-			<p>Using MySQL for DBMS most of the time, I have also Oracle and MongoDB knowledge.</p>
+			<p>I studied computer engineering and I'm currently a Backend and Mobile coordinator for Caffeina in Parma, Italy.<br/>I started to learn how to code at 16 (C, C++ and .NET), and soon it became my passion, not just my work.</p>
+			<p>I started as full-stack developer using PHP + classical web techs as main technologies.<br/>
+			After that, I specialized building API using Laravel and making some experience with NodeJS applications.<br/>
+			Using MySQL for DBMS most of the time, I have also Oracle and MongoDB knowledge.</p>
 			<p>For mobile apps, I started to learn Titanium since 3.x release, becoming a core contributor of this awesome framework.</p>
 			<p>I usally build project with security in mind and I do a full pen-testing; in the free time I usally play CTF competitions.</p>
 			<p>I actively contribute to open source projects, view <a href="https://github.com/kopiro?tab=activity" target="_blank">my public activity</a>.</p>
