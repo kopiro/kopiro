@@ -6,7 +6,7 @@ require_once __DIR__ . '/../app.php';
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Flavio De Stefano - Portfolio</title>
+	<title>Flavio De Stefano - kopiro - Portfolio</title>
 
 	<meta name="robots" content="index, follow"/>
 	<meta name="description" content="Software developer for passion, music and photography enthusiast."/>
@@ -33,7 +33,7 @@ require_once __DIR__ . '/../app.php';
 </head>
 <body>
 
-	<h1 id="title">Flavio De Stefano</h1>
+	<h1 id="title">kopiro</h1>
 
 	<section id="moved">
 
@@ -51,7 +51,7 @@ require_once __DIR__ . '/../app.php';
 		</ul>
 
 		<div id="intro">
-			<p>Hello, I'm Flavio.</p>
+			<p>Hello, I'm <b>Flavio De Stefano</b>, alias <b>kopiro</b>.</p>
 			<p>I studied computer engineering and I'm currently a Backend and Mobile coordinator for Caffeina in Parma, Italy.<br/>I started to learn how to code at 16 (C, C++ and .NET), and soon it became my passion, not just my work.</p>
 			<p>I started as full-stack developer using PHP + classical web techs as main technologies.<br/>
 			After that, I specialized building API using Laravel and making some experience with NodeJS applications.<br/>
