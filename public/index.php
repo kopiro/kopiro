@@ -6,7 +6,7 @@ require_once __DIR__ . '/../app.php';
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Flavio De Stefano - Portfolio</title>
+	<title>Flavio De Stefano - kopiro - Portfolio</title>
 
 	<meta name="robots" content="index, follow"/>
 	<meta name="description" content="Software developer for passion, music and photography enthusiast."/>
@@ -40,7 +40,7 @@ require_once __DIR__ . '/../app.php';
 </head>
 <body>
 
-	<h1 id="title">Flavio De Stefano</h1>
+	<h1 id="title">kopiro</h1>
 
 	<section id="moved">
 
@@ -58,40 +58,18 @@ require_once __DIR__ . '/../app.php';
 		</ul>
 
 		<div id="intro">
-			<p>Hello,<br>I studied computer engineering and I work as a developer for Caffeina in Parma, Italy.</p>
-			<p>I started to learn how to code at 16 (C, C++ and .NET), and soon it became my passion, not just my work.</p>
-			<p>I started as a full-stack developer using PHP + classical web techs (HTML + JS + CSS) as main technologies,<br>studying at the same time the canvas JS API to make beautiful and low-level animations.</p>
-			<p>After that, I specialized building API using Laravel and making some experience with high-scalable Node.js application,<br>other than simple CLI scripts.</p>
-			<p>Then I started to learn Titanium since 3.x release, becoming a core contributor of this awesome framework.</p>
+			<p>Hello, I'm <b>Flavio De Stefano</b>, alias <b>kopiro</b>.</p>
+			<p>I studied computer engineering and I'm currently a Backend and Mobile coordinator for Caffeina in Parma, Italy.<br/>I started to learn how to code at 16 (C, C++ and .NET), and soon it became my passion, not just my work.</p>
+			<p>I started as full-stack developer using PHP + classical web techs as main technologies.<br/>
+			After that, I specialized building API using Laravel and making some experience with NodeJS applications.<br/>
+			Using MySQL for DBMS most of the time, I have also Oracle and MongoDB knowledge.</p>
+			<p>For mobile apps, I started to learn Titanium since 3.x release, becoming a core contributor of this awesome framework.</p>
+			<p>I usally build project with security in mind and I do a full pen-testing; in the free time I usally play CTF competitions.</p>
 			<p>I actively contribute to open source projects, view <a href="https://github.com/kopiro?tab=activity" target="_blank">my public activity</a>.</p>
-			<p>The project of which I am most proud of is <a href="https://github.com/caffeinalab/trimethyl" target="_blank">Trimethyl</a>, an open-source Titanium toolchain.</p>
 			<p><i>I believe that one of the greatest satisfactions in this life is to create something on your own,<br>and my best way to do so is by coding.</i></p>
 		</div>
 
 		<hr/>
-
-		<div class="section">
-			<h3>Skills</h3>
-			<p>I list all my acknowledges, but remember that <i>Imagination is more important than knowledge</i>.</p>
-			<ul>
-				<li><b>ECMAScript 5/6</b> in its main essence and <b>NodeJS</b>.</li>
-				<li><b>iOS</b> and <b>Android</b> mobile development with <b>Titanium/Alloy</b>.</li>
-				<li><b>PHP</b>, used primarily as OOP language.</li>
-				<li><b>Laravel</b> and <b>WordPress</b> full knowledges.</li>
-				<li><b>MySQL</b> for DBMS, <b>Redis</b> for in-memory databases and caching.</li>
-				<li>Minor knowledged in <b>C / C++</b>, <b>Java</b> and <b>.NET</b></li>
-				<li>UNIX basic knowledges and server administrations, Java and C#, basic usage of Adobe Photoshop,<br>bases of Informatic Security, project management, computer graphics with OpenGL and Unity.</small></li>
-			</ul>
-		</div>
-
-		<div id="carepos" class="section">
-			<h3>Caffeina Open source projects</h3>
-			<ul>
-				<?php foreach (get_ca_repos() as $r) : ?>
-					<li><a target="_blank" rel="noopener" href="<?= $r->link ?>"><?= $r->name ?></a> - <i><?= $r->description ?></i></li>
-				<?php endforeach; ?>
-			</ul>
-		</div>
 
 		<div id="repos" class="section">
 			<h3>Personal open source projects</h3>
@@ -111,11 +89,11 @@ require_once __DIR__ . '/../app.php';
 			</ul>
 		</div>
 
-		<div id="tweets" class="section">
-			<h3>Latest</h3>
-			<ul style="list-style: bullet">
-				<?php foreach (get_tweets() as $r) : ?>
-					<li><?= $r->text ?> - <i><?= $r->date ?></i> - <a target="_blank" rel="noopener" href="<?= $r->link ?>">link</a></li>
+		<div id="carepos" class="section">
+			<h3>Caffeina Open source projects</h3>
+			<ul>
+				<?php foreach (get_ca_repos() as $r) : ?>
+					<li><a target="_blank" rel="noopener" href="<?= $r->link ?>"><?= $r->name ?></a> - <i><?= $r->description ?></i></li>
 				<?php endforeach; ?>
 			</ul>
 		</div>
@@ -126,6 +104,15 @@ require_once __DIR__ . '/../app.php';
 				<li><a target="_blank" rel="noopener" href="http://ilpaesaggiodellabonifica.it">Il Paesaggio della Bonifica</a> - <i>2014</i></li>
 				<li><a target="_blank" rel="noopener" href="http://ecruarchitetti.it">écru architetti</a> - <i>2014</i></li>
 				<li><a target="_blank" rel="noopener" href="http://www.ducciograssiarchitects.com/">duccio grassi architects</a> - <i>2017</i></li>
+			</ul>
+		</div>
+
+		<div id="tweets" class="section">
+			<h3>Latest</h3>
+			<ul style="list-style: bullet">
+				<?php foreach (get_tweets() as $r) : ?>
+					<li><?= $r->text ?> - <i><?= $r->date ?></i> - <a target="_blank" rel="noopener" href="<?= $r->link ?>">link</a></li>
+				<?php endforeach; ?>
 			</ul>
 		</div>
 
