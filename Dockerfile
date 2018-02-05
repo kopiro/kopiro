@@ -1,14 +1,16 @@
-FROM php:7-fpm-alpine
+FROM php:7.1-fpm-alpine
 
 WORKDIR /app
 ENTRYPOINT entrypoint
 
-RUN set -ex && apk update && apk add \
+RUN set -ex
+
+RUN apk add --no-cache --update \
 unzip \
 nano \
 nginx \
 supervisor \
-nodejs
+nodejs 
 
 RUN mkdir -p /run/nginx
 
