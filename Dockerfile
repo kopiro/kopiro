@@ -9,8 +9,7 @@ RUN apk add --no-cache --update \
 unzip \
 nano \
 nginx \
-supervisor \
-nodejs 
+supervisor
 
 RUN mkdir -p /run/nginx
 
