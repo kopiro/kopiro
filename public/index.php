@@ -1,8 +1,4 @@
-<?php 
-
-require_once __DIR__ . '/../app.php';
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
