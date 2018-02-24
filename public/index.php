@@ -34,8 +34,7 @@ require_once __DIR__ . '/../app.php';
 		})();
 	</script>
 
-	<link href="/bundle.css" rel="stylesheet" />
-	<script async src="/bundle.js"></script>
+	<link href="/style.css" rel="stylesheet" />
 
 </head>
 <body>

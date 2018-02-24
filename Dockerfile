@@ -26,13 +26,7 @@ RUN curl -sS -k https://getcomposer.org/installer | php -- --install-dir=/usr/bi
 COPY composer.json /composer/composer.json
 RUN cd /composer && composer install
 
-COPY package.json /node/package.json
-RUN cd /node && npm install
-
 COPY . /app
 RUN rm -rf /app/vendor && ln -svf /composer/vendor /app/vendor
-RUN rm -rf /app/node_modules && ln -svf /node/node_modules /app/node_modules
-
-RUN npm run build
 
 EXPOSE 80
