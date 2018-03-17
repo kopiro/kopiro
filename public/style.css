@@ -1,7 +1,4 @@
-@font-face {
-	font-family: 'NeutrifPro-SemiBold';
-	src: url('/NeutrifPro-SemiBold.woff2') format('woff2');
-}
+@import url('https://fonts.googleapis.com/css?family=Anton|IBM+Plex+Sans|IBM+Plex+Serif');
 
 html {
 	padding: 0;
@@ -9,61 +6,76 @@ html {
 }
 
 body {
-	font: 16px NeutrifPro-SemiBold, Tahoma, sans-serif;
+	font-size: 14px;
+	font-family: 'Helvetica', sans-serif;
 	margin: 0;
-	-webkit-font-smoothing: antialiased;
-	background: #fff;
-	color: #000;
-	font-weight: 200;
-	text-align: center;
-	max-width: 500px;
-	margin: 0 auto;
-	padding: 30px;
-}
-
-h1 {
-	font-size: 170px;
-	line-height: 1em;
-	color: #259223;
-}
-
-@media (max-width: 768px) {
-	h1 {
-		font-size: 100px;
-	}
-}
-
-h2 {
-	font-size: 28px;
-	font-weight: normal;
-	line-height: 1.2em;
-}
-
-h3 {
-	font-size: 16px;
-	font-weight: normal;
-	line-height: 1.2em;
-}
-
-#social-icons {
-	margin: 40px 0;
-	font-size: 40px;
-}
-
-
-#social-icons i {
-	display: inline-block;
-	margin: 0 10px;
+	background: #111;
+	color: #fff;
 }
 
 a {
-	color: #000;
+	color: #fff;
+	text-decoration: none;
 }
 
 a:hover {
-	color: #259223;
+	color: red;
 }
 
-ul li 
-	list-style: none;
+#giant {
+	font-size: 3000px;
+	position: fixed;
+	z-index: -1;
+	line-height: 1em;
+	top: -0.4em;
+	left: -0.14em;
+	font-weight: bold;
+	color: #236023;
+	font-family: 'Tahoma';
+}
+
+#content {
+	position: absolute;
+	width: 400px;
+	right: 50px;
+	top: 0;
+	padding: 2em;
+	margin: auto;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+#social-icons {
+	font-size: 30px;
+}
+
+#social-icons i {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+ul {
+	text-transform: lowercase;
+	padding-left: 1em;
+	list-style: cjk-ideographic;
+}
+
+li {
+	margin-bottom: 0.2em;
+}
+
+@media (max-width: 768px) {
+	#giant {
+		left: -0.45em;
+		font-size: 1700px;
+	}
+
+	#content {
+		position: static;
+		width: auto;
+		left: 0;
+		right: 0;
+	}
 }
