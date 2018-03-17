@@ -17,7 +17,7 @@ require_once __DIR__ . '/../app.php';
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link href="/style.css" rel="stylesheet" />
+	<link href="/style.css?v=2" rel="stylesheet" />
 </head>
 <body>
 
