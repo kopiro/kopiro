@@ -4,19 +4,21 @@ html {
 }
 
 body {
-	font-size: 12px;
-	font-family: 'Menlo', sans-serif;
-	margin: 0;
-	background: #111;
-	color: #fff;
+	margin: 40px;
+	width: 320px;
+	font-size: 10px;
+	font-family: 'Noto Sans', sans-serif;
+	background: #fff;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
 }
 
 * {
-	line-height: 1.2em;
+	line-height: 1.1em;
 }
 
 a {
-	color: #fff;
+	color: #000000;
 	text-decoration: none;
 }
 
@@ -24,40 +26,19 @@ a:hover {
 	color: red;
 }
 
-#giant {
-	font-size: 3000px;
-	position: fixed;
-	z-index: -1;
-	line-height: 1em;
-	top: -0.4em;
-	left: -0.14em;
-	font-weight: bold;
-	color: #236023;
-	font-family: 'Tahoma';
-}
-
-#content {
-	position: absolute;
-	width: 500px;
-	right: 50px;
-	top: 0;
-	padding: 2em;
-	margin: auto;
-}
-
 h1 {
-	font-family: 'Helvetica', sans-serif;
-	font-size: 4.5em;
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 0.9em;
 }
 
 h2 {
-	font-family: 'Helvetica', sans-serif;
-	font-size: 1.5em;
+	font-size: 12px;
+	font-style: italic;
 }
 
-h2, h3 {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+h3 {
+	margin: 0 0 7px 0;
 }
 
 #social-icons {
@@ -82,15 +63,7 @@ li {
 }
 
 @media (max-width: 768px) {
-	#giant {
-		left: -0.45em;
-		font-size: 1700px;
-	}
-
-	#content {
-		position: static;
+	body {
 		width: auto;
-		left: 0;
-		right: 0;
 	}
 }
