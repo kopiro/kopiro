@@ -1,15 +1,30 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/kopdo.php';
+require_once __DIR__ . '/classes/kopdo.php';
 
+// Define constants
 define('SQL_DATE', 'Y-m-d H:i:s');
-
 ini_set('display_errors', getenv('DEBUG'));
 
-KOPDO::connect('mysql:host=' . getenv('DB_HOST') . '; port=' . getenv('DB_PORT') . '; dbname=' . getenv('DB_NAME') . '; charset=utf8', getenv('DB_USER'), getenv('DB_PASS'));
+// Functions
 
-// ---------------
+function sanitize_output($buffer) {
+    $search = array(
+        '/\>[^\S ]+/s',     // strip whitespaces after tags, except space
+        '/[^\S ]+\</s',     // strip whitespaces before tags, except space
+        '/(\s)+/s',         // shorten multiple whitespace sequences
+        '/<!--(.|\s)*?-->/' // Remove HTML comments
+    );
+    $replace = array(
+        '>',
+        '<',
+        '\\1',
+        ''
+    );
+    $buffer = preg_replace($search, $replace, $buffer);
+    return $buffer;
+}
 
 function get_press() {
 	return KOPDO::all("press", "*", "visible = 1 ORDER BY claps_count DESC");
@@ -24,11 +39,9 @@ function get_projects() {
 }
 
 function get_about() {
-	$p = file_get_contents(__DIR__ . '/public/about.md');
+	$p = file_get_contents(__DIR__ . '/README.md');
 	return (new ParsedownExtra())->text($p);
 }
-
-// --------------
 
 function http_request($url, $ttl = 86400, $decode = true) {
 	$key = 'http_' . sha1($url);
@@ -159,3 +172,7 @@ function get_tweets() {
 
 	return json_decode($r);
 }
+
+// Boot
+
+KOPDO::connect('mysql:host=' . getenv('DB_HOST') . '; port=' . getenv('DB_PORT') . '; dbname=' . getenv('DB_NAME') . '; charset=utf8', getenv('DB_USER'), getenv('DB_PASS'));
