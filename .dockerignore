@@ -1,5 +1,5 @@
 ./env
 /.git
 /vendor
-/supervisord.log
-/supervisord.pid
+/*.pid
+/*.log

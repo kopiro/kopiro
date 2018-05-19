@@ -1,69 +1,126 @@
+@font-face {
+    font-family: 'Balto';
+    src: url('/fonts/800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Balto';
+    src: url('/fonts/600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Balto';
+    src: url('/fonts/200.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
 html {
 	padding: 0;
 	margin: 0;
 }
 
 body {
-	margin: 40px;
-	width: 320px;
-	font-size: 10px;
-	font-family: 'Noto Sans', sans-serif;
+	padding: 80px;
+	width: auto;
+	font-size: 22px;
+	font-family: 'Balto', sans-serif;
 	background: #fff;
-	color: #333;
+	color: #121C2A;
 	-webkit-font-smoothing: antialiased;
+	max-width: 680px;
+}
+
+@media (max-width: 768px) {
+	body {
+		padding: 20px;
+	}
 }
 
 * {
-	line-height: 1.1em;
+	line-height: 1.3em;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 0.5em;
 }
 
 a {
-	color: #000000;
+	color: #C55347;
 	text-decoration: none;
+	border-bottom: 3px solid #C55347;
+}
+
+ul li a {
+	color: #121C2A;
+	border-bottom: none;
 }
 
 a:hover {
-	color: red;
+	border-bottom: 5px solid #C55347;
+	color: #C55347;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	line-height: 1em;
+	margin-bottom: 0.5em;
 }
 
 h1 {
-	font-weight: bold;
-	font-size: 35px;
-	line-height: 0.9em;
+	font-weight: 800;
+	font-size: 75px;
+	text-transform: capitalize;
 }
 
 h2 {
-	font-size: 12px;
-	font-style: italic;
+	font-size: 30px;
+	font-weight: 800;
+	color: #C55347;
 }
 
 h3 {
-	margin: 0 0 7px 0;
+	margin-bottom: 1em;
+	font-size: 40px;
+}
+
+h6 {
+	font-size: 16px;
+	font-weight: 800;
+}
+
+b, strong {
+	font-weight: 600;
+}
+
+#story {
+	margin: 1em 0 2em 0;
 }
 
 #social-icons {
-	padding-left: 1em;
-	font-size: 2em;
+	font-size: 43px;
+}
+
+#social-icons a {
+	border-bottom: none;
 }
 
 #social-icons i {
 	display: inline-block;
 	margin-right: 5px;
+	color: #121C2A;
 }
 
 ul {
 	margin: 0;
-	text-transform: lowercase;
-	padding-left: 4em;
-	list-style: cjk-ideographic;
+	list-style: hiragana;
 }
 
 li {
-	margin-bottom: 3px;
-}
-
-@media (max-width: 768px) {
-	body {
-		width: auto;
-	}
+	margin-bottom: 0.5em;
 }

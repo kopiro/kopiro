@@ -1,21 +1,11 @@
-# [www.kopiro.it](http://www.kopiro.it)
+**Backend and Mobile Lead Developer for @Caffeina, Parma, IT.**
 
-## Flavio De Stefano
+I started to learn how to code during high school, studying **algorithms** and **data structures** in C and C++. In the meantime, I used to build simple desktop apps using .NET... and it immediately became my **passion**.
 
-Hello, I'm Flavio.
+Specializing as a **full-stack developer** using PHP and classical web technologies, I loved to build animations using canvas and javascript API. Then I focused on building REST backends using **PHP** and **Laravel**, and making some experience with high-scalable **Node.js** application and simple CLI utilities. During mobile era in 2015, I started to learn **Titanium** since 3.x release, becoming a core contributor of this framework.
 
-I studied computer engineering and I'm currently a Backend and Mobile coordinator for Caffeina in Parma, Italy.
-I started to learn how to code at 16 (C, C++ and .NET), and soon it became my passion, not just my work.
+I love to build useful stuffs that solves (my) everyday problems, and as soon as I can I release **Open Source** projects. [(yes, this website is also open source)](https://github.com/kopiro/kopiro)
 
-I started as full-stack developer using PHP + classical web techs as main technologies.
-After that, I specialized building API using Laravel and making some experience with NodeJS applications.
-Using MySQL for DBMS most of the time, I have also Oracle and MongoDB knowledge.
+I'm currently studying **cyber-security** and I used to do CTF competitions.
 
-For mobile apps, I started to learn Titanium since 3.x release, becoming a core contributor of this awesome framework.
-
-I usally build project with security in mind and I do a full pen-testing; in the free time I usally play CTF competitions.
-
-I actively contribute to open source projects, view my [public activity](https://github.com/kopiro?tab=activity).
-
-I believe that one of the greatest satisfactions in this life is to create something on your own,
-and my best way to do so is by coding.
+Known as **@kopiro**.

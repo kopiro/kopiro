@@ -1,20 +1,46 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/kopdo.php';
 
-ini_set('display_errors', 0);
+define('SQL_DATE', 'Y-m-d H:i:s');
+
+ini_set('display_errors', getenv('DEBUG'));
+
+KOPDO::connect('mysql:host=' . getenv('DB_HOST') . '; port=' . getenv('DB_PORT') . '; dbname=' . getenv('DB_NAME') . '; charset=utf8', getenv('DB_USER'), getenv('DB_PASS'));
+
+// ---------------
+
+function get_press() {
+	return KOPDO::all("press", "*", "visible = 1 ORDER BY claps_count DESC");
+}
+
+function get_oss_projects() {
+	return KOPDO::all("oss_projects", "*", "visible = 1 AND description IS NOT NULL ORDER BY (stars_count + forks_count) DESC", []);
+}
+
+function get_projects() {
+	return KOPDO::all("projects", "*", "visible = 1 ORDER BY year DESC", []);
+}
+
+function get_about() {
+	$p = file_get_contents(__DIR__ . '/public/about.md');
+	return (new ParsedownExtra())->text($p);
+}
+
+// --------------
 
 function http_request($url, $ttl = 86400, $decode = true) {
-	$key = 'kopiro_' . sha1($url);
+	$key = 'http_' . sha1($url);
 	$file = sys_get_temp_dir() . '/' . $key;
-	$r = file_get_contents($file);
+	$r = @file_get_contents($file);
 
 	if ($r == null || (filemtime($file) + (24 * 60 * 60) < time())) {
 		$ch = curl_init($url);
 
 		curl_setopt($ch, CURLOPT_PORT , 443);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_USERAGENT, 'kopiro.it');
+		curl_setopt($ch, CURLOPT_USERAGENT, 'Website');
 		curl_setopt($ch, CURLOPT_HTTPHEADER, [ 'Accept: application/json' ]); 
 		$r = curl_exec($ch);
 
@@ -27,37 +53,35 @@ function http_request($url, $ttl = 86400, $decode = true) {
 	return $decode ? json_decode($r) : $r;
 }
 
-function get_ca_repos() {
-	$carepos = [];
-	foreach (http_request('https://api.github.com/users/caffeinalab/repos?per_page=200&&access_token=' . getenv('GITHUB_TOKEN')) as $k => $r) {
-		if ($r->fork) continue;
-		if (substr($r->description, -1) !== '.') continue;
-		$carepos[] = (object)[
-		'link' => $r->html_url,
-		'name' => $r->name,
-		'description' => $r->description,
-		'stargazers_count' => $r->stargazers_count,
-		'date' => date('Y, M d', strtotime($r->created_at))
-		];
-	}
-	usort($carepos, function($b,$a){ return $a->stargazers_count - $b->stargazers_count; });
-	return $carepos;
-}
-
-function get_repos() {
+function update_oss_projects() {
 	$repos = [];
-	foreach (http_request('https://api.github.com/users/kopiro/repos?per_page=200&&access_token=' . getenv('GITHUB_TOKEN')) as $k => $r) {
-		if ($r->fork) continue;
-		$repos[] = (object)[
-		'link' => $r->html_url,
-		'name' => $r->name,
-		'description' => $r->description,
-		'stargazers_count' => $r->stargazers_count,
-		'date' => date('Y, M d', strtotime($r->created_at))
-		];
+	foreach (explode(',', getenv('GITHUB_USERNAMES')) as $profile) {
+		$repos = array_merge($repos, http_request('https://api.github.com/users/' . $profile . '/repos?per_page=500&&access_token=' . getenv('GITHUB_TOKEN')));
 	}
-	usort($repos, function($b,$a){ return $a->stargazers_count - $b->stargazers_count; });
-	return $repos;
+
+	foreach ($repos as $k => $r) {
+		if ($r->fork) continue;
+		$e = [
+			'github_id' => $r->id,
+			'name' => $r->name,
+			'description' => $r->description,
+			'url' => $r->html_url,
+			'stars_count' => $r->stargazers_count,
+			'forks_count' => $r->forks_count,
+			'year' => intval(date('Y', strtotime($r->created_at))),
+			'fork' => $r->fork ? 1 : 0,
+			'owner' => $r->owner->login,
+			'visible' => 1
+		];
+
+		if (false == KOPDO::val("oss_projects", "id", "github_id = ?", [ $e['github_id'] ])) {
+			echo "Inserting {$e['github_id']}... ";
+			echo KOPDO::insert("oss_projects", $e);
+			echo PHP_EOL;
+		} else {
+			// echo "Skipping repo {$e['name']}... " . PHP_EOL;
+		}
+	}
 }
 
 function get_gists() {
@@ -66,32 +90,41 @@ function get_gists() {
 		if (!$r->public) continue;
 		if (!$r->description) continue;
 		$gists[] = (object)[
-		'link' => $r->html_url,
-		'name' => $r->description,
-		'date' => date('Y, M d', strtotime($r->created_at))
+			'link' => $r->html_url,
+			'name' => $r->description,
+			'date' => date('Y, M d', strtotime($r->created_at))
 		];
 	}
 	return $gists;
 }
 
-function get_medium_posts() {
-	$medium = [];
-	$medium_raw = http_request('https://medium.com/@destefanoflavio/latest');
+function update_press() {
+	$medium_raw = http_request('https://medium.com/@' . getenv('MEDIUM_USERNAME') . '/latest');
 	foreach ($medium_raw->payload->references->Post as $r) {
-		$medium[] = (object)[
-		'link' => 'https://medium.com/destefanoflavio/' . $r->uniqueSlug,
-		'name' => $r->title,
-		'date' => date('Y, M d', floor($r->firstPublishedAt / 1000))		
+		$e = [
+			'medium_id' => $r->id,
+			'name' => $r->title,
+			'url' => 'https://medium.com/' . getenv('MEDIUM_USERNAME') . '/' . $r->uniqueSlug,
+			'date' => date(SQL_DATE, floor($r->firstPublishedAt / 1000)),
+			'claps_count' => intval($r->virtuals->totalClapCount),
+			'visible' => 1
 		];
+
+		if (false == KOPDO::val("press", "id", "medium_id = ?", [ $e['medium_id'] ])) {
+			echo "Inserting {$e['medium_id']}... ";
+			echo KOPDO::insert("press", $e);
+			echo PHP_EOL;
+		} else {
+			// echo "Skipping press {$e['name']}... " . PHP_EOL;
+		}
 	}
-	return $medium;
 }
 
 function get_tweets() {
-	$file = sys_get_temp_dir() . '/kopiro_twitter.json';
-	$r = file_get_contents($file);
+	$file = sys_get_temp_dir() . '/twitter.json';
+	$r = @file_get_contents($file);
 
-	if (true || $r == null || (filemtime($file) + (1 * 60 * 60) < time())) {
+	if ($r == null || (filemtime($file) + (1 * 60 * 60) < time())) {
 
 		$settings = [
 		'oauth_access_token' => getenv('TWITTER_TOKEN'),
@@ -101,7 +134,7 @@ function get_tweets() {
 		];
 		$twitter = new TwitterAPIExchange($settings);
 
-		$r = $twitter->setGetfield('?screen_name=destefanoflavio&count=50')
+		$r = $twitter->setGetfield('?screen_name=' . getenv('TWITTER_USERNAME') . '&count=50')
 		->buildOauth('https://api.twitter.com/1.1/statuses/user_timeline.json', 'GET')
 		->performRequest();
 
@@ -115,7 +148,7 @@ function get_tweets() {
 			$tweets[] = (object)[
 				'text' => $t->text,
 				'id' => $t->id_str,
-				'link' => 'http://twitter.com/destefanoflavio/status/' . $t->id_str,
+				'link' => 'http://twitter.com/' . getenv('TWITTER_USERNAME') . '/status/' . $t->id_str,
 				'date' => date('Y, M d', strtotime($t->created_at))
 			];
 		}
