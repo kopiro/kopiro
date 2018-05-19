@@ -1,5 +1,4 @@
-.env
-node_modules
-vendor
-supervisord.log
-supervisord.pid
+/.env
+/vendor
+/*.pid
+/*.log
