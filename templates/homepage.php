@@ -9,7 +9,7 @@
 <ul>
 	<?php foreach (get_press() as $r) : ?>
 		<li>
-			<a target="_blank" rel="noopener" href="<?= $r->link ?>">
+			<a target="_blank" rel="noopener" href="<?= $r->url ?>">
 				<?= $r->name ?> <span>(<?= date('M Y', strtotime($r->date)) ?>)</span>
 			</a>
 		</li>
