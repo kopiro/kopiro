@@ -14,8 +14,6 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 	<link href="/style.css?v=2" rel="stylesheet" />
 </head>
 <body>

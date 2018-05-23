@@ -41,14 +41,12 @@
 </ul>
 <br/>
 
-<h3>reach me anywhere {</h3>
-<div id="social-icons">
-	<a target="_blank" rel="noopener" href="/github" style="color: #26292E"><i class="fa fa-github"></i></a>
-	<a target="_blank" rel="noopener" href="/linkedin" style="color: #4077AB"><i class="fa fa-linkedin"></i></a>
-	<a target="_blank" rel="noopener" href="/medium" style="color: #87DB87"><i class="fa fa-medium"></i></a>
-	<a target="_blank" rel="noopener" href="/twitter" style="color: #5F94CF"><i class="fa fa-twitter"></i></a>
-	<a target="_blank" rel="noopener" href="/stackoverflow" style="color: #DA894C"><i class="fa fa-stack-overflow"></i></a>
-</div>
+<h3>Everywhere</h3>
+<ul>
+	<?php foreach (get_socials() as $e) : ?>
+		<li><a target="_blank" rel="noopener" href="https://www.kopiro.it/<?= strtolower($e->service) ?>"><b><?= $e->service ?></b></a></li>
+	<?php endforeach; ?>
+</ul>
 
 <br/>
 <h6><a target="_blank" rel="noopener" href="https://pgp.mit.edu/pks/lookup?op=get&search=0xEDE51005D982268E">GPG: 0xEDE51005D982268E</a></h6>

@@ -26,6 +26,10 @@ function sanitize_output($buffer) {
     return $buffer;
 }
 
+function get_socials() {
+	return KOPDO::all("socials", "*");
+}
+
 function get_press() {
 	return KOPDO::all("press", "*", "visible = 1 ORDER BY claps_count DESC");
 }

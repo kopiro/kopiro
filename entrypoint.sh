@@ -2,6 +2,7 @@
 
 if [ "$REBUILD" == "1" ]; then
 	composer install
+	composer dump-autoload
 fi
 
 (while (true); do
