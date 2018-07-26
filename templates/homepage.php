@@ -17,6 +17,13 @@
 </ul>
 <br/>
 
+<h3>Everywhere</h3>
+<ul>
+	<?php foreach (get_socials() as $e) : ?>
+		<li><a target="_blank" rel="noopener" href="https://www.kopiro.it/<?= strtolower($e->service) ?>"><b><?= $e->service ?></b></a></li>
+	<?php endforeach; ?>
+</ul>
+
 <h3>OSS Projects</h3>
 <ul>
 	<?php foreach (get_oss_projects() as $e) : ?>
@@ -41,14 +48,6 @@
 </ul>
 <br/>
 
-<h3>Everywhere</h3>
-<ul>
-	<?php foreach (get_socials() as $e) : ?>
-		<li><a target="_blank" rel="noopener" href="https://www.kopiro.it/<?= strtolower($e->service) ?>"><b><?= $e->service ?></b></a></li>
-	<?php endforeach; ?>
-</ul>
-
-<br/>
 <h6><a target="_blank" rel="noopener" href="https://pgp.mit.edu/pks/lookup?op=get&search=0xEDE51005D982268E">GPG: 0xEDE51005D982268E</a></h6>
 
 <?php require 'footer.php'; ?>
