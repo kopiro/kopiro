@@ -14,6 +14,7 @@ RUN docker-php-ext-install pdo_mysql
 RUN mkdir -p /run/nginx && \
 mkdir -p /tmp/nginx && \
 chown -R www-data:www-data /tmp/nginx && \
+chown -R www-data:www-data /var/tmp/nginx && \
 chown -R www-data:www-data /var/lib/nginx
 
 COPY ./conf/php-fpm-pool.conf /usr/local/etc/php-fpm.d/zzzz-docker.conf

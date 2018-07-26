@@ -10,7 +10,7 @@
 	<?php foreach (get_press() as $r) : ?>
 		<li>
 			<a target="_blank" rel="noopener" href="<?= $r->url ?>">
-				<?= $r->name ?> <span>(<?= date('M Y', strtotime($r->date)) ?>)</span>
+				<b><?= $r->name ?></b> <span>(<?= date('M Y', strtotime($r->date)) ?>)</span>
 			</a>
 		</li>
 	<?php endforeach; ?>
@@ -23,6 +23,7 @@
 		<li><a target="_blank" rel="noopener" href="https://www.kopiro.it/<?= strtolower($e->service) ?>"><b><?= $e->service ?></b></a></li>
 	<?php endforeach; ?>
 </ul>
+<br/>
 
 <h3>OSS Projects</h3>
 <ul>
