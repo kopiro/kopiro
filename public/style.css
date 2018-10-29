@@ -1,22 +1,22 @@
 @font-face {
-    font-family: 'Balto';
-    src: url('/fonts/800.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
+	font-family: 'Balto';
+	src: url('/fonts/balto/balto-800.woff2') format('woff2');
+	font-weight: 800;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'Balto';
-    src: url('/fonts/600.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
+	font-family: 'Balto';
+	src: url('/fonts/balto/balto-600.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'Balto';
-    src: url('/fonts/200.woff2') format('woff2');
-    font-weight: 200;
-    font-style: normal;
+	font-family: 'Balto';
+	src: url('/fonts/balto/balto-200.woff2') format('woff2');
+	font-weight: 200;
+	font-style: normal;
 }
 
 html {
@@ -27,12 +27,12 @@ html {
 body {
 	padding: 80px;
 	width: auto;
-	font-size: 22px;
+	font-size: 18px;
 	font-family: 'Balto', sans-serif;
 	background: #fff;
 	color: #121C2A;
-	-webkit-font-smoothing: antialiased;
 	max-width: 680px;
+	display: block;
 }
 
 @media (max-width: 768px) {
@@ -42,7 +42,7 @@ body {
 }
 
 * {
-	line-height: 1.3em;
+	line-height: 1.2em;
 }
 
 p {
@@ -66,27 +66,38 @@ a:hover {
 	color: #C55347;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	margin: 0;
 	line-height: 1em;
-	margin-bottom: 0.5em;
+	margin-bottom: 10px;
 }
 
 h1 {
 	font-weight: 800;
 	font-size: 75px;
+	margin-top: 0;
 	text-transform: capitalize;
+	font-weight: bold;
 }
 
 h2 {
 	font-size: 30px;
 	font-weight: 800;
 	color: #C55347;
+	font-weight: bold;
 }
 
 h3 {
+	font-size: 24px;
 	margin-bottom: 1em;
-	font-size: 40px;
+	color: #C55347;
+	font-weight: bold;
+}
+
+h3 a {
+	color: #121C2A;
 }
 
 h6 {
@@ -94,12 +105,13 @@ h6 {
 	font-weight: 200;
 }
 
-b, strong {
+b,
+strong {
 	font-weight: 600;
 }
 
 #story {
-	margin: 1em 0 2em 0;
+	margin: 0 0 2em 0;
 }
 
 #social-icons {
@@ -125,6 +137,24 @@ li {
 	margin-bottom: 0.5em;
 }
 
+blockquote {
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0;
+	color: #4a6488;
+}
+
+#socials {
+	font-weight: bold;
+	font-size: 18px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#socials>li {
+	display: inline-block;
+}
 
 @media print {
 
@@ -132,10 +162,10 @@ li {
 		margin: 2cm;
 	}
 
-	a:after{
-		content:" (" attr(href) ") ";
-		font-size:0.8em;
-		font-weight:normal;
+	a:after {
+		content: " ("attr(href) ") ";
+		font-size: 0.8em;
+		font-weight: normal;
 	}
 
 }

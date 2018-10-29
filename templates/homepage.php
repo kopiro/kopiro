@@ -1,8 +1,5 @@
 <?php require 'header.php'; ?>
 
-<h1>Flavio De Stefano</h1>
-<h2>One of the greatest satisfactions is to create something on your own. My best way to do it's by coding.</h2>
-
 <div id="story"><?= get_about() ?></div>
 
 <h3>Press</h3>
@@ -13,14 +10,6 @@
 				<b><?= $r->name ?></b> <span>(<?= date('M Y', strtotime($r->date)) ?>)</span>
 			</a>
 		</li>
-	<?php endforeach; ?>
-</ul>
-<br/>
-
-<h3>Everywhere</h3>
-<ul>
-	<?php foreach (get_socials() as $e) : ?>
-		<li><a target="_blank" rel="noopener" href="https://www.kopiro.it/<?= strtolower($e->service) ?>"><b><?= $e->service ?></b></a></li>
 	<?php endforeach; ?>
 </ul>
 <br/>
