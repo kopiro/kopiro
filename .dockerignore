@@ -1,5 +1,1 @@
-/.env
-/.git
-/vendor
-/*.pid
-/*.log
+.gitignore

@@ -1,4 +1,7 @@
-version: '3'
+version: "3"
+
+volumes:
+  db-data:
 
 services:
   app:
@@ -11,5 +14,16 @@ services:
       - 80:80
     volumes:
       - .:/app
+    env_file:
+      - .env
+
+  db:
+    image: mysql:5
+    restart: on-failure
+    ports:
+      - 3306:3306
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./mysql:/docker-entrypoint-initdb.d
     env_file:
       - .env
