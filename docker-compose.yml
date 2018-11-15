@@ -1,29 +1,47 @@
-version: "3"
+version: '3'
 
 volumes:
-  db-data:
+   render-data:
 
 services:
-  app:
-    image: kopiro/kopiro
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    restart: on-failure
-    ports:
-      - 80:80
-    volumes:
-      - .:/app
-    env_file:
-      - .env
+   app:
+      image: kopiro/kopiro:latest
+      build:
+         context: .
+         dockerfile: ./Dockerfile
+      restart: on-failure
+      entrypoint: ['npm', 'run', 'dev']
+      volumes:
+         - ./package.json:/app/package.json
+         - ./package-lock.json:/app/package-lock.json
+         - ./views:/app/views
+         - ./routes:/app/routes
+         - ./app.js:/app/app.js
+         - ./updater.js:/app/updater.js
+         - ./server.js:/app/server.js
+         - ./volumes/db:/app/db
+      env_file:
+         - .env
 
-  db:
-    image: mysql:5
-    restart: on-failure
-    ports:
-      - 3306:3306
-    volumes:
-      - db-data:/var/lib/mysql
-      - ./mysql:/docker-entrypoint-initdb.d
-    env_file:
-      - .env
+   nginx:
+      image: kopiro/kopiro:latest-nginx
+      build:
+         context: .
+         dockerfile: ./Dockerfile-nginx
+      restart: on-failure
+      ports:
+         - 80:80
+      volumes:
+         - ./public:/www/public
+         - ./volumes/render:/www/public/render
+      env_file:
+         - .env
+
+   render:
+      image: kopiro/kopiro:latest-render
+      build:
+         context: .
+         dockerfile: ./Dockerfile-render
+      restart: on-failure
+      volumes:
+         - ./volumes/render:/screenshots

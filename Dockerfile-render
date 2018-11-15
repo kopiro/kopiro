@@ -1,0 +1,2 @@
+FROM alekzonder/puppeteer:1
+COPY ./render/index.js index.js
