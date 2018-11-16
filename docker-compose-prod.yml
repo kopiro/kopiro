@@ -2,8 +2,7 @@ version: '3'
 
 networks:
   proxy:
-    external:
-      true
+    external: true
   kopiro:
 
 services:
@@ -27,6 +26,8 @@ services:
     networks:
       - proxy
       - kopiro
+    depends_on:
+      - app
 
   render:
     image: kopiro/kopiro:latest-render
@@ -35,3 +36,6 @@ services:
       - ./render-data:/screenshots
     networks:
       - kopiro
+    depends_on:
+      - nginx
+      - app
