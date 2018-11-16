@@ -1,0 +1,21 @@
+{
+	"name": "kopiro",
+	"version": "1.0.0",
+	"private": true,
+	"gpgKey": "0xEDE51005D982268E",
+	"scripts": {
+		"start": "node server.js",
+		"dev": "if [ ! -d node_modules ]; then npm i; fi; nodemon --ignore ./db server.js"
+	},
+	"dependencies": {
+		"cookie-parser": "~1.4.3",
+		"debug": "~2.6.9",
+		"express": "~4.16.0",
+		"http-errors": "~1.6.2",
+		"morgan": "~1.9.0",
+		"node-fetch": "^2.3.0",
+		"nodemon": "^1.18.6",
+		"pug": "2.0.0-beta11",
+		"showdown": "^1.9.0"
+	}
+}

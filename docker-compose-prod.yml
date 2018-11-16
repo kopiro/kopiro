@@ -1,0 +1,44 @@
+version: '3'
+
+networks:
+  proxy:
+    external: true
+  kopiro:
+
+volumes:
+  render-data:
+
+services:
+  app:
+    image: kopiro/kopiro:latest
+    restart: always
+    volumes:
+      - ./db:/app/db
+    env_file:
+      - .env
+    networks:
+      - kopiro
+
+  nginx:
+    image: kopiro/kopiro:latest-nginx
+    restart: always
+    volumes:
+      - render-data:/www/render
+    env_file:
+      - .env
+    networks:
+      - proxy
+      - kopiro
+    depends_on:
+      - app
+
+  render:
+    image: kopiro/kopiro:latest-render
+    restart: always
+    volumes:
+      - render-data:/screenshots
+    networks:
+      - kopiro
+    depends_on:
+      - nginx
+      - app
