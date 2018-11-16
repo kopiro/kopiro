@@ -2,7 +2,11 @@
 
 ## Software Engineer
 
-### [Github](https://www.kopiro.it/github) - [Twitter](https://www.kopiro.it/twitter) - [Medium](https://www.kopiro.it/medium)
+#### [Github](https://www.kopiro.it/github)
+
+#### [Twitter](https://www.kopiro.it/twitter)
+
+#### [Medium](https://www.kopiro.it/medium)
 
 > One of the greatest satisfactions is to create something on your own; my best way to do it's by coding.
 

@@ -10,9 +10,8 @@ async function run() {
 		waitUntil: 'networkidle2'
 	});
 	if (response.status() == 200) {
-		await page.emulateMedia('screen');
 		await page.pdf({
-			margin: { left: '2cm', top: '2.5cm', right: '2cm', bottom: '2.5cm' },
+			margin: { left: '3cm', top: '3cm', right: '3cm', bottom: '4cm' },
 			path: '/screenshots/cv.pdf'
 		});
 		console.log('Screenshot OK');

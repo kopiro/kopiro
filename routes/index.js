@@ -12,7 +12,7 @@ async function getData(file) {
 
 async function getPress() {
 	let data = await getData('press');
-	data = data.sort(e => e.clapsCount);
+	data = data.sort(e => e.totalClapCount);
 	return data;
 }
 

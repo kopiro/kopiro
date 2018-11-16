@@ -7,8 +7,9 @@ block content
 	ul
 		each e in press
 			li
-				a(target="_blank" rel="noopener" href=e.url) 
+				a(target="_blank" rel="noopener" href=('https://medium.com/@' + process.env.MEDIUM_USERNAME + '/' + e.uniqueSlug))
 					b #{e.title}
+					span : #{e.content.subtitle}
 	
 	h3 OSS Projects
 	ul

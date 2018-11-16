@@ -5,12 +5,7 @@ async function getOssProjects() {
 	let response = await fetch(
 		`https://api.github.com/users/${
 			process.env.GITHUB_USERNAME
-		}/repos?per_page=100&access_token=${process.env.GITHUB_TOKEN}`,
-		{
-			headers: {
-				Accept: 'application/json'
-			}
-		}
+		}/repos?per_page=100&access_token=${process.env.GITHUB_TOKEN}`
 	);
 	response = await response.json();
 	return response;
@@ -18,12 +13,7 @@ async function getOssProjects() {
 
 async function getPress() {
 	let response = await fetch(
-		`https://medium.com/@${process.env.MEDIUM_USERNAME}/latest`,
-		{
-			headers: {
-				Accept: 'application/json'
-			}
-		}
+		`https://medium.com/@${process.env.MEDIUM_USERNAME}/latest?format=json`
 	);
 	response = await response.text();
 	response = response.replace('])}while(1);</x>', '');
