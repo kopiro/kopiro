@@ -12,7 +12,9 @@ async function getData(file) {
 
 async function getPress() {
 	let data = await getData('press');
-	data = data.sort(e => e.totalClapCount);
+	data = data.sort(
+		(b, a) => a.virtuals.totalClapCount - b.virtuals.totalClapCount
+	);
 	return data;
 }
 
@@ -20,13 +22,13 @@ async function getOssProjects() {
 	let data = await getData('oss_projects');
 	data = data.filter(e => !e.fork && !e.private);
 	data = data.filter(e => e.description);
-	data = data.sort(e => -e.stargazers_count);
+	data = data.sort((b, a) => a.stargazers_count - b.stargazers_count);
 	return data;
 }
 
 async function getProjects() {
 	let data = await getData('projects');
-	data = data.sort(e => e.updated_at);
+	data = data.sort((b, a) => new Date(a.updated_at) - new Date(b.updated_at));
 	return data;
 }
 
