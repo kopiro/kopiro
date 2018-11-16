@@ -1,5 +1,11 @@
 version: '3'
 
+networks:
+  proxy:
+    external:
+      true
+  kopiro:
+
 services:
   app:
     image: kopiro/kopiro:latest
@@ -8,6 +14,8 @@ services:
       - ./db:/app/db
     env_file:
       - .env
+    networks:
+      - kopiro
 
   nginx:
     image: kopiro/kopiro:latest-nginx
@@ -16,9 +24,14 @@ services:
       - ./render-data:/www/public/render
     env_file:
       - .env
+    networks:
+      - proxy
+      - kopiro
 
   render:
     image: kopiro/kopiro:latest-render
     restart: always
     volumes:
       - ./render-data:/screenshots
+    networks:
+      - kopiro
