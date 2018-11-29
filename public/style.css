@@ -41,6 +41,22 @@ body {
 	}
 }
 
+.social-icons {
+	font-size: 32px;
+}
+
+.social-icons a:after {
+	display: none;
+}
+
+.social-icons a {
+	color: #121c2a;
+}
+
+.social-icons a:hover {
+	color: #c55347;
+}
+
 * {
 	line-height: 1.2em;
 }
@@ -52,8 +68,6 @@ p {
 
 a {
 	color: #c55347;
-	text-decoration: none;
-	border-bottom: 3px solid #c55347;
 }
 
 h4 a {
@@ -65,9 +79,26 @@ ul li a {
 	border-bottom: none;
 }
 
-a:hover {
-	border-bottom: 5px solid #c55347;
-	color: #c55347;
+a {
+	position: relative;
+	text-decoration: none;
+}
+
+a:after {
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	right: 0;
+	width: 100%;
+	height: 3px;
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform 0.3s;
+	background-color: #c55347;
+}
+
+a:hover:after {
+	transform: scaleX(1);
 }
 
 h1,

@@ -2,11 +2,13 @@
 
 ## Software Engineer
 
-#### [Github](https://www.kopiro.it/github)
-
-#### [Twitter](https://www.kopiro.it/twitter)
-
-#### [Medium](https://www.kopiro.it/medium)
+<div class="social-icons">
+	<a href="/medium" class="icon-notebook"></a>
+	<a href="/twitter" class="icon-social-twitter"></a>
+	<a href="/instagram" class="icon-social-instagram"></a>
+	<a href="/github" class="icon-social-github"></a>
+	<a href="/linkedin" class="icon-social-linkedin"></a>
+</div>
 
 > One of the greatest satisfactions is to create something on your own; my best way to do it's by coding.
 
