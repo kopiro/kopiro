@@ -1,6 +1,6 @@
 # Flavio De Stefano
 
-## Software Engineer
+## Software Engineer - for passion
 
 <div class="social-icons">
 	<a href="/medium" class="icon-notebook"></a>
