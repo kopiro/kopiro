@@ -1,6 +1,6 @@
 # Flavio De Stefano
 
-## Software Engineer; for passion
+## Software Engineer for Spotify @Stockholm; with passion
 
 <div class="social-icons">
 	<a href="/medium" class="icon-notebook"></a>
