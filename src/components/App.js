@@ -12,7 +12,6 @@ const App = ({
   story, medium, github, projects,
 }) => (
   <React.Fragment>
-    <Ruler />
     <div id="app">
       <Story data={story} />
       <Medium data={medium} />
@@ -29,6 +28,7 @@ const App = ({
       </div>
     </div>
     <img id="avatar" src="https://gravatar.com/avatar/6a46c3623a8bb6e3e641eca16450bd83.jpg?s=600" />
+    <Ruler />
   </React.Fragment>
 );
 
