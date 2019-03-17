@@ -1,21 +1,44 @@
 {
-	"name": "kopiro",
-	"version": "1.0.0",
-	"private": true,
-	"gpgKey": "0xEDE51005D982268E",
-	"scripts": {
-		"start": "node server.js",
-		"dev": "if [ ! -d node_modules ]; then npm i; fi; nodemon --ignore ./db server.js"
-	},
-	"dependencies": {
-		"cookie-parser": "~1.4.3",
-		"debug": "~2.6.9",
-		"express": "~4.16.0",
-		"http-errors": "~1.6.2",
-		"morgan": "~1.9.0",
-		"node-fetch": "^2.3.0",
-		"nodemon": "^1.18.7",
-		"pug": "2.0.0-beta11",
-		"showdown": "^1.9.0"
-	}
+  "name": "kopiro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:server": "nodemon -r dotenv/config --config nodemon.json ./src/server",
+    "dev:client": "webpack --mode development --watch",
+    "dev": "concurrently 'yarn dev:server' 'yarn dev:client'",
+    "build": "webpack --mode production",
+    "prod": "node -r dotenv/config ./src/server"
+  },
+  "config": {
+    "gpgKey": "0xEDE51005D982268E"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "cross-fetch": "^3.0.1",
+    "dotenv": "^6.2.0",
+    "eslint": "^5.15.1",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "install": "^0.12.2",
+    "node-fetch": "^2.3.0",
+    "nodemon": "^1.18.7",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "showdown": "^1.9.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0"
+  }
 }

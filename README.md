@@ -1,8 +1,8 @@
-# Flavio De Stefano
+# Flavio Maria De Stefano - @aka kopiro
 
 ## Software Engineer for Spotify @Stockholm; with passion
 
-<div class="social-icons">
+<div id="followme">
 	<a href="/medium" class="icon-notebook"></a>
 	<a href="/twitter" class="icon-social-twitter"></a>
 	<a href="/instagram" class="icon-social-instagram"></a>

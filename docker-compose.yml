@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   app:
@@ -7,19 +7,13 @@ services:
       context: .
       dockerfile: ./Dockerfile
     restart: on-failure
-    entrypoint: ['npm', 'run', 'dev']
-    volumes:
-      - ./package.json:/app/package.json
-      - ./package-lock.json:/app/package-lock.json
-      - ./views:/app/views
-      - ./routes:/app/routes
-      - ./app.js:/app/app.js
-      - ./README.md:/app/README.md
-      - ./updater.js:/app/updater.js
-      - ./server.js:/app/server.js
-      - ./db:/app/db
+    ports:
+      - 3000:3000
     env_file:
       - .env
+    volumes:
+      - .:/app
+    entrypoint: "yarn dev"
 
   nginx:
     image: kopiro/kopiro:latest-nginx
@@ -29,18 +23,7 @@ services:
     restart: on-failure
     ports:
       - 80:80
-    volumes:
-      - ./public:/www
-      - ./render-data:/www/render
     env_file:
       - .env
-
-  render:
-    image: kopiro/kopiro:latest-render
-    build:
-      context: .
-      dockerfile: ./Dockerfile-render
-    restart: on-failure
     volumes:
-      - ./render/index.js:/app/index.js
-      - ./render-data:/screenshots
+      - ./public:/www
