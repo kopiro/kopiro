@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "server:dev": "nodemon -r dotenv/config --config nodemon.json ./src/server",
-    "server:prod": "node -r dotenv/config ./src/server"
+    "dev": "nodemon -r dotenv/config --config nodemon.json ./src/server",
+    "prod": "node -r dotenv/config ./src/server"
   },
   "config": {
     "gpgKey": "0xEDE51005D982268E"
@@ -14,15 +14,11 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.5",
-    "concurrently": "^4.1.0",
     "cross-fetch": "^3.0.1",
     "dotenv": "^6.2.0",
-    "eslint": "^5.15.1",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
-    "install": "^0.12.2",
     "node-fetch": "^2.3.0",
-    "nodemon": "^1.18.7",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "showdown": "^1.9.0",
@@ -33,9 +29,11 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0"
+    "eslint-plugin-react": "^7.11.0",
+    "nodemon": "^1.19.1"
   }
 }

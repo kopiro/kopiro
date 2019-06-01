@@ -3,7 +3,6 @@ WORKDIR /app
 VOLUME /app/db
 RUN npm -g install yarn
 COPY package.json yarn.lock ./
-RUN yarn install
+RUN yarn install && yarn cache clean
 COPY . ./
-RUN yarn build
 ENTRYPOINT [ "yarn", "run", "prod" ]
