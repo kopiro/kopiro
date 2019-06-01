@@ -8,9 +8,12 @@ function List({
       {data.map((e, i) => (
         <li key={String(i)}>
           <a target="_blank" rel="noopener noreferrer" href={getLink(e)}>
-            <b>{getTitle(e)}</b>
+            {getTitle(e)}
           </a>
-          <div>{getSubtitle(e)}</div>
+          {' '}
+          -
+          {' '}
+          {getSubtitle(e)}
         </li>
       ))}
     </ul>

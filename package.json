@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev:server": "nodemon -r dotenv/config --config nodemon.json ./src/server",
-    "dev:client": "webpack --mode development --watch",
-    "dev": "concurrently 'yarn dev:server' 'yarn dev:client'",
-    "build": "webpack --mode production",
-    "prod": "node -r dotenv/config ./src/server"
+    "server:dev": "nodemon -r dotenv/config --config nodemon.json ./src/server",
+    "server:prod": "node -r dotenv/config ./src/server"
   },
   "config": {
     "gpgKey": "0xEDE51005D982268E"

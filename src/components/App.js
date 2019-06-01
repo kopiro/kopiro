@@ -4,7 +4,6 @@ import Story from './Story';
 import Medium from './Medium';
 import Github from './Github';
 import Projects from './Projects';
-import Ruler from './Ruler';
 
 import { config } from '../../package.json';
 
@@ -27,8 +26,6 @@ const App = ({
         </a>
       </div>
     </div>
-    <img id="avatar" src="https://gravatar.com/avatar/6a46c3623a8bb6e3e641eca16450bd83.jpg?s=600" />
-    <Ruler />
   </React.Fragment>
 );
 
