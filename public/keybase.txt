@@ -1,68 +1,51 @@
-==================================================================
 https://keybase.io/kopiro
 --------------------------------------------------------------------
 
 I hereby claim:
 
-  * I am an admin of https://kopiro.it
+  * I am an admin of https://www.kopiro.me
   * I am kopiro (https://keybase.io/kopiro) on keybase.
-  * I have a public key with fingerprint 3579 CA25 0F27 FED2 BF3F  D0DF EDE5 1005 D982 268E
+  * I have a public key ASAcPljhFmiL5sjGoV0ol_FuY0Me50KT6m8ZgpZxZbCSSAo
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "0101cd0bc14251fd8b8e834f9629eacccbb41b8b8a90ad41e0e3e9058c6dc9ab37540a",
-            "fingerprint": "3579ca250f27fed2bf3fd0dfede51005d982268e",
-            "host": "keybase.io",
-            "key_id": "ede51005d982268e",
-            "kid": "0101cd0bc14251fd8b8e834f9629eacccbb41b8b8a90ad41e0e3e9058c6dc9ab37540a",
-            "uid": "5c5f71e2115b7012140dfae4cd220519",
-            "username": "kopiro"
-        },
-        "service": {
-            "hostname": "kopiro.it",
-            "protocol": "https:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "0101cd0bc14251fd8b8e834f9629eacccbb41b8b8a90ad41e0e3e9058c6dc9ab37540a",
+      "host": "keybase.io",
+      "kid": "01201c3e58e116688be6c8c6a15d2897f16e63431ee74293ea6f1982967165b092480a",
+      "uid": "5c5f71e2115b7012140dfae4cd220519",
+      "username": "kopiro"
     },
-    "ctime": 1491312699,
-    "expire_in": 157680000,
-    "prev": "0ddcff25d34e668e1101f76d5c5d9b9a45bd9a55a2c20387b9522b3ccf29806c",
-    "seqno": 6,
-    "tag": "signature"
+    "merkle_root": {
+      "ctime": 1592302802,
+      "hash": "d6dad9b09465ea8c97011838479631b97b7cbc2bdee77d99375e2cb57ade2da0737c7f306ac6b81c4acffb4d3de6e1eae9275263cb9dab0977c21ce0ef91c2bd",
+      "hash_meta": "f9da1188b9a9656fd5e5b8ba5b175e0ca6fb7f724aa827a5738f2782dfb39ca8",
+      "seqno": 16680474
+    },
+    "service": {
+      "entropy": "OKR0wbeqbFvbMF+iAo1cO0he",
+      "hostname": "www.kopiro.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1592302809,
+  "expire_in": 504576000,
+  "prev": "ba70ae3cd614697ca277615158cf70b23e88f01a02067c6e049327d264c40030",
+  "seqno": 16,
+  "tag": "signature"
 }
 
 which yields the signature:
 
------BEGIN PGP MESSAGE-----
-
-owGtUmtMFFcY3RUVRAxbCNFGijq2lq4Ic+exs7OQNtQYqEWLwRctdDuPO7vDws6y
-OwusAmmxQEkULLUpii0UEpO2KFAfNFktJoCpKQXUWlEUbCisGh6VNqQq0t4h7Y8m
-/dn759773XPOPd/Jd3hFkC5UPzlmWHKzbEO1/vv7vG7vaOPL+zFeEX2YZT/mgAsb
-zBWhR7U6ZBGzYDjAgSDivAAoggaSaObN0ExSEmsiWMgJgsDzFOBRlWNxTqQAxCEJ
-WZw2CyZRYDmeZGgK57A4TJKdNuh2uWWnimRJmmEFjqBxiWAkKBK8REoiLqIjpAGO
-0yJrJgiTGSKiXfFoDGSO5zwwXlZQDV2sC/b+A/8/+/YuyNECLTEAEgDQPIMDAlDI
-LAcpQSQInAasBvRAt5PLg5pXxSW7FawkDkO1AlmAWqxaH/96j5dVRHO5FVURlFxU
-tquqy2PRaKrPpeEKIW/9W8HKy04RRYgYBdDtkRUnZgEIKaiyJgkoFpCAMLFsHAaL
-kDq0yhqCZkxmHC3tH1ig5SKKgiQRtEhSMMOEEgMoKIkxiahDkeVZjqJ5keVomiME
-AifNDM/SBMGTgiARrBk3CZjWVL5TwSwm5JOzIU2PbHNyqtcNsZLQqkXRi3X6UN3S
-JYu04dKFLjP8M3F3XzDourvrH4DEA0GXXjNatp/pCk6sOxjwXsjp/7H0VFSWvqvk
-eMkraQ98fY9XphuP/rL1g7U9zLmOhi8am3PCvz05YHx1T3tL9PIY4d76NzovD2Xn
-V1x6v744038/kPLbteuzuuBO/46VuxX5Y19dZOHA4sp880RgNjz30a07We3rnmvN
-qg2sUsqjQpp612RGlvdkxva9x/0Qe9Ux6Mq7XpYUfbYzInn8xae+qLbQIXbwVmXz
-PW5tIONGeEX3lpqlj7s9pmcbnum6Eeh2NLYk5TX3X4yoKJYjkv7sbVuX5j8XhD0K
-Sth0p+14asuHh3966dMw3bCj+vLwUCuYqhvY1ZB4Ovn3N/emj89NDHYcpEpXj/hc
-dkfj3HxM+a+60eBjxayn7xt7Ra2fiyHynu4c2jgr3x0tO3VtIjLE/bb99s2RhBgs
-LG3etj2h0B5bVMHdnty3Y+bY7ozNezZM1/5haCo58Z2vYyzEGHx1OsMeKN44dmZb
-c1XLkStxmSOG18ktTzZfePhu8UzkmmTPprGvP3nn7HSgLyqlr5DxNz0cj9znXv3R
-E8PW81J5ev/5pqmiua/qs9tSU9uv9AzP1aww7vr5M1u8lT5QdbT9RJHtrZlKrn7W
-uz5bXc6drJkqSokK+jz6yzDHqnJ970D/4GnZSO7szVQPeWNLW5dtO5LTCbKZ0Uli
-YvL52ovV84XuvwA=
-=/X8B
------END PGP MESSAGE-----
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgHD5Y4RZoi+bIxqFdKJfxbmNDHudCk+pvGYKWcWWwkkgKp3BheWxvYWTESpcCEMQgunCuPNYUaXyid2FRWM9wsj6I8BoCBnxuBJMn0mTEADDEIAgU7shz9Eeav0XE8iTFPBriHhkR70hHHfgjbPRTuFalAgHCo3NpZ8RAjuDldmTc4HZDZZdsLvmHZqpcULJXCSkClGNMeu0fUrMVudhWoKxSPv3/8pvIzonWxGuu2PAAopx8+maSmeD3AqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOJzK0L5GwiXGCGbwnRXxiDc+VWvKtphvrBN8bQ2hDkKo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
@@ -70,4 +53,3 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/kopiro
 
 ==================================================================
-
