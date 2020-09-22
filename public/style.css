@@ -40,13 +40,14 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1.3em;
+  line-height: 1em;
 }
 
 h1 {
   font-size: 4em;
   margin-bottom: 0em;
   color: #ceff1a;
+  line-height: 0.9em;
 }
 
 h2 {
@@ -100,4 +101,27 @@ blockquote {
 hr {
   border: none;
   margin: 2em 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 1em 2em;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h3,
+  h4 {
+    transform: none;
+    position: static;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+
+  section {
+    margin-top: 1em;
+  }
 }
