@@ -6,8 +6,7 @@ const { readDbFile, readMdFile } = require("./data");
 const { DevtoList, ProjectsList, GithubList } = require("./mdComponents");
 
 const htmlTemplate = ({ title, description }, body) =>
-  `
-<!DOCTYPE html>
+  `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -23,48 +22,57 @@ const htmlTemplate = ({ title, description }, body) =>
 <body>
 ${body}
 </body>
-</html>
-`.trim();
+</html>`;
 
 const renderHtmlApp = (state, markdown) => {
   const converter = new showdown.Converter({
     noHeaderId: true,
   });
-  const html = converter.makeHtml(markdown);
+  const html = converter
+    .makeHtml(markdown)
+    .replace(/\<\/ul\>/g, "</ul></section>")
+    .replace(/\<h3\>/g, "<section><h3>");
   return htmlTemplate(state, html);
 };
 
-const renderMdApp = ({ title, description, story, github, devto, medium, projects }) => {
+const renderMdApp = ({ title, description, header, history, github, devto, projects }) => {
   return `
 # ${title}
-## ${description}
+#### kopiro
+## ${description.replace(/;/g, "<br/>")}
 
-${story}
+${header}
 
-### Press
+### me
+${history}
+
+### press
 ${DevtoList(devto)}
 
-### OSS Projects
+### oss
 ${GithubList(github)}
 
-### Projects
+### proj
 ${ProjectsList(projects)}
+
+---
 
 [GPG key: 0xEDE51005D982268E](gpgkey.txt)
 `.trim();
 };
 
 const main = async () => {
-  const [title, description, story, devto, github, projects] = await Promise.all([
+  const [title, description, header, history, devto, github, projects] = await Promise.all([
     readMdFile("title"),
     readMdFile("description"),
-    readMdFile("story"),
+    readMdFile("header"),
+    readMdFile("history"),
     readDbFile("devto"),
     readDbFile("github"),
     readDbFile("projects"),
   ]);
 
-  const state = { title, description, story, devto, github, projects };
+  const state = { title, description, header, history, devto, github, projects };
 
   const markdown = await renderMdApp(state);
   fs.writeFileSync(paths.readme, markdown);

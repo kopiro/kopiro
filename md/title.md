@@ -1,1 +1,1 @@
-Flavio De Stefano | kopiro
+Flavio De Stefano

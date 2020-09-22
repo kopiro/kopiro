@@ -1,5 +1,5 @@
 const List = ({ data, getTitle, getSubtitle, getLink }) =>
-  data.map((el) => `* [${getTitle(el)}](${getLink(el)}) - ${getSubtitle(el)}`).join("\n");
+  data.map((el) => `* [${getTitle(el)}](${getLink(el)}) ${getSubtitle(el)}`).join("\n");
 
 const StdList = (data) =>
   List({
