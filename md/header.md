@@ -9,4 +9,3 @@ I'm interested in cyber-security, cryptography and I have fun in building bots, 
 [/twitter](https://www.kopiro.me/twitter)
 [/instagram](https://www.kopiro.me/instagram)
 [/github](https://www.kopiro.me/github)
-[/linkedin](https://www.kopiro.me/linkedin)
