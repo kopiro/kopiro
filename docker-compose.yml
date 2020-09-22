@@ -8,22 +8,4 @@ services:
       dockerfile: ./Dockerfile
     restart: on-failure
     ports:
-      - 3000:3000
-    env_file:
-      - .env
-    volumes:
-      - .:/app
-    entrypoint: "yarn dev"
-
-  nginx:
-    image: kopiro/kopiro:latest-nginx
-    build:
-      context: .
-      dockerfile: ./Dockerfile-nginx
-    restart: on-failure
-    ports:
       - 80:80
-    env_file:
-      - .env
-    volumes:
-      - ./public:/www
