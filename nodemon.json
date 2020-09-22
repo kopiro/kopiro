@@ -1,5 +1,0 @@
-{
-  "restartable": "rs",
-  "inspect": 8230,
-  "watch": [".env", "./src"]
-}
