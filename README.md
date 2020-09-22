@@ -1,7 +1,5 @@
 # Flavio De Stefano | kopiro
-
 ## Sr. Software Engineer @Spotify 🇸🇪; Cyber-security obsessed; I built a monkey Monkey face AI; I like RJ45 cables; oh, I hate YAML.
-
 - [/linkedin](https://www.kopiro.me/linkedin)
 - [/devto](https://www.kopiro.me/devto)
 - [/twitter](https://www.kopiro.me/twitter)
@@ -18,7 +16,6 @@ Specializing as a full-stack developer using classical PHP, learning Wordpress a
 In the last few years, I used NodeJS as the main backend language and built web apps with React, Redux, and GraphQL. I also made some experience in IOT with Arduino and Raspberry PI boards. I learned how micro-services ecosystems work and managed Docker containers, CI pipelines by building infrastructures in AWS.
 
 Building bots, vocal assistants, CLI utilities and working with Unity in the free time, I love to build useful stuff that solves everyday problems, and as soon as I can I release open source project. In my work, I like to build stuff by applying a lot of math, very useful in WebGL and low-level graphics animations.
-
 
 ### OSS Projects
 * [siriwave](https://github.com/kopiro/siriwave) - The Apple® Siri wave-form replicated in a JS library. (★1077/141)

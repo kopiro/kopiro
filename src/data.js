@@ -2,7 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const paths = require("./paths");
 
-// eslint-disable-next-line import/prefer-default-export
+async function readMdFile(file) {
+  return fs.readFileSync(path.join(paths.md, `${file}.md`), "utf-8").trim();
+}
+
 async function readDbFile(file) {
   const filePath = path.join(paths.db, `${file}.json`);
   if (!fs.existsSync(filePath)) return [];
@@ -35,4 +38,4 @@ async function readDbFile(file) {
   return data;
 }
 
-module.exports = { readDbFile };
+module.exports = { readDbFile, readMdFile };
