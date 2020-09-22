@@ -23,12 +23,12 @@ const RUNNERS = {
   },
 };
 
-async function writeDbFile(file, json) {
+const writeDbFile = (file, json) => {
   const filePath = path.join(paths.db, `${file}.json`);
   return fs.writeFileSync(filePath, JSON.stringify(json, null, 2));
-}
+};
 
-async function main() {
+const main = () => {
   Object.keys(RUNNERS).forEach(async (name) => {
     console.log(`${name}: running...`);
     try {
@@ -39,6 +39,6 @@ async function main() {
       console.error(`${name}: ERR`, ex);
     }
   });
-}
+};
 
 main();
