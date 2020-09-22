@@ -5,7 +5,8 @@
   "scripts": {
     "fetch-data": "node -r dotenv/config ./src/fetch-data.js",
     "generate": "node -r dotenv/config ./src/generate.js",
-    "dev": "yarn fetch-data; while true; do yarn generate; sleep 2; done"
+    "dev": "yarn fetch-data; while true; do yarn generate; sleep 2; done",
+    "deploy": "yarn fetch-data && yarn generate && docker-compose build && docker-compose push"
   },
   "dependencies": {
     "cross-fetch": "^3.0.6",
