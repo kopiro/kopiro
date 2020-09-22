@@ -3,7 +3,7 @@ const path = require("path");
 const showdown = require("showdown");
 const paths = require("./paths");
 const { readDbFile, readMdFile } = require("./data");
-const { DevtoList, ProjectsList, MediumList, GithubList } = require("./mdComponents");
+const { DevtoList, ProjectsList, GithubList } = require("./mdComponents");
 
 const htmlTemplate = ({ title, description }, body) =>
   `
@@ -43,7 +43,6 @@ ${story}
 
 ### Press
 ${DevtoList(devto)}
-${MediumList(medium)}
 
 ### OSS Projects
 ${GithubList(github)}
@@ -56,17 +55,16 @@ ${ProjectsList(projects)}
 };
 
 const main = async () => {
-  const [title, description, story, medium, devto, github, projects] = await Promise.all([
+  const [title, description, story, devto, github, projects] = await Promise.all([
     readMdFile("title"),
     readMdFile("description"),
     readMdFile("story"),
-    readDbFile("medium"),
     readDbFile("devto"),
     readDbFile("github"),
     readDbFile("projects"),
   ]);
 
-  const state = { title, description, story, medium, devto, github, projects };
+  const state = { title, description, story, devto, github, projects };
 
   const markdown = await renderMdApp(state);
   fs.writeFileSync(paths.readme, markdown);
