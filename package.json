@@ -5,7 +5,7 @@
   "scripts": {
     "fetch-data": "node -r dotenv/config ./src/fetch-data.js",
     "generate": "node -r dotenv/config ./src/generate.js",
-    "dev": "yarn fetch-data; open ./public/index.html; while true; do yarn generate; sleep 2; done",
+    "dev": "./dev.sh",
     "deploy": "yarn fetch-data && yarn generate && docker-compose build && docker-compose push"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "serve": "^11.3.2"
   }
 }

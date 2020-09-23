@@ -13,7 +13,6 @@ I'm interested in cyber-security, cryptography and I have fun in building bots, 
 [/twitter](https://www.kopiro.me/twitter)
 [/instagram](https://www.kopiro.me/instagram)
 [/github](https://www.kopiro.me/github)
-[/linkedin](https://www.kopiro.me/linkedin)
 
 ### me
 I started coding in high-school by studying algorithms and data structures in C and C++. In the meantime, I used to build simple apps using .NET technologies and experimenting with ancient Windows Mobile phones... and it immediately became my passion.

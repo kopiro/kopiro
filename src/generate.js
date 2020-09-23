@@ -28,10 +28,7 @@ const renderHtmlApp = (state, markdown) => {
   const converter = new showdown.Converter({
     noHeaderId: true,
   });
-  const html = converter
-    .makeHtml(markdown)
-    .replace(/\<\/ul\>/g, "</ul></section>")
-    .replace(/\<h3\>/g, "<section><h3>");
+  const html = converter.makeHtml(markdown).replace(/<h3>/g, "</section><section><h3>");
   return htmlTemplate(state, html);
 };
 
