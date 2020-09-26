@@ -58,7 +58,7 @@ ${ProjectsList(projects)}
 
 ---
 
-[GPG key: ${gpg}](gpg.txt)
+[${gpg}](gpg.txt)
 `.trim();
 };
 
@@ -69,13 +69,13 @@ const main = async () => {
     description: readMdFile("description"),
     header: readMdFile("header"),
     history: readMdFile("history"),
+    gpg: readMdFile("gpg"),
     devto: readDbFile("devto"),
     github: readDbFile("github"),
     projects: readDbFile("projects"),
-    gpg: readMdFile("gpg"),
     metas: [
-      { name: "author", content: title },
-      { name: "description", content: description },
+      { name: "author", content: readMdFile("title") },
+      { name: "description", content: readMdFile("description") },
       { name: "viewport", content: "width=device-width" },
     ],
     links: [

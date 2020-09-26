@@ -52,4 +52,4 @@ In the last few years, I used NodeJS as main backend language and I've built web
 
 ---
 
-[GPG key: undefined](gpgkey.txt)
+[0xEDE51005D982268E](gpg.txt)
