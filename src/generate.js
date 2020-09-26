@@ -5,19 +5,19 @@ const paths = require("./paths");
 const { readDbFile, readMdFile } = require("./data");
 const { DevtoList, ProjectsList, GithubList } = require("./mdComponents");
 
-const htmlTemplate = ({ title, description }, body) =>
+const htmlTag = (tag) => (props) =>
+  `<${tag} ${Object.entries(props)
+    .map(([k, v]) => `${k}="${v}"`)
+    .join(" ")} />`;
+
+const htmlTemplate = ({ title, metas, links, lang = "en" }, body) =>
   `<!DOCTYPE html>
-<html lang="en">
+<html lang="${lang}">
 <head>
   <meta charset="utf-8" />
   <title>${title}</title>
-  <meta name="author" content="${title}" />
-  <meta name="description" content="${description}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  ${metas.map(htmlTag("meta")).join("\n")}
+  ${links.map(htmlTag("link")).join("\n")}
 </head>
 <body>
 ${body}
@@ -27,49 +27,64 @@ ${body}
 const renderHtmlApp = (state, markdown) => {
   const converter = new showdown.Converter({
     noHeaderId: true,
+    openLinksInNewWindow: true,
+    emoji: true,
   });
-  const html = converter.makeHtml(markdown).replace(/<h3>/g, "</section><section><h3>");
+  converter.setFlavor("github");
+  let i = 0;
+  const html = converter.makeHtml(markdown).replace(/<h2>/g, () => `${i++ > 0 ? "</section>" : ""}<section><h2>`);
   return htmlTemplate(state, html);
 };
 
-const renderMdApp = ({ title, description, header, history, github, devto, projects }) => {
+const renderMdApp = ({ title, subtitle, description, header, history, github, devto, projects, gpg }) => {
   return `
 # ${title}
-#### kopiro
-## ${description.replace(/;/g, "<br/>")}
+## ${subtitle}
+### ${description.replace(/;/g, "<br/>")}
 
 ${header}
 
-### me
+## me
 ${history}
 
-### press
+## press
 ${DevtoList(devto)}
 
-### oss
+## oss
 ${GithubList(github)}
 
-### proj
+## proj
 ${ProjectsList(projects)}
 
 ---
 
-[GPG key: 0xEDE51005D982268E](gpgkey.txt)
+[GPG key: ${gpg}](gpg.txt)
 `.trim();
 };
 
 const main = async () => {
-  const [title, description, header, history, devto, github, projects] = await Promise.all([
-    readMdFile("title"),
-    readMdFile("description"),
-    readMdFile("header"),
-    readMdFile("history"),
-    readDbFile("devto"),
-    readDbFile("github"),
-    readDbFile("projects"),
-  ]);
-
-  const state = { title, description, header, history, devto, github, projects };
+  const state = {
+    title: readMdFile("title"),
+    subtitle: readMdFile("subtitle"),
+    description: readMdFile("description"),
+    header: readMdFile("header"),
+    history: readMdFile("history"),
+    devto: readDbFile("devto"),
+    github: readDbFile("github"),
+    projects: readDbFile("projects"),
+    gpg: readMdFile("gpg"),
+    metas: [
+      { name: "author", content: title },
+      { name: "description", content: description },
+      { name: "viewport", content: "width=device-width" },
+    ],
+    links: [
+      { rel: "stylesheet", href: "style.css" },
+      { rel: "apple-touch-icon", sizes: "60x60", href: "apple-touch-icon.png" },
+      { rel: "icon", sizes: "32x32", type: "image/png", href: "favicon-32x32.png" },
+      { rel: "icon", sizes: "16x16", type: "image/png", href: "favicon-16x16.png" },
+    ],
+  };
 
   const markdown = await renderMdApp(state);
   fs.writeFileSync(paths.readme, markdown);

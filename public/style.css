@@ -52,13 +52,6 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4em;
-  color: #fff;
-  margin-bottom: 1em;
-}
-
-h3,
-h4 {
   font-size: 4em;
   font-weight: bold;
   margin-bottom: 0em;
@@ -68,16 +61,16 @@ h4 {
   transform: translateX(-100%) rotate(-90deg) translateY(-1em);
   position: absolute;
   letter-spacing: -2px;
-  /* right: 0; */
-  top: -0.6em;
+  top: -0.4em;
   margin: 0;
-  /* text-align: right; */
-  /* right: 0; */
   transform-origin: right;
 }
 
-h4 {
-  top: 0.3em;
+h3 {
+  font-size: 1.4em;
+  color: #fff;
+  margin-bottom: 1em;
+  margin-top: 0;
 }
 
 ul {
