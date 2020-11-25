@@ -78,12 +78,7 @@ const main = async () => {
       { name: "description", content: readMdFile("description") },
       { name: "viewport", content: "width=device-width" },
     ],
-    links: [
-      { rel: "stylesheet", href: "style.css" },
-      { rel: "apple-touch-icon", sizes: "60x60", href: "apple-touch-icon.png" },
-      { rel: "icon", sizes: "32x32", type: "image/png", href: "favicon-32x32.png" },
-      { rel: "icon", sizes: "16x16", type: "image/png", href: "favicon-16x16.png" },
-    ],
+    links: [{ rel: "stylesheet", href: "style.css" }],
   };
 
   const markdown = await renderMdApp(state);
