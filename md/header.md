@@ -4,8 +4,9 @@ I'm interested in cyber-security, cryptography and I have fun in building bots, 
 
 > One of the greatest satisfactions is to create something on your own; my best way to do it's by coding.
 
-[/linkedin](https://www.kopiro.me/linkedin)
-[/devto](https://www.kopiro.me/devto)
-[/twitter](https://www.kopiro.me/twitter)
-[/instagram](https://www.kopiro.me/instagram)
-[/github](https://www.kopiro.me/github)
+- [/linkedin](https://www.kopiro.me/linkedin)
+- [/devto](https://www.kopiro.me/devto)
+- [/twitter](https://www.kopiro.me/twitter)
+- [/instagram](https://www.kopiro.me/instagram)
+- [/github](https://www.kopiro.me/github)
+- [/codewars](https://www.kopiro.me/codewars)
