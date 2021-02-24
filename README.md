@@ -1,6 +1,6 @@
 # Flavio De Stefano
 ## kopiro
-### Sr. Software Engineer @Spotify in Stockholm<br/> Cyber-security obsessed<br/> I've built a monkey AI<br/> I like RJ45 cables<br/> oh, I hate YAML
+### Sr. Software Engineer @Spotify in Stockholm 🇸🇪<br/>🕵️‍♂️ Cyber-security obsessed<br/>🤖 I've built a monkey AI<br/>📠 I like RJ45 cables<br/>📃 oh, I hate YAML
 
 Hey! I currently work at Spotify in the Stockholm HQ as Senior Software Engineer, building the [Web Player](https://open.spotify.com) and the [Desktop App](https://www.spotify.com/download/other); other than several acquisition products like [the widgets](https://developer.spotify.com/documentation/widgets).
 

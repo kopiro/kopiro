@@ -1,1 +1,1 @@
-Sr. Software Engineer @Spotify in Stockholm; Cyber-security obsessed; I've built a monkey AI; I like RJ45 cables; oh, I hate YAML
+Sr. Software Engineer @Spotify in Stockholm 🇸🇪<br/>🕵️‍♂️ Cyber-security obsessed<br/>🤖 I've built a monkey AI<br/>📠 I like RJ45 cables<br/>📃 oh, I hate YAML
