@@ -8,9 +8,9 @@ const RUNNERS = {
     const usernames = process.env.GITHUB_USERNAME.split(",");
     const responses = await Promise.all(
       usernames.map((username) =>
-        fetch(
-          `https://api.github.com/users/${username}/repos?per_page=100&access_token=${process.env.GITHUB_TOKEN}`,
-        ).then((response) => response.json()),
+        fetch(`https://api.github.com/users/${username}/repos?per_page=100`, {
+          headers: { authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
+        }).then((response) => response.json()),
       ),
     );
     return responses.reduce((carry, e) => carry.concat(e), []).sort((a, b) => b.stargazers_count - a.stargazers_count);
