@@ -54,4 +54,4 @@ In the last few years, I used NodeJS as main backend language and I've built web
 
 ---
 
-[0xEDE51005D982268E](gpg.txt)
+[0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

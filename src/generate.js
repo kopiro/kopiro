@@ -58,7 +58,7 @@ ${ProjectsList(projects)}
 
 ---
 
-[${gpg}](gpg.txt)
+${gpg}
 `.trim();
 };
 
@@ -81,10 +81,10 @@ const main = async () => {
     links: [{ rel: "stylesheet", href: "style.css" }],
   };
 
-  const markdown = await renderMdApp(state);
-  fs.writeFileSync(paths.readme, markdown);
+  const markdown = renderMdApp(state);
+  const html = renderHtmlApp(state, markdown);
 
-  const html = await renderHtmlApp(state, markdown);
+  fs.writeFileSync(paths.readme, markdown);
   fs.writeFileSync(path.join(paths.public, "index.html"), html);
 };
 
