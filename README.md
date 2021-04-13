@@ -32,7 +32,7 @@ In the last few years, I used NodeJS as main backend language and I've built web
 * [How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)](https://dev.to/kopiro/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox-2md2) This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Ma...
 
 ## oss
-* [siriwave](https://github.com/kopiro/siriwave) The Apple® Siri wave-form replicated in a JS library. (★1175/147)
+* [siriwave](https://github.com/kopiro/siriwave) The Apple® Siri wave-form replicated in a JS library. (★1191/151)
 * [trimethyl](https://github.com/trimethyl/trimethyl) Titanium toolchain with superpower and wrapper around bugs. (★100/21)
 * [ti.notifications](https://github.com/caffeinalab/ti.notifications) Useful Titanium+Alloy widget to handle notifications messages when app is in foreground. (★84/23)
 * [ti.tilt-image-view](https://github.com/caffeinalab/ti.tilt-image-view) FacebookPaper-style tilt-fullscreen Image viewer widget for Titanium Alloy. (★55/14)
