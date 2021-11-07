@@ -7,7 +7,7 @@ const { DevtoList, ProjectsList, GithubList } = require("./mdComponents");
 
 const htmlTag = (tag) => (props) =>
   `<${tag} ${Object.entries(props)
-    .map(([k, v]) => `${k}="${v}"`)
+    .map(([k, v]) => `${k}="${v.replace("<br/>", " - ")}"`)
     .join(" ")} />`;
 
 const htmlTemplate = ({ title, metas, links, lang = "en" }, body) =>
