@@ -128,3 +128,44 @@ section:nth-child(2) > ul > li > a {
     margin-top: 1em;
   }
 }
+
+@media (print) {
+
+  html, body {
+    background: #fff;
+    color: #444;
+  }
+
+  a::after {
+    content: ' [' attr(href) '] ';
+    opacity: 0.4;
+  }
+
+  h1 {
+      font-size: 3em;
+      color: #111;
+      margin-bottom: 0;
+  }
+
+  h2 {
+      font-size: 2.5em;
+      color: #222; 
+      transform: initial;
+      position: initial;
+      top: initial;
+      margin: initial;  
+      -webkit-text-stroke-width: initial;
+      -webkit-text-stroke-color: initial;
+      margin-bottom: 0.5em;  
+  }
+
+  h3 {
+      font-size: 1.3em;
+      color: #333;        
+  }
+
+  section {
+      margin-top: 1.5em;
+  }
+
+}
