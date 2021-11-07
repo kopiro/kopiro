@@ -1,6 +1,10 @@
-Hey! I currently work at Spotify in the Stockholm HQ as Senior Software Engineer, building the [Web Player](https://open.spotify.com) and the [Desktop App](https://www.spotify.com/download/other); other than several acquisition products like [the widgets](https://developer.spotify.com/documentation/widgets).
+Hej! Flavio here.
 
-I'm interested in cyber-security, cryptography and I have fun in building bots, vocal assistants, IOT devices and CLI utilities. In my free time I love to build stuff that solve everyday problems, and as soon I can I release them as OSS projects. In general, I tend to apply lot of math in order to create elegant and readable algorithms.
+I'm interested in cyber-security, cryptography and I have fun in building bots, vocal assistants, IOT devices.
+
+In my free time I love to build stuff that solve everyday problems, and as soon I can I release them as OSS projects.
+
+I tend to apply lot of math in order to create elegant and readable algorithms.
 
 > One of the greatest satisfactions is to create something on your own; my best way to do it's by coding.
 
