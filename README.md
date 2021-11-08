@@ -1,6 +1,5 @@
 # Flavio De Stefano
-## kopiro
-### Senior Software Engineer at Spotify (living in Stockholm).
+### Senior Software Engineer at Spotify (living in Stockholm); known as kopiro
 
 - [/portfolio](https://www.kopiro.me)
 - [/github](https://github.com/kopiro)

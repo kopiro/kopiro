@@ -36,10 +36,9 @@ const renderHtmlApp = (state, markdown) => {
   return htmlTemplate(state, html);
 };
 
-const renderMdApp = ({ title, subtitle, description, header, history, github, devto, projects, gpg }) => {
+const renderMdApp = ({ title, description, header, history, github, devto, projects, gpg }) => {
   return `
 # ${title}
-## ${subtitle}
 ### ${description}
 
 ${header}
@@ -65,7 +64,6 @@ ${gpg}
 const main = async () => {
   const state = {
     title: readMdFile("title"),
-    subtitle: readMdFile("subtitle"),
     description: readMdFile("description"),
     header: readMdFile("header"),
     history: readMdFile("history"),
