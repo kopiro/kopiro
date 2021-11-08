@@ -1,5 +1,5 @@
 # Flavio De Stefano
-## @kopiro
+## kopiro
 ### Senior Software Engineer at Spotify (living in Stockholm).
 
 - [/portfolio](https://www.kopiro.me)
