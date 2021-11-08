@@ -1,23 +1,14 @@
 # Flavio De Stefano
-## kopiro
+## @kopiro
 ### Senior Software Engineer at Spotify (living in Stockholm).
 
-Hej! Flavio here.
-
-I'm interested in cyber-security, cryptography and I have fun in building bots, vocal assistants, IOT devices.
-
-In my free time I love to build stuff that solve everyday problems, and as soon I can I release them as OSS projects.
-
-I tend to apply lot of math in order to create elegant and readable algorithms.
-
-> One of the greatest satisfactions is to create something on your own; my best way to do it's by coding.
-
-- [/linkedin](https://www.kopiro.me/linkedin)
-- [/devto](https://www.kopiro.me/devto)
-- [/twitter](https://www.kopiro.me/twitter)
-- [/instagram](https://www.kopiro.me/instagram)
-- [/github](https://www.kopiro.me/github)
-- [/codewars](https://www.kopiro.me/codewars)
+- [/portfolio](https://www.kopiro.me)
+- [/github](https://github.com/kopiro)
+- [/devto](https://dev.to/kopiro)
+- [/linkedin](https://www.linkedin.com/in/destefanoflavio/)
+- [/twitter](https://twitter.com/destefanoflavio)
+- [/codewars](https://www.codewars.com/users/kopiro)
+- [/instagram](https://www.instagram.com/destefanoflavio)
 
 ## me
 I'm currently working at Spotify, building the [Desktop App](https://www.spotify.com/download/other), the server and client of the [Web Player](https://open.spotify.com), and other several acquisition products like [the widgets](https://developer.spotify.com/documentation/widgets).
@@ -29,6 +20,8 @@ Specializing as a full-stack developer using classical PHP, learning Joomla, Mag
 Before joining Spotify, I used Node.js as main backend language and I've built web apps with React & Redux and GraphQL. I also made some experience in IOT using Arduino and Raspberry PI boards.
 
 I learned how micro-services ecosystems work and dig a bit into dev-ops by managing Docker containers, CI pipelines by building infrastructures in AWS.
+
+> One of the greatest satisfactions is to create something on your own; my best way to do it's by coding.
 
 ## press
 * [How I built the SiriWaveJS library: a look at the math and the code](https://dev.to/kopiro/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code-l0o) It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iP...

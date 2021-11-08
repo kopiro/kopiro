@@ -7,3 +7,5 @@ Specializing as a full-stack developer using classical PHP, learning Joomla, Mag
 Before joining Spotify, I used Node.js as main backend language and I've built web apps with React & Redux and GraphQL. I also made some experience in IOT using Arduino and Raspberry PI boards.
 
 I learned how micro-services ecosystems work and dig a bit into dev-ops by managing Docker containers, CI pipelines by building infrastructures in AWS.
+
+> One of the greatest satisfactions is to create something on your own; my best way to do it's by coding.
