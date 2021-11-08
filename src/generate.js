@@ -40,7 +40,7 @@ const renderMdApp = ({ title, subtitle, description, header, history, github, de
   return `
 # ${title}
 ## ${subtitle}
-### ${description.replace(/;/g, "<br/>")}
+### ${description}
 
 ${header}
 
@@ -78,7 +78,7 @@ const main = async () => {
       { name: "description", content: readMdFile("description") },
       { name: "viewport", content: "width=device-width" },
     ],
-    links: [{ rel: "stylesheet", href: "style.css" }],
+    links: [{ rel: "stylesheet", href: `style.css?t=${Date.now()}` }],
   };
 
   const markdown = renderMdApp(state);
