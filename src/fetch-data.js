@@ -5,13 +5,25 @@ const paths = require("./paths");
 
 const RUNNERS = {
   github: async () => {
+    const MAX_PER_PAGE = 100;
     const usernames = process.env.GITHUB_USERNAME.split(",");
     const responses = await Promise.all(
-      usernames.map((username) =>
-        fetch(`https://api.github.com/users/${username}/repos?per_page=100`, {
-          headers: { authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
-        }).then((response) => response.json()),
-      ),
+      usernames.map(async (username) => {
+        let page = 1;
+        let json = null;
+        let carry = [];
+        while (json == null || json.length > 0) {
+          const response = await fetch(
+            `https://api.github.com/users/${username}/repos?per_page=${MAX_PER_PAGE}&page=${page++}`,
+            {
+              headers: { authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
+            },
+          );
+          json = await response.json();
+          carry = carry.concat(json);
+        }
+        return carry;
+      }),
     );
     return responses.reduce((carry, e) => carry.concat(e), []).sort((a, b) => b.stargazers_count - a.stargazers_count);
   },
