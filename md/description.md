@@ -1,1 +1,1 @@
-Senior Software Engineer at Spotify (living in Stockholm); known as kopiro
+Senior Engineer living in Stockholm - alias: kopiro
