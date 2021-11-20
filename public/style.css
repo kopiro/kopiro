@@ -1,12 +1,11 @@
 html {
   padding: 0;
   margin: 0;
-  background: rgb(34, 22, 39);
+  background: #132723;
   color: #fff;
-  font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
-  font-weight: normal;
+  font-size: 16px;
+  font-family: -apple-system, sans-serif;
+  font-weight: 400
 }
 
 body {
@@ -15,157 +14,151 @@ body {
   text-align: left;
   padding-left: 8em;
   padding-bottom: 4em;
-  max-width: 600px;
+  max-width: 600px
 }
 
 p {
-  margin: 0 0 0.4em 0;
-  line-height: 1.5em;
+  margin: 0 0 .4em;
+  line-height: 1.5em
 }
 
 a {
-  color: #60afff;
-  text-decoration: none;
+  color: #28baa2;
+  text-decoration: none
 }
 
 a:hover {
-  color: #ceff1a;
+  color: #ceff1a
 }
 
 section {
   position: relative;
-  margin-top: 2em;
+  margin-top: 2em
 }
 
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1em;
+h1,h2,h3,h4 {
+  line-height: 1em
 }
 
 h1 {
-  font-size: 4em;
-  margin-bottom: 0.2em;
+  font-size: 3em;
+  margin-bottom: .2em;
   color: #ceff1a;
-  line-height: 0.9em;
+  line-height: .9em
 }
 
 h2 {
-  font-size: 4em;
-  font-weight: bold;
-  margin-bottom: 0em;
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 0;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ceff1a;
-  color: rgb(34, 22, 39);
+  color: #221627;
   transform: translateX(-100%) rotate(-90deg) translateY(-1em);
   position: absolute;
   letter-spacing: -2px;
-  top: -0.4em;
+  top: -.4em;
   margin: 0;
-  transform-origin: right;
+  transform-origin: right
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: #fff;
   margin-bottom: 1em;
-  margin-top: 0;
+  margin-top: 0
 }
 
 ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0
 }
 
 section ul li {
-  margin-bottom: 1em;
+  margin-bottom: 1em
 }
 
 section ul li a {
-  display: block;
+  display: block
 }
 
 blockquote {
   margin: 1em 0;
-  color: #cccc;
+  color: #cccc
 }
 
 hr {
   border: none;
-  margin: 2em 0;
+  margin: 2em 0
 }
 
-section:nth-child(2) > ul > li {
+section:nth-child(2)>ul>li {
   display: inline;
-  margin: 0;
+  margin: 0
 }
 
-section:nth-child(2) > ul > li > a {
-  display: inline;
+section:nth-child(2)>ul>li>a {
+  display: inline
 }
 
-@media (max-width: 600px) {
+@media(max-width: 600px) {
   body {
-    font-size: 16px;
-    padding: 1em 2em;
+      font-size:16px;
+      padding: 1em 2em
   }
 
   h1 {
-    font-size: 3em;
+      font-size: 3em
   }
 
-  h3,
-  h4 {
-    transform: none;
-    position: static;
-    font-size: 3em;
-    margin-bottom: 0.5em;
+  h3,h4 {
+      transform: none;
+      position: static;
+      font-size: 3em;
+      margin-bottom: .5em
   }
 
   section {
-    margin-top: 1em;
+      margin-top: 1em
   }
 }
 
-@media (print) {
-
-  html, body {
-    background: #fff;
-    color: #444;
+@media(print) {
+  html,body {
+      background: #fff;
+      color: #444
   }
 
   a::after {
-    content: ' [' attr(href) '] ';
-    opacity: 0.4;
+      content: ' [' attr(href) '] ';
+      opacity: .4
   }
 
   h1 {
       font-size: 3em;
       color: #111;
-      margin-bottom: 0;
+      margin-bottom: 0
   }
 
   h2 {
       font-size: 2.5em;
-      color: #222; 
+      color: #222;
       transform: initial;
       position: initial;
       top: initial;
-      margin: initial;  
+      margin: initial;
       -webkit-text-stroke-width: initial;
       -webkit-text-stroke-color: initial;
-      margin-bottom: 0.5em;  
+      margin-bottom: .5em
   }
 
   h3 {
       font-size: 1.3em;
-      color: #333;        
+      color: #333
   }
 
   section {
-      margin-top: 1.5em;
+      margin-top: 1.5em
   }
-
 }
