@@ -1,4 +1,4 @@
-# Flavio De Stefano
+# Flavio De Stefano (kopiro)
 ### SSWE working on @Spotify desktop client & web player, living in Sweden.
 
 - [/portfolio](https://www.kopiro.me)
