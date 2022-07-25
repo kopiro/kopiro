@@ -9,21 +9,6 @@
 - [/codewars](https://www.codewars.com/users/kopiro)
 - [/instagram](https://www.instagram.com/destefanoflavio)
 
-## me
-I'm currently working at Spotify, building the [Desktop App](https://www.spotify.com/download/other), the server and client of the [Web Player](https://open.spotify.com), and other several acquisition products like [the widgets](https://developer.spotify.com/documentation/widgets).
-
-During my free time, I'm learning about cyber-security and cryptography, and I'm having fun contributing to OSS projects.
-
-I started coding in high school by studying algorithms and data structures in C and C++. In the meantime, I used to build simple apps using .NET technologies and experiment with (now) ancient Windows Mobile phones... and it immediately became my passion.
-
-Specializing as a full-stack developer using classical PHP, learning Joomla, Magento, and WordPress, then I focused on building REST APIs using Laravel. During the mobile era, I developed iOS and Android apps using Appcelerator Titanium and React Native.
-
-Before joining Spotify, I used Node.js as backend language and I've built web apps with React & Redux and GraphQL; I also made some experience in IoT using Arduino and Raspberry Pi boards.
-
-I learned how micro-services ecosystems work and dig a bit into dev-ops by managing Docker containers, CI pipelines by building infrastructures in AWS.
-
-> One of the greatest satisfactions is to create something on your own; my best way to do it's by coding.
-
 ## press
 * [How I built the SiriWaveJS library: a look at the math and the code](https://dev.to/kopiro/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code-l0o) It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iP...
 * [Kata resolution: Next bigger number with the same digits](https://dev.to/kopiro/kata-resolution-next-bigger-number-with-the-same-digits-41mj) I would like to share with you my solution of a Kata on CodeWars.  CodeWars is a website where you ha...

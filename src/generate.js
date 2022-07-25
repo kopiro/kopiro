@@ -43,9 +43,6 @@ const renderMdApp = ({ title, description, header, history, github, devto, proje
 
 ${header}
 
-## me
-${history}
-
 ## press
 ${DevtoList(devto)}
 
@@ -66,7 +63,6 @@ const main = async () => {
     title: readMdFile("title"),
     description: readMdFile("description"),
     header: readMdFile("header"),
-    history: readMdFile("history"),
     gpg: readMdFile("gpg"),
     devto: readDbFile("devto"),
     github: readDbFile("github"),
