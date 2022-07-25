@@ -1,5 +1,5 @@
 # Flavio De Stefano
-### Senior Engineer living in Stockholm - alias: kopiro
+### SSWE working on @Spotify desktop client & web player, living in Sweden.
 
 - [/portfolio](https://www.kopiro.me)
 - [/github](https://github.com/kopiro)
@@ -34,25 +34,26 @@ I learned how micro-services ecosystems work and dig a bit into dev-ops by manag
 * [How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)](https://dev.to/kopiro/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox-2md2) This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Ma...
 
 ## oss
-* [siriwave](https://github.com/kopiro/siriwave) The Apple® Siri wave-form replicated in a JS library. (★1270/158)
+* [siriwave](https://github.com/kopiro/siriwave) The Apple® Siri wave-form replicated in a JS library. (★1285/161)
 * [trimethyl](https://github.com/trimethyl/trimethyl) Titanium toolchain with superpower and wrapper around bugs. (★99/20)
 * [ti.notifications](https://github.com/caffeinalab/ti.notifications) Useful Titanium+Alloy widget to handle notifications messages when app is in foreground. (★84/23)
 * [ti.tilt-image-view](https://github.com/caffeinalab/ti.tilt-image-view) FacebookPaper-style tilt-fullscreen Image viewer widget for Titanium Alloy. (★54/14)
 * [ti.goosh](https://github.com/caffeinalab/ti.goosh) GCM/FCM module for Titanium. (★53/36)
 * [ti.loader](https://github.com/caffeinalab/ti.loader) Alloy+Titanium widget to display a loader mask for you applications. (★44/14)
+* [homebridge-playstation](https://github.com/kopiro/homebridge-playstation) Playstation integration for Homebridge / HOOBS. (★36/1)
+* [homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera) Homebridge plugin for TP-Link TAPO security cameras (★31/6)
 * [ti.formbuilder](https://github.com/caffeinalab/ti.formbuilder) Build forms for Titanium with just an object. (★24/6)
+* [ti.passcode](https://github.com/caffeinalab/ti.passcode) Alloy+Titanium widget for an identical iPhone lock screen with passcode. (★23/5)
 * [ti.sharer](https://github.com/caffeinalab/ti.sharer) Sharing widget heavily inspired by AirBNB, with default drivers and the ability to add custom drivers to share. (★23/6)
-* [ti.passcode](https://github.com/caffeinalab/ti.passcode) Alloy+Titanium widget for an identical iPhone lock screen with passcode. (★22/5)
-* [homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera) Homebridge plugin for TP-Link TAPO security cameras (★17/3)
-* [dotfiles](https://github.com/kopiro/dotfiles) kopiro's (.)files (★8/1)
 * [whatever2telegram](https://github.com/kopiro/whatever2telegram) Allows forwarding whatever you want to a Telegram handle. (★8/0)
-* [homebridge-playstation](https://github.com/kopiro/homebridge-playstation) Playstation integration for Homebridge / HOOBS. (★6/0)
 * [ulala](https://github.com/kopiro/ulala) Show the right things when you scroll (★4/1)
 * [backup](https://github.com/kopiro/backup) null (★2/0)
 * [kopiro](https://github.com/kopiro/kopiro) Personal portfolio website (★1/0)
+* [xscreensaver-apple-aerial](https://github.com/kopiro/xscreensaver-apple-aerial) Apple TV screensaver for Linux (★1/0)
 * [tommy](https://github.com/caffeinalab/tommy) Web Assets converter and optimizer (★1/0)
 * [eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr) eslint plugin to forbid globals within the react server side rendering (★0/0)
-* [xscreensaver-apple-aerial](https://github.com/kopiro/xscreensaver-apple-aerial) Apple TV screensaver for Linux (★0/0)
+* [homebridge-hyperion-control](https://github.com/kopiro/homebridge-hyperion-control) Turn hyperion ng instance on/off and change brightness (★0/0)
+* [homebridge-mqttthing](https://github.com/kopiro/homebridge-mqttthing) A plugin for Homebridge allowing the integration of many different accessory types using MQTT. (★0/0)
 
 ## proj
 * [PolpettaMag - website](http://www.polpettamag.com/) Website for the magazine "PolpettaMag" using Wordpress containerized with Docker

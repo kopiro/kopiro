@@ -1,1 +1,1 @@
-Senior Engineer living in Stockholm - alias: kopiro
+SSWE working on @Spotify desktop client & web player, living in Sweden.
