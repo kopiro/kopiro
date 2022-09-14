@@ -1,22 +1,27 @@
 const List = ({ data, getTitle, getSubtitle, getLink }) =>
   data.map((el) => `* [${getTitle(el)}](${getLink(el)}) ${getSubtitle(el)}`).join("\n");
 
-const StdList = (data) =>
+const DevtoList = (data) =>
   List({
     data,
     getTitle: (e) => e.title,
-    getSubtitle: (e) => e.description,
+    getSubtitle: (e) => e.readable_publish_date,
     getLink: (e) => e.url,
   });
 
-const DevtoList = StdList;
-const ProjectsList = StdList;
+const ProjectsList = (data) =>
+  List({
+    data,
+    getTitle: (e) => e.title,
+    getSubtitle: (e) => e.year,
+    getLink: (e) => e.url,
+  });
 
 const GithubList = (data) =>
   List({
     data,
     getTitle: (e) => e.name,
-    getSubtitle: (e) => `${e.description} (★${e.stargazers_count}/${e.forks_count})`,
+    getSubtitle: (e) => e.description,
     getLink: (e) => e.html_url,
   });
 

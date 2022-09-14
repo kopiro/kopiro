@@ -1,0 +1,5 @@
+- [spotify](https://www.spotify.com) Senior Engineer (2019/jan to present)
+- [caffeina](https://www.caffeina.com) Engineering Manager (2017/jul to 2018/dec)
+- [caffeina](https://www.caffeina.com) Senior Web & Mobike Engineer (2012/sep to 2017/jul)
+- [ped](https://www.ped.company/) Jr. Web Engineer (2011/oct to 2013/dec)
+- [computer science (university)](https://www.unipr.it/en) (2010/sep to 2013/dec)

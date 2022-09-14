@@ -36,18 +36,21 @@ const renderHtmlApp = (state, markdown) => {
   return htmlTemplate(state, html);
 };
 
-const renderMdApp = ({ title, description, header, history, github, devto, projects, gpg }) => {
+const renderMdApp = ({ title, description, header, work, github, devto, projects, gpg }) => {
   return `
 # ${title}
 ### ${description}
 
 ${header}
 
-## press
-${DevtoList(devto)}
+## work
+${work}
 
 ## oss
 ${GithubList(github)}
+
+## press
+${DevtoList(devto)}
 
 ## proj
 ${ProjectsList(projects)}
@@ -63,6 +66,7 @@ const main = async () => {
     title: readMdFile("title"),
     description: readMdFile("description"),
     header: readMdFile("header"),
+    work: readMdFile("work"),
     gpg: readMdFile("gpg"),
     devto: readDbFile("devto"),
     github: readDbFile("github"),

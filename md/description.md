@@ -1,1 +1,1 @@
-SSWE working on @Spotify desktop client & web player, living in Sweden.
+SSWE working on Spotify desktop & web client, living in 🇸🇪

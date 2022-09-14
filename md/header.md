@@ -3,5 +3,3 @@
 - [/devto](https://dev.to/kopiro)
 - [/linkedin](https://www.linkedin.com/in/destefanoflavio/)
 - [/twitter](https://twitter.com/destefanoflavio)
-- [/codewars](https://www.codewars.com/users/kopiro)
-- [/instagram](https://www.instagram.com/destefanoflavio)
