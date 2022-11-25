@@ -34,13 +34,13 @@
 * [eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr) eslint plugin to forbid globals within the react server side rendering
 
 ## press
-* [Kata resolution: Next bigger number with the same digits](https://dev.to/kopiro/kata-resolution-next-bigger-number-with-the-same-digits-41mj) Jul 30 '20
-* [How I built the SiriWaveJS library: a look at the math and the code](https://dev.to/kopiro/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code-l0o) Aug 3 '20
 * [Hey Siri, make coffee!](https://dev.to/kopiro/hey-siri-make-coffee-2n9p) Jan 21 '21
-* [What I learned hacking the Facebook Messenger Soccer game](https://dev.to/kopiro/what-i-learned-hacking-the-facebook-messenger-soccer-game-mo6) Jul 30 '20
-* [The hardware behind Otto: a monkey plush which became my vocal assistant](https://dev.to/kopiro/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant-1gaa) Jul 30 '20
+* [How I built the SiriWaveJS library: a look at the math and the code](https://dev.to/kopiro/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code-l0o) Aug 3 '20
 * [How to easily run any Linux tool on any machine](https://dev.to/kopiro/how-to-easily-run-any-linux-tool-on-any-machine-2g6p) Jul 30 '20
 * [How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)](https://dev.to/kopiro/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox-2md2) Jul 30 '20
+* [Kata resolution: Next bigger number with the same digits](https://dev.to/kopiro/kata-resolution-next-bigger-number-with-the-same-digits-41mj) Jul 30 '20
+* [What I learned hacking the Facebook Messenger Soccer game](https://dev.to/kopiro/what-i-learned-hacking-the-facebook-messenger-soccer-game-mo6) Jul 30 '20
+* [The hardware behind Otto: a monkey plush which became my vocal assistant](https://dev.to/kopiro/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant-1gaa) Jul 30 '20
 
 ## proj
 * [PolpettaMag - website](http://www.polpettamag.com/) 2017

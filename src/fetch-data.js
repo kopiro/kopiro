@@ -31,7 +31,7 @@ const RUNNERS = {
     const response = await fetch(`https://dev.to/api/articles?username=${process.env.DEVTO_USERNAME}`).then((r) =>
       r.json(),
     );
-    return response.sort((a, b) => b.public_reactions_count - a.public_reactions_count);
+    return response.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
   },
 };
 
