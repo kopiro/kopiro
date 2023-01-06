@@ -10,7 +10,7 @@
 ## work
 - [spotify](https://www.spotify.com) Senior Engineer (2019/jan to present)
 - [caffeina](https://www.caffeina.com) Engineering Manager (2017/jul to 2018/dec)
-- [caffeina](https://www.caffeina.com) Senior Web & Mobike Engineer (2012/sep to 2017/jul)
+- [caffeina](https://www.caffeina.com) Full-stack web/mobile Engineer (2012/sep to 2017/jul)
 - [ped](https://www.ped.company/) Jr. Web Engineer (2011/oct to 2013/dec)
 - [computer science (university)](https://www.unipr.it/en) (2010/sep to 2013/dec)
 
@@ -18,11 +18,11 @@
 * [siriwave](https://github.com/kopiro/siriwave) The Apple® Siri wave-form replicated in a JS library.
 * [trimethyl](https://github.com/trimethyl/trimethyl) Titanium toolchain with superpower and wrapper around bugs.
 * [ti.notifications](https://github.com/caffeinalab/ti.notifications) Useful Titanium+Alloy widget to handle notifications messages when app is in foreground.
+* [homebridge-playstation](https://github.com/kopiro/homebridge-playstation) Playstation integration for Homebridge / HOOBS.
 * [ti.tilt-image-view](https://github.com/caffeinalab/ti.tilt-image-view) FacebookPaper-style tilt-fullscreen Image viewer widget for Titanium Alloy.
 * [ti.goosh](https://github.com/caffeinalab/ti.goosh) GCM/FCM module for Titanium.
-* [homebridge-playstation](https://github.com/kopiro/homebridge-playstation) Playstation integration for Homebridge / HOOBS.
-* [ti.loader](https://github.com/caffeinalab/ti.loader) Alloy+Titanium widget to display a loader mask for you applications.
 * [homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera) Homebridge plugin for TP-Link TAPO security cameras
+* [ti.loader](https://github.com/caffeinalab/ti.loader) Alloy+Titanium widget to display a loader mask for you applications.
 * [ti.formbuilder](https://github.com/caffeinalab/ti.formbuilder) Build forms for Titanium with just an object.
 * [ti.passcode](https://github.com/caffeinalab/ti.passcode) Alloy+Titanium widget for an identical iPhone lock screen with passcode.
 * [ti.sharer](https://github.com/caffeinalab/ti.sharer) Sharing widget heavily inspired by AirBNB, with default drivers and the ability to add custom drivers to share.
