@@ -1,26 +1,48 @@
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("MabryPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("MabryPro-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("MabryPro-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: #000;
-  font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: #6e6e73;
-  font-size: 14px;
-  font-weight: normal;
+  background: #fff;
+  font-family: "mabry pro", helvetica neue, helvetica, arial, sans-serif;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
   padding: 30px;
-  text-transform: lowercase;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   margin-bottom: 0.5em;
   margin-top: 0;
 }
@@ -34,7 +56,8 @@ hr {
 }
 
 a {
-  color: #2997ff;
+  font-weight: bold;
+  color: #000000;
   text-decoration: underline;
 }
 
@@ -43,13 +66,24 @@ a:hover {
 }
 
 section {
-  margin-top: 1em;
+  margin-top: 1rem;
+  border: 1px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+section > h2 {
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border-bottom: 1px solid black;
+  background-color: black;
+  color: white;
 }
 
 h1 {
-  font-size: 32px;
-  font-weight: bold;
-  color: #fff;
+  font-size: 40px;
+  font-weight: 900;
   margin-right: 120px;
 }
 
@@ -67,20 +101,27 @@ h1:after {
 
 h2 {
   font-size: 20px;
-  font-weight: bold;
-  color: #00ff41;
+  font-weight: 900;
 }
 
 h3 {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ccc;
+  font-size: 22px;
+  font-weight: 700;
   margin-right: 120px;
-  margin-bottom: 1em;
+  margin-bottom: 3rem;
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid black;
+}
+
+ul li:last-child {
+  border-bottom: none;
 }

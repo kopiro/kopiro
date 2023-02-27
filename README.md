@@ -1,6 +1,7 @@
 # Flavio De Stefano (kopiro)
 ### SSWE working on Spotify desktop & web client, living in 🇸🇪
 
+## links
 - [/portfolio](https://www.kopiro.me)
 - [/github](https://github.com/kopiro)
 - [/devto](https://dev.to/kopiro)
@@ -48,7 +49,3 @@
 * [Iotti + Pavarani Architetti - website](http://www.iotti-pavarani.com/) 2014
 * [Il Paesaggio della Bonifica - website](http://ilpaesaggiodellabonifica.it/) 2011
 * [écru architetti - website](http://ecruarchitetti.it/) 2013
-
----
-
-[0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

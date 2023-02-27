@@ -36,11 +36,12 @@ const renderHtmlApp = (state, markdown) => {
   return htmlTemplate(state, html);
 };
 
-const renderMdApp = ({ title, description, header, work, github, devto, projects, gpg }) => {
+const renderMdApp = ({ title, description, header, work, github, devto, projects }) => {
   return `
 # ${title}
 ### ${description}
 
+## links
 ${header}
 
 ## work
@@ -54,10 +55,6 @@ ${DevtoList(devto)}
 
 ## proj
 ${ProjectsList(projects)}
-
----
-
-${gpg}
 `.trim();
 };
 
