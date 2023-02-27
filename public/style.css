@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Mabry Pro";
-  src: url("MabryPro-Bold.woff2") format("woff2");
+  src: url("/fonts/MabryPro-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Mabry Pro";
-  src: url("MabryPro-Black.woff2") format("woff2");
+  src: url("/fonts/MabryPro-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Mabry Pro";
-  src: url("MabryPro-Regular.woff2") format("woff2");
+  src: url("/fonts/MabryPro-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -38,6 +38,7 @@ body {
   margin: 0 auto;
   position: relative;
   padding: 30px;
+  line-height: 1.2em;
 }
 
 h1,
@@ -45,6 +46,7 @@ h2,
 h3 {
   margin-bottom: 0.5em;
   margin-top: 0;
+  line-height: 1.2em;
 }
 
 hr {
@@ -58,7 +60,7 @@ hr {
 a {
   font-weight: bold;
   color: #000000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover {
@@ -118,7 +120,7 @@ ul {
 }
 
 li {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem 0.5rem 1rem;
   border-bottom: 1px solid black;
 }
 
