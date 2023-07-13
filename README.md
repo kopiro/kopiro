@@ -20,9 +20,9 @@
 * [trimethyl](https://github.com/trimethyl/trimethyl) Titanium toolchain with superpower and wrapper around bugs.
 * [ti.notifications](https://github.com/caffeinalab/ti.notifications) Useful Titanium+Alloy widget to handle notifications messages when app is in foreground.
 * [homebridge-playstation](https://github.com/kopiro/homebridge-playstation) Playstation integration for Homebridge / HOOBS.
+* [homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera) Homebridge plugin for TP-Link TAPO security cameras
 * [ti.tilt-image-view](https://github.com/caffeinalab/ti.tilt-image-view) FacebookPaper-style tilt-fullscreen Image viewer widget for Titanium Alloy.
 * [ti.goosh](https://github.com/caffeinalab/ti.goosh) GCM/FCM module for Titanium.
-* [homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera) Homebridge plugin for TP-Link TAPO security cameras
 * [ti.loader](https://github.com/caffeinalab/ti.loader) Alloy+Titanium widget to display a loader mask for you applications.
 * [ti.formbuilder](https://github.com/caffeinalab/ti.formbuilder) Build forms for Titanium with just an object.
 * [ti.passcode](https://github.com/caffeinalab/ti.passcode) Alloy+Titanium widget for an identical iPhone lock screen with passcode.
@@ -30,9 +30,9 @@
 * [whatever2telegram](https://github.com/kopiro/whatever2telegram) Allows forwarding whatever you want to a Telegram handle.
 * [ulala](https://github.com/kopiro/ulala) Show the right things when you scroll
 * [kopiro](https://github.com/kopiro/kopiro) Personal portfolio website
+* [eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr) eslint plugin to forbid globals within the react server side rendering
 * [xscreensaver-apple-aerial](https://github.com/kopiro/xscreensaver-apple-aerial) Apple TV screensaver for Linux
 * [tommy](https://github.com/caffeinalab/tommy) Web Assets converter and optimizer
-* [eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr) eslint plugin to forbid globals within the react server side rendering
 
 ## press
 * [Hey Siri, make coffee!](https://dev.to/kopiro/hey-siri-make-coffee-2n9p) Jan 21 '21
