@@ -45,7 +45,7 @@
 
 ## proj
 * [PolpettaMag - website](http://www.polpettamag.com/) 2017
-* [Duccio Grassi Architects - website](http://www.ducciograssiarchitects.com/) 2017
+* [Duccio Grassi Architects - website](http://www.ducciograssi.com/) 2017
 * [Iotti + Pavarani Architetti - website](http://www.iotti-pavarani.com/) 2014
 * [Il Paesaggio della Bonifica - website](http://ilpaesaggiodellabonifica.it/) 2011
 * [écru architetti - website](http://ecruarchitetti.it/) 2013
