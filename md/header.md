@@ -3,3 +3,4 @@
 - [/devto](https://dev.to/kopiro)
 - [/linkedin](https://www.linkedin.com/in/destefanoflavio/)
 - [/twitter](https://twitter.com/destefanoflavio)
+- [/letterboxd](https://letterboxd.com/kopiro)
