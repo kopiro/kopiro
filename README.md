@@ -7,6 +7,7 @@
 - [/devto](https://dev.to/kopiro)
 - [/linkedin](https://www.linkedin.com/in/destefanoflavio/)
 - [/twitter](https://twitter.com/destefanoflavio)
+- [/letterboxd](https://letterboxd.com/kopiro)
 
 ## work
 - [spotify](https://www.spotify.com) Senior Engineer (2019/jan to present)
