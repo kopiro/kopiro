@@ -39,6 +39,10 @@ section > h2 {
   color: white;
 }
 
+section > p {
+  padding: 0 0.5em;
+}
+
 h1 {
   font-size: 40px;
   font-weight: 900;

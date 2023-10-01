@@ -26,13 +26,15 @@ ${body}
 
 const renderHtmlApp = (state, markdown) => {
   const converter = new showdown.Converter({
-    noHeaderId: true,
+    noHeaderId: false,
     openLinksInNewWindow: true,
     emoji: true,
   });
   converter.setFlavor("github");
   let i = 0;
-  const html = converter.makeHtml(markdown).replace(/<h2>/g, () => `${i++ > 0 ? "</section>" : ""}<section><h2>`);
+  const html = converter
+    .makeHtml(markdown)
+    .replace(/<h2([^>]*)>/g, () => `${i++ > 0 ? "</section>" : ""}<section><h2>`);
   return htmlTemplate(state, html);
 };
 
