@@ -1,12 +1,12 @@
 #!/bin/bash
 set -ex
 
-yarn fetch-data
-yarn generate
+npm run fetch-data
+npm run generate
 
-yarn serve ./public
+./node_modules/.bin/serve ./public
 
 while true; do
     fswatch -o ./src ./md ./db
-    yarn generate
+    npm run generate
 done

@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "fetch-data": "node -r dotenv/config ./src/fetch-data.js",
-    "generate": "node -r dotenv/config ./src/generate.js",
+    "generate": "node -r dotenv/config ./src/generate.js && npm run copy:css",
+    "copy:css": "cp -R ./node_modules/@sakun/system.css/dist ./public/system7",
     "dev": "./dev.sh",
-    "deploy": "yarn fetch-data && yarn generate && docker-compose build && docker-compose push"
+    "deploy": "npm run fetch-data && npm run generate && docker-compose build && docker-compose push"
   },
   "dependencies": {
+    "@sakun/system.css": "^0.1.11",
     "cross-fetch": "^3.1.5",
     "dotenv": "^8.2.0",
     "node-fetch": "^3.1.1",

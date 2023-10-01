@@ -73,7 +73,10 @@ const main = async () => {
       { name: "description", content: readMdFile("description") },
       { name: "viewport", content: "width=device-width" },
     ],
-    links: [{ rel: "stylesheet", href: `style.css?t=${Date.now()}` }],
+    links: [
+      { rel: "stylesheet", href: "system7/system.css" },
+      { rel: "stylesheet", href: `style.css?t=${Date.now()}` },
+    ],
   };
 
   const markdown = renderMdApp(state);

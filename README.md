@@ -31,8 +31,8 @@
 * [whatever2telegram](https://github.com/kopiro/whatever2telegram) Allows forwarding whatever you want to a Telegram handle.
 * [ulala](https://github.com/kopiro/ulala) Show the right things when you scroll
 * [kopiro](https://github.com/kopiro/kopiro) Personal portfolio website
-* [eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr) eslint plugin to forbid globals within the react server side rendering
 * [xscreensaver-apple-aerial](https://github.com/kopiro/xscreensaver-apple-aerial) Apple TV screensaver for Linux
+* [eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr) eslint plugin to forbid globals within the react server side rendering
 * [tommy](https://github.com/caffeinalab/tommy) Web Assets converter and optimizer
 
 ## press
