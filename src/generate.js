@@ -20,21 +20,23 @@ const htmlTemplate = ({ title, metas, links, lang = "en" }, body) =>
   ${links.map(htmlTag("link")).join("\n")}
 </head>
 <body>
-${body}
+  ${body}
 </body>
 </html>`;
 
 const renderHtmlApp = (state, markdown) => {
   const converter = new showdown.Converter({
-    noHeaderId: false,
+    noHeaderId: true,
     openLinksInNewWindow: true,
     emoji: true,
   });
   converter.setFlavor("github");
+
   let i = 0;
-  const html = converter
-    .makeHtml(markdown)
-    .replace(/<h2([^>]*)>/g, () => `${i++ > 0 ? "</section>" : ""}<section><h2>`);
+  const html = converter.makeHtml(markdown).replace(/<h2[^>]*>([^<]+)<\/h2>/g, (match, p1) => {
+    return `${i++ > 0 ? "</section>" : ""}` + `<section id="${p1.toLowerCase()}"><h2>${p1}</h2>`;
+  });
+
   return htmlTemplate(state, html);
 };
 
@@ -44,19 +46,25 @@ const renderMdApp = ({ title, description, header, work, github, devto, projects
 ### ${description}
 
 ## links
+
 ${header}
 
 ## work
+
 ${work}
 
 ## oss
+
 ${GithubList(github)}
 
 ## press
+
 ${DevtoList(devto)}
 
 ## proj
+
 ${ProjectsList(projects)}
+
 `.trim();
 };
 
@@ -76,6 +84,10 @@ const main = async () => {
       { name: "viewport", content: "width=device-width" },
     ],
     links: [
+      {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+      },
       { rel: "stylesheet", href: "system7/system.css" },
       { rel: "stylesheet", href: `style.css?t=${Date.now()}` },
     ],
@@ -85,6 +97,8 @@ const main = async () => {
   const html = renderHtmlApp(state, markdown);
 
   fs.writeFileSync(paths.readme, markdown);
+
+  fs.writeFileSync(path.join(paths.public, "index.md"), markdown);
   fs.writeFileSync(path.join(paths.public, "index.html"), html);
 };
 
