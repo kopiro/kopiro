@@ -1,5 +1,5 @@
-# Flavio De Stefano (kopiro)
-### SSWE working on Spotify desktop & web client, living in 🇸🇪
+# Flavio M. De Stefano
+### aka @kopiro - sswe working on Spotify desktop & web-client, living in 🇸🇪
 
 ## links
 
