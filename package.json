@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "fetch-data": "node -r dotenv/config ./src/fetch-data.js",
-    "generate": "node -r dotenv/config ./src/generate.js && npm run copy:css",
-    "copy:css": "cp -R ./node_modules/@sakun/system.css/dist ./public/system7",
+    "generate": "node -r dotenv/config ./src/generate.js",
     "dev": "./dev.sh",
     "deploy": "npm run fetch-data && npm run generate && docker-compose build && docker-compose push"
   },

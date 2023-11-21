@@ -33,14 +33,17 @@ const renderHtmlApp = (state, markdown) => {
   converter.setFlavor("github");
 
   let i = 0;
-  const html = converter.makeHtml(markdown).replace(/<h2[^>]*>([^<]+)<\/h2>/g, (match, p1) => {
-    return `${i++ > 0 ? "</section>" : ""}` + `<section id="${p1.toLowerCase()}"><h2>${p1}</h2>`;
-  });
+  const html = converter
+    .makeHtml(markdown)
+    .replace(/<h2[^>]*>(.+)<\/h2>[^<]*?(\<ul[^>]*\>[^]*?\<\/ul\>)/gm, (match, title, content) => {
+      return `<section id="${title.toLowerCase()}"><h2>${title}</h2>${content}</section>`;
+    })
+    .replace(/ - /g, `<br/>`);
 
   return htmlTemplate(state, html);
 };
 
-const renderMdApp = ({ title, description, header, work, github, devto, projects }) => {
+const renderMdApp = ({ title, description, header, work, github, devto, projects, gpg }) => {
   return `
 # ${title}
 ### ${description}
@@ -65,6 +68,7 @@ ${DevtoList(devto)}
 
 ${ProjectsList(projects)}
 
+${gpg}
 `.trim();
 };
 
@@ -83,14 +87,7 @@ const main = async () => {
       { name: "description", content: readMdFile("description") },
       { name: "viewport", content: "width=device-width" },
     ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-      },
-      { rel: "stylesheet", href: "system7/system.css" },
-      { rel: "stylesheet", href: `style.css?t=${Date.now()}` },
-    ],
+    links: [{ rel: "stylesheet", href: `style.css?t=${Date.now()}` }],
   };
 
   const markdown = renderMdApp(state);
