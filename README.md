@@ -21,11 +21,11 @@
 
 ## oss
 
-* <span class="title">[siriwave](https://github.com/kopiro/siriwave)</span> - <span class="description">The Apple® Siri wave-form replicated in a JS library.</span> - <span class="subtitle">1465 stars</span>
+* <span class="title">[siriwave](https://github.com/kopiro/siriwave)</span> - <span class="description">The Apple® Siri wave-form replicated in a JS library.</span> - <span class="subtitle">1468 stars</span>
 * <span class="title">[trimethyl](https://github.com/trimethyl/trimethyl)</span> - <span class="description">Titanium toolchain with superpower and wrapper around bugs.</span> - <span class="subtitle">99 stars</span>
 * <span class="title">[homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera)</span> - <span class="description">Homebridge plugin for TP-Link TAPO security cameras</span> - <span class="subtitle">88 stars</span>
 * <span class="title">[ti.notifications](https://github.com/caffeinalab/ti.notifications)</span> - <span class="description">Useful Titanium+Alloy widget to handle notifications messages when app is in foreground.</span> - <span class="subtitle">83 stars</span>
-* <span class="title">[homebridge-playstation](https://github.com/kopiro/homebridge-playstation)</span> - <span class="description">Playstation integration for Homebridge / HOOBS.</span> - <span class="subtitle">78 stars</span>
+* <span class="title">[homebridge-playstation](https://github.com/kopiro/homebridge-playstation)</span> - <span class="description">Playstation integration for Homebridge / HOOBS.</span> - <span class="subtitle">80 stars</span>
 * <span class="title">[ti.tilt-image-view](https://github.com/caffeinalab/ti.tilt-image-view)</span> - <span class="description">FacebookPaper-style tilt-fullscreen Image viewer widget for Titanium Alloy.</span> - <span class="subtitle">54 stars</span>
 * <span class="title">[ti.goosh](https://github.com/caffeinalab/ti.goosh)</span> - <span class="description">GCM/FCM module for Titanium.</span> - <span class="subtitle">52 stars</span>
 * <span class="title">[ti.loader](https://github.com/caffeinalab/ti.loader)</span> - <span class="description">Alloy+Titanium widget to display a loader mask for you applications.</span> - <span class="subtitle">44 stars</span>
@@ -38,6 +38,7 @@
 * <span class="title">[kopiro](https://github.com/kopiro/kopiro)</span> - <span class="description">Personal portfolio website</span> - <span class="subtitle">2 stars</span>
 * <span class="title">[eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr)</span> - <span class="description">eslint plugin to forbid globals within the react server side rendering</span> - <span class="subtitle">1 stars</span>
 * <span class="title">[tommy](https://github.com/caffeinalab/tommy)</span> - <span class="description">Web Assets converter and optimizer</span> - <span class="subtitle">1 stars</span>
+* <span class="title">[pika-bulba](https://github.com/kopiro/pika-bulba)</span> - <span class="description">Simple 3D game of pokemons running with beautiful pixel-art</span> - <span class="subtitle">0 stars</span>
 
 ## press
 
