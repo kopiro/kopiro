@@ -21,11 +21,11 @@
 
 ## oss
 
-* <span class="title">[siriwave](https://github.com/kopiro/siriwave)</span> - <span class="description">The Apple® Siri wave-form replicated in a JS library.</span> - <span class="subtitle">1468 stars</span>
+* <span class="title">[siriwave](https://github.com/kopiro/siriwave)</span> - <span class="description">The Apple® Siri wave-form replicated in a JS library.</span> - <span class="subtitle">1502 stars</span>
 * <span class="title">[trimethyl](https://github.com/trimethyl/trimethyl)</span> - <span class="description">Titanium toolchain with superpower and wrapper around bugs.</span> - <span class="subtitle">99 stars</span>
-* <span class="title">[homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera)</span> - <span class="description">Homebridge plugin for TP-Link TAPO security cameras</span> - <span class="subtitle">88 stars</span>
+* <span class="title">[homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera)</span> - <span class="description">Homebridge plugin for TP-Link TAPO security cameras</span> - <span class="subtitle">96 stars</span>
+* <span class="title">[homebridge-playstation](https://github.com/kopiro/homebridge-playstation)</span> - <span class="description">Playstation integration for Homebridge / HOOBS.</span> - <span class="subtitle">88 stars</span>
 * <span class="title">[ti.notifications](https://github.com/caffeinalab/ti.notifications)</span> - <span class="description">Useful Titanium+Alloy widget to handle notifications messages when app is in foreground.</span> - <span class="subtitle">83 stars</span>
-* <span class="title">[homebridge-playstation](https://github.com/kopiro/homebridge-playstation)</span> - <span class="description">Playstation integration for Homebridge / HOOBS.</span> - <span class="subtitle">80 stars</span>
 * <span class="title">[ti.tilt-image-view](https://github.com/caffeinalab/ti.tilt-image-view)</span> - <span class="description">FacebookPaper-style tilt-fullscreen Image viewer widget for Titanium Alloy.</span> - <span class="subtitle">54 stars</span>
 * <span class="title">[ti.goosh](https://github.com/caffeinalab/ti.goosh)</span> - <span class="description">GCM/FCM module for Titanium.</span> - <span class="subtitle">52 stars</span>
 * <span class="title">[ti.loader](https://github.com/caffeinalab/ti.loader)</span> - <span class="description">Alloy+Titanium widget to display a loader mask for you applications.</span> - <span class="subtitle">44 stars</span>
@@ -37,11 +37,13 @@
 * <span class="title">[xscreensaver-apple-aerial](https://github.com/kopiro/xscreensaver-apple-aerial)</span> - <span class="description">Apple TV screensaver for Linux</span> - <span class="subtitle">3 stars</span>
 * <span class="title">[kopiro](https://github.com/kopiro/kopiro)</span> - <span class="description">Personal portfolio website</span> - <span class="subtitle">2 stars</span>
 * <span class="title">[eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr)</span> - <span class="description">eslint plugin to forbid globals within the react server side rendering</span> - <span class="subtitle">1 stars</span>
+* <span class="title">[pika-bulba](https://github.com/kopiro/pika-bulba)</span> - <span class="description">Simple 3D game of pokemons running with beautiful pixel-art</span> - <span class="subtitle">1 stars</span>
 * <span class="title">[tommy](https://github.com/caffeinalab/tommy)</span> - <span class="description">Web Assets converter and optimizer</span> - <span class="subtitle">1 stars</span>
-* <span class="title">[pika-bulba](https://github.com/kopiro/pika-bulba)</span> - <span class="description">Simple 3D game of pokemons running with beautiful pixel-art</span> - <span class="subtitle">0 stars</span>
+* <span class="title">[mbti](https://github.com/kopiro/mbti)</span> - <span class="description">null</span> - <span class="subtitle">0 stars</span>
 
 ## press
 
+* <span class="title">[Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](https://dev.to/kopiro/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023-44b1)</span> - <span class="description">For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have...</span> - <span class="subtitle">Dec 3 '23</span>
 * <span class="title">[Hey Siri, make coffee!](https://dev.to/kopiro/hey-siri-make-coffee-2n9p)</span> - <span class="description">“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the m...</span> - <span class="subtitle">Jan 21 '21</span>
 * <span class="title">[How I built the SiriWaveJS library: a look at the math and the code](https://dev.to/kopiro/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code-l0o)</span> - <span class="description">It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iP...</span> - <span class="subtitle">Aug 3 '20</span>
 * <span class="title">[How to easily run any Linux tool on any machine](https://dev.to/kopiro/how-to-easily-run-any-linux-tool-on-any-machine-2g6p)</span> - <span class="description">Have you ever encountered a situation like the ones below?  Situation 1: You’re on your Linux worksta...</span> - <span class="subtitle">Jul 30 '20</span>
@@ -57,5 +59,7 @@
 * <span class="title">[Iotti + Pavarani Architetti (website)](http://www.iotti-pavarani.com/)</span> - <span class="description">Company website for the Architect Studio "Iotti + Pavarani"</span> - <span class="subtitle">2014</span>
 * <span class="title">[Il Paesaggio della Bonifica (website)](http://ilpaesaggiodellabonifica.it/)</span> - <span class="description">Portal for "Il Paesaggio della Bonifica"</span> - <span class="subtitle">2011</span>
 * <span class="title">[écru architetti (website)](http://ecruarchitetti.it/)</span> - <span class="description">Company website for the Architect Studio "écru architetti"</span> - <span class="subtitle">2013</span>
+* <span class="title">[PikaBulba](https://kopiro.github.io/pika-bulba)</span> - <span class="description">Pikachu & Bulbasaur racing themselves</span> - <span class="subtitle">2023</span>
+* <span class="title">[MBTI showcase](https://kopiro.github.io/mbti)</span> - <span class="description">Showcase for MBTI personality types and cognitive functions</span> - <span class="subtitle">2024</span>
 
 [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)
