@@ -19,6 +19,16 @@
 - <span class="title">[Pane&Design](https://www.ped.company/)</span> - <span class="subtitle">Jr. Web Engineer (2011/oct to 2013/dec)</span>
 - <span class="title">[Computer Science (University)](https://www.unipr.it/en)</span> - <span class="subtitle">(2010/sep to 2013/dec)</span>
 
+## proj
+
+* <span class="title">[MBTI showcase](https://kopiro.github.io/mbti)</span> - <span class="description">Showcase for MBTI personality types and cognitive functions</span> - <span class="subtitle">2024</span>
+* <span class="title">[PikaBulba](https://kopiro.github.io/pika-bulba)</span> - <span class="description">Pikachu & Bulbasaur racing themselves</span> - <span class="subtitle">2023</span>
+* <span class="title">[PolpettaMag (website)](http://www.polpettamag.com/)</span> - <span class="description">Website for the magazine "PolpettaMag"</span> - <span class="subtitle">2017</span>
+* <span class="title">[Duccio Grassi Architects (website)](http://www.ducciograssi.com/)</span> - <span class="description">Company website for the Architect Studio "Duccio Grassi Architects"</span> - <span class="subtitle">2017</span>
+* <span class="title">[Iotti + Pavarani Architetti (website)](http://www.iotti-pavarani.com/)</span> - <span class="description">Company website for the Architect Studio "Iotti + Pavarani"</span> - <span class="subtitle">2014</span>
+* <span class="title">[écru architetti (website)](http://ecruarchitetti.it/)</span> - <span class="description">Company website for the Architect Studio "écru architetti"</span> - <span class="subtitle">2013</span>
+* <span class="title">[Il Paesaggio della Bonifica (website)](http://ilpaesaggiodellabonifica.it/)</span> - <span class="description">Portal for "Il Paesaggio della Bonifica"</span> - <span class="subtitle">2011</span>
+
 ## oss
 
 * <span class="title">[siriwave](https://github.com/kopiro/siriwave)</span> - <span class="description">The Apple® Siri wave-form replicated in a JS library.</span> - <span class="subtitle">1502 stars</span>
@@ -39,7 +49,7 @@
 * <span class="title">[eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr)</span> - <span class="description">eslint plugin to forbid globals within the react server side rendering</span> - <span class="subtitle">1 stars</span>
 * <span class="title">[pika-bulba](https://github.com/kopiro/pika-bulba)</span> - <span class="description">Simple 3D game of pokemons running with beautiful pixel-art</span> - <span class="subtitle">1 stars</span>
 * <span class="title">[tommy](https://github.com/caffeinalab/tommy)</span> - <span class="description">Web Assets converter and optimizer</span> - <span class="subtitle">1 stars</span>
-* <span class="title">[mbti](https://github.com/kopiro/mbti)</span> - <span class="description">null</span> - <span class="subtitle">0 stars</span>
+* <span class="title">[mbti](https://github.com/kopiro/mbti)</span> - <span class="description">Myers–Briggs Type Indicator showcase with Carl Jung functions</span> - <span class="subtitle">0 stars</span>
 
 ## press
 
@@ -51,15 +61,5 @@
 * <span class="title">[Kata resolution: Next bigger number with the same digits](https://dev.to/kopiro/kata-resolution-next-bigger-number-with-the-same-digits-41mj)</span> - <span class="description">I would like to share with you my solution of a Kata on CodeWars.  This is the link to the kata...</span> - <span class="subtitle">Jul 30 '20</span>
 * <span class="title">[What I learned hacking the Facebook Messenger Soccer game](https://dev.to/kopiro/what-i-learned-hacking-the-facebook-messenger-soccer-game-mo6)</span> - <span class="description">Recently, during the last European Football Championship, Facebook introduced a little game in the Me...</span> - <span class="subtitle">Jul 30 '20</span>
 * <span class="title">[The hardware behind Otto: a monkey plush which became my vocal assistant](https://dev.to/kopiro/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant-1gaa)</span> - <span class="description">Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February...</span> - <span class="subtitle">Jul 30 '20</span>
-
-## proj
-
-* <span class="title">[PolpettaMag (website)](http://www.polpettamag.com/)</span> - <span class="description">Website for the magazine "PolpettaMag"</span> - <span class="subtitle">2017</span>
-* <span class="title">[Duccio Grassi Architects (website)](http://www.ducciograssi.com/)</span> - <span class="description">Company website for the Architect Studio "Duccio Grassi Architects"</span> - <span class="subtitle">2017</span>
-* <span class="title">[Iotti + Pavarani Architetti (website)](http://www.iotti-pavarani.com/)</span> - <span class="description">Company website for the Architect Studio "Iotti + Pavarani"</span> - <span class="subtitle">2014</span>
-* <span class="title">[Il Paesaggio della Bonifica (website)](http://ilpaesaggiodellabonifica.it/)</span> - <span class="description">Portal for "Il Paesaggio della Bonifica"</span> - <span class="subtitle">2011</span>
-* <span class="title">[écru architetti (website)](http://ecruarchitetti.it/)</span> - <span class="description">Company website for the Architect Studio "écru architetti"</span> - <span class="subtitle">2013</span>
-* <span class="title">[PikaBulba](https://kopiro.github.io/pika-bulba)</span> - <span class="description">Pikachu & Bulbasaur racing themselves</span> - <span class="subtitle">2023</span>
-* <span class="title">[MBTI showcase](https://kopiro.github.io/mbti)</span> - <span class="description">Showcase for MBTI personality types and cognitive functions</span> - <span class="subtitle">2024</span>
 
 [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

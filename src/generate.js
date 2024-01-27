@@ -56,6 +56,10 @@ ${header}
 
 ${work}
 
+## proj
+
+${ProjectsList(projects)}
+
 ## oss
 
 ${GithubList(github)}
@@ -63,10 +67,6 @@ ${GithubList(github)}
 ## press
 
 ${DevtoList(devto)}
-
-## proj
-
-${ProjectsList(projects)}
 
 ${gpg}
 `.trim();

@@ -25,13 +25,13 @@ const RUNNERS = {
         return carry;
       }),
     );
-    return responses.reduce((carry, e) => carry.concat(e), []).sort((a, b) => b.stargazers_count - a.stargazers_count);
+    return responses.reduce((carry, e) => carry.concat(e), []);
   },
   devto: async () => {
     const response = await fetch(`https://dev.to/api/articles?username=${process.env.DEVTO_USERNAME}`).then((r) =>
       r.json(),
     );
-    return response.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    return response;
   },
 };
 
