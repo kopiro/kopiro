@@ -26,7 +26,6 @@
 * <span class="title">[PolpettaMag (website)](http://www.polpettamag.com/)</span> - <span class="description">Website for the magazine "PolpettaMag"</span> - <span class="subtitle">2017</span>
 * <span class="title">[Duccio Grassi Architects (website)](http://www.ducciograssi.com/)</span> - <span class="description">Company website for the Architect Studio "Duccio Grassi Architects"</span> - <span class="subtitle">2017</span>
 * <span class="title">[Iotti + Pavarani Architetti (website)](http://www.iotti-pavarani.com/)</span> - <span class="description">Company website for the Architect Studio "Iotti + Pavarani"</span> - <span class="subtitle">2014</span>
-* <span class="title">[écru architetti (website)](http://ecruarchitetti.it/)</span> - <span class="description">Company website for the Architect Studio "écru architetti"</span> - <span class="subtitle">2013</span>
 * <span class="title">[Il Paesaggio della Bonifica (website)](http://ilpaesaggiodellabonifica.it/)</span> - <span class="description">Portal for "Il Paesaggio della Bonifica"</span> - <span class="subtitle">2011</span>
 
 ## oss
