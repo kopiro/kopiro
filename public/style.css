@@ -1,37 +1,14 @@
-@font-face {
-  font-family: "PT Serif";
-  src: url(./fonts/PTSerif-Regular.woff2);
-}
-
-@font-face {
-  font-family: "PT Serif";
-  font-weight: bold;
-  src: url(./fonts/PTSerif-Bold.woff2);
-}
-
-@font-face {
-  font-family: "PT Serif";
-  font-style: italic;
-  src: url(./fonts/PTSerif-Italic.woff2);
-}
-
 body {
-  background: #fff;
-  font-family: "PT Serif", sans-serif;
-  color: #222;
+  background: #2d2d2d;
+  font-family: "SF Mono", monospace;
+  color: #c9c9c9;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
   padding: 30px;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.4em;
   -webkit-font-smoothing: antialiased;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: normal;
 }
 
 section#links ul {
@@ -49,7 +26,7 @@ section#links a {
 }
 
 a {
-  color: #000;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -58,7 +35,6 @@ section#links a::before {
   height: 20px;
   content: "";
   display: block;
-  filter: contrast(1) grayscale(1);
   background-position: center;
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -112,7 +88,7 @@ section {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
   margin-right: 120px;
   margin-top: 5px;
@@ -132,12 +108,12 @@ h1:after {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top: 0;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-right: 120px;
   margin-top: 20px;
   margin-bottom: 0;
@@ -158,5 +134,5 @@ li .title {
 }
 
 li .subtitle {
-  color: #999;
+  color: #949494;
 }

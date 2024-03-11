@@ -30,12 +30,12 @@
 
 ## oss
 
-* <span class="title">[siriwave](https://github.com/kopiro/siriwave)</span> - <span class="description">The Apple® Siri wave-form replicated in a JS library.</span> - <span class="subtitle">1502 stars</span>
+* <span class="title">[siriwave](https://github.com/kopiro/siriwave)</span> - <span class="description">The Apple® Siri wave-form replicated in a JS library.</span> - <span class="subtitle">1519 stars</span>
+* <span class="title">[homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera)</span> - <span class="description">Homebridge plugin for TP-Link TAPO security cameras</span> - <span class="subtitle">101 stars</span>
 * <span class="title">[trimethyl](https://github.com/trimethyl/trimethyl)</span> - <span class="description">Titanium toolchain with superpower and wrapper around bugs.</span> - <span class="subtitle">99 stars</span>
-* <span class="title">[homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera)</span> - <span class="description">Homebridge plugin for TP-Link TAPO security cameras</span> - <span class="subtitle">96 stars</span>
-* <span class="title">[homebridge-playstation](https://github.com/kopiro/homebridge-playstation)</span> - <span class="description">Playstation integration for Homebridge / HOOBS.</span> - <span class="subtitle">88 stars</span>
-* <span class="title">[ti.notifications](https://github.com/caffeinalab/ti.notifications)</span> - <span class="description">Useful Titanium+Alloy widget to handle notifications messages when app is in foreground.</span> - <span class="subtitle">83 stars</span>
-* <span class="title">[ti.tilt-image-view](https://github.com/caffeinalab/ti.tilt-image-view)</span> - <span class="description">FacebookPaper-style tilt-fullscreen Image viewer widget for Titanium Alloy.</span> - <span class="subtitle">54 stars</span>
+* <span class="title">[homebridge-playstation](https://github.com/kopiro/homebridge-playstation)</span> - <span class="description">Playstation integration for Homebridge / HOOBS.</span> - <span class="subtitle">92 stars</span>
+* <span class="title">[ti.notifications](https://github.com/caffeinalab/ti.notifications)</span> - <span class="description">Useful Titanium+Alloy widget to handle notifications messages when app is in foreground.</span> - <span class="subtitle">82 stars</span>
+* <span class="title">[ti.tilt-image-view](https://github.com/caffeinalab/ti.tilt-image-view)</span> - <span class="description">FacebookPaper-style tilt-fullscreen Image viewer widget for Titanium Alloy.</span> - <span class="subtitle">53 stars</span>
 * <span class="title">[ti.goosh](https://github.com/caffeinalab/ti.goosh)</span> - <span class="description">GCM/FCM module for Titanium.</span> - <span class="subtitle">52 stars</span>
 * <span class="title">[ti.loader](https://github.com/caffeinalab/ti.loader)</span> - <span class="description">Alloy+Titanium widget to display a loader mask for you applications.</span> - <span class="subtitle">44 stars</span>
 * <span class="title">[ti.formbuilder](https://github.com/caffeinalab/ti.formbuilder)</span> - <span class="description">Build forms for Titanium with just an object.</span> - <span class="subtitle">24 stars</span>
@@ -43,7 +43,7 @@
 * <span class="title">[ti.sharer](https://github.com/caffeinalab/ti.sharer)</span> - <span class="description">Sharing widget heavily inspired by AirBNB, with default drivers and the ability to add custom drivers to share.</span> - <span class="subtitle">23 stars</span>
 * <span class="title">[whatever2telegram](https://github.com/kopiro/whatever2telegram)</span> - <span class="description">Allows forwarding whatever you want to a Telegram handle.</span> - <span class="subtitle">9 stars</span>
 * <span class="title">[ulala](https://github.com/kopiro/ulala)</span> - <span class="description">Show the right things when you scroll</span> - <span class="subtitle">4 stars</span>
-* <span class="title">[xscreensaver-apple-aerial](https://github.com/kopiro/xscreensaver-apple-aerial)</span> - <span class="description">Apple TV screensaver for Linux</span> - <span class="subtitle">3 stars</span>
+* <span class="title">[xscreensaver-apple-aerial](https://github.com/kopiro/xscreensaver-apple-aerial)</span> - <span class="description">Apple TV screensaver for Linux</span> - <span class="subtitle">4 stars</span>
 * <span class="title">[kopiro](https://github.com/kopiro/kopiro)</span> - <span class="description">Personal portfolio website</span> - <span class="subtitle">2 stars</span>
 * <span class="title">[eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr)</span> - <span class="description">eslint plugin to forbid globals within the react server side rendering</span> - <span class="subtitle">1 stars</span>
 * <span class="title">[pika-bulba](https://github.com/kopiro/pika-bulba)</span> - <span class="description">Simple 3D game of pokemons running with beautiful pixel-art</span> - <span class="subtitle">1 stars</span>
