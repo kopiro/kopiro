@@ -1,1 +1,1 @@
-Flavio M. De Stefano
+Flavio De Stefano

@@ -1,85 +1,23 @@
 body {
-  background: #2d2d2d;
-  font-family: "SF Mono", monospace;
-  color: #c9c9c9;
+  background: #fff;
+  font-family: "Futura", sans-serif;
+  color: #555;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
   padding: 30px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.4em;
   -webkit-font-smoothing: antialiased;
 }
 
-section#links ul {
-  border: none;
-  display: flex;
-  gap: 8px;
-  padding: 0;
-  margin: 0;
-  height: 20px;
-  margin-bottom: 60px;
-}
-
-section#links a {
-  opacity: 0.7;
-}
-
 a {
-  color: #fff;
+  color: #000;
   font-weight: bold;
 }
 
-section#links a::before {
-  width: 20px;
-  height: 20px;
-  content: "";
-  display: block;
-  background-position: center;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-}
-
-section#links a:hover {
-  opacity: 1;
-}
-
-section#links a[href*="twitter.com"]::before {
-  background-image: url(https://abs.twimg.com/favicons/twitter.3.ico);
-}
-
-section#links a[href*="github.com"]::before {
-  background-image: url(https://github.com/favicon.ico);
-}
-
-section#links a[href*="letterboxd.com"]::before {
-  background-image: url(https://letterboxd.com/favicon.ico);
-}
-
-section#links a[href*="kopiro.me"]::before {
-  background-image: url(https://kopiro.me/favicon.ico);
-}
-
-section#links a[href*="dev.to"]::before {
-  background-image: url(https://dev.to/favicon.ico);
-}
-
-section#links a[href*="linkedin.com"]::before {
-  background-image: url(https://linkedin.com/favicon.ico);
-}
-
-section#links a[href*="instagram.com"]::before {
-  background-image: url(https://instagram.com/favicon.ico);
-}
-
-section#links a {
-  content: "";
-  font-size: 0;
-  text-decoration: none;
-}
-
-section#links h2 {
-  display: none;
+a:hover {
+  color: rgb(14, 132, 31);
 }
 
 section {
@@ -88,11 +26,12 @@ section {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 6rem;
   font-weight: 900;
   margin-right: 120px;
-  margin-top: 5px;
   margin-bottom: 0;
+  color: #000;
+  line-height: 1em;
 }
 
 h1:after {
@@ -104,19 +43,20 @@ h1:after {
   background-size: cover;
   position: absolute;
   right: 30px;
-  top: 30px;
+  top: 100px;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-top: 0;
+  font-size: 3rem;
+  line-height: 1em;
+  color: #000;
 }
 
 h3 {
-  font-size: 1rem;
-  margin-right: 120px;
-  margin-top: 20px;
-  margin-bottom: 0;
+  font-size: 2rem;
+  line-height: 1em;
+  font-weight: normal;
+  color: rgb(14, 132, 31);
 }
 
 ul {
@@ -127,12 +67,4 @@ ul {
 
 li {
   margin-bottom: 1rem;
-}
-
-li .title {
-  font-weight: bold;
-}
-
-li .subtitle {
-  color: #949494;
 }

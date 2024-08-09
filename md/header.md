@@ -1,7 +1,0 @@
-- [/portfolio](https://www.kopiro.me)
-- [/github](https://github.com/kopiro)
-- [/devto](https://dev.to/kopiro)
-- [/linkedin](https://www.linkedin.com/in/destefanoflavio)
-- [/twitter](https://twitter.com/kopiro91)
-- [/letterboxd](https://letterboxd.com/kopiro)
-- [/instagram](https://www.instagram.com/kopiro91)

@@ -1,15 +1,5 @@
-# Flavio M. De Stefano
-### aka @kopiro - sswe working on Spotify desktop & web-client, living in 🇸🇪
-
-## links
-
-- [/portfolio](https://www.kopiro.me)
-- [/github](https://github.com/kopiro)
-- [/devto](https://dev.to/kopiro)
-- [/linkedin](https://www.linkedin.com/in/destefanoflavio)
-- [/twitter](https://twitter.com/destefanoflavio)
-- [/letterboxd](https://letterboxd.com/kopiro)
-- [/instagram](https://www.instagram.com/destefanoflavio)
+# Flavio De Stefano
+### \@kopiro
 
 ## work
 
@@ -30,10 +20,10 @@
 
 ## oss
 
-* <span class="title">[siriwave](https://github.com/kopiro/siriwave)</span> - <span class="description">The Apple® Siri wave-form replicated in a JS library.</span> - <span class="subtitle">1519 stars</span>
-* <span class="title">[homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera)</span> - <span class="description">Homebridge plugin for TP-Link TAPO security cameras</span> - <span class="subtitle">101 stars</span>
+* <span class="title">[siriwave](https://github.com/kopiro/siriwave)</span> - <span class="description">The Apple® Siri wave-form replicated in a JS library.</span> - <span class="subtitle">1589 stars</span>
+* <span class="title">[homebridge-tapo-camera](https://github.com/kopiro/homebridge-tapo-camera)</span> - <span class="description">Homebridge plugin for TP-Link TAPO security cameras</span> - <span class="subtitle">124 stars</span>
 * <span class="title">[trimethyl](https://github.com/trimethyl/trimethyl)</span> - <span class="description">Titanium toolchain with superpower and wrapper around bugs.</span> - <span class="subtitle">99 stars</span>
-* <span class="title">[homebridge-playstation](https://github.com/kopiro/homebridge-playstation)</span> - <span class="description">Playstation integration for Homebridge / HOOBS.</span> - <span class="subtitle">92 stars</span>
+* <span class="title">[homebridge-playstation](https://github.com/kopiro/homebridge-playstation)</span> - <span class="description">Playstation integration for Homebridge / HOOBS.</span> - <span class="subtitle">98 stars</span>
 * <span class="title">[ti.notifications](https://github.com/caffeinalab/ti.notifications)</span> - <span class="description">Useful Titanium+Alloy widget to handle notifications messages when app is in foreground.</span> - <span class="subtitle">82 stars</span>
 * <span class="title">[ti.tilt-image-view](https://github.com/caffeinalab/ti.tilt-image-view)</span> - <span class="description">FacebookPaper-style tilt-fullscreen Image viewer widget for Titanium Alloy.</span> - <span class="subtitle">53 stars</span>
 * <span class="title">[ti.goosh](https://github.com/caffeinalab/ti.goosh)</span> - <span class="description">GCM/FCM module for Titanium.</span> - <span class="subtitle">52 stars</span>
