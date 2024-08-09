@@ -37,13 +37,21 @@ h1 {
 h1:after {
   content: "";
   background-image: url(https://s.gravatar.com/avatar/6a46c3623a8bb6e3e641eca16450bd83?s=400);
-  width: 100px;
-  height: 100px;
-  border-radius: 16px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   background-size: cover;
   position: absolute;
-  right: 30px;
-  top: 100px;
+  right: 0;
+  top: 120px;
+  border: 8px solid white;
+  outline: 1px solid #ddd;
+  cursor: pointer;
+  transition: scale ease-out 200ms;
+}
+
+h1:hover:after {
+  scale: 1.05;
 }
 
 h2 {
