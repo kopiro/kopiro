@@ -2,6 +2,6 @@
 - [/github](https://github.com/kopiro)
 - [/devto](https://dev.to/kopiro)
 - [/linkedin](https://www.linkedin.com/in/destefanoflavio)
-- [/twitter](https://twitter.com/destefanoflavio)
+- [/twitter](https://twitter.com/kopiro91)
 - [/letterboxd](https://letterboxd.com/kopiro)
-- [/instagram](https://www.instagram.com/destefanoflavio)
+- [/instagram](https://www.instagram.com/kopiro91)
