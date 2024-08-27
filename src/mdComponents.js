@@ -7,7 +7,7 @@ const List = ({ data, getTitle, getSubtitle, getLink, getDesc, sortingKey }) => 
       (el) =>
         `* <span class="title">[${getTitle(el)}](${getLink(el)})</span> - <span class="description">${getDesc(
           el,
-        )}</span> - <span class="subtitle">${getSubtitle(el)}</span>`,
+        )}</span>${getSubtitle(el) ? `<span class="subtitle"> (${getSubtitle(el)})</span>` : ""}`,
     )
     .join("\n");
 };
@@ -37,7 +37,7 @@ const GithubList = (data) =>
     data,
     sortingKey: "stargazers_count",
     getTitle: (e) => e.name,
-    getSubtitle: (e) => `${e.stargazers_count} stars`,
+    getSubtitle: (e) => null,
     getDesc: (e) => e.description,
     getLink: (e) => e.html_url,
   });
