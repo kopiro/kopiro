@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const showdown = require("showdown");
 const paths = require("./paths");
-const { readDbFile, readMdFile } = require("./data");
+const { readDbFile, readMdFile, readOtherFile } = require("./data");
 const { DevtoList, ProjectsList, AppList, GithubList } = require("./mdComponents");
 
 const htmlTag = (tag) => (props) =>
@@ -10,7 +10,7 @@ const htmlTag = (tag) => (props) =>
     .map(([k, v]) => `${k}="${v.replace("<br/>", " - ")}"`)
     .join(" ")} />`;
 
-const htmlTemplate = ({ title, metas, links, lang = "en" }, body) =>
+const htmlTemplate = ({ title, metas, links, gtag, lang = "en" }, body) =>
   `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
@@ -21,13 +21,7 @@ const htmlTemplate = ({ title, metas, links, lang = "en" }, body) =>
 </head>
 <body>
   ${body}
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-20NDLVTCNE');
-  </script>
+  ${gtag}
 </body>
 </html>`;
 
@@ -88,6 +82,7 @@ const main = async () => {
     github: readDbFile("github"),
     projects: readDbFile("projects"),
     apps: readDbFile("apps"),
+    gtag: readOtherFile("gtag.html"),
     metas: [
       { name: "author", content: readMdFile("title") },
       { name: "viewport", content: "width=device-width" },

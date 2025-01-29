@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const paths = require("./paths");
 
+const readOtherFile = (file) => fs.readFileSync(path.join(paths.db, file), "utf-8").trim();
+
 const readMdFile = (file) => fs.readFileSync(path.join(paths.md, `${file}.md`), "utf-8").trim();
 
 const readDbFile = (file) => {
@@ -36,4 +38,4 @@ const readDbFile = (file) => {
   return data;
 };
 
-module.exports = { readDbFile, readMdFile };
+module.exports = { readDbFile, readMdFile, readOtherFile };
