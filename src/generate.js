@@ -3,7 +3,7 @@ const path = require("path");
 const showdown = require("showdown");
 const paths = require("./paths");
 const { readDbFile, readMdFile } = require("./data");
-const { DevtoList, ProjectsList, GithubList } = require("./mdComponents");
+const { DevtoList, ProjectsList, AppList, GithubList } = require("./mdComponents");
 
 const htmlTag = (tag) => (props) =>
   `<${tag} ${Object.entries(props)
@@ -21,6 +21,13 @@ const htmlTemplate = ({ title, metas, links, lang = "en" }, body) =>
 </head>
 <body>
   ${body}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-20NDLVTCNE');
+  </script>
 </body>
 </html>`;
 
@@ -32,7 +39,6 @@ const renderHtmlApp = (state, markdown) => {
   });
   converter.setFlavor("github");
 
-  let i = 0;
   const html = converter
     .makeHtml(markdown)
     .replace(/<h2[^>]*>(.+)<\/h2>[^<]*?(\<ul[^>]*\>[^]*?\<\/ul\>)/gm, (match, title, content) => {
@@ -43,7 +49,7 @@ const renderHtmlApp = (state, markdown) => {
   return htmlTemplate(state, html);
 };
 
-const renderMdApp = ({ title, description, header, work, github, devto, projects, gpg }) => {
+const renderMdApp = ({ title, description, header, work, github, devto, projects, apps, gpg }) => {
   return `
 # ${title}
 ### ${description}
@@ -51,6 +57,10 @@ const renderMdApp = ({ title, description, header, work, github, devto, projects
 ## work
 
 ${work}
+
+## apps
+
+${ProjectsList(apps)}
 
 ## proj
 
@@ -77,9 +87,9 @@ const main = async () => {
     devto: readDbFile("devto"),
     github: readDbFile("github"),
     projects: readDbFile("projects"),
+    apps: readDbFile("apps"),
     metas: [
       { name: "author", content: readMdFile("title") },
-      { name: "description", content: readMdFile("description") },
       { name: "viewport", content: "width=device-width" },
     ],
     links: [{ rel: "stylesheet", href: `style.css?t=${Date.now()}` }],

@@ -24,5 +24,6 @@
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.2",
     "serve": "^11.3.2"
-  }
+  },
+  "packageManager": "pnpm@9.15.2+sha1.0ffb02f94047016ec7e088030337455b4c94bb34"
 }
