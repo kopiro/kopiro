@@ -43,6 +43,7 @@ body.press img {
 body.index h1 {
   font-size: 5em;
   margin-top: 20px;
+  line-height: 1em;
 }
 
 h1 {
@@ -57,7 +58,6 @@ h1 {
 
 h1:after {
   content: "";
-
   background-image: url(https://s.gravatar.com/avatar/6a46c3623a8bb6e3e641eca16450bd83?s=400);
   width: 150px;
   height: 150px;
@@ -105,8 +105,9 @@ hr {
   margin: 2em 0;
 }
 
-.username {
-  color: rgb(14, 132, 31);
+a.username {
+  color: rgb(14, 132, 31) !important;
+  font-weight: bold !important;
 }
 
 pre {
