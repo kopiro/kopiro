@@ -4,6 +4,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const paths = require("./paths");
 const { renderBaseHtmlFromMd, renderBaseMd } = require("./baseTemplates");
+const { readPartial } = require("./data");
 
 async function main() {
   try {
@@ -17,7 +18,10 @@ async function main() {
     for (const { id } of articlesJson) {
       const articleResp = await fetch(`https://dev.to/api/articles/${id}`);
       const articleJson = await articleResp.json();
+
       const { title, body_markdown: markdown, slug } = articleJson;
+
+      await fs.writeFile(path.join(paths.root, "press", `${slug}.json`), JSON.stringify(articleJson, null, 2));
 
       const actualMarkdown = renderBaseMd(
         {},
@@ -32,17 +36,22 @@ ${markdown}
 `,
       );
       await fs.writeFile(path.join(paths.root, "press", `${slug}.md`), actualMarkdown);
-      console.log(`Generated MD file for: ${title}`);
 
       const html = renderBaseHtmlFromMd(
         {
           title,
           bodyClass: "press",
+          metas: [
+            { name: "og:title", content: articleJson.title },
+            { name: "og:description", content: articleJson.description },
+            articleJson.cover_image ? { name: "og:image", content: articleJson.cover_image } : null,
+            { name: "og:type", content: `article` },
+          ].filter(Boolean),
         },
         actualMarkdown,
       );
       await fs.writeFile(path.join(paths.root, "press", `${slug}.html`), html);
-      console.log(`Generated HTML file for: ${title}`);
+      console.log(`Generated files for "${title}"`);
     }
 
     console.log("All articles have been processed successfully!");

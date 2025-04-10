@@ -8,23 +8,26 @@ const converter = new showdown.Converter({
 });
 converter.setFlavor("github");
 
+const escapeHtml = (str) => str.replace(/[<>"']/g, encodeURIComponent);
+
 const htmlTag = (tag) => (props) =>
   `<${tag} ${Object.entries(props)
-    .map(([k, v]) => `${k}="${v.replace("<br/>", " - ")}"`)
+    .map(([k, v]) => `${k}="${escapeHtml(v).replace("<br/>", " - ")}"`)
     .join(" ")} />`;
 
-const htmlTemplate = ({ title, metas, links, gtag, bodyClass, lang = "en" }, body) =>
+const htmlTemplate = ({ title, metas, links, bodyClass, lang = "en" }, body) =>
   `<!DOCTYPE html>
 <html lang="${lang}">
-  <head>
-	<meta charset="utf-8" />
-	<title>${title}</title>
-	${metas.map(htmlTag("meta")).join("\n")}
-	${links.map(htmlTag("link")).join("\n")}
+<head>
+<meta charset="utf-8" />
+<title>${title}</title>
+${metas.map(htmlTag("meta")).join("\n")}
+${links.map(htmlTag("link")).join("\n")}
 </head>
 <body class="${bodyClass}">
-	${body}
-	${gtag}
+${readPartial("menu.html")}
+${body}
+${readPartial("gtag.html")}
 </body>
 </html>`;
 
@@ -38,17 +41,31 @@ const baseState = {
   footer: readPartial("footer.md"),
 };
 
+const deepMerge = (a, b) => {
+  const result = { ...a };
+  Object.keys(b).forEach((key) => {
+    if (Array.isArray(b[key])) {
+      result[key] = [...(a[key] || []), ...b[key]];
+    } else if (typeof b[key] === "object" && b[key] !== null) {
+      result[key] = deepMerge(a[key], b[key]);
+    } else {
+      result[key] = b[key];
+    }
+  });
+  return result;
+};
+
 const renderBaseMd = (_state, md) => {
-  const state = { ...baseState, ..._state };
+  const state = deepMerge(baseState, _state || {});
   const { footer } = state;
   return `${md}\n\n${footer}`.trim();
 };
 
 const renderBaseHtmlFromMd = (_state, md) => {
-  const state = { ...baseState, ..._state };
+  const state = deepMerge(baseState, _state || {});
   const baseHtml = converter.makeHtml(md);
   const html = htmlTemplate(state, baseHtml);
-  return html.replace(/\.md$/, ".html");
+  return html.replace(/\.md/g, ".html");
 };
 
 module.exports = { renderBaseMd, renderBaseHtmlFromMd };

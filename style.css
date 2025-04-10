@@ -91,11 +91,30 @@ hr {
   margin: 2em 0;
 }
 
+.username {
+  color: rgb(14, 132, 31);
+}
+
 pre {
   background: #f0f0f0;
   padding: 1em;
   border-radius: 0.5em;
   overflow-x: auto;
+}
+
+nav#menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav#menu li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+nav#menu li a {
+  font-weight: normal;
 }
 
 /* On iPhone, reduce the font size of the h1 */

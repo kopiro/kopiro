@@ -1,7 +1,5 @@
 # Flavio De Stefano
-### \@kopiro
-
-<a href="https://www.buymeacoffee.com/kopiro" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="180px"></a>
+### <a href="https://www.buymeacoffee.com/kopiro" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="140px"></a>
 
 ## work
 
@@ -50,14 +48,14 @@
 
 ## press
 
-* <span class="title">[Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023-44b1.html)</span> - <span class="description">For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have...</span><span class="subtitle"> (Dec 3 '23)</span>
-* <span class="title">[Hey Siri, make coffee!](/press/hey-siri-make-coffee-2n9p.html)</span> - <span class="description">“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the m...</span><span class="subtitle"> (Jan 21 '21)</span>
-* <span class="title">[How I built the SiriWaveJS library: a look at the math and the code](/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code-l0o.html)</span> - <span class="description">It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iP...</span><span class="subtitle"> (Aug 3 '20)</span>
-* <span class="title">[How to easily run any Linux tool on any machine](/press/how-to-easily-run-any-linux-tool-on-any-machine-2g6p.html)</span> - <span class="description">Have you ever encountered a situation like the ones below?  Situation 1: You’re on your Linux worksta...</span><span class="subtitle"> (Jul 30 '20)</span>
-* <span class="title">[How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)](/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox-2md2.html)</span> - <span class="description">This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Ma...</span><span class="subtitle"> (Jul 30 '20)</span>
-* <span class="title">[Kata resolution: Next bigger number with the same digits](/press/kata-resolution-next-bigger-number-with-the-same-digits-41mj.html)</span> - <span class="description">I would like to share with you my solution of a Kata on CodeWars.  This is the link to the kata...</span><span class="subtitle"> (Jul 30 '20)</span>
-* <span class="title">[What I learned hacking the Facebook Messenger Soccer game](/press/what-i-learned-hacking-the-facebook-messenger-soccer-game-mo6.html)</span> - <span class="description">Recently, during the last European Football Championship, Facebook introduced a little game in the Me...</span><span class="subtitle"> (Jul 30 '20)</span>
-* <span class="title">[The hardware behind Otto: a monkey plush which became my vocal assistant](/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant-1gaa.html)</span> - <span class="description">Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February...</span><span class="subtitle"> (Jul 30 '20)</span>
+* <span class="title">[Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023-44b1.md)</span> - <span class="description">For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have...</span><span class="subtitle"> (Dec 3 '23)</span>
+* <span class="title">[Hey Siri, make coffee!](/press/hey-siri-make-coffee-2n9p.md)</span> - <span class="description">“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the m...</span><span class="subtitle"> (Jan 21 '21)</span>
+* <span class="title">[How I built the SiriWaveJS library: a look at the math and the code](/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code-l0o.md)</span> - <span class="description">It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iP...</span><span class="subtitle"> (Aug 3 '20)</span>
+* <span class="title">[How to easily run any Linux tool on any machine](/press/how-to-easily-run-any-linux-tool-on-any-machine-2g6p.md)</span> - <span class="description">Have you ever encountered a situation like the ones below?  Situation 1: You’re on your Linux worksta...</span><span class="subtitle"> (Jul 30 '20)</span>
+* <span class="title">[How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)](/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox-2md2.md)</span> - <span class="description">This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Ma...</span><span class="subtitle"> (Jul 30 '20)</span>
+* <span class="title">[Kata resolution: Next bigger number with the same digits](/press/kata-resolution-next-bigger-number-with-the-same-digits-41mj.md)</span> - <span class="description">I would like to share with you my solution of a Kata on CodeWars.  This is the link to the kata...</span><span class="subtitle"> (Jul 30 '20)</span>
+* <span class="title">[What I learned hacking the Facebook Messenger Soccer game](/press/what-i-learned-hacking-the-facebook-messenger-soccer-game-mo6.md)</span> - <span class="description">Recently, during the last European Football Championship, Facebook introduced a little game in the Me...</span><span class="subtitle"> (Jul 30 '20)</span>
+* <span class="title">[The hardware behind Otto: a monkey plush which became my vocal assistant](/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant-1gaa.md)</span> - <span class="description">Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February...</span><span class="subtitle"> (Jul 30 '20)</span>
 
 
 ---
