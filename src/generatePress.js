@@ -26,7 +26,7 @@ async function main() {
       const actualMarkdown = renderBaseMd(
         {},
         `
-## ${title}
+# ${title}
 
 #### Published on ${new Date(articleJson.published_at).toLocaleDateString()}
 

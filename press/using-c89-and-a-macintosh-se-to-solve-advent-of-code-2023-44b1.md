@@ -1,4 +1,4 @@
-## Using C89 on a '80s Macintosh SE to solve Advent of Code 2023
+# Using C89 on a '80s Macintosh SE to solve Advent of Code 2023
 
 #### Published on 12/3/2023
 

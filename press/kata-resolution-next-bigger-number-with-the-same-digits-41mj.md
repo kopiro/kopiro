@@ -1,4 +1,4 @@
-## Kata resolution: Next bigger number with the same digits
+# Kata resolution: Next bigger number with the same digits
 
 #### Published on 7/30/2020
 

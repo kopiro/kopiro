@@ -1,4 +1,4 @@
-## How to easily run any Linux tool on any machine
+# How to easily run any Linux tool on any machine
 
 #### Published on 7/30/2020
 

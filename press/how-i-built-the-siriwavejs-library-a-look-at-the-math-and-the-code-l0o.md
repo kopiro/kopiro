@@ -1,4 +1,4 @@
-## How I built the SiriWaveJS library: a look at the math and the code
+# How I built the SiriWaveJS library: a look at the math and the code
 
 #### Published on 8/3/2020
 
