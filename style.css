@@ -41,9 +41,9 @@ body.press img {
 }
 
 body.index h1 {
-  font-size: 4em;
+  font-size: 5em;
   margin-top: 20px;
-  line-height: 1em;
+  line-height: 0.95em;
 }
 
 h1 {
