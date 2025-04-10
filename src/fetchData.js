@@ -12,12 +12,14 @@ const RUNNERS = {
         let json = null;
         let carry = [];
         while (json == null || json.length > 0) {
+          // eslint-disable-next-line no-await-in-loop
           const response = await fetch(
             `https://api.github.com/users/${username}/repos?per_page=${MAX_PER_PAGE}&page=${page++}`,
             {
               headers: { authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
             },
           );
+          // eslint-disable-next-line no-await-in-loop
           json = await response.json();
           carry = carry.concat(json);
         }

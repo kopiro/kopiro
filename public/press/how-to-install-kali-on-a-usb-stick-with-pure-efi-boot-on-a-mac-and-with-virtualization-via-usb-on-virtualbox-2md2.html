@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8" />
+	<title>How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)</title>
+	<meta name="author" content="Flavio De Stefano" />
+<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="/style.css" />
+</head>
+<body class="press">
+	<h2>How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)</h2>
+<h4>Published on 7/30/2020</h4>
+<p><img src="https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fo8lgxk6805u1dc8g7obx.png" alt="How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)" /></p>
+<p>This tutorial is for everyone who wants a USB stick with a <strong>full Kali installation</strong> to use with your Mac(s). This is not intended to perform a Live Kali installation with persistence.</p>
+<p><strong>The problem when you perform a Kali installation on a USB stick is that Kali partitions the disk with the VFAT file system. Mac OS only recognizes HFS+ partitions along with some files needed for it.</strong></p>
+<p>So, you need:</p>
+<ul>
+<li><p>Your Mac</p></li>
+<li><p>A USB stick with Kali ISO installer</p></li>
+<li><p>A target USB stick, SD card or an SSD external drive where you’re going to install Kali (16GB and USB 3.0 recommended)</p></li>
+</ul>
+<p><em>This tutorial was heavily inspired by this tutorial with proper fixes for Kali. <a href="https://medium.com/@mmiglier/ubuntu-installation-on-usb-stick-with-pure-efi-boot-mac-compatible-469ad33645c9" rel="noopener noreferrer" target="_blank">https://medium.com/@mmiglier/ubuntu-installation-on-usb-stick-with-pure-efi-boot-mac-compatible-469ad33645c9</a></em></p>
+<h3>USB Live installation</h3>
+<p>First of all, install Kali on a USB stick by following this <a href="https://docs.kali.org/downloading/kali-linux-live-usb-install" rel="noopener noreferrer" target="_blank">tutorial</a>. I’m not gonna bother you on how to proceed on this step, but start here:</p>
+<pre><code class="bash language-bash">sudo dd if={KALI_ISO.iso} of=/dev/{USB} bs=1m </code></pre>
+<p>When you’re ready, reboot your Mac. Insert both your USB sticks, then press ALT and select the <strong>EFI boot</strong> to start the Live installer.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/0*MzOP02pAieEe6wqE.png" alt="" /></p>
+<p>Kali installer will ask you different questions about your timezone and keyboard layout.</p>
+<p>Proceed until it asks you to partition disks, here select: <strong>Manual.</strong> Then select your USB <strong>target</strong> drive (where you want to install Kali). You can recognize by various factors, for example by its size. Click <strong>Continue:</strong> this will partition your drive.</p>
+<p>Now, back again to the same screen and select the <strong>FREE SPACE</strong> under the USB target drive. Click <strong>Continue</strong> and select Automatically partition the free space. Follow the recommended option. Then click on Finish partitioning and write the change to disk.</p>
+<p>The installation process now will copy data to disk. Wait until it finishes (this is gonna take ~30 minutes).</p>
+<h3>Boot from GRUB Live</h3>
+<p>Once finished, your Mac will reboot and you have to press <strong>ALT</strong> again. Select <strong>EFI boot</strong> again.</p>
+<p>What we have to do now is to load our installed Kali system via <strong>Live GRUB</strong>, because our installed system doesn’t have a recognizable boot-loader by MacOS.</p>
+<p>Once GRUB is loaded, press <strong>c</strong> to get the GRUB command-line-interface.</p>
+<p>Now you have to understand in which HD is your Kali installation. To do this, when GRUB CLI is loaded, type <code>ls</code>; eject your USB stick and type <code>ls</code> gain.</p>
+<pre><code class="bash language-bash">grub&gt; ls
+(memdisk) (hd0) (hd1) (hd1,gpt3) (hd1, gpt2) (hd1,gpt1) ...</code></pre>
+<p>You’ll notice that an <code>hd{X}</code> disappeared: that is your drive. Now you have to find your <code>gpt</code>. Probably it’s the <code>gpt2</code> but just to be sure, type:</p>
+<pre><code class="bash language-bash">grub&gt; ls (hdX,gpt2)/boot/grub
+unicode.pf2 ...</code></pre>
+<p>*If the command says <code>unicode..</code> it’s the correct gpt; try other <strong>gpts</strong> otherwise. Now find your UUID of the partition, and annotate it.</p>
+<pre><code class="bash language-bash">grub&gt; ls -l (hdX},gpt{X})
+Partition hd2,gpt2: Filesystem type ext* 〈...snip...〉 UUID **e86c20b9-83e1-447d-a3be-d1ddaad6c4c6** - Partition start at [...]</code></pre>
+<p>Now we can set the parameters to GRUB to boot (use the <strong>tab</strong> key to use autocomplete):</p>
+<pre><code class="bash language-bash">grub&gt; set root=(hd{X},gpt{X})
+grub&gt; linux /boot/vmlinuz〈...tab here!...〉.efi.signed root=UUID=〈the UUID〉
+grub&gt; initrd /boot/initrd〈...tab here!...〉
+grub&gt; boot</code></pre>
+<p>This should boot your <strong>Full Kali Installation</strong> using the Live GRUB. You could differentiate from the Live environment by the password it recognizes during the login process.</p>
+<h3>Fixing the EFI partition</h3>
+<p>Once you’re logged in in your Kali installation, open the Terminal and type:</p>
+<pre><code class="bash language-bash">fdisk -l</code></pre>
+<p>and find your drive.</p>
+<p>Now, open <strong>gdisk</strong> (installed by default on Kali) to partition the drive (be very careful here):</p>
+<pre><code class="bash language-bash">$ gdisk /dev/sd{X}
+GPT fdisk (gdisk) version 1.0.1
+
+Partition table scan:
+  MBR: hybrid
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with hybrid MBR; using GPT.
+
+Command (? for help):</code></pre>
+<p>Now we have to:</p>
+<ul>
+<li><p>delete that EF00 partition</p></li>
+<li><p>create a new HFS+ once in its place</p></li>
+</ul>
+<pre><code class="bash language-bash">Command (? for help): p
+Disk /dev/sdd: ...
+
+[...]
+
+Number  Start (sector)  End (sector)  Size     Code   Name
+   1         2048         1050623  512.0 MiB   EF00   EFI System Partition
+
+[...]</code></pre>
+<p><em>Just leave defaults values in the sector phase</em></p>
+<pre><code class="bash language-bash">Current type is 'Linux filesystem'
+Hex code or GUID (L to show codes, Enter = 8300): AF00
+Changed type of partition to 'Apple HFS/HFS+'
+
+Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING PARTITIONS!!
+
+Do you want to proceed? (Y/N): Y
+
+OK; writing new GUID partition table (GPT) to /dev/sdd.
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot.
+The operation has completed successfully.</code></pre>
+<p>Now we have an unformatted HFS+ partition. To format, we need some tools; but to obtain these tools we need to add the Debian source-list to <strong>apt</strong>.</p>
+<pre><code class="bash language-bash">echo "deb http://ftp.debian.org/debian unstable main contrib non-free" &gt; /etc/apt/sources.list.d/debian.list &amp;&amp; \
+apt update &amp;&amp; \
+apt install hfsprogs</code></pre>
+<p>We can format that partition:</p>
+<pre><code class="bash language-bash">mkfs.hfsplus /dev/sd{X}1 -v Kali</code></pre>
+<p>Now we have to edit the <strong>/etc/fstab</strong> file:</p>
+<pre><code class="bash language-bash">gedit /etc/fstab</code></pre>
+<p>This will launch Gedit. In this file, localize these lines:</p>
+<pre><code># /boot/efi was on /dev/sd{X}1 during installation
+UUID={XXXXXXX} /boot/efi vfat defaults 0 1</code></pre>
+<p>and delete them.</p>
+<p>Now, unmount the boot partition, localizing it using:</p>
+<pre><code class="bash language-bash">mount | grep /boot/efi
+umount /dev/sd{Y}1</code></pre>
+<p>Then run this to add the necessary entries to your fstab file:</p>
+<pre><code class="bash language-bash">echo "UUID=$(blkid -o value -s UUID /dev/sd{X}1) /boot/efi auto defaults 0 0" &gt;&gt; /etc/fstab</code></pre>
+<p>Now we have to reinstall GRUB so it can use the newly formatted HFS+ partition for its EFI data:</p>
+<pre><code class="bash language-bash">mkdir -p /boot/efi/EFI/Kali
+echo "This file is required for booting" &gt; /boot/efi/EFI/Kali/mach_kernel
+echo "This file is required for booting" &gt; /boot/efi/mach_kernel
+grub-install --target x86_64-efi --boot-directory=/boot --efi-directory=/boot/efi --bootloader-id=Kali</code></pre>
+<p>We then need to “bless” the bootloader code, so that the Mac bootloader will boot it. To do that we need <strong>hfsbless</strong> binary that is not available via apt. No problem, just clone the repository and build:</p>
+<pre><code class="bash language-bash">cd /root
+git clone https://github.com/detly/mactel-boot
+cd mactel-boot
+make</code></pre>
+<p>Then bless:</p>
+<pre><code class="bash language-bash">./hfs-bless /boot/efi/EFI/Kali/System/Library/CoreServices/boot.efi</code></pre>
+<p>The final step is to create the grub configuration:</p>
+<pre><code class="bash language-bash">sed -i 's/GRUB_HIDDEN/#GRUB_HIDDEN/g' /etc/default/grub
+sed -i 's/GRUB_TIMEOUT=10/GRUB_TIMEOUT=0.1/' /etc/default/grub
+grub-mkconfig -o /boot/grub/grub.cfg</code></pre>
+<p>Perfecto! Now reboot and you should see your USB stick in the Mac bootloader by pressing <strong>ALT</strong>.</p>
+<h3>Virtualizing the USB via Virtualbox</h3>
+<p>If you ever need to boot this USB stick via Virtualbox (on Mac OSX), there is a simple trick to do that.</p>
+<p>First of all, you’ve to create a VMDK disk that points to the sectors of your USB stick. So, let’s identify that disk:</p>
+<pre><code>diskutil list
+    /dev/disk0 (internal):
+       #:                       TYPE NAME                    SIZE       IDENTIFIER
+       0:      GUID_partition_scheme                         500.3 GB   disk0
+       1:                        EFI EFI                     314.6 MB   disk0s1
+       2:                 Apple_APFS Container disk1         499.3 GB   disk0s2
+
+    /dev/disk1 (synthesized):
+       #:                       TYPE NAME                    SIZE       IDENTIFIER
+       0:      APFS Container Scheme -                      +499.3 GB   disk1
+                                     Physical Store disk0s2
+       1:                APFS Volume Macintosh HD            222.0 GB   disk1s1
+       2:                APFS Volume Preboot                 22.4 MB    disk1s2
+       3:                APFS Volume Recovery                519.9 MB   disk1s3
+       4:                APFS Volume VM                      3.2 GB     disk1s4
+
+    /dev/disk3 (external, physical):
+       #:                       TYPE NAME                    SIZE       IDENTIFIER
+       0:      GUID_partition_scheme                        *32.0 GB    disk3</code></pre>
+<p>In our case, it is **/dev/disk3. **Let’s unmount before proceeding:</p>
+<pre><code class="bash language-bash">diskutil unmountDisk /dev/disk{X}</code></pre>
+<p>With VirtualBox installed, run:</p>
+<pre><code class="bash language-bash">sudo VBoxManage internalcommands createrawvmdk -filename ~/Kali.vmdk -rawdisk /dev/disk{X}
+chmod 777 ~/Kali.vmdk
+chmod 777 /dev/disk{X}</code></pre>
+<p>Perfecto. Now, run Virtualbox UI and create a new machine with the following settings:</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*oyWrYb9bcCPJfNRUyloKQQ.png" alt="" /></p>
+<p>When VirtualBox asks you for a disk, let’s point to that VMDK created before:</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*3FNitD5paeNC683Yxty4WQ.png" alt="" /></p>
+<p>Before starting up the machine, let’s go to Settings and adjust your process counts, video and memory.</p>
+<p>The important things are to set **Enable EFI **under <strong>System > Motherboard.</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*_fyYoNFb9tzyeDZqHOS0gQ.png" alt="" /></p>
+<p>This will allow you to boot via EFI. Now start the virtual machine and immediately press <strong>F12</strong>.</p>
+<p>Select <strong>Boot Maintenance Manager:</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*_Qyi-uKl68zNQFBSVrfrlQ.png" alt="" /></p>
+<p>Select <strong>Boot from file:</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*lu734xFjlJa0UgXWg9oIAw.png" alt="" /></p>
+<p>Then select {<strong>SATA_DRIVE} > EFI > Kali > System > Library > CoreServices > boot.efi</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*XhEFqkrLQdKh8LnnHHmD2A.png" alt="" /></p>
+<p>And, voilà:</p>
+<p><img src="https://cdn-images-1.medium.com/max/2048/1*ct2UMeotA-Sbvyhka9T4pw.png" alt="" /></p>
+<p>Stay tuned :)</p>
+<hr />
+<p>© 2025 <a href="https://www.kopiro.me" rel="noopener noreferrer" target="_blank">Flavio De Stefano</a> - <a href="https://www.kopiro.me/gpg.txt" rel="noopener noreferrer" target="_blank">0xEDE51005D982268E</a></p>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-20NDLVTCNE");
+</script>
+</body>
+</html>

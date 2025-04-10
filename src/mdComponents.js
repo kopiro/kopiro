@@ -12,14 +12,15 @@ const List = ({ data, getTitle, getSubtitle, getLink, getDesc, sortingKey }) => 
     .join("\n");
 };
 
-const DevtoList = (data) =>
+const PressList = (data) =>
   List({
     data,
     sortingKey: "created_at",
     getTitle: (e) => e.title,
     getSubtitle: (e) => e.readable_publish_date,
     getDesc: (e) => e.description,
-    getLink: (e) => e.url,
+    _getLink: (e) => e.url,
+    getLink: (e) => `/press/${e.slug}.html`,
   });
 
 const ProjectsList = (data) =>
@@ -42,4 +43,4 @@ const GithubList = (data) =>
     getLink: (e) => e.html_url,
   });
 
-module.exports = { DevtoList, ProjectsList, GithubList };
+module.exports = { ProjectsList, GithubList, PressList };

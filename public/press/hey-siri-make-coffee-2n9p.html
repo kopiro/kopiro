@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8" />
+	<title>Hey Siri, make coffee!</title>
+	<meta name="author" content="Flavio De Stefano" />
+<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="/style.css" />
+</head>
+<body class="press">
+	<h2>Hey Siri, make coffee!</h2>
+<h4>Published on 1/21/2021</h4>
+<p><img src="https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fxetf3o819s0vfos6h9mn.jpeg" alt="Hey Siri, make coffee!" /></p>
+<p><em>“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the morning) to actually get up and make it. Therefore, I automated it.”</em></p>
+<p>My goal was exactly the one described in the first sentence, I needed to automate the first coffee I get in the morning, ‘cause I can’t really do anything if I don’t get otherwise. Since I have a cheap Nespresso machine, it can’t be programmed to do so; therefore I decided to solve it using simple programming and iOS automation.</p>
+<p>This is definitely not sci-fi, not even complex programming or electronic. But it works, and the solution is quite simple and brilliant in my opinion, so I thought I could share it so others may benefit from it.</p>
+<p>{% youtube GYO14ioZ4Rw %}</p>
+<h3>What you need:</h3>
+<ul>
+<li>ESP8266 board (I use the NodeMCU; it's very cheap (5$) and it does the job)</li>
+<li>A cheap servo motor (I use cheaps <a href="https://github.com/kopiro/arduino/blob/main/stuff/hextronik-hxt900.jpg" rel="noopener noreferrer" target="_blank">HXT900</a>)</li>
+</ul>
+<p>In theory, this is all you need; you could just write a simple sketch that will turn the motor at 8 AM and press the button.</p>
+<p>I soon realized though that to make the most of it, your coffee shouldn’t be made every day (there could be days when you aren’t at home) and it shouldn’t be made every day at the same time (I don’t know about you, but I don’t wake up every day at the same time, and also 5m could make the difference between a hot coffee vs a cold one).</p>
+<p>In my case, I every day end up drinking the coffee as soon I stop my alarm; that’s the moment when the button should be pressed; in order to do that, we can take advantage of some of the recent automation that Apple put in the latest iOS. I’m quite sure there is a similar concept in Android, but since I own an iPhone I’ll describe the procedure for this one.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/c56ulsht6ffzo7fgaxmv.jpeg" alt="Alt Text" /></p>
+<h3>Connect the servo</h3>
+<p>That's pretty straightforward; your servo motor should have 3 pins: 3V, GROUND, and the controller pin.</p>
+<p>Connect these to your board, choose the controller pin and write it down; if you have a NodeMCU and the HXT900, you can use this schema:</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/4ap1cn6qk9yth37xvmvr.png" alt="Alt Text" /></p>
+<h3>Download the sketch and flash it</h3>
+<p>Download this sketch: <a href="https://github.com/kopiro/arduino/blob/main/Projects/ButtonPresser/ButtonPresser.ino" rel="noopener noreferrer" target="_blank">https://github.com/kopiro/arduino/blob/main/Projects/ButtonPresser/ButtonPresser.ino</a> to your workstation and open it.</p>
+<p>I'm not gonna cover here how to configure your workstation on how to build Arduino sketches or how to install ESP8266 drivers, as you can find all resources <a href="https://www.espressif.com/en/products/socs/esp8266" rel="noopener noreferrer" target="_blank">here</a>.</p>
+<p>Before flashing it, you should modify the sketch and set <code>WIFI_ENABLED</code> to <code>1</code>, <code>WIFI_SSID</code> and <code>WIFI_PASS</code> to reflect your network configuration, so that the board is able to connect to it.</p>
+<p>Also, make sure you set the <code>MDNS_ENABLED</code> to <code>1</code>, and <code>MDNS_NAME</code> to something that makes sense for you; this is how you can reach your board in your network without dealing with static DHCP IP allocation on your router.</p>
+<p>Make sure you also change the <code>SERVO_GPIO</code> to be the GPIO number where you have connected your servo controller pin.</p>
+<p>If you want to make sure you can update the board via OTA (over-the-air; without connecting the board via USB to the workstation), please also set <code>OTA_ENABLED</code> to 1 and set the <code>OTA_PASS</code> to something unique.</p>
+<p>Once you have flashed your board, it should be accessible via the <code>MDNS_NAME</code> you choose in your browser.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/dxd69zq3o8av7dpe53tk.png" alt="Alt Text" /></p>
+<p>This is a simple dashboard where you can play with the software to choose the right values based on your coffee machine, on how long, how far, and how many times the button should be pressed.</p>
+<p>Specifically:</p>
+<ul>
+<li><code>degree</code> is a numeric value representing how many degrees the servo should turn. If you have put the button at 0 degree, something between 20 and 45 should do the job to press a button.</li>
+<li><code>delay</code> is the number of milliseconds the board should wait before lifting the servo back and turning it again to <code>0</code></li>
+<li><code>times</code> is how many times this “push” button operation should be repeated. This is quite useful in my case because I have to press once to switch on the coffee machine and twice to actually pour the coffee.</li>
+<li><code>delaytimes</code> is the number of milliseconds to wait between every “push” button operation</li>
+</ul>
+<p>Play with these values until you are sure that the coffee machine is able to press the button properly, and store them for later.</p>
+<h3>What the sketch is really doing</h3>
+<p>Nothing fancy, actually.</p>
+<p>It's simple exposing an HTTP server with a POST method called <code>/api</code> that accepts those parameters you played with before; when you hit this endpoint, it will simply turn the servo by the <code>degree</code> parameter specified.</p>
+<pre><code class="c language-c">const String method = server.arg("method");
+int _degree = server.arg("degree").toInt();
+int _delay = server.arg("delay").toInt();
+int _times = server.arg("times").toInt();
+int _delaytimes = server.arg("delaytimes").toInt();
+
+if (method.equals("push")) {
+  if (!_degree) _degree = 45;
+  if (!_delay) _delay = 200;
+  if (!_times) _times = 1;
+  if (!_delaytimes) _delaytimes = 1000;
+
+  for (int i = 0; i &lt; _times; i++) {
+    myservo.write(_degree);
+    delay(_delay);
+    myservo.write(0);
+    if ((i + 1) != _times) {
+      delay(_delaytimes);
+    }
+  }
+
+  server.send(200, "text/plain", "OK");
+  return;
+}</code></pre>
+<p>If you make a request using cURL to that endpoint, you can test from your terminal:</p>
+<pre><code class="sh language-sh">curl http://buttonpresser.local/api -X POST --data "method=push&amp;degree=20&amp;times=2"</code></pre>
+<h3>Make coffee every morning after you have stopped your alarm</h3>
+<p>This is the simplest and funniest part; we’re gonna just take advantage of the <em>“Shortcut”</em> app already available on your iOS device.</p>
+<p>Create a new shortcut with the action of <em>”Get Contents of URL”</em> and put these values:</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/27oyltgsmftqkvi1iqez.jpeg" alt="Alt Text" /></p>
+<p>You can now test this shortcut by saying to Siri, or just by pressing the button.</p>
+<p>How to do the automation though?</p>
+<p>That’s even simpler, go to the <em>Automation</em> tab, and select <em>When my alarm has stopped</em> &gt; <em>Run shortcut</em> and select the shortcut you’ve previously created!</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/q8c4h94wr802fmmr79ol.png" alt="Alt Text" /></p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/7mj1xbxbm4kjlrm64ob1.png" alt="Alt Text" /></p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/17aq3laeklk14pezigxb.png" alt="Alt Text" /></p>
+<p>That’s all, for real… Happy morning coffee!</p>
+<p>{% twitter 1350822814857777157 %}</p>
+<hr />
+<p>© 2025 <a href="https://www.kopiro.me" rel="noopener noreferrer" target="_blank">Flavio De Stefano</a> - <a href="https://www.kopiro.me/gpg.txt" rel="noopener noreferrer" target="_blank">0xEDE51005D982268E</a></p>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-20NDLVTCNE");
+</script>
+</body>
+</html>

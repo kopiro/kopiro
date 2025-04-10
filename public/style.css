@@ -25,6 +25,14 @@ section {
   margin-bottom: 2em;
 }
 
+img {
+  max-width: 100%;
+}
+
+body.press img {
+  display: block;
+}
+
 h1 {
   font-size: 6em;
   font-weight: 900;
@@ -67,14 +75,27 @@ h3 {
   color: rgb(14, 132, 31);
 }
 
-ul {
+body.index ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-li {
+body.index li {
   margin-bottom: 1em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 2em 0;
+}
+
+pre {
+  background: #f0f0f0;
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
 }
 
 /* On iPhone, reduce the font size of the h1 */

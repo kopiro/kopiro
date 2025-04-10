@@ -10,8 +10,10 @@ const paths = {
   src: resolveApp("src"),
   md: resolveApp("md"),
   db: resolveApp("db"),
+  partials: resolveApp("partials"),
   readme: resolveApp("readme.md"),
   public: resolveApp("public"),
+  press: resolveApp("press"),
 };
 
 module.exports = paths;

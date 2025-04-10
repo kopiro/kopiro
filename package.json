@@ -1,18 +1,17 @@
 {
   "name": "kopiro",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
-    "fetch-data": "node -r dotenv/config ./src/fetch-data.js",
-    "generate": "node -r dotenv/config ./src/generate.js",
-    "dev": "./dev.sh",
+    "fetch-data": "node -r dotenv/config ./src/fetchData.js",
+    "generate:press": "node -r dotenv/config ./src/generatePress.js",
+    "generate:index": "node -r dotenv/config ./src/generateIndex.js",
+    "generate": "npm run generate:press && npm run generate:index",
+    "start:dev": "npm run fetch-data && npm run generate && ./node_modules/.bin/serve ./public",
     "deploy": "npm run fetch-data && npm run generate && docker-compose build && docker-compose push"
   },
   "dependencies": {
-    "@sakun/system.css": "^0.1.11",
-    "cross-fetch": "^3.1.5",
     "dotenv": "^8.2.0",
-    "node-fetch": "^3.1.1",
     "showdown": "^1.9.1"
   },
   "devDependencies": {
@@ -24,6 +23,5 @@
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.2",
     "serve": "^11.3.2"
-  },
-  "packageManager": "pnpm@9.15.2+sha1.0ffb02f94047016ec7e088030337455b4c94bb34"
+  }
 }
