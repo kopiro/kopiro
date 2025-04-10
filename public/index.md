@@ -39,11 +39,13 @@
 * <span class="title">[ti.sharer](https://github.com/caffeinalab/ti.sharer)</span> - <span class="description">Sharing widget heavily inspired by AirBNB, with default drivers and the ability to add custom drivers to share.</span>
 * <span class="title">[whatever2telegram](https://github.com/kopiro/whatever2telegram)</span> - <span class="description">Allows forwarding whatever you want to a Telegram handle.</span>
 * <span class="title">[xscreensaver-apple-aerial](https://github.com/kopiro/xscreensaver-apple-aerial)</span> - <span class="description">Apple TV screensaver for Linux</span>
+* <span class="title">[esp8266-deerma-humidifier](https://github.com/kopiro/esp8266-deerma-humidifier)</span> - <span class="description">Cloud-free wifi humidification </span>
 * <span class="title">[ulala](https://github.com/kopiro/ulala)</span> - <span class="description">Show the right things when you scroll</span>
 * <span class="title">[kopiro](https://github.com/kopiro/kopiro)</span> - <span class="description">Personal portfolio website</span>
 * <span class="title">[eslint-plugin-react-hooks-ssr](https://github.com/kopiro/eslint-plugin-react-hooks-ssr)</span> - <span class="description">eslint plugin to forbid globals within the react server side rendering</span>
 * <span class="title">[pika-bulba](https://github.com/kopiro/pika-bulba)</span> - <span class="description">Simple 3D game of pokemons running with beautiful pixel-art</span>
 * <span class="title">[tommy](https://github.com/caffeinalab/tommy)</span> - <span class="description">Web Assets converter and optimizer</span>
+* <span class="title">[esp8266-gpio](https://github.com/kopiro/esp8266-gpio)</span> - <span class="description">ESP8266 all-in-one GPIO modular project</span>
 * <span class="title">[mbti](https://github.com/kopiro/mbti)</span> - <span class="description">Myers–Briggs Type Indicator showcase with Carl Jung functions</span>
 
 ## press
