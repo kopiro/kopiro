@@ -48,7 +48,7 @@ const renderBaseHtmlFromMd = (_state, md) => {
   const state = { ...baseState, ..._state };
   const baseHtml = converter.makeHtml(md);
   const html = htmlTemplate(state, baseHtml);
-  return html;
+  return html.replace(/\.md$/, ".html");
 };
 
 module.exports = { renderBaseMd, renderBaseHtmlFromMd };

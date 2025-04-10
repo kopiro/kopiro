@@ -20,7 +20,7 @@ const PressList = (data) =>
     getSubtitle: (e) => e.readable_publish_date,
     getDesc: (e) => e.description,
     _getLink: (e) => e.url,
-    getLink: (e) => `/press/${e.slug}.html`,
+    getLink: (e) => `/press/${e.slug}.md`,
   });
 
 const ProjectsList = (data) =>
@@ -38,7 +38,7 @@ const GithubList = (data) =>
     data,
     sortingKey: "stargazers_count",
     getTitle: (e) => e.name,
-    getSubtitle: (e) => null,
+    getSubtitle: () => null,
     getDesc: (e) => e.description,
     getLink: (e) => e.html_url,
   });
