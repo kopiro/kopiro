@@ -2,7 +2,7 @@
 
 #### Published on 7/30/2020
 
-![How to easily run any Linux tool on any machine](https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzita7utklosbwa4lp9nn.png)
+
 
 
 Have you ever encountered a situation like the ones below?

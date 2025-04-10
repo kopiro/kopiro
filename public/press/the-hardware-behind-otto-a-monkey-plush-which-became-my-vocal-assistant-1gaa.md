@@ -2,7 +2,7 @@
 
 #### Published on 7/30/2020
 
-![The hardware behind Otto: a monkey plush which became my vocal assistant](https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F028ubvdy3egiuhm39vhh.png)
+
 
 Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February 2017.
 

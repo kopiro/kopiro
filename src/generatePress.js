@@ -26,7 +26,7 @@ async function main() {
 
 #### Published on ${new Date(articleJson.published_at).toLocaleDateString()}
 
-${articleJson.social_image ? `![${title}](${articleJson.social_image})` : ""}
+${articleJson.cover_image ? `![${title}](${articleJson.cover_image})` : ""}
 
 ${markdown}
 `,
