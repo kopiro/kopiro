@@ -31,7 +31,7 @@ ${articleJson.cover_image ? `![${title}](${articleJson.cover_image})` : ""}
 ${markdown}
 `,
       );
-      await fs.writeFile(path.join(paths.public, "press", `${slug}.md`), actualMarkdown);
+      await fs.writeFile(path.join(paths.root, "press", `${slug}.md`), actualMarkdown);
       console.log(`Generated MD file for: ${title}`);
 
       const html = renderBaseHtmlFromMd(
@@ -41,7 +41,7 @@ ${markdown}
         },
         actualMarkdown,
       );
-      await fs.writeFile(path.join(paths.public, "press", `${slug}.html`), html);
+      await fs.writeFile(path.join(paths.root, "press", `${slug}.html`), html);
       console.log(`Generated HTML file for: ${title}`);
     }
 

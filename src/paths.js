@@ -12,7 +12,6 @@ const paths = {
   db: resolveApp("db"),
   partials: resolveApp("partials"),
   readme: resolveApp("readme.md"),
-  public: resolveApp("public"),
   press: resolveApp("press"),
 };
 

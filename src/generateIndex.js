@@ -62,10 +62,10 @@ async function main() {
 
   const markdown = renderIndexMd(state);
   await fs.writeFile(paths.readme, markdown);
-  await fs.writeFile(path.join(paths.public, "index.md"), markdown);
+  await fs.writeFile(path.join(paths.root, "index.md"), markdown);
 
   const html = renderIndexHtml(state, markdown);
-  await fs.writeFile(path.join(paths.public, "index.html"), html);
+  await fs.writeFile(path.join(paths.root, "index.html"), html);
 }
 
 main();
