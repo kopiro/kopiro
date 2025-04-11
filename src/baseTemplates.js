@@ -37,6 +37,7 @@ const baseState = {
   metas: [
     { name: "author", content: readPartial("title.md") },
     { name: "viewport", content: "width=device-width" },
+    { name: "og:image", content: "/img/avatar.jpg" },
   ],
   footer: readPartial("footer.md"),
 };

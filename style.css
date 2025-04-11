@@ -1,6 +1,6 @@
 body {
   background: #fff;
-  font-family: "Futura", sans-serif;
+  font-family: "Futura", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #555;
   max-width: 1024px;
   margin: 0 auto;
