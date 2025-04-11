@@ -171,6 +171,7 @@ pre {
   list-style: none;
   display: flex;
   gap: 0 2em;
+  flex-wrap: wrap;
 }
 
 #menu li {
@@ -200,10 +201,20 @@ pre {
   }
 
   #flavio-de-stefano {
-    margin-right: 0;
+    padding-right: 0;
+    font-size: 4em;
+    min-height: 0;
   }
 
   #avatar {
     display: none !important;
+  }
+
+  #menu ul {
+    justify-content: center;
+  }
+
+  .buymeacoffee {
+    margin-left: 0;
   }
 }
