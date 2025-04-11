@@ -204,6 +204,6 @@ pre {
   }
 
   #avatar {
-    display: none;
+    display: none !important;
   }
 }
