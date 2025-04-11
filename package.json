@@ -3,9 +3,9 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
-    "fetch-data": "node -r dotenv/config ./src/fetchData.js",
-    "generate:press": "node -r dotenv/config ./src/generatePress.js",
-    "generate:index": "node -r dotenv/config ./src/generateIndex.js",
+    "fetch-data": "node ./src/fetchData.js",
+    "generate:press": "node ./src/generatePress.js",
+    "generate:index": "node ./src/generateIndex.js",
     "generate": "npm run generate:press && npm run generate:index",
     "serve": "./node_modules/.bin/serve ./",
     "start:dev": "npm run fetch-data && npm run generate && npm run serve",

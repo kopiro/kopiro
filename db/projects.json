@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "year": 2010,
+    "title": "ViviAteneo (website)",
+    "description": "Website for the platform ViviAteneo",
+    "role": "Full stack Developer",
+    "company": "Pane&Design",
+    "url": null,
+    "updated_at": "2018-07-26 12:23:29"
+  },
+  {
+    "id": 2,
+    "year": 2011,
+    "title": "Oppure.me (website)",
+    "description": "Interactive video-messages platform \"Oppure.me\"",
+    "role": "Webmaster",
+    "company": "Pane&Design",
+    "url": null,
+    "updated_at": "2018-07-26 12:23:32"
+  },
+  {
+    "id": 3,
+    "year": 2012,
+    "title": "Vip4Charity (website)",
+    "description": "E-commerce and bid platform \"CharityStars\"",
+    "role": "Full stack Developer",
+    "company": "Pane&Design",
+    "url": "https://www.charitystars.com/",
+    "updated_at": "2018-07-26 12:23:36"
+  },
+  {
+    "id": 4,
+    "year": 2013,
+    "title": "Parma FC (website)",
+    "description": "Website of \"Parma FC\" football club",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 5,
+    "year": 2014,
+    "title": "Alpestre (website)",
+    "description": "Company website of \"Alpestre\"",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": "http://alpestre.com",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 6,
+    "year": 2014,
+    "title": "Hogan Retail (mobile app)",
+    "description": "Mobile in-store application (iPad only) for the \"Hogan\" brand",
+    "role": "Mobile Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 7,
+    "year": 2014,
+    "title": "ERGO (mobile app)",
+    "description": "Mobile application (Android + iOS) \"ERGO\"",
+    "role": "Mobile Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 8,
+    "year": 2014,
+    "title": "Monster (mobile app)",
+    "description": "Mobile application (Android + iOS) \"Monster\"",
+    "role": "Mobile Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 10,
+    "year": 2014,
+    "title": "Genialloyd (mobile app)",
+    "description": "Mobile application (Android + iOS) and a REST backend for \"Genialloyd\" and Laravel 4.X",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": "https://itunes.apple.com/it/app/genialloyd/id868029797?mt=8",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 11,
+    "year": 2014,
+    "title": "Caffeina (website)",
+    "description": "Company website Caffeina",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": "http://caffeina.com",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 12,
+    "year": 2015,
+    "title": "Thumbspire (website)",
+    "description": "Company website for \"Thumbspire\"",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 13,
+    "year": 2015,
+    "title": "BeautyStar (mobile app)",
+    "description": "Mobile app (Android + iOS) for \"BeautyStar\" brand",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 14,
+    "year": 2015,
+    "title": "BeautyStar (website)",
+    "description": "Facebook Tab landing page for the \"BeautyStar\" brand",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 15,
+    "year": 2015,
+    "title": "FAI (mobile app)",
+    "description": "Official mobile application (Android + iOS) and a REST backend for \"FAI (Fondo Ambiente Italiano\"",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": "https://itunes.apple.com/it/app/fai/id969562346?mt=8",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 17,
+    "year": 2015,
+    "title": "Cashlog (website)",
+    "description": "Company website \"CashLog\"",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 18,
+    "year": 2015,
+    "title": "FAI Marathon (website)",
+    "description": "Website for \"FAI Marathon\" national event",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": "http://faimarathon.it",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 19,
+    "year": 2015,
+    "title": "FAI Marathon (mobile app)",
+    "description": "Mobile app (Android + iOS) for \"FAI Marathon\" national event",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 20,
+    "year": 2015,
+    "title": "FIMI (website)",
+    "description": "Website \"FIMI\" + REST API",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": "http://fimi.it",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 21,
+    "year": 2016,
+    "title": "Giornate FAI (website)",
+    "description": "Website for \"Giornate FAI\" national event",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": "http://giornatefai.it",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 22,
+    "year": 2016,
+    "title": "Giornate FAI (mobile app)",
+    "description": "Mobile app (Android + iOS) for \"Giornate FAI\" national event",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 23,
+    "year": 2016,
+    "title": "TeeTee (ecommerce",
+    "description": "E-commerce for \"TeeTee\"",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": "http://teetee.eu",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 24,
+    "year": 2016,
+    "title": "Unyca (mobile app)",
+    "description": "Mobile application (Android + iOS) \"Unyca\", by integrating BLE communication with an Arduino microcontroller",
+    "role": "Mobile Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 25,
+    "year": 2016,
+    "title": "Armani Frames of Life (website)",
+    "description": "Website \"Armani (Frames Of Life\" with PHP and web technologies (Developer AWWWARDS winner)",
+    "role": "Full stack Developer",
+    "company": "Caffeina",
+    "url": "http://framesoflife.com",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 26,
+    "year": 2016,
+    "title": "Luoghi del Cuore (API)",
+    "description": "REST backend for national event \"FAI (I Luoghi del cuore)",
+    "role": "Backend Developer",
+    "company": "Caffeina",
+    "url": "http://iluoghidelcuore.it",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 27,
+    "year": 2016,
+    "title": "Zanichelli Prof (mobile app)",
+    "description": "Mobile application (Android + iOS) \"Zanichelli Prof\" technology",
+    "role": "Mobile Developer",
+    "company": "Caffeina",
+    "url": "https://itunes.apple.com/it/app/zanichelli-prof/id1115186891?mt=8",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 28,
+    "year": 2017,
+    "title": "FAI Platform (API)",
+    "description": "REST microserviced backend for \"FAI (Fondo Ambiente Italiano\" ecosystem using Laravel 5.X and Oracle DB integration deployed on AWS services",
+    "role": "Lead Mobile and Backend Developer",
+    "company": "Caffeina",
+    "url": "http://fondoambiente.it",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 30,
+    "year": 2017,
+    "title": "BNL Youmanist (api & mobile app",
+    "description": "Managed the development of \"BNL (Youmanist\" mobile application",
+    "role": "Lead Mobile and Backend Developer",
+    "company": "Caffeina",
+    "url": "http://www.youmanist.it/",
+    "updated_at": "2018-09-26 08:49:28"
+  },
+  {
+    "id": 31,
+    "year": 2017,
+    "title": "PolpettaMag (website)",
+    "description": "Website for the magazine \"PolpettaMag\"",
+    "role": "Full stack Developer",
+    "company": "",
+    "url": "http://www.polpettamag.com/",
+    "updated_at": "2018-09-26 08:50:12"
+  },
+  {
+    "id": 32,
+    "year": 2017,
+    "title": "Duccio Grassi Architects (website)",
+    "description": "Company website for the Architect Studio \"Duccio Grassi Architects\"",
+    "role": "Full stack Developer",
+    "company": "",
+    "url": "http://www.ducciograssi.com/",
+    "updated_at": "2018-09-26 08:50:11"
+  },
+  {
+    "id": 33,
+    "year": 2014,
+    "title": "Iotti + Pavarani Architetti (website)",
+    "description": "Company website for the Architect Studio \"Iotti + Pavarani\"",
+    "role": "Full stack Developer",
+    "company": "",
+    "url": "http://www.iotti-pavarani.com/",
+    "updated_at": "2018-09-26 08:50:10"
+  },
+  {
+    "id": 34,
+    "year": 2011,
+    "title": "Il Paesaggio della Bonifica (website)",
+    "description": "Portal for \"Il Paesaggio della Bonifica\"",
+    "role": "Webmaster",
+    "company": "",
+    "url": "http://ilpaesaggiodellabonifica.it/",
+    "updated_at": "2018-09-26 08:50:08"
+  },
+  {
+    "id": 35,
+    "year": 2013,
+    "title": "écru architetti (website)",
+    "description": "Company website for the Architect Studio \"écru architetti\"",
+    "role": "Webmaster",
+    "company": "",
+    "url": "http://ecruarchitetti.it/",
+    "updated_at": "2018-09-26 08:50:07"
+  },
+  {
+    "id": 36,
+    "year": 2014,
+    "title": "D&G Intenso (mobile app)",
+    "description": "Mobile app \"D&G Intenso\" (iPad only) for D&G Stores",
+    "role": "Mobile Developer",
+    "company": "Caffeina",
+    "url": null,
+    "updated_at": "2018-09-26 08:49:28"
+  }
+]

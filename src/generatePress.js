@@ -1,10 +1,12 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-await-in-loop */
+
+require("./config");
+
 const fs = require("fs/promises");
 const path = require("path");
 const paths = require("./paths");
 const { renderBaseHtmlFromMd, renderBaseMd } = require("./baseTemplates");
-const { readPartial } = require("./data");
 
 async function main() {
   try {

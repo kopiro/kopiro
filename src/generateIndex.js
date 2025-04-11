@@ -1,3 +1,5 @@
+require("./config");
+
 const fs = require("fs/promises");
 const path = require("path");
 const paths = require("./paths");

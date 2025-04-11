@@ -1,3 +1,5 @@
+require("./config");
+
 const fs = require("fs");
 const path = require("path");
 const paths = require("./paths");
@@ -22,6 +24,7 @@ const RUNNERS = {
           );
           // eslint-disable-next-line no-await-in-loop
           json = await response.json();
+          json = json.filter((e) => e.private === false);
           carry = carry.concat(json);
         }
         return carry;
@@ -42,17 +45,19 @@ const writeDbFile = (file, json) => {
   return fs.writeFileSync(filePath, JSON.stringify(json, null, 2));
 };
 
-const main = () => {
-  Object.keys(RUNNERS).forEach(async (name) => {
-    console.log(`${name}: running...`);
+const main = async () => {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const name of Object.keys(RUNNERS)) {
+    process.stdout.write(`${name}: running...`);
     try {
+      // eslint-disable-next-line no-await-in-loop
       const data = await RUNNERS[name]();
       if (data) writeDbFile(name, data);
-      console.log(`${name}: OK, ${data.length} rows fetched`);
+      process.stdout.write(`OK, ${data.length} rows fetched\n`);
     } catch (ex) {
-      console.error(`${name}: ERR`, ex);
+      process.stdout.write(`ERR\n`);
     }
-  });
+  }
 };
 
 main();
