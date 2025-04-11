@@ -1,6 +1,6 @@
 # Kata resolution: Next bigger number with the same digits
 
-#### Published on 7/30/2020
+#### Published on 2020, July 30th
 
 
 

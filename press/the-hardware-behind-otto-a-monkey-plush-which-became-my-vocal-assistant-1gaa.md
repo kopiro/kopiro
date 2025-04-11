@@ -1,6 +1,6 @@
 # The hardware behind Otto: a monkey plush which became my vocal assistant
 
-#### Published on 7/30/2020
+#### Published on 2020, July 30th
 
 
 

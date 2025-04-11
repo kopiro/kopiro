@@ -3,31 +3,40 @@
 <head>
 <meta charset="utf-8" />
 <title>What I learned hacking the Facebook Messenger Soccer game</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 <meta name="author" content="Flavio De Stefano" />
 <meta name="viewport" content="width=device-width" />
 <meta name="og:title" content="What I learned hacking the Facebook Messenger Soccer game" />
 <meta name="og:description" content="Recently, during the last European Football Championship, Facebook introduced a little game in the Me..." />
 <meta name="og:type" content="article" />
-<link rel="stylesheet" href="/style.css" />
 </head>
 <body class="press">
 <nav id="menu">
   <ul>
-    <li><a href="/" class="home username">@kopiro</a></li>
+    <li class="username"><a href="/">@kopiro</a></li>
     <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
     <li><a target="_blank" href="https://linkedin.com/in/destefanoflavio ">Linkedin</a></li>
     <li><a target="_blank" href="https://threads.net/@kopiro91">Threads</a></li>
     <li><a target="_blank" href="https://twitter.com/kopiro91">Twitter</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
   </ul>
 </nav>
-<h1>What I learned hacking the Facebook Messenger Soccer game</h1>
-<h4>Published on 7/30/2020</h4>
+
+<img id="avatar" src="/img/avatar.jpg" alt="Flavio De Stefano" />
+<div id="content">
+<h1 id="what-i-learned-hacking-the-facebook-messenger-soccer-game">What I learned hacking the Facebook Messenger Soccer game</h1>
+<h4 id="published-on-2020-july-30th">Published on 2020, July 30th</h4>
 <p>Recently, during the last European Football Championship, Facebook introduced a little game in the Messenger app that makes you lose hours and hours despite its simplicity.</p>
 <p>If you didn’t notice it, read <a href="https://mashable.com/2016/06/15/facebook-messenger-soccer-game-how-to/#fmGutFmQ3Oqx" rel="noopener noreferrer" target="_blank">this article</a> on Mashable.</p>
 <p>I have to admit… I totally suck at this game, so my best score was <strong>9</strong>.</p>
 <p>But, as a Developer, the best thing I could do was to beat my friends by hacking the game.</p>
 <p><em>I really thought this would be simple.</em></p>
-<h3>First way: Listen to HTTP(s) requests</h3>
+<h3 id="first-way-listen-to-https-requests">First way: Listen to HTTP(s) requests</h3>
 <p>While developing apps, you immediately realize that you need an HTTP debugger tool to analyze incoming /outgoing traffic for your APIs.</p>
 <p><a href="https://www.charlesproxy.com/" rel="noopener noreferrer" target="_blank">Charles</a> is the best tool I’ve found to accomplish this task. It has a very intuitive interface and you can easily use it for debugging and reverse engineering purposes.</p>
 <p>It was supposed to end at this point: I would have to analyze the API that the Facebook app used and just replay it with CURL while editing the data and the score sent to the server.</p>
@@ -39,7 +48,7 @@
 <p>You can easily do this by including the public key of the remote server certificate within the application so that it’s easy to validate the identity of the client for each HTTPS request.</p>
 <p>This technique invalidates the <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" rel="noopener noreferrer" target="_blank">Man in the Middle (MITM)</a> Attack.</p>
 <p>Great job Facebook! But…(remember, there’s always a but) there is a way to disable the <strong>SSL certificate pinning</strong> using some system tweaks only available on a jailbroken device.</p>
-<h3>The first way (enhanced): Jailbreak a device and install iOS SSL Kill Switch</h3>
+<h3 id="the-first-way-enhanced-jailbreak-a-device-and-install-ios-ssl-kill-switch">The first way (enhanced): Jailbreak a device and install iOS SSL Kill Switch</h3>
 <p>My iPhone is currently running iOS 9.x, so at the time of this writing, it was impossible to jailbreak. So I took an old iPad mini running iOS 8.3.x and easily jailbroke it using the <a href="http://www.taig.com/en/" rel="noopener noreferrer" target="_blank">TaiG</a> tool.</p>
 <p>Searching on the web, I found <a href="https://github.com/nabla-c0d3/ssl-kill-switch2" rel="noopener noreferrer" target="_blank">SSL Kill Switch 2</a>, a Blackbox tool to disable SSL certificate validation within iOS and OS X apps.</p>
 <p>Once loaded into an iOS or OS X App, SSL Kill Switch 2 patches specific low-level SSL functions within the Secure Transport API in order to <em>override, and disable the system’s default certificate validation as well as any kind of custom certificate validation</em> (such as certificate pinning).</p>
@@ -56,7 +65,7 @@ killall -HUP SpringBoard</code></pre>
 <p>Looking at the project issues, I noticed that someone else had the same problem (<a href="https://github.com/nabla-c0d3/ssl-kill-switch2/issues/13" rel="noopener noreferrer" target="_blank">https://github.com/nabla-c0d3/ssl-kill-switch2/issues/13</a>), with no resolution.</p>
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*UlNOgv5rpOId_yvnggV3hQ.png" alt="" /></p>
 <p><em>Pause.</em></p>
-<h3>Second way: simulate touch events within the application</h3>
+<h3 id="second-way-simulate-touch-events-within-the-application">Second way: simulate touch events within the application</h3>
 <p>I realized that there are many game cheats that use a “human” approach: <em>simulate touch events</em> (one of the most popular games that many game cheats utilize this strategy on is Clash of Clans).</p>
 <p>Browsing the web for a tool that automates these operations, I found this awesome tweak - <a href="https://autotouch.net/" rel="noopener noreferrer" target="_blank">AutoTouch</a>. It can record human touch events and store the data in a LUA script. You can then edit this produced script and simulate whatever you want anywhere on your device.</p>
 <p>Once installed with <a href="https://cydia.saurik.com/" rel="noopener noreferrer" target="_blank">Cydia</a>, I saved a BMP screenshot of the Messenger application with the ball visible and obtained the coordinates of where to click.</p>
@@ -104,7 +113,7 @@ killall -HUP SpringBoard</code></pre>
 
     end</code></pre>
 <p>I don’t know why, but it simply didn’t work. Maybe the <em>findColor</em> is too slow to intercept the ball, which then makes the script useless.</p>
-<h3>Third way: Reverse engineer the app</h3>
+<h3 id="third-way-reverse-engineer-the-app">Third way: Reverse engineer the app</h3>
 <p>I don’t have good native skills in Objective C, but I remember (when I played with the jailbreak ~4 years ago) that there was a tool by <a href="https://twitter.com/saurik?lang=en" rel="noopener noreferrer" target="_blank">Saurik</a> that could inject itself into iOS processes.</p>
 <p>It is released along with Cydia and was called <a href="http://www.cycript.org/" rel="noopener noreferrer" target="_blank">Cycript</a>. It allowed developers to explore and modify running applications on iOS, by injecting code at run time.</p>
 <p>I read some basic tutorials on how to use it, and after a few struggles, I decided to follow this (another) way.</p>
@@ -134,10 +143,11 @@ MS.hookMessage(MNSoccerGame, @selector(_setScore:), function(arg0) {
 }, _setScore_pointer);</code></pre>
 <p>Now you can just play, <strong>lose</strong>, and <strong>anyway score a new record.</strong></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ar0Zef4Ey3M" frameborder="0" allowfullscreen></iframe>
-<h3>What I learned</h3>
+<h3 id="what-i-learned">What I learned</h3>
 <p>Never stop yourself. Always try and discover a new way to accomplish the same thing. I know, it’s just a game, but if you treat the problem you’re trying to solve like a challenge, you’ll get much more than the satisfaction of beating your friends.</p>
 <hr />
 <p>© 2025 <a href="https://www.kopiro.me" rel="noopener noreferrer" target="_blank">Flavio De Stefano</a> • <a href="https://www.kopiro.me/gpg.txt" rel="noopener noreferrer" target="_blank">0xEDE51005D982268E</a></p>
+</div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

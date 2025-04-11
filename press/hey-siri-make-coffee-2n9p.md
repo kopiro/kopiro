@@ -1,6 +1,6 @@
 # Hey Siri, make coffee!
 
-#### Published on 1/21/2021
+#### Published on 2021, January 21st
 
 ![Hey Siri, make coffee!](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fxetf3o819s0vfos6h9mn.jpeg)
 

@@ -3,32 +3,41 @@
 <head>
 <meta charset="utf-8" />
 <title>How I built the SiriWaveJS library: a look at the math and the code</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 <meta name="author" content="Flavio De Stefano" />
 <meta name="viewport" content="width=device-width" />
 <meta name="og:title" content="How I built the SiriWaveJS library: a look at the math and the code" />
 <meta name="og:description" content="It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iP..." />
 <meta name="og:image" content="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fk1i915are06zdw037tel.png" />
 <meta name="og:type" content="article" />
-<link rel="stylesheet" href="/style.css" />
 </head>
 <body class="press">
 <nav id="menu">
   <ul>
-    <li><a href="/" class="home username">@kopiro</a></li>
+    <li class="username"><a href="/">@kopiro</a></li>
     <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
     <li><a target="_blank" href="https://linkedin.com/in/destefanoflavio ">Linkedin</a></li>
     <li><a target="_blank" href="https://threads.net/@kopiro91">Threads</a></li>
     <li><a target="_blank" href="https://twitter.com/kopiro91">Twitter</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
   </ul>
 </nav>
-<h1>How I built the SiriWaveJS library: a look at the math and the code</h1>
-<h4>Published on 8/3/2020</h4>
+
+<img id="avatar" src="/img/avatar.jpg" alt="Flavio De Stefano" />
+<div id="content">
+<h1 id="how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code">How I built the SiriWaveJS library: a look at the math and the code</h1>
+<h4 id="published-on-2020-august-3rd">Published on 2020, August 3rd</h4>
 <p><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fk1i915are06zdw037tel.png" alt="How I built the SiriWaveJS library: a look at the math and the code" /></p>
 <p>It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iPhone 4S) in the browser using pure Javascript.</p>
 <p>During the last month, I updated this library by doing a lot of refactoring using ES6 features and reviewed the build process using <strong>RollupJS</strong>. Now I’ve decided to share what I've learned during this process and the math behind this library.</p>
 <p>To get an idea of what the output will be, visit the <a href="http://kopiro.github.io/siriwave/" rel="noopener noreferrer" target="_blank">live example</a>; the whole codebase is <a href="https://github.com/kopiro/siriwave" rel="noopener noreferrer" target="_blank">here</a>.</p>
 <p>Additionally, you can download all plots drawn in this article in GCX (OSX Grapher format): <a href="https://github.com/kopiro/siriwave/raw/master/etc/gcx/default.gcx" rel="noopener noreferrer" target="_blank">default.gcx</a> and <a href="https://github.com/kopiro/siriwave/raw/master/etc/gcx/ios9.gcx" rel="noopener noreferrer" target="_blank">ios9.gcx</a></p>
-<h2>The classic wave style</h2>
+<h2 id="the-classic-wave-style">The classic wave style</h2>
 <p><img src="https://cdn-images-1.medium.com/max/2380/1*60NI4dQ3KgGxAm7SJSUQww.gif" alt="Classic style" /></p>
 <p>Initially, this library only had the classic wave-form style that all of you remember using in iOS 7 and iOS 8.</p>
 <p>It’s no hard task to replicate this simple wave-form, only a bit of math and basic concepts of the Canvas API.</p>
@@ -56,7 +65,7 @@
 <p>Now, if you notice on the original wave we have other sub-waves that will give a lower value for the amplitude. Let’s draw them for <code>A = {0.8, 0.6, 0.4, 0.2, -0.2, -0.4, -0.6, -0.8}</code></p>
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*Vf8LFJTkLtk5NWifl4D_8w.png" alt="" /></p>
 <p>In the final canvas composition, the sub-waves will be drawn with a decreasing opacity tending to <code>0</code>.</p>
-<h3>Basic code concepts</h3>
+<h3 id="basic-code-concepts">Basic code concepts</h3>
 <p>What do we do now with this equation?</p>
 <p>We use the equation to obtain the <strong>Y value</strong> for an <strong>input X</strong>.</p>
 <p>Basically, by using a simple <strong>for loop</strong> from <code>-2 to 2</code> (the <em>plot boundaries in this case</em>), we have to draw <strong>point by point</strong> the equation on the canvas using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath" rel="noopener noreferrer" target="_blank">beginPath</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo" rel="noopener noreferrer" target="_blank">lineTo</a> API.</p>
@@ -79,12 +88,12 @@ ctx.stroke();</code></pre>
 <p>Instead, if you use a really big value (<code>&gt; 0.1</code>) your graph will lose precision and you’ll notice this instantly.</p>
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*F9vtajOYHMBnd47FtuCcBQ.png" alt="Plot drawn with precision = 0.2" /></p>
 <p>You can see that the final code is actually similar to the pseudo-code: <a href="https://github.com/kopiro/siriwave/blob/master/src/curve.ts" rel="noopener noreferrer" target="_blank">https://github.com/kopiro/siriwave/blob/master/src/curve.ts</a></p>
-<h3>Implement <code>_xpos(i)</code></h3>
+<h3 id="implement-_xposi">Implement <code>_xpos(i)</code></h3>
 <p>You may argue that if we’re drawing the plot by incrementing the <code>x</code>, then <code>_xpos</code> may simply return the input argument.</p>
 <p>This is almost correct, but our plot is always drawn from <code>-B</code> to <code>B</code> (<code>B = Boundary = 2</code>).</p>
 <p>So, to draw on the canvas via <strong>pixel coordinates</strong>, we must translate <code>-B to 0</code> and <code>B to 1</code> (simple transposition of [-B, B] to [0,1]); then multiply [0,1] and the <strong>canvas width (w)</strong>.</p>
 <pre><code>_xpos(i) = w * [ (i + B) / 2B ]</code></pre>
-<h3>Implement <code>_ypos</code></h3>
+<h3 id="implement-_ypos">Implement <code>_ypos</code></h3>
 <p>To implement <code>_ypos</code>, we should simply write our equation obtained before (closely).</p>
 <pre><code class="js language-js">const K = 4;
 const FREQ = 6;
@@ -108,12 +117,12 @@ function _ypos(i) {
 <li><p><code>globalAmplitude</code> is a static parameter that represents the amplitude of the total wave (composed by sub-waves)</p></li>
 <li><p><code>attenuation</code> is a static parameter that changes for each line and represents the amplitude of a wave</p></li>
 </ul>
-<h3>Phase</h3>
+<h3 id="phase">Phase</h3>
 <p>Now let’s discuss the <strong>phase variable</strong>: it is the <strong>first changing variable</strong> over time because it simulates the wave movement.</p>
 <p>What does it mean? It means that <strong>for each</strong> animation frame, our base controller should <strong>increment</strong> this value. But to avoid this value throwing a buffer overflow, let’s modulo it with 2π (since <code>Math.sin</code> dominio is already modulo 2π).</p>
 <pre><code class="js language-js">phase = (phase + (Math.PI / 2) * speed) % (2 * Math.PI);</code></pre>
 <p>We multiply <code>speed</code> and <code>Math.PI</code> so that with <code>speed = 1</code>  we have the maximum speed (why? because <code>sin(0) = 0, sin(π/2) = 1, sin(π) = 0, ...</code>.</p>
-<h3>Finalizing</h3>
+<h3 id="finalizing">Finalizing</h3>
 <p>Now that we have all code to draw a single line, we define a configuration array to draw all sub-waves and then cycle over them.</p>
 <pre><code class="js language-js">return [
     { attenuation: -2, lineWidth: 1.0, opacity: 0.1 },
@@ -124,7 +133,7 @@ function _ypos(i) {
     // basic line
     { attenuation: 1, lineWidth: 1.5, opacity: 1.0},
 ];</code></pre>
-<h2>The iOS 9+ style</h2>
+<h2 id="the-ios-9-style">The iOS 9+ style</h2>
 <p><img src="https://cdn-images-1.medium.com/max/2392/1*yXia5olaPzgiWmTLtK15dQ.gif" alt="GIF of SiriwaveJS iOS9+" /></p>
 <p>Now things start to get complicated. The style introduced with iOS 9 is really complex and reverse engineering to simulate it’s not easy at all! I’m not fully satisfied with the final result, but I’ll continue to improve it until I get the desired result.</p>
 <p>As previously done, let’s start to obtain the linear equations of the waves.</p>
@@ -182,14 +191,14 @@ function _ypos(i) {
 }</code></pre>
 <p>There’s nothing complex here. The only thing that changed is that we cycle <code>NO_OF_CURVES</code> times overall pseudo-random parameters and we <strong>sum</strong> all <strong>y values</strong>.</p>
 <p>Before multiplying it for <code>canvasHeightMax</code> and  <code>globalAmplitude</code> that give us the absolute PX coordinate of the canvas, we divide it for <code>NO_OF_CURVES</code> so that <strong>y is always ≤ 1</strong>.</p>
-<h3>Composite operation</h3>
+<h3 id="composite-operation">Composite operation</h3>
 <p>One thing that actually matters here is the <code>globalCompositeOperation</code> mode to set in the Canvas. If you notice, in the original controller, when there’s an overlap of 2+ colors, they’re actually mixed in a standard way.</p>
 <p>The default is set to <code>source-over</code>, but the result is poor, even with an opacity set.</p>
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*wlFF6gwTfbz324uhSuYaOg.png" alt="composite operation: source-over" /></p>
 <p>You can see all examples of vary **globalCompositeOperation **here: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation</a></p>
 <p>By setting <code>globalCompositeOperation</code> to <code>ligther</code>, you notice that the intersection of the colors is nearest to the original.</p>
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*DxOICjfEReAFqCeC5V0oNA.png" alt="Composite operation: lighter" /></p>
-<h2>Build with RollupJS</h2>
+<h2 id="build-with-rollupjs">Build with RollupJS</h2>
 <p>Before refactoring everything, I wasn’t satisfied at all with the codebase: old prototype-like classes, a single Javascript file for everything, no uglify/minify and <strong>no build at all</strong>.</p>
 <p>Using the new ES6 feature like <strong>native classes, spread operators</strong> and <strong>lambda functions</strong>, I was able to clean everything, split files, and decrease lines of unnecessary code.</p>
 <p>Furthermore, I used <a href="https://rollupjs.org/" rel="noopener noreferrer" target="_blank">RollupJS</a> to create a transpiled and minified build in various formats.</p>
@@ -238,7 +247,7 @@ function _ypos(i) {
 }</code></pre>
 <p>We clearly don’t want the **resolve **or <strong>commonjs</strong> RollupJS plugins because the developer transplier will resolve dependencies for us.</p>
 <p>You can find the final RollupJS configuration here: <a href="https://github.com/kopiro/siriwave/blob/master/rollup.config.js" rel="noopener noreferrer" target="_blank">https://github.com/kopiro/siriwave/blob/master/rollup.config.js</a></p>
-<h3>Watch and Hot code reload</h3>
+<h3 id="watch-and-hot-code-reload">Watch and Hot code reload</h3>
 <p>Using RollupJS, you can also take advantage of <code>rollup-plugin-livereload</code> and <code>rollup-plugin-serve</code> plugins to provide a better way to work on scripts.</p>
 <p>Basically, you just add these plugins when you’re in “developer” mode:</p>
 <pre><code class="js language-js">import livereload from 'rollup-plugin-livereload';
@@ -267,6 +276,7 @@ if (process.env.NODE_ENV !== 'production') {
 <p>Hope that you find this article interesting, see you soon! 😎</p>
 <hr />
 <p>© 2025 <a href="https://www.kopiro.me" rel="noopener noreferrer" target="_blank">Flavio De Stefano</a> • <a href="https://www.kopiro.me/gpg.txt" rel="noopener noreferrer" target="_blank">0xEDE51005D982268E</a></p>
+</div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

@@ -3,25 +3,34 @@
 <head>
 <meta charset="utf-8" />
 <title>How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 <meta name="author" content="Flavio De Stefano" />
 <meta name="viewport" content="width=device-width" />
 <meta name="og:title" content="How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)" />
 <meta name="og:description" content="This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Ma..." />
 <meta name="og:type" content="article" />
-<link rel="stylesheet" href="/style.css" />
 </head>
 <body class="press">
 <nav id="menu">
   <ul>
-    <li><a href="/" class="home username">@kopiro</a></li>
+    <li class="username"><a href="/">@kopiro</a></li>
     <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
     <li><a target="_blank" href="https://linkedin.com/in/destefanoflavio ">Linkedin</a></li>
     <li><a target="_blank" href="https://threads.net/@kopiro91">Threads</a></li>
     <li><a target="_blank" href="https://twitter.com/kopiro91">Twitter</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
   </ul>
 </nav>
-<h1>How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)</h1>
-<h4>Published on 7/30/2020</h4>
+
+<img id="avatar" src="/img/avatar.jpg" alt="Flavio De Stefano" />
+<div id="content">
+<h1 id="how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox">How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)</h1>
+<h4 id="published-on-2020-july-30th">Published on 2020, July 30th</h4>
 <p>This tutorial is for everyone who wants a USB stick with a <strong>full Kali installation</strong> to use with your Mac(s). This is not intended to perform a Live Kali installation with persistence.</p>
 <p><strong>The problem when you perform a Kali installation on a USB stick is that Kali partitions the disk with the VFAT file system. Mac OS only recognizes HFS+ partitions along with some files needed for it.</strong></p>
 <p>So, you need:</p>
@@ -31,7 +40,7 @@
 <li><p>A target USB stick, SD card or an SSD external drive where you’re going to install Kali (16GB and USB 3.0 recommended)</p></li>
 </ul>
 <p><em>This tutorial was heavily inspired by this tutorial with proper fixes for Kali. <a href="https://medium.com/@mmiglier/ubuntu-installation-on-usb-stick-with-pure-efi-boot-mac-compatible-469ad33645c9" rel="noopener noreferrer" target="_blank">https://medium.com/@mmiglier/ubuntu-installation-on-usb-stick-with-pure-efi-boot-mac-compatible-469ad33645c9</a></em></p>
-<h3>USB Live installation</h3>
+<h3 id="usb-live-installation">USB Live installation</h3>
 <p>First of all, install Kali on a USB stick by following this <a href="https://docs.kali.org/downloading/kali-linux-live-usb-install" rel="noopener noreferrer" target="_blank">tutorial</a>. I’m not gonna bother you on how to proceed on this step, but start here:</p>
 <pre><code class="bash language-bash">sudo dd if={KALI_ISO.iso} of=/dev/{USB} bs=1m </code></pre>
 <p>When you’re ready, reboot your Mac. Insert both your USB sticks, then press ALT and select the <strong>EFI boot</strong> to start the Live installer.</p>
@@ -40,7 +49,7 @@
 <p>Proceed until it asks you to partition disks, here select: <strong>Manual.</strong> Then select your USB <strong>target</strong> drive (where you want to install Kali). You can recognize by various factors, for example by its size. Click <strong>Continue:</strong> this will partition your drive.</p>
 <p>Now, back again to the same screen and select the <strong>FREE SPACE</strong> under the USB target drive. Click <strong>Continue</strong> and select Automatically partition the free space. Follow the recommended option. Then click on Finish partitioning and write the change to disk.</p>
 <p>The installation process now will copy data to disk. Wait until it finishes (this is gonna take ~30 minutes).</p>
-<h3>Boot from GRUB Live</h3>
+<h3 id="boot-from-grub-live">Boot from GRUB Live</h3>
 <p>Once finished, your Mac will reboot and you have to press <strong>ALT</strong> again. Select <strong>EFI boot</strong> again.</p>
 <p>What we have to do now is to load our installed Kali system via <strong>Live GRUB</strong>, because our installed system doesn’t have a recognizable boot-loader by MacOS.</p>
 <p>Once GRUB is loaded, press <strong>c</strong> to get the GRUB command-line-interface.</p>
@@ -59,7 +68,7 @@ grub&gt; linux /boot/vmlinuz〈...tab here!...〉.efi.signed root=UUID=〈the UU
 grub&gt; initrd /boot/initrd〈...tab here!...〉
 grub&gt; boot</code></pre>
 <p>This should boot your <strong>Full Kali Installation</strong> using the Live GRUB. You could differentiate from the Live environment by the password it recognizes during the login process.</p>
-<h3>Fixing the EFI partition</h3>
+<h3 id="fixing-the-efi-partition">Fixing the EFI partition</h3>
 <p>Once you’re logged in in your Kali installation, open the Terminal and type:</p>
 <pre><code class="bash language-bash">fdisk -l</code></pre>
 <p>and find your drive.</p>
@@ -139,7 +148,7 @@ make</code></pre>
 sed -i 's/GRUB_TIMEOUT=10/GRUB_TIMEOUT=0.1/' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg</code></pre>
 <p>Perfecto! Now reboot and you should see your USB stick in the Mac bootloader by pressing <strong>ALT</strong>.</p>
-<h3>Virtualizing the USB via Virtualbox</h3>
+<h3 id="virtualizing-the-usb-via-virtualbox">Virtualizing the USB via Virtualbox</h3>
 <p>If you ever need to boot this USB stick via Virtualbox (on Mac OSX), there is a simple trick to do that.</p>
 <p>First of all, you’ve to create a VMDK disk that points to the sectors of your USB stick. So, let’s identify that disk:</p>
 <pre><code>diskutil list
@@ -186,6 +195,7 @@ chmod 777 /dev/disk{X}</code></pre>
 <p>Stay tuned :)</p>
 <hr />
 <p>© 2025 <a href="https://www.kopiro.me" rel="noopener noreferrer" target="_blank">Flavio De Stefano</a> • <a href="https://www.kopiro.me/gpg.txt" rel="noopener noreferrer" target="_blank">0xEDE51005D982268E</a></p>
+</div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

@@ -3,30 +3,39 @@
 <head>
 <meta charset="utf-8" />
 <title>Using C89 on a '80s Macintosh SE to solve Advent of Code 2023</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 <meta name="author" content="Flavio De Stefano" />
 <meta name="viewport" content="width=device-width" />
 <meta name="og:title" content="Using C89 on a '80s Macintosh SE to solve Advent of Code 2023" />
 <meta name="og:description" content="For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have..." />
 <meta name="og:image" content="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5tqxlid54aj7vp5mvwqp.jpeg" />
 <meta name="og:type" content="article" />
-<link rel="stylesheet" href="/style.css" />
 </head>
 <body class="press">
 <nav id="menu">
   <ul>
-    <li><a href="/" class="home username">@kopiro</a></li>
+    <li class="username"><a href="/">@kopiro</a></li>
     <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
     <li><a target="_blank" href="https://linkedin.com/in/destefanoflavio ">Linkedin</a></li>
     <li><a target="_blank" href="https://threads.net/@kopiro91">Threads</a></li>
     <li><a target="_blank" href="https://twitter.com/kopiro91">Twitter</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
   </ul>
 </nav>
-<h1>Using C89 on a '80s Macintosh SE to solve Advent of Code 2023</h1>
-<h4>Published on 12/3/2023</h4>
+
+<img id="avatar" src="/img/avatar.jpg" alt="Flavio De Stefano" />
+<div id="content">
+<h1 id="using-c89-on-a-80s-macintosh-se-to-solve-advent-of-code-2023">Using C89 on a '80s Macintosh SE to solve Advent of Code 2023</h1>
+<h4 id="published-on-2023-december-3rd">Published on 2023, December 3rd</h4>
 <p><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5tqxlid54aj7vp5mvwqp.jpeg" alt="Using C89 on a '80s Macintosh SE to solve Advent of Code 2023" /></p>
 <p>For this year <a href="https://adventofcode.com/" rel="noopener noreferrer" target="_blank">AdventOfCode</a>, I want to try to solve some problems using an old Macintosh SE I have lying around and the ThinkC compiler.</p>
 <p>My goal is to learn more about the old C89 syntax and also try to get as efficient as possible with memory and CPU so that even more complex problems can be solved in reasonable time.</p>
-<h3>Day 0</h3>
+<h3 id="day-0">Day 0</h3>
 <p>First of all, I had to resurrect the old Macintosh and make sure everything works correctly. With my surprise, the <a href="https://beyondloom.com/blog/thinkc.html" rel="noopener noreferrer" target="_blank">ThinkC compiler</a> was already installed from 3 years ago and I managed to run a very quick "Hello world".</p>
 <p>The IDE that comes with the ThinkC compiler, called ThinkC Project manager, it's surprisingly good for those years.</p>
 <p>Then, I had to make sure I could still use my 1.4MB floppy disks with a modern MacBook. The TLDR is that old Macintoshs use HFS file systems and the support for this has been removed, therefore you can't just mount the floppy and see the files in the Finder of your new macOS Sonoma.</p>
@@ -42,20 +51,21 @@ sudo hcopy -a ~/Developer/aoc/2023/1/input.txt :1.txt
 # Copy the source from the Macintosh
 sudo hcopy -a :1.c ~/Developer/aoc/2023/1/main.c</code></pre>
 <p>I strangely could't open the input.txt on the Macintosh itself, but the C program I wrote is able to read the file correctly using <code>fopen</code></p>
-<h3>Day 1 learnings</h3>
-<h4>Declarations at the beginning of the scope</h4>
+<h3 id="day-1-learnings">Day 1 learnings</h3>
+<h4 id="declarations-at-the-beginning-of-the-scope">Declarations at the beginning of the scope</h4>
 <p>ANSI C89 requires variables to be declared at the beginning of a scope; this is not valid (syntax error on line 3):</p>
 <pre><code class="c language-c">FILE* fp = fopen("example.txt", "r");
 if (fp == NULL) return;
 char line[128];</code></pre>
-<h4>snprintf doesn't exist</h4>
+<h4 id="snprintf-doesnt-exist">snprintf doesn't exist</h4>
 <p>The safer version of <a href="https://cplusplus.com/reference/cstdio/snprintf/" rel="noopener noreferrer" target="_blank">sprintf</a> to do string concatenation doesn't exists; no big deal, I don't really care about safety in this scenario.</p>
-<h4>I hit 32k limit with <code>int sum</code></h4>
+<h4 id="i-hit-32k-limit-with-int-sum">I hit 32k limit with <code>int sum</code></h4>
 <p>My <code>int sum</code> went negative as soon I hit the number 32k. </p>
 <p>I thought that this CPU was 32bit, but something it telling me that it's rather 16bit.</p>
 <p>Switching to <code>unsigned long</code> and also making sure I use <code>printf("%lu", sum)</code> (took 20m to realize I was still using <code>%d</code>) made it work.</p>
 <hr />
 <p>© 2025 <a href="https://www.kopiro.me" rel="noopener noreferrer" target="_blank">Flavio De Stefano</a> • <a href="https://www.kopiro.me/gpg.txt" rel="noopener noreferrer" target="_blank">0xEDE51005D982268E</a></p>
+</div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

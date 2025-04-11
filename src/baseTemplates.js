@@ -1,8 +1,7 @@
 const showdown = require("showdown");
-const { readPartial } = require("./data");
+const { readPartial } = require("./utils");
 
 const converter = new showdown.Converter({
-  noHeaderId: true,
   openLinksInNewWindow: true,
   emoji: true,
 });
@@ -15,19 +14,22 @@ const htmlTag = (tag) => (props) =>
     .map(([k, v]) => `${k}="${escapeHtml(v).replace("<br/>", " - ")}"`)
     .join(" ")} />`;
 
-const htmlTemplate = ({ title, metas, links, bodyClass, lang = "en" }, body) =>
+const htmlTemplate = ({ title, metas, bodyClass, lang = "en" }, body) =>
   `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
 <meta charset="utf-8" />
 <title>${title}</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 ${metas.map(htmlTag("meta")).join("\n")}
-${links.map(htmlTag("link")).join("\n")}
 </head>
 <body class="${bodyClass}">
-${readPartial("menu.html")}
+${readPartial("header.html")}
+<div id="content">
 ${body}
-${readPartial("gtag.html")}
+</div>
+${readPartial("footer.html")}
 </body>
 </html>`;
 
@@ -36,8 +38,6 @@ const baseState = {
     { name: "author", content: readPartial("title.md") },
     { name: "viewport", content: "width=device-width" },
   ],
-  links: [{ rel: "stylesheet", href: `/style.css` }],
-  gtag: readPartial("gtag.html"),
   footer: readPartial("footer.md"),
 };
 

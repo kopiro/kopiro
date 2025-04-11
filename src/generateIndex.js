@@ -3,7 +3,7 @@ require("./config");
 const fs = require("fs/promises");
 const path = require("path");
 const paths = require("./paths");
-const { readDbFile, readPartial } = require("./data");
+const { readDbFile, readPartial } = require("./utils");
 const { PressList, ProjectsList, GithubList } = require("./mdComponents");
 const { renderBaseHtmlFromMd, renderBaseMd } = require("./baseTemplates");
 
@@ -14,15 +14,13 @@ const renderIndexHtml = (state, markdown) => {
       bodyClass: "index",
     },
     markdown,
-  )
-    .replace(/<h2[^>]*>(.+)<\/h2>[^<]*?(<ul[^>]*>[^]*?<\/ul>)/gm, (match, title, content) => {
-      return `<section id="${title.toLowerCase()}"><h2>${title}</h2>${content}</section>`;
-    })
-    .replace(/ - /g, `<br/>`);
+  ).replace(/<h2[^>]*>(.+)<\/h2>[^<]*?(<ul[^>]*>[^]*?<\/ul>)/gm, (match, title, content) => {
+    return `<section id="${title.toLowerCase()}"><h2>${title}</h2>${content}</section>`;
+  });
 };
 
 const renderIndexMd = (state) => {
-  const { title, description, work, github, devto, projects, apps } = state;
+  const { title, description, work, github, press, projects, apps } = state;
   return renderBaseMd(
     state,
     `# ${title}
@@ -47,7 +45,7 @@ ${GithubList(github)}
 
 ## press
 
-${PressList(devto)}
+${PressList(press)}
 `,
   );
 };
@@ -57,7 +55,7 @@ async function main() {
     title: readPartial("title.md"),
     description: readPartial("description.md"),
     work: readPartial("work.md"),
-    devto: readDbFile("devto"),
+    press: [...readDbFile("devto"), ...readDbFile("docs")],
     github: readDbFile("github"),
     projects: readDbFile("projects"),
     apps: readDbFile("apps"),

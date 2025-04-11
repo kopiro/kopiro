@@ -1,6 +1,6 @@
 # How I built the SiriWaveJS library: a look at the math and the code
 
-#### Published on 8/3/2020
+#### Published on 2020, August 3rd
 
 ![How I built the SiriWaveJS library: a look at the math and the code](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fk1i915are06zdw037tel.png)
 

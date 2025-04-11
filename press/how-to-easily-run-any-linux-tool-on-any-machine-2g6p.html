@@ -3,25 +3,34 @@
 <head>
 <meta charset="utf-8" />
 <title>How to easily run any Linux tool on any machine</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 <meta name="author" content="Flavio De Stefano" />
 <meta name="viewport" content="width=device-width" />
 <meta name="og:title" content="How to easily run any Linux tool on any machine" />
 <meta name="og:description" content="Have you ever encountered a situation like the ones below?  Situation 1: You’re on your Linux worksta..." />
 <meta name="og:type" content="article" />
-<link rel="stylesheet" href="/style.css" />
 </head>
 <body class="press">
 <nav id="menu">
   <ul>
-    <li><a href="/" class="home username">@kopiro</a></li>
+    <li class="username"><a href="/">@kopiro</a></li>
     <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
     <li><a target="_blank" href="https://linkedin.com/in/destefanoflavio ">Linkedin</a></li>
     <li><a target="_blank" href="https://threads.net/@kopiro91">Threads</a></li>
     <li><a target="_blank" href="https://twitter.com/kopiro91">Twitter</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
   </ul>
 </nav>
-<h1>How to easily run any Linux tool on any machine</h1>
-<h4>Published on 7/30/2020</h4>
+
+<img id="avatar" src="/img/avatar.jpg" alt="Flavio De Stefano" />
+<div id="content">
+<h1 id="how-to-easily-run-any-linux-tool-on-any-machine">How to easily run any Linux tool on any machine</h1>
+<h4 id="published-on-2020-july-30th">Published on 2020, July 30th</h4>
 <p>Have you ever encountered a situation like the ones below?</p>
 <p><strong>Situation 1</strong>: You’re on your Linux workstation, and there is a PHP code that you must execute. But this code only runs under PHP 7, and your workstation only has PHP 5.</p>
 <p><strong>Situation 2</strong>: You’re working on your MacBook laptop, and you desperately need your sqlmap tool from your Kali Linux distribution. But you don’t have access to your Virtual Machine.</p>
@@ -36,7 +45,7 @@
 <p>But let’s start from the beginning.</p>
 <p>You can install Docker on your machine by clicking <a href="https://docs.docker.com/install/overview/" rel="noopener noreferrer" target="_blank">this link</a> and selecting your platform from left menu. Then, follow the guide.</p>
 <p>Once you have installed Docker, open your preferred Terminal or Command Prompt.</p>
-<h3>Basic concepts</h3>
+<h3 id="basic-concepts">Basic concepts</h3>
 <p>First of all, let’s test if your Docker configuration is working correctly. From the terminal:</p>
 <pre><code class="bash language-bash">$ docker --version
 Docker version 18.03.0-ce, build 0520e24</code></pre>
@@ -45,7 +54,7 @@ Docker version 18.03.0-ce, build 0520e24</code></pre>
 <p>The first thing to know is the name of the image you want to use. For official images, you usually have the name of the binary with no additions.</p>
 <p>For example, in the case of PHP, the image name is simply <code>php</code>. And what about the version? Simple as well, just add the version number (e.g., 7).</p>
 <p>Now let’s run our first container.</p>
-<h3>Situation 1</h3>
+<h3 id="situation-1">Situation 1</h3>
 <blockquote>
   <p>You’re on your Linux workstation, and there is a PHP code that you must execute. But this code only runs under PHP 7, and your workstation only has PHP 5.</p>
 </blockquote>
@@ -63,7 +72,7 @@ php &gt; echo 1&lt;=&gt;0;
 <li><p>-i (—interactive): keep <a href="https://en.wikipedia.org/wiki/Standard_streams" rel="noopener noreferrer" target="_blank">STDIN</a> open, even if not attached</p></li>
 </ul>
 <p>You should use them most of the time, with some exceptions.</p>
-<h3>Situation 2</h3>
+<h3 id="situation-2">Situation 2</h3>
 <blockquote>
   <p>You’re working on your MacBook laptop, and you desperately need your sqlmap tool from your Kali Linux distribution. But you don’t have access to your Virtual Machine.</p>
 </blockquote>
@@ -99,7 +108,7 @@ php &gt; echo 1&lt;=&gt;0;
    --url [http://localhost](http://localhost)</code></pre>
 <p>With the -v option we’ll create a bind mount. The first argument is the host path, and the second is the path on the container that we want to map.</p>
 <p>And, in fact, everything has been saved — including our reports.</p>
-<h3>Situation 3</h3>
+<h3 id="situation-3">Situation 3</h3>
 <blockquote>
   <p>You’re on your Windows PC, and you immediately need an NGINX server that serves your static files from a directory.</p>
 </blockquote>
@@ -120,7 +129,7 @@ php &gt; echo 1&lt;=&gt;0;
    -v $(pwd):/usr/share/nginx/html:ro \
    -p 80:80 \
    nginx:alpine</code></pre>
-<h3>Situation 4</h3>
+<h3 id="situation-4">Situation 4</h3>
 <blockquote>
   <p>No matter which platform, you have to start your Node.js 10 project. But you don’t have Node.js installed on your platform.</p>
 </blockquote>
@@ -138,6 +147,7 @@ php &gt; echo 1&lt;=&gt;0;
 <p>I hope that you’re gonna use Docker for all your future binaries! :)</p>
 <hr />
 <p>© 2025 <a href="https://www.kopiro.me" rel="noopener noreferrer" target="_blank">Flavio De Stefano</a> • <a href="https://www.kopiro.me/gpg.txt" rel="noopener noreferrer" target="_blank">0xEDE51005D982268E</a></p>
+</div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

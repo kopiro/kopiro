@@ -2,7 +2,7 @@ body {
   background: #fff;
   font-family: "Futura", sans-serif;
   color: #555;
-  max-width: 920px;
+  max-width: 1024px;
   margin: 0 auto;
   position: relative;
   padding: 30px;
@@ -30,60 +30,108 @@ section {
   margin-bottom: 2em;
 }
 
-img {
+#content * {
   max-width: 100%;
+}
+
+#content img {
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
-body.press img {
+body.press #content img {
   display: block;
 }
 
-body.index h1 {
+body.index .username {
+  display: none !important;
+}
+
+.username:before {
+  content: "";
+  background-image: url("/img/avatar.jpg");
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-size: cover;
+  border: 2px solid white;
+  outline: 1px solid #ddd;
+  cursor: pointer;
+}
+
+#flavio-de-stefano {
   font-size: 5em;
   margin-top: 20px;
   line-height: 0.95em;
-}
-
-h1 {
-  font-size: 3em;
   font-weight: 900;
   padding-right: 200px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   color: #000;
+  min-height: 160px;
   position: relative;
   line-height: 1.15em;
 }
 
-h1:after {
-  content: "";
-  background-image: url(https://s.gravatar.com/avatar/6a46c3623a8bb6e3e641eca16450bd83?s=400);
+#avatar {
+  display: none;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   background-size: cover;
   position: absolute;
-  right: 0;
-  top: 0px;
+  right: 20px;
+  top: 140px;
   border: 8px solid white;
   outline: 1px solid #ddd;
   cursor: pointer;
+  scale: 1;
+  z-index: 2;
   transition: scale ease-out 200ms;
 }
 
-h1:hover:after {
+#avatar:hover {
   scale: 1.05;
 }
 
+body.index #avatar {
+  display: block;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+  color: #000;
+}
+
 h2 {
-  font-size: 2.5em;
+  font-size: 2.25em;
   line-height: 1em;
   color: #000;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.8em;
+  line-height: 1em;
+  font-weight: normal;
+  color: rgb(14, 132, 31);
+}
+
+h4 {
+  font-size: 1.5em;
+  line-height: 1em;
+  font-weight: normal;
+  color: rgb(14, 132, 31);
+}
+
+h5 {
+  font-size: 1.25em;
+  line-height: 1em;
+  font-weight: normal;
+  color: rgb(14, 132, 31);
+}
+
+h6 {
+  font-size: 1em;
   line-height: 1em;
   font-weight: normal;
   color: rgb(14, 132, 31);
@@ -105,8 +153,8 @@ hr {
   margin: 2em 0;
 }
 
-a.username {
-  color: rgb(14, 132, 31) !important;
+.username a {
+  color: rgb(14, 132, 31);
   font-weight: bold !important;
 }
 
@@ -117,19 +165,32 @@ pre {
   overflow-x: auto;
 }
 
-nav#menu ul {
+#menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  gap: 0 2em;
 }
 
-nav#menu li {
-  display: inline-block;
-  margin-right: 1em;
+#menu li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 5px;
 }
 
-nav#menu li a {
+#menu li a {
   font-weight: normal;
+}
+
+.buymeacoffee {
+  display: inline-flex;
+  margin-left: auto;
+  width: 140px;
+}
+
+.buymeacoffee img {
+  width: 100%;
 }
 
 /* On iPhone, reduce the font size of the h1 */
@@ -138,11 +199,11 @@ nav#menu li a {
     font-size: 14px;
   }
 
-  h1 {
+  #flavio-de-stefano {
     margin-right: 0;
   }
 
-  h1:after {
+  #avatar {
     display: none;
   }
 }

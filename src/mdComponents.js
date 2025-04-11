@@ -1,3 +1,5 @@
+const { getDateHumanFormat } = require("./utils");
+
 const List = ({ data, getTitle, getSubtitle, getLink, getDesc, sortingKey }) => {
   if (sortingKey) {
     data.sort((a, b) => (a[sortingKey] > b[sortingKey] ? -1 : 1));
@@ -15,9 +17,9 @@ const List = ({ data, getTitle, getSubtitle, getLink, getDesc, sortingKey }) => 
 const PressList = (data) =>
   List({
     data,
-    sortingKey: "created_at",
+    sortingKey: "published_at",
     getTitle: (e) => e.title,
-    getSubtitle: (e) => e.readable_publish_date,
+    getSubtitle: (e) => getDateHumanFormat(e.published_at),
     getDesc: (e) => e.description,
     _getLink: (e) => e.url,
     getLink: (e) => `/press/${e.slug}.md`,
