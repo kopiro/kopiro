@@ -49,6 +49,7 @@
 
 ## press
 
+* <span class="title">[How to correctly publish your Mac apps outside of the App Store](/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store-38a.md)</span> - <span class="description">Distributing Mac apps outside of the App Store requires more than just building and zipping your...</span><span class="subtitle"> (2025, April 11th)</span>
 * <span class="title">[Stock tax declaration for Sweden - Guide](/press/stock-tax-declaration-for-sweden.md)</span> - <span class="description">How to declare taxes when selling shares / stock options in Sweden: how to fill your K4 form</span><span class="subtitle"> (2025, April 11th)</span>
 * <span class="title">[Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023-44b1.md)</span> - <span class="description">For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have...</span><span class="subtitle"> (2023, December 3rd)</span>
 * <span class="title">[Hey Siri, make coffee!](/press/hey-siri-make-coffee-2n9p.md)</span> - <span class="description">“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the m...</span><span class="subtitle"> (2021, January 21st)</span>

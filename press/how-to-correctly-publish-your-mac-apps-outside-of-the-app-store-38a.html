@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>How to correctly publish your Mac apps outside of the App Store</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
+<meta name="author" content="Flavio De Stefano" />
+<meta name="viewport" content="width=device-width" />
+<meta name="og:image" content="/img/avatar.jpg" />
+<meta name="og:title" content="How to correctly publish your Mac apps outside of the App Store" />
+<meta name="og:description" content="Distributing Mac apps outside of the App Store requires more than just building and zipping your..." />
+<meta name="og:type" content="article" />
+</head>
+<body class="press">
+<nav id="menu">
+  <ul>
+    <li class="username"><a href="/">@kopiro</a></li>
+    <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
+    <li><a target="_blank" href="https://linkedin.com/in/destefanoflavio ">Linkedin</a></li>
+    <li><a target="_blank" href="https://threads.net/@kopiro91">Threads</a></li>
+    <li><a target="_blank" href="https://twitter.com/kopiro91">Twitter</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
+  </ul>
+</nav>
+
+<img id="avatar" src="/img/avatar.jpg" alt="Flavio De Stefano" />
+<div id="content">
+<h1 id="how-to-correctly-publish-your-mac-apps-outside-of-the-app-store">How to correctly publish your Mac apps outside of the App Store</h1>
+<h4 id="published-on-2025-april-11th">Published on 2025, April 11th</h4>
+<p>Distributing Mac apps outside of the App Store requires more than just building and zipping your .app. </p>
+<p>Since macOS Catalina, Apple requires all apps to be notarized by Apple to run without warnings on users' machines. Notarization ensures the app is from a known developer and free of malicious code.</p>
+<p>Without notarization, users will see a warning saying the app “can’t be opened because Apple cannot check it for malicious software.”</p>
+<p>With proper notarization and signing, your app behaves like a first-class citizen on macOS, even outside the App Store.</p>
+<p>Here’s a streamlined process to do it correctly:</p>
+<h3 id="step-1-archive-your-app-in-xcode">Step 1: Archive Your App in Xcode</h3>
+<p>Open your project in Xcode and create an archive:</p>
+<p>In the menu, go to Product &gt; Archive.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5x4frue305x3a1195qqp.png" alt="Image description" /></p>
+<p>After the archive builds, the Organizer window will open. Click "Distribute App" on the build you want to export, then click "Direct Distribution".</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m78hflczqnpxanuxx3aj.png" alt="Image description" /></p>
+<p>When it's done, click "Export", and save the app somewhere; you'll receive a signed .app.</p>
+<h3 id="step-2-create-the-notarized-dmg">Step 2: Create the notarized DMG</h3>
+<p>To simplify post-export steps, I wrote a script that takes your exported .app, packages it into a .dmg, submits it for notarization, and staples the result — all automatically.</p>
+<p>Before doing anything, install the necessary tools:</p>
+<pre><code class="sh language-sh">brew install create-dmg</code></pre>
+<p>Now we want to export the credentials that you already have into Xcode to the keychain, so that other tools can use it:</p>
+<pre><code>xcrun notarytool store-credentials "AC_PASSWORD" --apple-id $EMAIL --team-id $TEAM_ID</code></pre>
+<p>Perfect - you can now use <a href="https://gist.github.com/kopiro/7b77b2a6d3dfc2c5359ff0f25667747b" rel="noopener noreferrer" target="_blank">my create-my-dmg.sh script</a> to create a DMG.</p>
+<script src="https://gist.github.com/kopiro/7b77b2a6d3dfc2c5359ff0f25667747b.js"></script>
+<p>You can run it using:</p>
+<pre><code class="bash language-bash">create-my-dmg.sh YourMacApp.app</code></pre>
+<p>This will create a DMG like <code>YourMacApp-1.2.0.dmg</code>, correctly notarized and stapled.</p>
+<hr />
+<p>© 2025 <a href="https://www.kopiro.me" rel="noopener noreferrer" target="_blank">Flavio De Stefano</a> • <a href="https://www.kopiro.me/gpg.txt" rel="noopener noreferrer" target="_blank">0xEDE51005D982268E</a></p>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-20NDLVTCNE");
+</script>
+</body>
+</html>

@@ -66,9 +66,27 @@ const renderBaseMd = (_state, md) => {
 
 const renderBaseHtmlFromMd = (_state, md) => {
   const state = deepMerge(baseState, _state || {});
-  const baseHtml = converter.makeHtml(md);
-  const html = htmlTemplate(state, baseHtml);
-  return html.replace(/\.md/g, ".html");
+
+  let body = md;
+
+  body = body.replace(/\.md/g, ".html");
+
+  // For each {% embed %} tag, replace it with the content of the file
+  const embeds = md.match(/{% embed (.*?) %}/g);
+  if (embeds) {
+    embeds.forEach((embed) => {
+      const file = embed.replace(/{% embed (.*?) %}/, "$1");
+      console.log("file :>> ", file);
+      if (file.startsWith("https://gist.github.com")) {
+        // Replace with https://gist.github.com/kopiro/7b77b2a6d3dfc2c5359ff0f25667747b.js
+        body = body.replace(embed, `<script src="${file}.js"></script>`);
+        console.log("body :>> ", body);
+      }
+    });
+  }
+
+  const html = converter.makeHtml(body);
+  return htmlTemplate(state, html);
 };
 
 module.exports = { renderBaseMd, renderBaseHtmlFromMd };
