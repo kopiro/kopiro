@@ -22,7 +22,9 @@ const htmlTemplate = ({ title, metas, bodyClass, lang = "en" }, body) =>
 <title>${title}</title>
 <link rel="stylesheet" href="/style.css" />
 <script src="/script.js"></script>
-${metas.map(htmlTag("meta")).join("\n")}
+${Object.values(metas)
+  .map(({ name, content }) => htmlTag("meta")({ name, content }))
+  .join("\n")}
 </head>
 <body class="${bodyClass}">
 ${readPartial("header.html")}
@@ -34,11 +36,11 @@ ${readPartial("footer.html")}
 </html>`;
 
 const baseState = {
-  metas: [
-    { name: "author", content: readPartial("title.md") },
-    { name: "viewport", content: "width=device-width" },
-    { name: "og:image", content: "/img/avatar.jpg" },
-  ],
+  metas: {
+    author: { name: "author", content: readPartial("title.md") },
+    viewport: { name: "viewport", content: "width=device-width" },
+    ogImage: { name: "og:image", content: "/img/avatar.jpg" },
+  },
   footer: readPartial("footer.md"),
 };
 

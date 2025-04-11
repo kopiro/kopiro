@@ -30,12 +30,12 @@ ${article.body_markdown}
     {
       title: article.title,
       bodyClass: "press",
-      metas: [
-        { name: "og:title", content: article.title },
-        { name: "og:description", content: article.description },
-        article.cover_image ? { name: "og:image", content: article.cover_image } : null,
-        { name: "og:type", content: `article` },
-      ].filter(Boolean),
+      metas: {
+        ogTitle: { name: "og:title", content: article.title },
+        ogDescription: { name: "og:description", content: article.description },
+        ...(article.cover_image && { ogImage: { name: "og:image", content: article.cover_image } }),
+        ogType: { name: "og:type", content: "article" },
+      },
     },
     actualMarkdown,
   );

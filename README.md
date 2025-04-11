@@ -49,7 +49,7 @@
 
 ## press
 
-* <span class="title">[Stock tax declaration for Sweden - Guide](/press/stock-tax-declaration-for-sweden.md)</span> - <span class="description">How to declare your stock options and shares in Sweden</span><span class="subtitle"> (2025, April 11th)</span>
+* <span class="title">[Stock tax declaration for Sweden - Guide](/press/stock-tax-declaration-for-sweden.md)</span> - <span class="description">How to declare taxes when selling shares / stock options in Sweden: how to fill your K4 form</span><span class="subtitle"> (2025, April 11th)</span>
 * <span class="title">[Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023-44b1.md)</span> - <span class="description">For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have...</span><span class="subtitle"> (2023, December 3rd)</span>
 * <span class="title">[Hey Siri, make coffee!](/press/hey-siri-make-coffee-2n9p.md)</span> - <span class="description">“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the m...</span><span class="subtitle"> (2021, January 21st)</span>
 * <span class="title">[How I built the SiriWaveJS library: a look at the math and the code](/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code-l0o.md)</span> - <span class="description">It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iP...</span><span class="subtitle"> (2020, August 3rd)</span>
