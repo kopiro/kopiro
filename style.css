@@ -1,6 +1,6 @@
 body {
   background: #fff;
-  font-family: "Futura", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #555;
   max-width: 1024px;
   margin: 0 auto;
@@ -9,6 +9,13 @@ body {
   font-size: 18px;
   line-height: 1.35em;
   -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+b,
+a {
+  font-family: "Futura", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 ::selection {
