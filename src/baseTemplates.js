@@ -76,11 +76,9 @@ const renderBaseHtmlFromMd = (_state, md) => {
   if (embeds) {
     embeds.forEach((embed) => {
       const file = embed.replace(/{% embed (.*?) %}/, "$1");
-      console.log("file :>> ", file);
       if (file.startsWith("https://gist.github.com")) {
         // Replace with https://gist.github.com/kopiro/7b77b2a6d3dfc2c5359ff0f25667747b.js
         body = body.replace(embed, `<script src="${file}.js"></script>`);
-        console.log("body :>> ", body);
       }
     });
   }

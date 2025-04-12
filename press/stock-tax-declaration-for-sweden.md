@@ -147,8 +147,7 @@ Now that we have identified where to find the RSU vested, you want, for each of 
 **FMV:** Must match “Est. Cost Basis per share”, or “Market Value Per Share” in the “*Confirmation of Release PDF*”
 
 ***Note:** if you have multiple RSU packages you’ve received during these years, you can sum each RSU you received for the month as long as their FMV matches \- or add separate rows \- it’s the same\!*  
-***Note 2:*** You need to add the RSU you’ve received **since the beginning**, not only for this year.  
-**Note 3:** If you have manually bought shares of Spotify, you must add them as well with the same process (use “Buy” as an operation to differentiate them).
+***Note 2:*** You need to add the RSU you’ve received **since the beginning**, not only for this year.
 
 ![][image3]
 
