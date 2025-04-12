@@ -5,7 +5,9 @@
 
 
 
-This guide reflects my understanding of how to declare taxes when selling shares / stock options in Sweden.
+This guide reflects my understanding of how to declare taxes when selling shares / stock options in Sweden and how to correctly fill the K4 form when you sell shares (outside of an ISK).
+
+This is especially useful if you have a stock plan from your employer and have a monthly vesting of RSU, which complicates everything as you need to calculate the "Omkostnadsbelopp" using the average cost acquisition method.
 
 I assume no responsibility for any errors in the calculations provided by this tool or errors in the guide \- also, **none of what you find here is financial advice**. 
 
