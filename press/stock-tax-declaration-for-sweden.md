@@ -136,9 +136,11 @@ Check your broker (in eTrade, go to [your holdings](https://us.etrade.com/etx/sp
 *I highly recommend you to do this manually \- but in case you want a shortcut, I have a little javascript you can just use; **make sure you first open all your RSU grants**, then copy and paste this in the DevTools. The code is going to extract all the information and download a CSV that you can directly copy paste in the spreadsheet, no edits needed.*  
 ***This thing only works if we’re not in a blackout period, otherwise the grants show “0” as vested RSUs.***
 
+```js
 (() \=\> { const hs \= Array.from(document.querySelectorAll('\[data-test-id="RSblockdetails"\] \> table \> tbody')).map(r \=\> { const cs \= r.querySelector("tr").querySelectorAll("td"), ds \= cs\[2\].innerText.split("/"), d \= new Date(\`${ds\[2\]}-${ds\[0\]}-${ds\[1\]}\`); return { d, s: \`${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()}\`, q: \+cs\[3\].innerText, p: \+cs\[5\].innerText.replace("$","") }; }).sort((a, b) \=\> a.d \- b.d);   
 const csv \= hs.map(r \=\> \[r.s, r.s, "RSU vesting", r.q, r.p\].join(",")).join("\\n");  
 const url \= URL.createObjectURL(new Blob(\[csv\], { type: "text/csv" })); const a \= Object.assign(document.createElement("a"), { href: url, download: "rsu.csv" }); a.click();URL.revokeObjectURL(url); })();
+```
 
 Now that we have identified where to find the RSU vested, you want, for each of this RSU received, add a row in the spreadsheet with the following data:
 
