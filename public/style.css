@@ -57,7 +57,7 @@ body.index .username {
   margin-top: 20px;
   line-height: 0.95em;
   font-weight: 900;
-  padding-right: 400px;
+  width: 50%;
   margin-bottom: 20px;
   color: #000;
   min-height: 160px;

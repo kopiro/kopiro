@@ -12,8 +12,6 @@ const renderIndexMd = (state) => {
     state,
     `# ${title}
   
-${description}
-  
 ## work
   
 ${work}
