@@ -12,6 +12,7 @@ async function renderArticleHtml(article) {
   const html = renderHtmlFromMd(
     {
       bodyClass: "article",
+      title,
       metas: {
         ogTitle: { name: "og:title", content: title },
         ogType: { name: "og:type", content: "article" },
