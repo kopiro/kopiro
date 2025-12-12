@@ -14,11 +14,9 @@
   },
   "devDependencies": {
     "eslint": "^9.39.1",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.4",
-    "prettier": "^2.1.2",
+    "prettier": "^3.5.3",
     "serve": "^14.2.5"
   },
   "packageManager": "pnpm@9.15.2+sha1.0ffb02f94047016ec7e088030337455b4c94bb34"
