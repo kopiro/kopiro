@@ -1,9 +1,5 @@
 # Kata resolution: Next bigger number with the same digits
 
-#### Published on 2020, July 30th
-
-
-
 I would like to share with you my solution of a Kata on CodeWars.
 
 This is the link to the kata problem: [http://www.codewars.com/kata/next-bigger-number-with-the-same-digits](http://www.codewars.com/kata/next-bigger-number-with-the-same-digits/javascript)
@@ -137,8 +133,3 @@ function nextBigger(n){
   return ret;
 }
 ```
-
-
----
-
-© 2025 [Flavio De Stefano](https://www.kopiro.me) • [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

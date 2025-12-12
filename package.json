@@ -1,29 +1,25 @@
 {
   "name": "kopiro",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
   "scripts": {
-    "fetch-data": "node ./src/fetchData.js",
-    "generate:press": "node ./src/generatePress.js",
-    "generate:index": "node ./src/generateIndex.js",
-    "generate": "npm run fetch-data && npm run generate:press && npm run generate:index",
-    "serve": "./node_modules/.bin/serve ./",
-    "start:dev": "npm run fetch-data && npm run generate && npm run serve",
-    "deploy": "npm run fetch-data && npm run generate && docker-compose build && docker-compose push"
+    "pre-build": "node ./src/fetch.js && node ./src/buildMd.js",
+    "build": "node ./src/buildHtml.js && cp -Rv ./public/* ./build/",
+    "start:dev": "npm run pre-build && npm run build && serve ./build",
+    "deploy": "npm run pre-build && npm run build && docker-compose build && docker-compose push"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "showdown": "^1.9.1"
+    "dotenv": "^17.2.3",
+    "showdown": "^2.1.0"
   },
   "devDependencies": {
-    "eslint": "^7.9.0",
-    "eslint-config-airbnb": "^18.2.0",
+    "eslint": "^9.39.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-prettier": "^5.5.4",
     "prettier": "^2.1.2",
-    "serve": "^11.3.2"
+    "serve": "^14.2.5"
   },
   "packageManager": "pnpm@9.15.2+sha1.0ffb02f94047016ec7e088030337455b4c94bb34"
 }

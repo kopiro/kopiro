@@ -1,7 +1,5 @@
 # Convert a batch of images into Ghibli style using ChatGPT and macOS Automator
 
-#### Published on 2025, April 13th
-
 ![Convert a batch of images into Ghibli style using ChatGPT and macOS Automator](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fblnx8g5r5rttrqr7dwlf.png)
 
 If you love the warm, dreamy visuals of Studio Ghibli films, here's a powerful automation trick: an AppleScript automation that lets you select multiple images from Finder, apply a Ghibli-style transformation using ChatGPT, and process them unattended — even overnight.
@@ -55,10 +53,3 @@ Make sure as first step you add "Ask For Finder Items", then "Run AppleScript" a
 ### Using another style
 
 The prompt you use is highly customizable. Just change that in the code to add some details or to make images into another completely different style.
-
-
-
-
----
-
-© 2025 [Flavio De Stefano](https://www.kopiro.me) • [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

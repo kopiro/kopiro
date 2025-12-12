@@ -7,9 +7,9 @@ const List = ({ data, getTitle, getSubtitle, getLink, getDesc, sortingKey }) => 
   return data
     .map(
       (el) =>
-        `* <span class="title">[${getTitle(el)}](${getLink(el)})</span> - <span class="description">${getDesc(
-          el,
-        )}</span>${getSubtitle(el) ? `<span class="subtitle"> (${getSubtitle(el)})</span>` : ""}`,
+        `* <span class="title">[${getTitle(el)}](${getLink(el)})</span>${
+          getDesc(el) ? ` - <span class="description">${getDesc(el)}</span>` : ""
+        }${getSubtitle(el) ? `<span class="subtitle"> (${getSubtitle(el)})</span>` : ""}`,
     )
     .join("\n");
 };
@@ -19,10 +19,9 @@ const PressList = (data) =>
     data,
     sortingKey: "published_at",
     getTitle: (e) => e.title,
-    getSubtitle: (e) => getDateHumanFormat(e.published_at),
     getDesc: (e) => e.description,
-    _getLink: (e) => e.url,
-    getLink: (e) => `/press/${e.slug}.md`,
+    getSubtitle: (e) => getDateHumanFormat(e.published_at),
+    getLink: (e) => e.webPath,
   });
 
 const ProjectsList = (data) =>

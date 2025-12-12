@@ -1,7 +1,5 @@
 # Using C89 on a '80s Macintosh SE to solve Advent of Code 2023
 
-#### Published on 2023, December 3rd
-
 ![Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5tqxlid54aj7vp5mvwqp.jpeg)
 
 For this year [AdventOfCode](https://adventofcode.com/), I want to try to solve some problems using an old Macintosh SE I have lying around and the ThinkC compiler.
@@ -56,10 +54,3 @@ My `int sum` went negative as soon I hit the number 32k.
 I thought that this CPU was 32bit, but something it telling me that it's rather 16bit.
 
 Switching to `unsigned long` and also making sure I use `printf("%lu", sum)` (took 20m to realize I was still using `%d`) made it work.
-
-
-
-
----
-
-© 2025 [Flavio De Stefano](https://www.kopiro.me) • [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

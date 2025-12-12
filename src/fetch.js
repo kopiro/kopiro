@@ -32,12 +32,6 @@ const RUNNERS = {
     );
     return responses.reduce((carry, e) => carry.concat(e), []);
   },
-  devto: async () => {
-    const response = await fetch(`https://dev.to/api/articles?username=${process.env.DEVTO_USERNAME}`).then((r) =>
-      r.json(),
-    );
-    return response;
-  },
 };
 
 const writeDbFile = (file, json) => {

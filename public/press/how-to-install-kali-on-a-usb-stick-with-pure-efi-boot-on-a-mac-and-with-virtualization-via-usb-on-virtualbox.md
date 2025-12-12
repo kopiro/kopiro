@@ -1,10 +1,5 @@
 # How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)
 
-#### Published on 2020, July 30th
-
-
-
-
 This tutorial is for everyone who wants a USB stick with a **full Kali installation** to use with your Mac(s). This is not intended to perform a Live Kali installation with persistence.
 
 **The problem when you perform a Kali installation on a USB stick is that Kali partitions the disk with the VFAT file system. Mac OS only recognizes HFS+ partitions along with some files needed for it.**
@@ -294,8 +289,3 @@ And, voilà:
 
 Stay tuned :)
 
-
-
----
-
-© 2025 [Flavio De Stefano](https://www.kopiro.me) • [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

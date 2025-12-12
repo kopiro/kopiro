@@ -1,10 +1,5 @@
 # How to easily run any Linux tool on any machine
 
-#### Published on 2020, July 30th
-
-
-
-
 Have you ever encountered a situation like the ones below?
 
 **Situation 1**: You’re on your Linux workstation, and there is a PHP code that you must execute. But this code only runs under PHP 7, and your workstation only has PHP 5.
@@ -195,8 +190,3 @@ Why don’t you try [my simple tool DR](https://github.com/kopiro/dr)?
 
 I hope that you’re gonna use Docker for all your future binaries! :)
 
-
-
----
-
-© 2025 [Flavio De Stefano](https://www.kopiro.me) • [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

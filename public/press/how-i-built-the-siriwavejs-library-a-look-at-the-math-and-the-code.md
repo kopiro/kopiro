@@ -1,7 +1,5 @@
 # How I built the SiriWaveJS library: a look at the math and the code
 
-#### Published on 2020, August 3rd
-
 ![How I built the SiriWaveJS library: a look at the math and the code](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fk1i915are06zdw037tel.png)
 
 It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iPhone 4S) in the browser using pure Javascript.
@@ -383,8 +381,3 @@ Let’s clarify some parameters:
 Thanks a lot **RollupJS!**
 
 Hope that you find this article interesting, see you soon! 😎
-
-
----
-
-© 2025 [Flavio De Stefano](https://www.kopiro.me) • [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

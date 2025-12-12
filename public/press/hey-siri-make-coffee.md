@@ -1,7 +1,5 @@
 # Hey Siri, make coffee!
 
-#### Published on 2021, January 21st
-
 ![Hey Siri, make coffee!](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fxetf3o819s0vfos6h9mn.jpeg)
 
 *“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the morning) to actually get up and make it. Therefore, I automated it.”*
@@ -124,13 +122,3 @@ That’s even simpler, go to the *Automation* tab, and select *When my alarm has
 That’s all, for real... Happy morning coffee!
 
 {% twitter 1350822814857777157 %}
-
-
-
-
-
-
-
----
-
-© 2025 [Flavio De Stefano](https://www.kopiro.me) • [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

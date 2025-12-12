@@ -6,7 +6,7 @@ body {
   margin: 0 auto;
   position: relative;
   padding: 30px;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.35em;
   -webkit-font-smoothing: antialiased;
 }
@@ -25,7 +25,7 @@ a {
 
 a {
   color: #000;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 a:hover {
@@ -51,7 +51,7 @@ section {
   margin-bottom: 0.5em;
 }
 
-body.press #content img {
+body.article #content img {
   display: block;
 }
 
@@ -76,7 +76,7 @@ body.index .username {
   margin-top: 20px;
   line-height: 0.95em;
   font-weight: 900;
-  padding-right: 200px;
+  padding-right: 400px;
   margin-bottom: 20px;
   color: #000;
   min-height: 160px;
@@ -92,7 +92,7 @@ body.index .username {
   background-size: cover;
   position: absolute;
   right: 20px;
-  top: 140px;
+  top: 100px;
   border: 8px solid white;
   outline: 1px solid #ddd;
   cursor: pointer;
@@ -110,22 +110,24 @@ body.index #avatar {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1em;
   color: #000;
+  font-weight: 400;
 }
 
 h2 {
-  font-size: 2.25em;
+  font-size: 2em;
   line-height: 1em;
   color: #000;
+  font-weight: 400;
 }
 
 h3 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   line-height: 1em;
   font-weight: normal;
-  color: rgb(14, 132, 31);
+  color: black;
 }
 
 h4 {
@@ -166,7 +168,7 @@ body.index ul {
 }
 
 body.index li {
-  margin-bottom: 1em;
+  margin-bottom: 0.15em;
 }
 
 hr {
@@ -223,6 +225,14 @@ pre {
 
 .buymeacoffee img {
   width: 100%;
+}
+
+#footer {
+  margin-top: 2em;
+  font-size: 0.8em;
+  color: #999;
+  padding-top: 2em;
+  border-top: 1px solid #eee;
 }
 
 /* On iPhone, reduce the font size of the h1 */

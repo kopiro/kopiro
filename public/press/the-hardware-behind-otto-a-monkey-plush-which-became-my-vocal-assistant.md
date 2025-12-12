@@ -1,9 +1,5 @@
 # The hardware behind Otto: a monkey plush which became my vocal assistant
 
-#### Published on 2020, July 30th
-
-
-
 Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February 2017.
 
 Its ability, while being extremely cute, was to listen to you, then walk and repeat all things with a higher pitch.
@@ -113,8 +109,3 @@ Here you can see in details the complete circuit diagram ([https://www.circuit-d
 And here a snapshot of the work:
 
 ![The hardware behind Otto](https://cdn-images-1.medium.com/max/8992/1*obNKyfbvgL3dUcVR3tK-6A.jpeg)*The hardware behind Otto*
-
-
----
-
-© 2025 [Flavio De Stefano](https://www.kopiro.me) • [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

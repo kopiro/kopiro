@@ -6,13 +6,12 @@ const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath);
 
 const paths = {
   root: appDirectory,
-  dist: resolveApp("dist"),
   src: resolveApp("src"),
-  md: resolveApp("md"),
+  public: resolveApp("public"),
   db: resolveApp("db"),
   partials: resolveApp("partials"),
-  readme: resolveApp("readme.md"),
-  press: resolveApp("press"),
+  readme: resolveApp("README.md"),
+  build: resolveApp("build"),
 };
 
 module.exports = paths;

@@ -41,7 +41,6 @@ const baseState = {
     viewport: { name: "viewport", content: "width=device-width" },
     ogImage: { name: "og:image", content: "/img/avatar.jpg" },
   },
-  footer: readPartial("footer.md"),
 };
 
 const deepMerge = (a, b) => {
@@ -58,33 +57,27 @@ const deepMerge = (a, b) => {
   return result;
 };
 
-const renderBaseMd = (_state, md) => {
-  const state = deepMerge(baseState, _state || {});
-  const { footer } = state;
-  return `${md}\n\n${footer}`.trim();
+const renderMd = (_state, markdownContent) => {
+  return markdownContent.trim();
 };
 
-const renderBaseHtmlFromMd = (_state, md) => {
+const renderHtmlFromMd = (_state, markdownContent) => {
   const state = deepMerge(baseState, _state || {});
 
-  let body = md;
-
-  body = body.replace(/\.md/g, ".html");
-
   // For each {% embed %} tag, replace it with the content of the file
-  const embeds = md.match(/{% embed (.*?) %}/g);
+  const embeds = markdownContent.match(/{% embed (.*?) %}/g);
   if (embeds) {
     embeds.forEach((embed) => {
       const file = embed.replace(/{% embed (.*?) %}/, "$1");
       if (file.startsWith("https://gist.github.com")) {
         // Replace with https://gist.github.com/kopiro/7b77b2a6d3dfc2c5359ff0f25667747b.js
-        body = body.replace(embed, `<script src="${file}.js"></script>`);
+        markdownContent = markdownContent.replace(embed, `<script src="${file}.js"></script>`);
       }
     });
   }
 
-  const html = converter.makeHtml(body);
+  const html = converter.makeHtml(markdownContent);
   return htmlTemplate(state, html);
 };
 
-module.exports = { renderBaseMd, renderBaseHtmlFromMd };
+module.exports = { renderMd, renderHtmlFromMd };

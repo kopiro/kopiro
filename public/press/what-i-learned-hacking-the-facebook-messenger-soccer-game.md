@@ -1,9 +1,5 @@
 # What I learned hacking the Facebook Messenger Soccer game
 
-#### Published on 2020, July 30th
-
-
-
 Recently, during the last European Football Championship, Facebook introduced a little game in the Messenger app that makes you lose hours and hours despite its simplicity.
 
 If you didn’t notice it, read [this article](https://mashable.com/2016/06/15/facebook-messenger-soccer-game-how-to/#fmGutFmQ3Oqx) on Mashable.
@@ -199,9 +195,3 @@ Now you can just play, **lose**, and **anyway score a new record.**
 ### What I learned
 
 Never stop yourself. Always try and discover a new way to accomplish the same thing. I know, it’s just a game, but if you treat the problem you’re trying to solve like a challenge, you’ll get much more than the satisfaction of beating your friends.
-
-
-
----
-
-© 2025 [Flavio De Stefano](https://www.kopiro.me) • [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

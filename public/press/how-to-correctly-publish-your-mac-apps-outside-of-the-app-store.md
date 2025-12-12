@@ -1,9 +1,5 @@
 # How to correctly publish your Mac apps outside of the App Store
 
-#### Published on 2025, April 11th
-
-
-
 Distributing Mac apps outside of the App Store requires more than just building and zipping your .app. 
 
 Since macOS Catalina, Apple requires all apps to be notarized by Apple to run without warnings on users' machines. Notarization ensures the app is from a known developer and free of malicious code.
@@ -55,8 +51,3 @@ create-my-dmg.sh YourMacApp.app
 ```
 
 This will create a DMG like `YourMacApp-1.2.0.dmg`, correctly notarized and stapled.
-
-
----
-
-© 2025 [Flavio De Stefano](https://www.kopiro.me) • [0xEDE51005D982268E](https://www.kopiro.me/gpg.txt)

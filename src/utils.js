@@ -4,6 +4,46 @@ const paths = require("./paths");
 
 const readPartial = (file) => fs.readFileSync(path.join(paths.partials, file), "utf-8").trim();
 
+const walkMarkdowns = (dir = paths.public) => {
+  let results = [];
+  const list = fs.readdirSync(dir, { withFileTypes: true });
+  for (const file of list) {
+    const filePath = path.join(dir, file.name);
+    if (file.isDirectory()) {
+      results = results.concat(walkMarkdowns(filePath));
+    } else if (file.name.endsWith(".md")) {
+      results.push(path.relative(paths.public, filePath));
+    }
+  }
+  return results;
+};
+
+const readPublicMarkdownDb = () => {
+  const mdFiles = walkMarkdowns();
+
+  return mdFiles.map((file) => {
+    const absolutePath = path.join(paths.public, file);
+    const baseName = path.basename(file);
+    const content = fs.readFileSync(absolutePath, "utf-8").trim();
+    const title = content.match(/^# (.+)$/m)?.[1];
+    const coverImage = content.match(/^![^ ]+ (.+)$/m)?.[1];
+    const webPath = `/${file.replace(/\.md$/, ".html")}`;
+    const slug = baseName.replace(/\.md$/, "");
+    const creationTimestamp = fs.statSync(absolutePath).birthtime;
+
+    return {
+      absolutePath,
+      relativePath: file,
+      webPath,
+      slug,
+      published_at: creationTimestamp,
+      content,
+      title,
+      coverImage,
+    };
+  });
+};
+
 const readDbFile = (file) => {
   const filePath = path.join(paths.db, `${file}.json`);
   if (!fs.existsSync(filePath)) return [];
@@ -56,4 +96,4 @@ function getDateHumanFormat(date) {
   return `${year}, ${month} ${ordinal(day)}`;
 }
 
-module.exports = { readDbFile, readPartial, getDateHumanFormat };
+module.exports = { readDbFile, readPartial, getDateHumanFormat, readPublicMarkdownDb };
