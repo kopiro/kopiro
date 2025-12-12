@@ -1,7 +1,5 @@
 # Flavio De Stefano
   
-undefined
-  
 ## work
   
 - <span class="title">[Spotify](https://www.spotify.com)</span> - <span class="subtitle">Senior Engineer (2019/jan to present)</span>

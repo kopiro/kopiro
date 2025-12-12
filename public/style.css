@@ -218,14 +218,8 @@ pre {
 
 /* On iPhone, reduce the font size of the h1 */
 @media only screen and (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-
   #flavio-de-stefano {
-    padding-right: 0;
-    font-size: 4em;
-    min-height: 0;
+    width: 100%;
   }
 
   #avatar {

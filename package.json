@@ -3,7 +3,8 @@
   "version": "4.0.0",
   "private": true,
   "scripts": {
-    "pre-build": "node ./src/fetch.js && node ./src/buildMd.js",
+    "fetch": "node ./src/fetch.js",
+    "prebuild": "node ./src/buildMd.js",
     "build": "node ./src/buildHtml.js && cp -Rv ./public/* ./build/",
     "start:dev": "npm run pre-build && npm run build && serve ./build",
     "deploy": "npm run pre-build && npm run build && docker-compose build && docker-compose push"
