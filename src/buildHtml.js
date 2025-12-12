@@ -24,6 +24,7 @@ async function renderArticleHtml(article) {
 
   const htmlFilePath = path.join(paths.build, webPath);
 
+  await fs.mkdir(path.dirname(htmlFilePath), { recursive: true });
   await fs.writeFile(htmlFilePath, html);
   console.log(`Generated HTML for "${webPath}"`);
 }
@@ -42,6 +43,8 @@ const renderIndexHtml = (state, markdownContent) => {
 };
 
 async function main() {
+  await fs.mkdir(paths.build, { recursive: true });
+
   const indexMarkdownContent = await fs.readFile(paths.readme, "utf-8");
   const html = renderIndexHtml({}, indexMarkdownContent);
   await fs.writeFile(path.join(paths.build, "index.html"), html);
