@@ -11,13 +11,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-b,
-a {
-  font-family: "Futura", ui-sans-serif, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
 ::selection {
   background: rgb(14, 132, 31);
   color: #fff;
