@@ -59,18 +59,6 @@ body.index .username {
   display: none !important;
 }
 
-.username:before {
-  content: "";
-  background-image: url("img/avatar.jpg");
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-size: cover;
-  border: 2px solid white;
-  outline: 1px solid #ddd;
-  cursor: pointer;
-}
-
 #flavio-de-stefano {
   font-size: 5em;
   margin-top: 20px;

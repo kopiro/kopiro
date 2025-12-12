@@ -20,8 +20,8 @@ const htmlTemplate = ({ title, metas, bodyClass, lang = "en" }, body) =>
 <head>
 <meta charset="utf-8" />
 <title>${title}</title>
-<link rel="stylesheet" href="style.css" />
-<script src="script.js"></script>
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 ${Object.values(metas)
   .map(({ name, content }) => htmlTag("meta")({ name, content }))
   .join("\n")}
@@ -39,7 +39,7 @@ const baseState = {
   metas: {
     author: { name: "author", content: readPartial("title.md") },
     viewport: { name: "viewport", content: "width=device-width" },
-    ogImage: { name: "og:image", content: "img/avatar.jpg" },
+    ogImage: { name: "og:image", content: "/img/avatar.jpg" },
   },
 };
 
