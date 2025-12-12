@@ -1,4 +1,4 @@
-# Reverse engineering Spotify and Chromecast protocols to let my vocal assistant play music
+# Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music
 
 I recently tried a Google Home Mini and the most interesting feature is the ability to play music by Spotify directly on a Chromecast.
 
