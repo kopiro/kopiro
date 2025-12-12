@@ -27,7 +27,7 @@ const readPublicMarkdownDb = () => {
     const content = fs.readFileSync(absolutePath, "utf-8").trim();
     const title = content.match(/^# (.+)$/m)?.[1];
     const coverImage = content.match(/^![^ ]+ (.+)$/m)?.[1];
-    const webPath = `/${file.replace(/\.md$/, ".html")}`;
+    const webPath = file.replace(/\.md$/, ".html");
     const slug = baseName.replace(/\.md$/, "");
     const creationTimestamp = fs.statSync(absolutePath).birthtime;
 

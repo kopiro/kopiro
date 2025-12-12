@@ -61,7 +61,7 @@ body.index .username {
 
 .username:before {
   content: "";
-  background-image: url("/img/avatar.jpg");
+  background-image: url("img/avatar.jpg");
   width: 32px;
   height: 32px;
   border-radius: 50%;
