@@ -11,13 +11,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const avatar = $("#avatar");
   const buyMeCoffee = $(".buymeacoffee");
 
-  originalAvatarSrc = avatar.src;
+  if (avatar && buyMeCoffee) {
+    originalAvatarSrc = avatar.src;
 
-  buyMeCoffee.addEventListener("mouseenter", () => {
-    avatar.src = "/img/avatar-smile.jpg";
-  });
+    buyMeCoffee.addEventListener("mouseenter", () => {
+      avatar.src = "/img/avatar-smile.jpg";
+    });
 
-  buyMeCoffee.addEventListener("mouseleave", () => {
-    avatar.src = originalAvatarSrc;
-  });
+    buyMeCoffee.addEventListener("mouseleave", () => {
+      avatar.src = originalAvatarSrc;
+    });
+  }
+
+  // Initialize syntax highlighting
+  if (typeof hljs !== "undefined") {
+    hljs.highlightAll();
+  }
 });

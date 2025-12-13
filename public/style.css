@@ -67,7 +67,7 @@ body.index .username {
   color: #000;
   min-height: 160px;
   position: relative;
-  line-height: 1.15em;
+  line-height: 1em;
 }
 
 #avatar {
@@ -163,13 +163,47 @@ hr {
   margin: 2em 0;
 }
 
+blockquote {
+  margin: 1.5em 0;
+  padding: 0.75em 1.25em;
+  border-left: 3px solid rgb(14, 132, 31);
+  background: #f9f9f9;
+  color: #444;
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+blockquote p + p {
+  margin-top: 0.5em;
+}
+
 .username a {
   color: rgb(14, 132, 31);
   font-weight: bold !important;
 }
 
+code {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
+  font-size: 0.85em;
+  background: #f5f5f5;
+  color: #333;
+  padding: 0.2em 0.45em;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
 pre {
-  background: #fff;
+  background: #f6f8fa !important;
   overflow-x: auto;
   font-family:
     ui-monospace,
@@ -179,11 +213,60 @@ pre {
     Consolas,
     Liberation Mono,
     monospace;
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
+  border-radius: 6px;
+  padding: 1.25em 1.5em;
+  margin: 1.5em 0;
+  border-left: 3px solid rgb(14, 132, 31);
+}
+
+pre code.hljs {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  white-space: pre;
+  font-size: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+
+th {
+  background: #f9f9f9;
+  font-weight: 600;
   color: #000;
-  border: 1px solid #eee;
-  width: auto;
-  padding: 1em;
+}
+
+tr:hover {
+  background: #fafafa;
+}
+
+body.article ul,
+body.article ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+body.article li {
+  margin-bottom: 0.35em;
 }
 
 .gist {
@@ -243,6 +326,6 @@ pre {
   }
 
   .buymeacoffee {
-    display: none;
+    display: none !important;
   }
 }

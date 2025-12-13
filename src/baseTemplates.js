@@ -21,7 +21,9 @@ const htmlTemplate = ({ title, metas, bodyClass, lang = "en" }, body) =>
 <meta charset="utf-8" />
 <title>${title}</title>
 <link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" />
 <script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 ${Object.values(metas)
   .map(({ name, content }) => htmlTag("meta")({ name, content }))
   .join("\n")}
