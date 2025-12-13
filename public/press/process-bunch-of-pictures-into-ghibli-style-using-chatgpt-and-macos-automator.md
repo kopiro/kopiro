@@ -1,6 +1,6 @@
 # Convert a batch of images into Ghibli style using ChatGPT and macOS Automator
 
-![Convert a batch of images into Ghibli style using ChatGPT and macOS Automator](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fblnx8g5r5rttrqr7dwlf.png)
+![Convert a batch of images into Ghibli style using ChatGPT and macOS Automator](/media/363923ee.png)
 
 If you love the warm, dreamy visuals of Studio Ghibli films, here's a powerful automation trick: an AppleScript automation that lets you select multiple images from Finder, apply a Ghibli-style transformation using ChatGPT, and process them unattended — even overnight.
 
@@ -28,15 +28,15 @@ First of all, you need to install the web-app of ChatGPT from Chrome. When I tri
 
 Therefore, just head to [chat.com](https://chat.com), and in the Chrome menu hit "Install Page as App"
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hfxe9pobxs33c13cayc7.png)
+![Image description](/media/7eee23f2.png)
 
 Now, let's  install the workflow into Automator:
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ibrf6ll8sibetdq8ddwo.png)
+![Image description](/media/7c95fa5e.png)
 
 You can download the workflow directly from [this link](https://kopiro.s3.amazonaws.com/var/FilesToChatGPT.workflow.zip) - extract it and Automator will open; then **Press Run**.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/12827tvhlgqxt8jqadmj.png)
+![Image description](/media/709d6b66.png)
 
 And that's it - the script should go into each file, paste it into ChatGPT, generate the request and wait 3 minutes until next request.
 
@@ -46,7 +46,7 @@ If you don't trust downloading semi-executable files into your system, you can c
 
 Make sure as first step you add "Ask For Finder Items", then "Run AppleScript" and paste this code:
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wlm117gfa71b9emfhf0a.png)
+![Image description](/media/60df2591.png)
 
 {% embed https://gist.github.com/kopiro/992558b306e8fd813860634c0d7e13d2 %}
 

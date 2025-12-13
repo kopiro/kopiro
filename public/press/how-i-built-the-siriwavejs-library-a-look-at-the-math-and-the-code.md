@@ -1,6 +1,6 @@
 # How I built the SiriWaveJS library: a look at the math and the code
 
-![How I built the SiriWaveJS library: a look at the math and the code](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fk1i915are06zdw037tel.png)
+![How I built the SiriWaveJS library: a look at the math and the code](/media/fe41712c.png)
 
 It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iPhone 4S) in the browser using pure Javascript.
 
@@ -30,7 +30,7 @@ We start by drawing the well known `sin(x)`:
 
 Perfecto! Now, let’s add some parameters (Amplitude `[A]`, Time coordinate `[t]` and Spatial frequency `[k]`) that will be useful later (Read more at: [https://en.wikipedia.org/wiki/Wave](https://en.wikipedia.org/wiki/Wave)).
 
-![](https://miro.medium.com/max/346/1*bub3URu32khRadkhU-WvOw.png)
+![](/media/d78ff0f4.png)
 
 Now we have to “attenuate” this function on plot boundaries, so that for `|x| > 2`, the `y` values tends to 0. Let’s draw separately an equation `g(x)` that has these characteristics.
 

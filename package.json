@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "fetch": "node ./src/fetch.js",
+    "download-images": "node ./src/downloadImages.js",
     "prebuild": "node ./src/buildMd.js",
     "build": "node ./src/buildHtml.js && cp -Rv ./public/* ./build/",
-    "start:dev": "npm run pre-build && npm run build && serve ./build",
-    "deploy": "npm run pre-build && npm run build && docker-compose build && docker-compose push"
+    "start:dev": "npm run build && serve ./build",
+    "deploy": "npm run build && docker-compose build && docker-compose push"
   },
   "dependencies": {
     "dotenv": "^17.2.3",

@@ -16,11 +16,11 @@ Open your project in Xcode and create an archive:
 
 In the menu, go to Product > Archive.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5x4frue305x3a1195qqp.png)
+![Image description](/media/4e069123.png)
 
 After the archive builds, the Organizer window will open. Click "Distribute App" on the build you want to export, then click "Direct Distribution".
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m78hflczqnpxanuxx3aj.png)
+![Image description](/media/1432b579.png)
 
 When it's done, click "Export", and save the app somewhere; you'll receive a signed .app.
 
