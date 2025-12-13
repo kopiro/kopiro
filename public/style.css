@@ -1,6 +1,10 @@
 body {
   background: #fff;
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   color: #555;
   max-width: 1024px;
   margin: 0 auto;
@@ -40,12 +44,13 @@ section {
 }
 
 #content img {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 body.article #content img {
   display: block;
+  max-width: 60%;
 }
 
 body.index .username {
@@ -166,7 +171,14 @@ hr {
 pre {
   background: #fff;
   overflow-x: auto;
-  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
   font-size: 12px;
   color: #000;
   border: 1px solid #eee;
