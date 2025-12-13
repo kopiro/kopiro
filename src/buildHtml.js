@@ -4,10 +4,11 @@ const fs = require("fs/promises");
 const path = require("path");
 const paths = require("./paths");
 const { renderHtmlFromMd } = require("./baseTemplates");
-const { readPublicMarkdownDb } = require("./utils");
+const { readDbFile } = require("./utils");
 
-async function renderArticleHtml(article) {
-  const { title, coverImage, content, webPath } = article;
+async function renderPress(article) {
+  const { title, coverImage, htmlPath } = article;
+  const content = await fs.readFile(path.join(paths.public, article.path), "utf-8");
 
   const html = renderHtmlFromMd(
     {
@@ -16,18 +17,16 @@ async function renderArticleHtml(article) {
       metas: {
         ogTitle: { name: "og:title", content: title },
         ogType: { name: "og:type", content: "article" },
-        // ...(description && { ogDescription: { name: "og:description", content: description } }),
         ...(coverImage && { ogImage: { name: "og:image", content: coverImage } }),
       },
     },
     content,
   );
 
-  const htmlFilePath = path.join(paths.build, webPath);
-
+  const htmlFilePath = path.join(paths.build, htmlPath);
   await fs.mkdir(path.dirname(htmlFilePath), { recursive: true });
   await fs.writeFile(htmlFilePath, html);
-  console.log(`Generated HTML for "${webPath}"`);
+  console.log(`Generated HTML for "${path}"`);
 }
 
 const renderIndexHtml = (state, markdownContent) => {
@@ -50,8 +49,8 @@ async function main() {
   const html = renderIndexHtml({}, indexMarkdownContent);
   await fs.writeFile(path.join(paths.build, "index.html"), html);
 
-  const markdownFiles = await readPublicMarkdownDb();
-  await Promise.all(markdownFiles.map(renderArticleHtml));
+  const press = readDbFile("press");
+  await Promise.all(press.map(renderPress));
 }
 
 main();

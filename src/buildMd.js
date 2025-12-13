@@ -2,7 +2,7 @@ require("./config");
 
 const fs = require("fs/promises");
 const paths = require("./paths");
-const { readDbFile, readPartial, readPublicMarkdownDb } = require("./utils");
+const { readDbFile, readPartial } = require("./utils");
 const { PressList, ProjectsList, GithubList } = require("./mdComponents");
 const { renderMd } = require("./baseTemplates");
 
@@ -39,7 +39,7 @@ async function renderIndex() {
   const state = {
     title: readPartial("title.md"),
     work: readPartial("work.md"),
-    press: [...(await readPublicMarkdownDb())],
+    press: readDbFile("press"),
     github: readDbFile("github"),
     projects: readDbFile("projects"),
     apps: readDbFile("apps"),

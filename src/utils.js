@@ -18,32 +18,6 @@ const walkMarkdowns = (dir = paths.public) => {
   return results;
 };
 
-const readPublicMarkdownDb = () => {
-  const mdFiles = walkMarkdowns();
-
-  return mdFiles.map((file) => {
-    const absolutePath = path.join(paths.public, file);
-    const baseName = path.basename(file);
-    const content = fs.readFileSync(absolutePath, "utf-8").trim();
-    const title = content.match(/^# (.+)$/m)?.[1];
-    const coverImage = content.match(/^![^ ]+ (.+)$/m)?.[1];
-    const webPath = "/" + file.replace(/\.md$/, ".html");
-    const slug = baseName.replace(/\.md$/, "");
-    const creationTimestamp = fs.statSync(absolutePath).birthtime;
-
-    return {
-      absolutePath,
-      relativePath: file,
-      webPath,
-      slug,
-      published_at: creationTimestamp,
-      content,
-      title,
-      coverImage,
-    };
-  });
-};
-
 const readDbFile = (file) => {
   const filePath = path.join(paths.db, `${file}.json`);
   if (!fs.existsSync(filePath)) return [];
@@ -82,18 +56,31 @@ function getDateHumanFormat(date) {
     date = new Date(date);
   }
 
-  const year = date.getFullYear();
-  const month = date.toLocaleString("default", { month: "long" });
-  const day = date.getDate();
+  const now = new Date();
+  const diffMs = now - date;
+  const diffSeconds = Math.floor(diffMs / 1000);
+  const diffMinutes = Math.floor(diffSeconds / 60);
+  const diffHours = Math.floor(diffMinutes / 60);
+  const diffDays = Math.floor(diffHours / 24);
+  const diffMonths = Math.floor(diffDays / 30);
+  const diffYears = Math.floor(diffDays / 365);
 
-  // Add ordinal suffix to day
-  const ordinal = (n) => {
-    const s = ["th", "st", "nd", "rd"];
-    const v = n % 100;
-    return n + (s[(v - 20) % 10] || s[v] || s[0]);
-  };
-
-  return `${year}, ${month} ${ordinal(day)}`;
+  if (diffYears >= 1) {
+    return diffYears === 1 ? "1 year ago" : `${diffYears} years ago`;
+  }
+  if (diffMonths >= 1) {
+    return diffMonths === 1 ? "1 month ago" : `${diffMonths} months ago`;
+  }
+  if (diffDays >= 1) {
+    return diffDays === 1 ? "1 day ago" : `${diffDays} days ago`;
+  }
+  if (diffHours >= 1) {
+    return diffHours === 1 ? "1 hour ago" : `${diffHours} hours ago`;
+  }
+  if (diffMinutes >= 1) {
+    return diffMinutes === 1 ? "1 minute ago" : `${diffMinutes} minutes ago`;
+  }
+  return "just now";
 }
 
-module.exports = { readDbFile, readPartial, getDateHumanFormat, readPublicMarkdownDb };
+module.exports = { readDbFile, readPartial, getDateHumanFormat };

@@ -16,12 +16,12 @@ const List = ({ data, getTitle, getSubtitle, getLink, getDesc, sortingKey }) => 
 
 const PressList = (data) =>
   List({
-    data,
-    sortingKey: "published_at",
+    data: data.filter((e) => !e.hidden),
+    sortingKey: "publishedAt",
     getTitle: (e) => e.title,
     getDesc: (e) => e.description,
-    getSubtitle: (e) => null,
-    getLink: (e) => e.webPath,
+    getSubtitle: (e) => getDateHumanFormat(e.publishedAt),
+    getLink: (e) => e.htmlPath,
   });
 
 const ProjectsList = (data) =>
