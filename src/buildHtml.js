@@ -26,14 +26,14 @@ async function renderPress(article) {
   const htmlFilePath = path.join(paths.build, htmlPath);
   await fs.mkdir(path.dirname(htmlFilePath), { recursive: true });
   await fs.writeFile(htmlFilePath, html);
-  console.log(`Generated HTML for "${path}"`);
+  console.log(`Generated HTML for "${htmlFilePath}"`);
 }
 
 const renderIndexHtml = (state, markdownContent) => {
   return renderHtmlFromMd(
     {
       ...state,
-      title: "Flavio De Stefano",
+      title: "kopiro",
       bodyClass: "index",
     },
     markdownContent,

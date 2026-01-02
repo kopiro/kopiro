@@ -7,7 +7,7 @@
     "download-images": "node ./src/downloadImages.js",
     "prebuild": "node ./src/buildMd.js",
     "build": "node ./src/buildHtml.js && cp -Rv ./public/* ./build/",
-    "start:dev": "npm run build && serve ./build",
+    "start:dev": "./dev.sh",
     "deploy": "npm run build && docker-compose build && docker-compose push"
   },
   "dependencies": {

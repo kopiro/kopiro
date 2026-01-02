@@ -57,7 +57,7 @@ body.index .username {
   display: none !important;
 }
 
-#flavio-de-stefano {
+#kopiro {
   font-size: 5em;
   margin-top: 20px;
   line-height: 0.95em;
@@ -313,7 +313,7 @@ body.article li {
 
 /* On iPhone, reduce the font size of the h1 */
 @media only screen and (max-width: 768px) {
-  #flavio-de-stefano {
+  #kopiro {
     width: 100%;
   }
 
