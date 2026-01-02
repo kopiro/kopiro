@@ -1,6 +1,5 @@
 [
   {
-    "id": 37,
     "year": 2023,
     "title": "PikaBulba",
     "description": "Pikachu & Bulbasaur racing themselves",
@@ -9,7 +8,6 @@
     "url": "https://kopiro.github.io/pika-bulba"
   },
   {
-    "id": 38,
     "year": 2024,
     "title": "MBTI showcase",
     "description": "Showcase for MBTI personality types and cognitive functions",
@@ -18,12 +16,19 @@
     "url": "https://kopiro.github.io/mbti"
   },
   {
-    "id": 39,
     "year": 2025,
     "title": "SoundAnchor",
     "description": "macOS app that lives in your toolbar that gives you full control over audio devices priority",
     "role": "Developer",
     "company": "Kopiro",
     "url": "https://apps.kopiro.me/soundanchor"
+  },
+  {
+    "year": 2025,
+    "title": "I'll Go First",
+    "description": "iOS app that helps you decide who goes first in a game, unless you know the settings",
+    "role": "Developer",
+    "company": "Kopiro",
+    "url": "https://apps.apple.com/us/app/ill-go-first/id6756658382"
   }
 ]

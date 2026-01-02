@@ -11,6 +11,7 @@
 ## apps
   
 * <span class="title">[SoundAnchor](https://apps.kopiro.me/soundanchor)</span> - <span class="description">macOS app that lives in your toolbar that gives you full control over audio devices priority</span><span class="subtitle"> (2025)</span>
+* <span class="title">[I'll Go First](https://apps.apple.com/us/app/ill-go-first/id6756658382)</span> - <span class="description">iOS app that helps you decide who goes first in a game, unless you know the settings</span><span class="subtitle"> (2025)</span>
 * <span class="title">[MBTI showcase](https://kopiro.github.io/mbti)</span> - <span class="description">Showcase for MBTI personality types and cognitive functions</span><span class="subtitle"> (2024)</span>
 * <span class="title">[PikaBulba](https://kopiro.github.io/pika-bulba)</span> - <span class="description">Pikachu & Bulbasaur racing themselves</span><span class="subtitle"> (2023)</span>
   
