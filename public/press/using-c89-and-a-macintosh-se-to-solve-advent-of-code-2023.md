@@ -29,7 +29,7 @@ sudo hcopy -a ~/Developer/aoc/2023/1/input.txt :1.txt
 sudo hcopy -a :1.c ~/Developer/aoc/2023/1/main.c
 ```
 
-I strangely could't open the input.txt on the Macintosh itself, but the C program I wrote is able to read the file correctly using `fopen`
+I strangely couldn't open the input.txt on the Macintosh itself, but the C program I wrote is able to read the file correctly using `fopen`
 
 ### Day 1 learnings
 

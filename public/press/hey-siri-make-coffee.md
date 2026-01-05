@@ -4,7 +4,7 @@
 
 *“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the morning) to actually get up and make it. Therefore, I automated it.”*
 
-My goal was exactly the one described in the first sentence, I needed to automate the first coffee I get in the morning, ‘cause I can’t really do anything if I don’t get otherwise. Since I have a cheap Nespresso machine, it can’t be programmed to do so; therefore I decided to solve it using simple programming and iOS automation.
+My goal was exactly the one described in the first sentence, I needed to automate the first coffee I get in the morning, ‘cause I can't really do anything if I don't get it. Since I have a cheap Nespresso machine, it can’t be programmed to do so; therefore I decided to solve it using simple programming and iOS automation.
 
 This is definitely not sci-fi, not even complex programming or electronic. But it works, and the solution is quite simple and brilliant in my opinion, so I thought I could share it so others may benefit from it.
 
@@ -19,7 +19,7 @@ In theory, this is all you need; you could just write a simple sketch that will 
 
 I soon realized though that to make the most of it, your coffee shouldn’t be made every day (there could be days when you aren’t at home) and it shouldn’t be made every day at the same time (I don’t know about you, but I don’t wake up every day at the same time, and also 5m could make the difference between a hot coffee vs a cold one).
 
-In my case, I every day end up drinking the coffee as soon I stop my alarm; that’s the moment when the button should be pressed; in order to do that, we can take advantage of some of the recent automation that Apple put in the latest iOS. I’m quite sure there is a similar concept in Android, but since I own an iPhone I’ll describe the procedure for this one.
+In my case, I end up drinking the coffee every day as soon as I stop my alarm; that’s the moment when the button should be pressed; in order to do that, we can take advantage of some of the recent automation that Apple put in the latest iOS. I’m quite sure there is a similar concept in Android, but since I own an iPhone I’ll describe the procedure for this one.
 
 ![Alt Text](/media/b481227b.jpeg)
 
@@ -53,12 +53,12 @@ This is a simple dashboard where you can play with the software to choose the ri
 
 Specifically:
 
-* `degree` is a numeric value representing how many degrees the servo should turn. If you have put the button at 0 degree, something between 20 and 45 should do the job to press a button.
+* `degree` is a numeric value representing how many degrees the servo should turn. If you have put the button at 0 degrees, something between 20 and 45 should do the job to press a button.
 * `delay` is the number of milliseconds the board should wait before lifting the servo back and turning it again to `0`
 * `times` is how many times this “push” button operation should be repeated. This is quite useful in my case because I have to press once to switch on the coffee machine and twice to actually pour the coffee.
 * `delaytimes` is the number of milliseconds to wait between every “push” button operation
 
-Play with these values until you are sure that the coffee machine is able to press the button properly, and store them for later.
+Play with these values until you are sure that the servo is able to press the button properly, and store them for later.
 
 ### What the sketch is really doing
 

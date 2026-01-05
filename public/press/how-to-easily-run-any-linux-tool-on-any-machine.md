@@ -10,7 +10,7 @@ Have you ever encountered a situation like the ones below?
 
 **Situation 4**: No matter which platform, you have to start your Node.js 10 project. But you don’t have Node.js installed on your platform.
 
-Or, in general, have you ever been a situation like this:
+Or, in general, have you ever been in a situation like this:
 
 **Situation X:** you are on one platform, and you immediately need a specific Linux tool, without altering your configuration or installing additional software.
 
@@ -51,7 +51,7 @@ Now let’s run our first container.
 
 > You’re on your Linux workstation, and there is a PHP code that you must execute. But this code only runs under PHP 7, and your workstation only has PHP 5.
 
-Ok, now let’s imagine we have this simple code. It only works under PHP 7, because of the spaceship** **operator:
+Ok, now let's imagine we have this simple code. It only works under PHP 7, because of the spaceship operator:
 
 ```php
 <?php echo 1 <=> 0;
@@ -109,7 +109,7 @@ $ docker run -it paoloo/sqlmap --url [http://localhost](http://localhost)
 ...
 ```
 
-All arguments that are after [docker run -it {image}]** **are passed to the binary executed in Docker, which is sqlmap in this case.
+All arguments that are after `docker run -it {image}` are passed to the binary executed in Docker, which is sqlmap in this case.
 
 Easy enough, right? Yes, but there is a con.
 
@@ -138,7 +138,7 @@ And, in fact, everything has been saved — including our reports.
 
 As you may have noticed, the first time you run docker run, it downloads the images from [the Docker Hub](https://hub.docker.com).
 
-This could be hundreds of hundreds gigabytes. This is because we downloaded the tag latest of the image (the default).
+This could be hundreds of gigabytes. This is because we downloaded the tag latest of the image (the default).
 
 But most images have also an ‘alpine’ version of the same image. It uses Linux Alpine OS. This is an optimized version of Linux, which occupies about 130MB.
 

@@ -58,16 +58,15 @@ body.index .username {
 }
 
 #kopiro {
-  font-size: 5em;
+  font-size: 10em;
   margin-top: 20px;
   line-height: 0.95em;
   font-weight: 900;
-  width: 50%;
   margin-bottom: 20px;
   color: #000;
-  min-height: 160px;
   position: relative;
   line-height: 1em;
+  min-height: 100px;
 }
 
 #avatar {
@@ -144,7 +143,7 @@ h4,
 h5,
 h6 {
   margin-top: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
 }
 
 body.index ul {
@@ -183,6 +182,17 @@ blockquote p + p {
 .username a {
   color: rgb(14, 132, 31);
   font-weight: bold !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.small-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 code {
@@ -213,7 +223,7 @@ pre {
     Consolas,
     Liberation Mono,
     monospace;
-  font-size: 13px;
+  font-size: 11px;
   line-height: 1.5;
   color: #333;
   border-radius: 6px;
@@ -314,7 +324,9 @@ body.article li {
 /* On iPhone, reduce the font size of the h1 */
 @media only screen and (max-width: 768px) {
   #kopiro {
+    font-size: 5em;
     width: 100%;
+    text-align: center;
   }
 
   #avatar {

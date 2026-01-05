@@ -7,14 +7,12 @@ const { PressList, ProjectsList, GithubList } = require("./mdComponents");
 const { renderMd } = require("./baseTemplates");
 
 const renderIndexMd = (state) => {
-  const { title, description, work, github, press, projects, apps } = state;
+  const { title, description, github, press, projects, apps } = state;
   return renderMd(
     state,
     `# ${title}
   
-## work
-  
-${work}
+### ${description}
   
 ## apps
   
@@ -38,7 +36,7 @@ ${PressList(press)}
 async function renderIndex() {
   const state = {
     title: readPartial("title.md"),
-    work: readPartial("work.md"),
+    description: readPartial("description.md"),
     press: readDbFile("press"),
     github: readDbFile("github"),
     projects: readDbFile("projects"),

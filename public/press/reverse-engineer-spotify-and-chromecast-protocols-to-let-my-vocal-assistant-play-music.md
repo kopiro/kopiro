@@ -73,7 +73,7 @@ To understand the protocol, I tried to debug the Chromecast itself, but it turns
 Remember that browser is the easiest platform where hacks can occur, because all Javascript code is always in clear.
 > You can obfuscate your code, minify it, do some magic with it, but for an expert Javascript developer will always be in clear.
 
-Let’s open Chrome Developers Tools, go to Sources and after some rrsearches with the simplest keyword: *“chromecast”* I ended up with this part of the code found in the main script (Check out the original script: [https://open.scdn.co/static/web-player.acc65e1b.js](https://open.scdn.co/static/web-player.acc65e1b.js))
+Let’s open Chrome Developers Tools, go to Sources and after some searches with the simplest keyword: *“chromecast”* I ended up with this part of the code found in the main script (Check out the original script: [https://open.scdn.co/static/web-player.acc65e1b.js](https://open.scdn.co/static/web-player.acc65e1b.js))
 
 ![](https://cdn-images-1.medium.com/max/4840/1*OvPWrkcBq0y3teTmNLvdxg.png)
 
@@ -158,7 +158,7 @@ Spotify.prototype.authenticate = function() {
 
 Question. Where can we find an access token? By copying my access token in the Javascript console with the debugger, it works like a charm.
 
-I tried to implement the OAuth flow described [here](https://developer.spotify.com/web-api/authorization-guide/) with a registered Spotify applications, using all kind of [scopes](https://developer.spotify.com/web-api/authorization-guide/#scopes) (*streaming** ***included), but when I tried to use this fresh access token in this CastV2 client, Spotify simply replies with this beautiful error message.
+I tried to implement the OAuth flow described [here](https://developer.spotify.com/web-api/authorization-guide/) with a registered Spotify applications, using all kinds of [scopes](https://developer.spotify.com/web-api/authorization-guide/#scopes) (*streaming** ***included), but when I tried to use this fresh access token in this CastV2 client, Spotify simply replies with this beautiful error message.
 
 ![Spotify on Chromecast with a non-valid access token](https://cdn-images-1.medium.com/max/2128/1*Y4tEkGW0gK8YxIrI22hkLg.png)*Spotify on Chromecast with a non-valid access token*
 
@@ -166,13 +166,13 @@ I think that my access token doesn’t have enough permission to run on a extern
 
 ## Grab a valid access token from Spotify Web Player
 
-I notice that Spotify Web Player send a Bearer access token to its API to authenticate them. Further investigations find out that Web players receive this access token in a Cookie named wp_access_token
+I noticed that Spotify Web Player sends a Bearer access token to its API to authenticate them. Further investigations find out that Web players receive this access token in a Cookie named wp_access_token
 
 ![Cookie storage for Spotify web Player](https://cdn-images-1.medium.com/max/2006/1*nuQGCDDiT_VAU7xJn2uo-A.png)*Cookie storage for Spotify web Player*
 
 To grab this “extended” access token, we have to mimic the entire login flow into the Spotify Web Player and then inspect where is it stored.
 
-Using with my favorite tool: [Charles](https://www.charlesproxy.com/), I inspected every HTTPs request to the Spotify website and replicated the entire login flow in a Node.js library.
+Using my favorite tool: [Charles](https://www.charlesproxy.com/), I inspected every HTTPs request to the Spotify website and replicated the entire login flow in a Node.js library.
 
 You can view the full code here: [https://github.com/kopiro/node-spotify-webplayer-accesstoken](https://github.com/kopiro/node-spotify-webplayer-accesstoken)
 
@@ -235,4 +235,4 @@ You can now finally control your Spotify over a Chromecast from your Node.js app
 
 The Spotify CastV2 Client is available on [Github](https://github.com/kopiro/spotify-castv2-client) and on NPM with the spotify-castv2-client package name.
 
-Build great stuffs!
+Build great stuff!

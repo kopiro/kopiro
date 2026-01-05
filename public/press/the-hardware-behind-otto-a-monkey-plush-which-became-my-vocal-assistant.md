@@ -32,7 +32,7 @@ The real challenge here was to find the rights components that fitted in the ori
 
 The preferred hardware for this project are Raspberry PI boards.
 
-They are tiny and powerful enough to allow developers to use a high-level programming language and built-in libraries without flashing the software every-time.
+They are tiny and powerful enough to allow developers to use a high-level programming language and built-in libraries without flashing the software every time.
 
 Furthermore, you can debug your application in a more comfortable environment.
 
@@ -90,7 +90,7 @@ For this reason, I switched to [Adafruit PowerBoost 500 Charger.](https://shop.p
 
 The software uses the “hot-word” concept to start the interaction. Basically, it continuously listens for a hot-word, like “Hey Otto”, then you just talk and say commands.
 
-For having an alternative method to start the interaction, I installed a** push-button **connected directly to the GPIO board, at the GPIO8 pin.
+For having an alternative method to start the interaction, I installed a **push-button** connected directly to the GPIO board, at the GPIO8 pin.
 
 ![Push button](https://cdn-images-1.medium.com/max/2000/1*53tODwL8Me43CcBwxxM_Aw.png)*Push button*
 

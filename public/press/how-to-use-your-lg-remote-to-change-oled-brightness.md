@@ -2,7 +2,7 @@
 
 This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV.
 
-Why would someone want to do this? Well, these OLED LG TV these days are so bright that they can be a bit overwhelming at night, and I want something quick and easy to use.
+Why would someone want to do this? Well, these OLED LG TVs these days are so bright that they can be a bit overwhelming at night, and I want something quick and easy to use.
 
 It's very convenient to map this function to the channel up and down buttons, as most of the time you don't need these channels if you (like me) use an Apple TV or something similar, and Live TV is just a relic of the past.
 
@@ -43,7 +43,7 @@ The mapping config is taken from [my gist](https://gist.github.com/kopiro/083d97
 
 Start the mapper manually with `/usr/bin/python -u /home/root/magic_mapper.py` and you should be able to use your remote to change the brightness of your OLED TV.
 
-Then, to setup autostart of the mapper, use the script provided in the project:
+Then, to set up autostart of the mapper, use the script provided in the project:
 
 ```bash
 cd /var/lib/webosbrew/init.d

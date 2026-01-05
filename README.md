@@ -1,12 +1,6 @@
 # kopiro
   
-## work
-  
-- <span class="title">[Spotify](https://www.spotify.com)</span> - <span class="subtitle">Senior Engineer (2019/jan to present)</span>
-- <span class="title">[Caffeina](https://www.caffeina.com)</span> - <span class="subtitle">Engineering Manager (2017/jul to 2018/dec)</span>
-- <span class="title">[Caffeina](https://www.caffeina.com)</span> - <span class="subtitle">Full-stack web/mobile Engineer (2012/sep to 2017/jul)</span>
-- <span class="title">[Pane&Design](https://www.ped.company/)</span> - <span class="subtitle">Jr. Web Engineer (2011/oct to 2013/dec)</span>
-- <span class="title">[Computer Science (University)](https://www.unipr.it/en)</span> - <span class="subtitle">(2010/sep to 2013/dec)</span>
+### SWE at Spotify. I like RJ45 cables.
   
 ## apps
   

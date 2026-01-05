@@ -42,7 +42,7 @@ What we have to do now is to load our installed Kali system via **Live GRUB**, b
 
 Once GRUB is loaded, press **c** to get the GRUB command-line-interface.
 
-Now you have to understand in which HD is your Kali installation. To do this, when GRUB CLI is loaded, type `ls`; eject your USB stick and type `ls` gain.
+Now you have to understand in which HD is your Kali installation. To do this, when GRUB CLI is loaded, type `ls`; eject your USB stick and type `ls` again.
 
 ```bash
 grub> ls
@@ -56,7 +56,7 @@ grub> ls (hdX,gpt2)/boot/grub
 unicode.pf2 ...
 ```
 
-*If the command says `unicode..` it’s the correct gpt; try other **gpts** otherwise. Now find your UUID of the partition, and annotate it.
+If the command says `unicode..` it's the correct gpt; try other **gpts** otherwise. Now find the UUID of the partition, and annotate it.
 
 ```bash
 grub> ls -l (hdX},gpt{X})
@@ -118,7 +118,7 @@ Number  Start (sector)  End (sector)  Size     Code   Name
 
 [...]
 ```
-*Just leave defaults values in the sector phase*
+*Just leave default values in the sector phase*
 
 ```bash
 Current type is 'Linux filesystem'

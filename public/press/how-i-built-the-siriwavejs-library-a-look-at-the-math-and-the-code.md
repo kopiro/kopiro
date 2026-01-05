@@ -89,7 +89,7 @@ Probably this pseudo-code will clear up these ideas. We still have to implement 
 
 But… hey, what is `0.01`???
 
-That value represents **how many pixels** you move forward in each iteration before reaching the right plot boundary... but why 0.0.1, and what is the correct value?
+That value represents **how many pixels** you move forward in each iteration before reaching the right plot boundary... but why 0.01, and what is the correct value?
 
 If you use a really small value (`< 0.01`), you’ll get an insanely precise rendering of the graph but your performance will decrease because you’ll get too many iterations.
 
@@ -176,7 +176,7 @@ return [
 
 ![GIF of SiriwaveJS iOS9+](https://cdn-images-1.medium.com/max/2392/1*yXia5olaPzgiWmTLtK15dQ.gif)
 
-Now things start to get complicated. The style introduced with iOS 9 is really complex and reverse engineering to simulate it’s not easy at all! I’m not fully satisfied with the final result, but I’ll continue to improve it until I get the desired result.
+Now things start to get complicated. The style introduced with iOS 9 is really complex and reverse engineering to simulate it is not easy at all! I’m not fully satisfied with the final result, but I’ll continue to improve it until I get the desired result.
 
 As previously done, let’s start to obtain the linear equations of the waves.
 
@@ -337,7 +337,7 @@ To provide a more elegant and modern way, I also built an ESM module with this c
 }
 ```
 
-We clearly don’t want the **resolve **or **commonjs** RollupJS plugins because the developer transplier will resolve dependencies for us.
+We clearly don't want the **resolve** or **commonjs** RollupJS plugins because the developer transpiler will resolve dependencies for us.
 
 You can find the final RollupJS configuration here: [https://github.com/kopiro/siriwave/blob/master/rollup.config.js](https://github.com/kopiro/siriwave/blob/master/rollup.config.js)
 
