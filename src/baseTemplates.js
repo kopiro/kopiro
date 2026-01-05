@@ -41,7 +41,6 @@ const baseState = {
   metas: {
     author: { name: "author", content: readPartial("title.md") },
     viewport: { name: "viewport", content: "width=device-width" },
-    ogImage: { name: "og:image", content: "/img/avatar.jpg" },
   },
 };
 
