@@ -4,6 +4,20 @@ const paths = require("./paths");
 
 const readPartial = (file) => fs.readFileSync(path.join(paths.partials, file), "utf-8").trim();
 
+const deepMerge = (a, b) => {
+  const result = { ...a };
+  Object.keys(b).forEach((key) => {
+    if (Array.isArray(b[key])) {
+      result[key] = [...(a[key] || []), ...b[key]];
+    } else if (typeof b[key] === "object" && b[key] !== null) {
+      result[key] = deepMerge(a[key], b[key]);
+    } else {
+      result[key] = b[key];
+    }
+  });
+  return result;
+};
+
 const walkMarkdowns = (dir = paths.public) => {
   let results = [];
   const list = fs.readdirSync(dir, { withFileTypes: true });
@@ -74,4 +88,4 @@ function getDateHumanFormat(date) {
   return `${months[date.getMonth()]} ${date.getFullYear()}`;
 }
 
-module.exports = { readDbFile, readPartial, getDateHumanFormat, walkMarkdowns };
+module.exports = { readDbFile, readPartial, getDateHumanFormat, walkMarkdowns, deepMerge };
