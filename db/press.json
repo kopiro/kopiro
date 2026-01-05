@@ -18,7 +18,7 @@
     "slug": "how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox",
     "title": "How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)",
     "path": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox.md",
-    "publishedAt": "2017-07-29T00:00:00.000Z",
+    "publishedAt": "2018-01-01T00:00:00.000Z",
     "htmlPath": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox.html"
   },
   {
@@ -26,15 +26,8 @@
     "title": "The hardware behind Otto: a monkey plush which became my vocal assistant",
     "path": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant.md",
     "coverImage": "/media/6F4ncy2Ji3laeQ2ZdgcQBA.png",
-    "publishedAt": "2018-04-29T00:00:00.000Z",
+    "publishedAt": "2018-04-13T00:00:00.000Z",
     "htmlPath": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant.html"
-  },
-  {
-    "slug": "how-to-easily-run-any-linux-tool-on-any-machine",
-    "title": "How to easily run any Linux tool on any machine",
-    "path": "/press/how-to-easily-run-any-linux-tool-on-any-machine.md",
-    "publishedAt": "2018-07-29T00:00:00.000Z",
-    "htmlPath": "/press/how-to-easily-run-any-linux-tool-on-any-machine.html"
   },
   {
     "slug": "reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music",
@@ -46,11 +39,18 @@
     "hidden": true
   },
   {
+    "slug": "how-to-easily-run-any-linux-tool-on-any-machine",
+    "title": "How to easily run any Linux tool on any machine",
+    "path": "/press/how-to-easily-run-any-linux-tool-on-any-machine.md",
+    "publishedAt": "2018-11-29T00:00:00.000Z",
+    "htmlPath": "/press/how-to-easily-run-any-linux-tool-on-any-machine.html"
+  },
+  {
     "slug": "how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code",
     "title": "How I built the SiriWaveJS library: a look at the math and the code",
     "path": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code.md",
     "coverImage": "/media/fe41712c.png",
-    "publishedAt": "2020-08-02T00:00:00.000Z",
+    "publishedAt": "2020-08-03T00:00:00.000Z",
     "htmlPath": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code.html"
   },
   {
