@@ -2,7 +2,9 @@
 
 This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV.
 
-It's very convenient to map this function to the channel up and down buttons, as most of the times you don't need these channels if you (like me) use an Apple TV or somethign similar, and Live TV is just a reminiscence of the past.
+Why would someone want to do this? Well, these OLED LG TV these days are so bright that they can be a bit overwhelming at night, and I want something quick and easy to use.
+
+It's very convenient to map this function to the channel up and down buttons, as most of the time you don't need these channels if you (like me) use an Apple TV or something similar, and Live TV is just a relic of the past.
 
 But, first of all, you need to root your TV - you can find several methods, a good place to start is [this guide](https://github.com/RootMyTV/RootMyTV.github.io).
 
@@ -49,4 +51,4 @@ wget https://raw.githubusercontent.com/andrewfraley/magic_mapper/main/start_magi
 chmod +x /var/lib/webosbrew/init.d/start_magic_mapper
 ```
 
-Tip: if you want to change the mapper without install any editor via SSH, you can always connect via SFTP and edit the files directly - I love [Cyberduck](https://cyberduck.io/) for this.
+Tip: if you want to change the mapper without installing any editor via SSH, you can always connect via SFTP and edit the files directly - I love [Cyberduck](https://cyberduck.io/) for this.
