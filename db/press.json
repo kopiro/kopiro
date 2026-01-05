@@ -1,86 +1,95 @@
 [
   {
+    "slug": "kata-resolution-next-bigger-number-with-the-same-digits",
+    "title": "Kata resolution: Next bigger number with the same digits",
+    "path": "/press/kata-resolution-next-bigger-number-with-the-same-digits.md",
+    "publishedAt": "2016-07-29T00:00:00.000Z",
+    "htmlPath": "/press/kata-resolution-next-bigger-number-with-the-same-digits.html"
+  },
+  {
     "slug": "what-i-learned-hacking-the-facebook-messenger-soccer-game",
     "title": "What I learned hacking the Facebook Messenger Soccer game",
-    "htmlPath": "/press/what-i-learned-hacking-the-facebook-messenger-soccer-game.html",
     "path": "/press/what-i-learned-hacking-the-facebook-messenger-soccer-game.md",
-    "publishedAt": "2017-01-01T00:00:00.000Z"
+    "coverImage": "/media/rHRhqfl0hZSYHdEsrJLF_A.png",
+    "publishedAt": "2017-01-01T00:00:00.000Z",
+    "htmlPath": "/press/what-i-learned-hacking-the-facebook-messenger-soccer-game.html"
+  },
+  {
+    "slug": "how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox",
+    "title": "How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)",
+    "path": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox.md",
+    "publishedAt": "2017-07-29T00:00:00.000Z",
+    "htmlPath": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox.html"
   },
   {
     "slug": "the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant",
     "title": "The hardware behind Otto: a monkey plush which became my vocal assistant",
-    "htmlPath": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant.html",
     "path": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant.md",
-    "coverImage": "and Otto](https://cdn-images-1.medium.com/max/3840/1*6F4ncy2Ji3laeQ2ZdgcQBA.png)*SkeletOtto and Otto*",
-    "publishedAt": "2018-04-29T00:00:00.000Z"
+    "coverImage": "/media/6F4ncy2Ji3laeQ2ZdgcQBA.png",
+    "publishedAt": "2018-04-29T00:00:00.000Z",
+    "htmlPath": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant.html"
+  },
+  {
+    "slug": "how-to-easily-run-any-linux-tool-on-any-machine",
+    "title": "How to easily run any Linux tool on any machine",
+    "path": "/press/how-to-easily-run-any-linux-tool-on-any-machine.md",
+    "publishedAt": "2018-07-29T00:00:00.000Z",
+    "htmlPath": "/press/how-to-easily-run-any-linux-tool-on-any-machine.html"
   },
   {
     "slug": "reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music",
     "title": "Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music",
-    "htmlPath": "/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music.html",
     "path": "/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music.md",
+    "coverImage": "/media/c5FGV8sSGrr-zKpRAIkOmg.png",
     "publishedAt": "2018-07-31T00:00:00.000Z",
+    "htmlPath": "/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music.html",
     "hidden": true
   },
   {
     "slug": "how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code",
     "title": "How I built the SiriWaveJS library: a look at the math and the code",
-    "htmlPath": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code.html",
     "path": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code.md",
     "coverImage": "/media/fe41712c.png",
-    "publishedAt": "2020-08-02T00:00:00.000Z"
-  },
-  {
-    "slug": "how-to-easily-run-any-linux-tool-on-any-machine",
-    "title": "How to easily run any Linux tool on any machine",
-    "htmlPath": "/press/how-to-easily-run-any-linux-tool-on-any-machine.html",
-    "path": "/press/how-to-easily-run-any-linux-tool-on-any-machine.md",
-    "publishedAt": "2020-07-29T00:00:00.000Z"
-  },
-  {
-    "slug": "how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox",
-    "title": "How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)",
-    "htmlPath": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox.html",
-    "path": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox.md",
-    "publishedAt": "2020-07-29T00:00:00.000Z"
-  },
-  {
-    "slug": "kata-resolution-next-bigger-number-with-the-same-digits",
-    "title": "Kata resolution: Next bigger number with the same digits",
-    "htmlPath": "/press/kata-resolution-next-bigger-number-with-the-same-digits.html",
-    "path": "/press/kata-resolution-next-bigger-number-with-the-same-digits.md",
-    "publishedAt": "2020-07-29T00:00:00.000Z"
+    "publishedAt": "2020-08-02T00:00:00.000Z",
+    "htmlPath": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code.html"
   },
   {
     "slug": "hey-siri-make-coffee",
     "title": "Hey Siri, make coffee!",
-    "htmlPath": "/press/hey-siri-make-coffee.html",
     "path": "/press/hey-siri-make-coffee.md",
     "coverImage": "/media/cefa0d21.jpeg",
-    "publishedAt": "2021-01-20T23:00:00.000Z"
+    "publishedAt": "2021-01-20T23:00:00.000Z",
+    "htmlPath": "/press/hey-siri-make-coffee.html"
   },
   {
     "slug": "using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023",
     "title": "Using C89 on a '80s Macintosh SE to solve Advent of Code 2023",
-    "htmlPath": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023.html",
     "path": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023.md",
     "coverImage": "/media/6930e2ea.jpeg",
-    "publishedAt": "2023-12-02T23:00:00.000Z"
-  },
-  {
-    "slug": "process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator",
-    "title": "Convert a batch of images into Ghibli style using ChatGPT and macOS Automator",
-    "htmlPath": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator.html",
-    "path": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator.md",
-    "coverImage": "/media/363923ee.png",
-    "publishedAt": "2025-04-12T00:00:00.000Z"
+    "publishedAt": "2023-12-02T23:00:00.000Z",
+    "htmlPath": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023.html"
   },
   {
     "slug": "how-to-correctly-publish-your-mac-apps-outside-of-the-app-store",
     "title": "How to correctly publish your Mac apps outside of the App Store",
-    "htmlPath": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store.html",
     "path": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store.md",
     "coverImage": "/media/4e069123.png",
-    "publishedAt": "2025-04-10T00:00:00.000Z"
+    "publishedAt": "2025-04-10T00:00:00.000Z",
+    "htmlPath": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store.html"
+  },
+  {
+    "slug": "process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator",
+    "title": "Convert a batch of images into Ghibli style using ChatGPT and macOS Automator",
+    "path": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator.md",
+    "coverImage": "/media/363923ee.png",
+    "publishedAt": "2025-04-12T00:00:00.000Z",
+    "htmlPath": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator.html"
+  },
+  {
+    "slug": "how-to-use-your-lg-remote-to-change-oled-brightness",
+    "title": "How to use your LG remote to change OLED brightness",
+    "path": "/press/how-to-use-your-lg-remote-to-change-oled-brightness.md",
+    "publishedAt": "2026-01-05T20:30:25.011Z",
+    "htmlPath": "/press/how-to-use-your-lg-remote-to-change-oled-brightness.html"
   }
 ]

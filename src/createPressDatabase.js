@@ -1,8 +1,9 @@
 require("./config");
 
-const fs = require("fs/promises");
+const fs = require("fs");
 const path = require("path");
 const paths = require("./paths");
+const { walkMarkdowns } = require("./utils");
 
 const listMarkdownFromPublicFolder = () => {
   const mdFiles = walkMarkdowns();
@@ -30,42 +31,63 @@ const listMarkdownFromPublicFolder = () => {
   });
 };
 
-async function createPressDatabase() {
+function createPressDatabase() {
   const filePath = path.join(paths.db, "press.json");
 
   // Read existing press.json if it exists
   let existingData = [];
   try {
-    const content = await fs.readFile(filePath, "utf-8");
+    const content = fs.readFileSync(filePath, "utf-8");
     existingData = JSON.parse(content);
   } catch {
     // File doesn't exist or is invalid, start fresh
   }
 
-  const existingSlugs = new Set(existingData.map((e) => e.slug));
+  // Create a map of existing entries by slug for easy lookup
+  const existingBySlug = new Map(existingData.map((e) => [e.slug, e]));
 
   const press = listMarkdownFromPublicFolder();
 
-  // Only add new entries (based on slug)
+  // Track which slugs we've processed from markdown files
+  const processedSlugs = new Set();
   let addedCount = 0;
-  for (const { relativePath, path, slug, publishedAt, title, coverImage } of press) {
-    if (!existingSlugs.has(slug)) {
-      existingData.push({
+  const updatedData = [];
+
+  // Process markdown files, merging with existing data
+  for (const { path, htmlPath, slug, publishedAt, title, coverImage } of press) {
+    processedSlugs.add(slug);
+    const existing = existingBySlug.get(slug);
+
+    if (existing) {
+      // Keep existing entry exactly as-is, don't change any fields
+      updatedData.push(existing);
+    } else {
+      updatedData.push({
         slug,
         title,
-        path: path,
-        relativePath,
+        path,
         coverImage,
         publishedAt,
+        htmlPath,
       });
       addedCount++;
     }
   }
 
-  await fs.writeFile(filePath, JSON.stringify(existingData, null, 2));
-  console.log(`Press database generated in ${filePath} (${existingData.length} entries, ${addedCount} new)`);
+  // Also preserve entries from the database that don't have markdown files
+  for (const existing of existingData) {
+    if (!processedSlugs.has(existing.slug)) {
+      updatedData.push(existing);
+    }
+  }
+
+  // Sort by publishedAt date (oldest first, newest at the end)
+  updatedData.sort((a, b) => new Date(a.publishedAt) - new Date(b.publishedAt));
+
+  fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2));
+  console.log(`Press database generated in ${filePath} (${updatedData.length} entries, ${addedCount} new)`);
 
   return press;
 }
 
-module.exports = { createPressDatabase };
+createPressDatabase();
