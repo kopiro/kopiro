@@ -49,7 +49,7 @@ const listMarkdownFromPublicFolder = () => {
     const baseName = path.basename(file);
     const htmlPath = "/" + file.replace(/\.md$/, ".html");
 
-    const absolutePath = path.join(paths.public, file);
+    const absolutePath = path.join(paths.root, file);
     const content = fs.readFileSync(absolutePath, "utf-8").trim();
 
     const title = content.match(/^# (.+)$/m)?.[1];

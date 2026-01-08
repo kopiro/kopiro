@@ -6,9 +6,18 @@ const paths = require("./paths");
 const { renderHtmlFromMd } = require("./baseTemplates");
 const { readDbFile, readPartial, deepMerge } = require("./utils");
 
+async function copyAssets() {
+  for (const asset of paths.publicAssets) {
+    const src = path.join(paths.root, asset);
+    const dest = path.join(paths.build, asset);
+    await fs.cp(src, dest, { recursive: true });
+    console.log(`Copied "${asset}" to build/`);
+  }
+}
+
 async function renderPress(article) {
   const { title, coverImage, htmlPath, description } = article;
-  const content = await fs.readFile(path.join(paths.public, article.path), "utf-8");
+  const content = await fs.readFile(path.join(paths.root, article.path), "utf-8");
   const articleUrl = `${baseUrl}${htmlPath}`;
   const absoluteCoverImage = coverImage ? `${baseUrl}${coverImage}` : null;
 
@@ -87,6 +96,8 @@ async function main() {
 
   const press = readDbFile("press");
   await Promise.all(press.map(renderPress));
+
+  await copyAssets();
 }
 
 main();

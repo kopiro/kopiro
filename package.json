@@ -6,7 +6,7 @@
     "fetch": "node ./src/fetch.js",
     "download-images": "node ./src/downloadImages.js",
     "prebuild": "node ./src/buildMd.js && node ./src/createPressDatabase.js",
-    "build": "node ./src/buildHtml.js && cp -Rv ./public/* ./build/",
+    "build": "node ./src/buildHtml.js",
     "start:dev": "./dev.sh",
     "deploy": "npm run build && docker-compose build && docker-compose push"
   },

@@ -18,7 +18,7 @@ const deepMerge = (a, b) => {
   return result;
 };
 
-const walkMarkdowns = (dir = paths.public) => {
+const walkMarkdowns = (dir = path.join(paths.root, "press")) => {
   let results = [];
   const list = fs.readdirSync(dir, { withFileTypes: true });
   for (const file of list) {
@@ -26,7 +26,7 @@ const walkMarkdowns = (dir = paths.public) => {
     if (file.isDirectory()) {
       results = results.concat(walkMarkdowns(filePath));
     } else if (file.name.endsWith(".md")) {
-      results.push(path.relative(paths.public, filePath));
+      results.push(path.relative(paths.root, filePath));
     }
   }
   return results;
