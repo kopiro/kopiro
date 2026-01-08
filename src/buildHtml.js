@@ -48,9 +48,11 @@ const renderIndexHtml = (state, markdownContent) => {
       bodyClass: "index",
     }),
     markdownContent,
-  ).replace(/<h2[^>]*>(.+)<\/h2>[^<]*?(<ul[^>]*>[^]*?<\/ul>)/gm, (match, title, content) => {
-    return `<section id="${title.toLowerCase()}"><h2>${title}</h2>${content}</section>`;
-  });
+  )
+    .replace(/\.md"/g, '.html"')
+    .replace(/<h2[^>]*>(.+)<\/h2>[^<]*?(<ul[^>]*>[^]*?<\/ul>)/gm, (match, title, content) => {
+      return `<section id="${title.toLowerCase()}"><h2>${title}</h2>${content}</section>`;
+    });
 };
 
 async function main() {
