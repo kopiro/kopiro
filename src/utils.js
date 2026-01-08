@@ -10,7 +10,7 @@ const deepMerge = (a, b) => {
     if (Array.isArray(b[key])) {
       result[key] = [...(a[key] || []), ...b[key]];
     } else if (typeof b[key] === "object" && b[key] !== null) {
-      result[key] = deepMerge(a[key], b[key]);
+      result[key] = deepMerge(a[key] || {}, b[key]);
     } else {
       result[key] = b[key];
     }

@@ -4,46 +4,52 @@
     "title": "Kata resolution: Next bigger number with the same digits",
     "path": "/press/kata-resolution-next-bigger-number-with-the-same-digits.md",
     "publishedAt": "2016-07-29T00:00:00.000Z",
-    "htmlPath": "/press/kata-resolution-next-bigger-number-with-the-same-digits.html"
+    "htmlPath": "/press/kata-resolution-next-bigger-number-with-the-same-digits.html",
+    "description": "I would like to share with you my solution of a Kata on CodeWars."
   },
   {
     "slug": "what-i-learned-hacking-the-facebook-messenger-soccer-game",
     "title": "What I learned hacking the Facebook Messenger Soccer game",
     "path": "/press/what-i-learned-hacking-the-facebook-messenger-soccer-game.md",
-    "coverImage": "/media/rHRhqfl0hZSYHdEsrJLF_A.png",
+    "coverImage": "https://cdn-images-1.medium.com/max/2564/1*rHRhqfl0hZSYHdEsrJLF_A.png",
     "publishedAt": "2017-01-01T00:00:00.000Z",
-    "htmlPath": "/press/what-i-learned-hacking-the-facebook-messenger-soccer-game.html"
+    "htmlPath": "/press/what-i-learned-hacking-the-facebook-messenger-soccer-game.html",
+    "description": "Recently, during the last European Football Championship, Facebook introduced a little game in the Messenger app that makes you lose hours and hours despite..."
   },
   {
     "slug": "how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox",
     "title": "How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)",
     "path": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox.md",
     "publishedAt": "2018-01-01T00:00:00.000Z",
-    "htmlPath": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox.html"
+    "htmlPath": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox.html",
+    "coverImage": "https://cdn-images-1.medium.com/max/2000/0*MzOP02pAieEe6wqE.png",
+    "description": "This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Mac(s). This is not intended to perform a Live Kali instal..."
   },
   {
     "slug": "the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant",
     "title": "The hardware behind Otto: a monkey plush which became my vocal assistant",
     "path": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant.md",
-    "coverImage": "/media/6F4ncy2Ji3laeQ2ZdgcQBA.png",
     "publishedAt": "2018-04-13T00:00:00.000Z",
-    "htmlPath": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant.html"
+    "htmlPath": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant.html",
+    "description": "Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February 2017."
   },
   {
     "slug": "reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music",
     "title": "Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music",
     "path": "/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music.md",
-    "coverImage": "/media/c5FGV8sSGrr-zKpRAIkOmg.png",
+    "coverImage": "https://cdn-images-1.medium.com/max/4840/1*OvPWrkcBq0y3teTmNLvdxg.png",
     "publishedAt": "2018-07-31T00:00:00.000Z",
     "htmlPath": "/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music.html",
-    "hidden": true
+    "hidden": true,
+    "description": "I recently tried a Google Home Mini and the most interesting feature is the ability to play music by Spotify directly on a Chromecast."
   },
   {
     "slug": "how-to-easily-run-any-linux-tool-on-any-machine",
     "title": "How to easily run any Linux tool on any machine",
     "path": "/press/how-to-easily-run-any-linux-tool-on-any-machine.md",
     "publishedAt": "2018-11-29T00:00:00.000Z",
-    "htmlPath": "/press/how-to-easily-run-any-linux-tool-on-any-machine.html"
+    "htmlPath": "/press/how-to-easily-run-any-linux-tool-on-any-machine.html",
+    "description": "Have you ever encountered a situation like the ones below?"
   },
   {
     "slug": "how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code",
@@ -51,7 +57,8 @@
     "path": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code.md",
     "coverImage": "/media/fe41712c.png",
     "publishedAt": "2020-08-03T00:00:00.000Z",
-    "htmlPath": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code.html"
+    "htmlPath": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code.html",
+    "description": "It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iPhone 4S) in the browser using pure Javascript."
   },
   {
     "slug": "hey-siri-make-coffee",
@@ -59,7 +66,8 @@
     "path": "/press/hey-siri-make-coffee.md",
     "coverImage": "/media/cefa0d21.jpeg",
     "publishedAt": "2021-01-20T23:00:00.000Z",
-    "htmlPath": "/press/hey-siri-make-coffee.html"
+    "htmlPath": "/press/hey-siri-make-coffee.html",
+    "description": "“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the morning) to actually get up and make it. Therefore, I aut..."
   },
   {
     "slug": "using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023",
@@ -67,7 +75,8 @@
     "path": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023.md",
     "coverImage": "/media/6930e2ea.jpeg",
     "publishedAt": "2023-12-02T23:00:00.000Z",
-    "htmlPath": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023.html"
+    "htmlPath": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023.html",
+    "description": "For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have lying around and the ThinkC compiler."
   },
   {
     "slug": "how-to-correctly-publish-your-mac-apps-outside-of-the-app-store",
@@ -75,7 +84,8 @@
     "path": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store.md",
     "coverImage": "/media/4e069123.png",
     "publishedAt": "2025-04-10T00:00:00.000Z",
-    "htmlPath": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store.html"
+    "htmlPath": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store.html",
+    "description": "Distributing Mac apps outside of the App Store requires more than just building and zipping your .app."
   },
   {
     "slug": "process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator",
@@ -83,14 +93,16 @@
     "path": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator.md",
     "coverImage": "/media/363923ee.png",
     "publishedAt": "2025-04-12T00:00:00.000Z",
-    "htmlPath": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator.html"
+    "htmlPath": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator.html",
+    "description": "If you love the warm, dreamy visuals of Studio Ghibli films, here's a powerful automation trick: an AppleScript automation that lets you select multiple imag..."
   },
   {
     "slug": "how-to-use-your-lg-remote-to-change-oled-brightness",
     "title": "How to use your LG remote to change OLED brightness",
     "path": "/press/how-to-use-your-lg-remote-to-change-oled-brightness.md",
     "publishedAt": "2026-01-05T20:30:25.011Z",
-    "htmlPath": "/press/how-to-use-your-lg-remote-to-change-oled-brightness.html"
+    "htmlPath": "/press/how-to-use-your-lg-remote-to-change-oled-brightness.html",
+    "description": "This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV."
   },
   {
     "slug": "claude-code-while-you-drink-an-espresso",
@@ -98,6 +110,15 @@
     "path": "/press/claude-code-while-you-drink-an-espresso.md",
     "coverImage": "/media/claude-code-meme.png",
     "publishedAt": "2026-01-07T04:29:54.356Z",
-    "htmlPath": "/press/claude-code-while-you-drink-an-espresso.html"
+    "htmlPath": "/press/claude-code-while-you-drink-an-espresso.html",
+    "description": "We have all been there: you are on a 4 hour session with Claude Code and you really need a break; it's in the middle of a big refactoring and you desperately..."
+  },
+  {
+    "slug": "how-to-use-different-git-identities-per-directory",
+    "title": "How to use different Git identities per directory",
+    "path": "/press/how-to-use-different-git-identities-per-directory.md",
+    "publishedAt": "2026-01-08T14:15:59.930Z",
+    "htmlPath": "/press/how-to-use-different-git-identities-per-directory.html",
+    "description": "If you're like me, you have a personal email for your side projects and a work email for... well, work. And if you've ever accidentally committed to your com..."
   }
 ]

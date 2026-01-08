@@ -42,6 +42,7 @@
   
 ## press
   
+* <span class="title">[How to use different Git identities per directory](/press/how-to-use-different-git-identities-per-directory.html)</span><span class="subtitle"> (January 2026)</span>
 * <span class="title">[Claude Code while you drink an espresso](/press/claude-code-while-you-drink-an-espresso.html)</span><span class="subtitle"> (January 2026)</span>
 * <span class="title">[How to use your LG remote to change OLED brightness](/press/how-to-use-your-lg-remote-to-change-oled-brightness.html)</span><span class="subtitle"> (January 2026)</span>
 * <span class="title">[Convert a batch of images into Ghibli style using ChatGPT and macOS Automator](/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator.html)</span><span class="subtitle"> (April 2025)</span>

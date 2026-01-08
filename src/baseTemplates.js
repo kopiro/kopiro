@@ -1,4 +1,5 @@
 const showdown = require("showdown");
+const { title, twitterHandle } = require("./config");
 const { readPartial, deepMerge } = require("./utils");
 
 const converter = new showdown.Converter({
@@ -14,7 +15,7 @@ const htmlTag = (tag) => (props) =>
     .map(([k, v]) => `${k}="${escapeHtml(v).replace("<br/>", " - ")}"`)
     .join(" ")} />`;
 
-const htmlTemplate = ({ title, metas, bodyClass, lang = "en" }, body) =>
+const htmlTemplate = ({ title, metas, links = {}, bodyClass, lang = "en" }, body) =>
   `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
@@ -26,6 +27,9 @@ const htmlTemplate = ({ title, metas, bodyClass, lang = "en" }, body) =>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 ${Object.values(metas)
   .map(({ name, content }) => htmlTag("meta")({ name, content }))
+  .join("\n")}
+${Object.values(links)
+  .map((props) => htmlTag("link")(props))
   .join("\n")}
 </head>
 <body class="${bodyClass}">
@@ -39,8 +43,10 @@ ${readPartial("footer.html")}
 
 const baseState = {
   metas: {
-    author: { name: "author", content: readPartial("title.md") },
+    author: { name: "author", content: title },
     viewport: { name: "viewport", content: "width=device-width" },
+    themeColor: { name: "theme-color", content: "#ffffff" },
+    twitterSite: { name: "twitter:site", content: twitterHandle },
   },
 };
 

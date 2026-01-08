@@ -19,7 +19,7 @@ const PressList = (data) =>
     data: data.filter((e) => !e.hidden),
     sortingKey: "publishedAt",
     getTitle: (e) => e.title,
-    getDesc: (e) => e.description,
+    getDesc: (e) => null,
     getSubtitle: (e) => getDateHumanFormat(e.publishedAt),
     getLink: (e) => e.htmlPath,
   });

@@ -1,4 +1,4 @@
-require("./config");
+const { title } = require("./config");
 
 const fs = require("fs/promises");
 const paths = require("./paths");
@@ -35,7 +35,7 @@ ${PressList(press)}
 
 async function renderIndex() {
   const state = {
-    title: readPartial("title.md"),
+    title,
     description: readPartial("description.md"),
     press: readDbFile("press"),
     github: readDbFile("github"),
