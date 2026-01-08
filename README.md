@@ -42,6 +42,7 @@
   
 ## press
   
+* <span class="title">[Claude Code while you drink an espresso](/press/claude-code-while-you-drink-an-espresso.html)</span><span class="subtitle"> (January 2026)</span>
 * <span class="title">[How to use your LG remote to change OLED brightness](/press/how-to-use-your-lg-remote-to-change-oled-brightness.html)</span><span class="subtitle"> (January 2026)</span>
 * <span class="title">[Convert a batch of images into Ghibli style using ChatGPT and macOS Automator](/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator.html)</span><span class="subtitle"> (April 2025)</span>
 * <span class="title">[How to correctly publish your Mac apps outside of the App Store](/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store.html)</span><span class="subtitle"> (April 2025)</span>
