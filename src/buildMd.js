@@ -18,17 +18,18 @@ const renderIndexMd = (state) => {
   
 ${ProjectsList(apps)}
   
-## proj
+## blog
+  
+${PressList(press)}
+
+## websites
   
 ${ProjectsList(projects)}
   
-## oss
+## opensource
   
 ${GithubList(github)}
   
-## press
-  
-${PressList(press)}
   `,
   );
 };
