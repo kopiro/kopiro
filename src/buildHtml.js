@@ -6,6 +6,14 @@ const paths = require("./paths");
 const { renderHtmlFromMd } = require("./baseTemplates");
 const { readDbFile, readPartial, deepMerge } = require("./utils");
 
+const escapeXml = (str) =>
+  str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+
 async function copyAssets() {
   for (const asset of paths.publicAssets) {
     const src = path.join(paths.root, asset);
@@ -64,6 +72,43 @@ const renderIndexHtml = (state, markdownContent) => {
     });
 };
 
+async function generateRssFeed() {
+  const press = readDbFile("press");
+  const description = readPartial("description.md");
+
+  const visibleArticles = press
+    .filter((article) => !article.hidden)
+    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+
+  const items = visibleArticles
+    .map((article) => {
+      const articleUrl = `${baseUrl}${article.htmlPath}`;
+      const pubDate = new Date(article.publishedAt).toUTCString();
+      return `    <item>
+      <title>${escapeXml(article.title)}</title>
+      <link>${articleUrl}</link>
+      <description>${escapeXml(article.description || "")}</description>
+      <pubDate>${pubDate}</pubDate>
+      <guid>${articleUrl}</guid>
+    </item>`;
+    })
+    .join("\n");
+
+  const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${escapeXml(siteName)}</title>
+    <link>${baseUrl}</link>
+    <description>${escapeXml(description)}</description>
+    <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
+${items}
+  </channel>
+</rss>`;
+
+  await fs.writeFile(path.join(paths.build, "rss.xml"), rss);
+  console.log("Generated RSS feed");
+}
+
 async function main() {
   await fs.mkdir(paths.build, { recursive: true });
 
@@ -97,6 +142,7 @@ async function main() {
   const press = readDbFile("press");
   await Promise.all(press.map(renderPress));
 
+  await generateRssFeed();
   await copyAssets();
 }
 
