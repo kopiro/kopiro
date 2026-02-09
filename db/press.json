@@ -120,5 +120,13 @@
     "publishedAt": "2026-01-08T14:15:59.930Z",
     "htmlPath": "/press/how-to-use-different-git-identities-per-directory.html",
     "description": "If you're like me, you have a personal email for your side projects and a work email for... well, work. And if you've ever accidentally committed to your com..."
+  },
+  {
+    "slug": "from-a-tweet-to-a-shipping-checklist",
+    "title": "I installed Fedora on an old Dell Latitude, and Linux laptop UX has changed a lot",
+    "path": "/press/from-a-tweet-to-a-shipping-checklist.md",
+    "description": "Inspired by @antirez, I picked up an old plastic Dell Latitude and installed Fedora.",
+    "publishedAt": "2026-02-09T00:30:22.349Z",
+    "htmlPath": "/press/from-a-tweet-to-a-shipping-checklist.html"
   }
 ]
