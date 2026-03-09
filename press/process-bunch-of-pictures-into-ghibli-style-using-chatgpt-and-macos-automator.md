@@ -34,7 +34,7 @@ Now, let's  install the workflow into Automator:
 
 ![Image description](/media/7c95fa5e.png)
 
-You can download the workflow directly from [this link](https://kopiro.s3.amazonaws.com/var/FilesToChatGPT.workflow.zip) - extract it and Automator will open; then **Press Run**.
+You can download the workflow directly from [this link](https://cdn.kopiro.me/var/FilesToChatGPT.workflow.zip) - extract it and Automator will open; then **Press Run**.
 
 ![Image description](/media/709d6b66.png)
 
