@@ -11,7 +11,7 @@
   
 ## blog
   
-* <span class="title">[How I made the IKEA VARMBLIXT donut lamp work with Zigbee](/press/ikea-varmblixt-donut-lamp-zigbee.md)</span><span class="subtitle"> (March 2026)</span>
+* <span class="title">[Make the IKEA VARMBLIXT Donut lamp work compatible with Zigbee](/press/ikea-varmblixt-donut-lamp-zigbee.md)</span><span class="subtitle"> (March 2026)</span>
 * <span class="title">[How to use different Git identities per directory](/press/how-to-use-different-git-identities-per-directory.md)</span><span class="subtitle"> (January 2026)</span>
 * <span class="title">[Claude Code while you drink an espresso](/press/claude-code-while-you-drink-an-espresso.md)</span><span class="subtitle"> (January 2026)</span>
 * <span class="title">[How to use your LG remote to change OLED brightness](/press/how-to-use-your-lg-remote-to-change-oled-brightness.md)</span><span class="subtitle"> (January 2026)</span>

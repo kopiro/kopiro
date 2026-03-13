@@ -123,7 +123,7 @@
   },
   {
     "slug": "ikea-varmblixt-donut-lamp-zigbee",
-    "title": "How I made the IKEA VARMBLIXT donut lamp work with Zigbee",
+    "title": "Make the IKEA VARMBLIXT Donut lamp work compatible with Zigbee",
     "path": "/press/ikea-varmblixt-donut-lamp-zigbee.md",
     "coverImage": "/media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg",
     "description": "I wanted to keep the IKEA VARMBLIXT donut lamp, but I did not want to keep IKEA's original driver and control path. The working setup ended up being much sim...",
