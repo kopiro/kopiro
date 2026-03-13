@@ -120,5 +120,14 @@
     "publishedAt": "2026-01-08T14:15:59.930Z",
     "htmlPath": "/press/how-to-use-different-git-identities-per-directory.html",
     "description": "If you're like me, you have a personal email for your side projects and a work email for... well, work. And if you've ever accidentally committed to your com..."
+  },
+  {
+    "slug": "ikea-varmblixt-donut-lamp-zigbee",
+    "title": "How I made the IKEA VARMBLIXT donut lamp work with Zigbee",
+    "path": "/press/ikea-varmblixt-donut-lamp-zigbee.md",
+    "coverImage": "/media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg",
+    "description": "I wanted to keep the IKEA VARMBLIXT donut lamp, but I did not want to keep IKEA's original driver and control path. The working setup ended up being much sim...",
+    "publishedAt": "2026-03-13T14:39:23.159Z",
+    "htmlPath": "/press/ikea-varmblixt-donut-lamp-zigbee.html"
   }
 ]
