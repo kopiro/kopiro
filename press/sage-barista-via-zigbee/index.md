@@ -30,9 +30,7 @@ So the practical reason to wake the machine ~20m before making coffee is that th
 
 That extra time makes the first shot more temperature-stable and helps avoid a sour, under-heated first espresso.
 
-Official reference:
-
-- Sage Barista Express instruction manual, pages 18-19 and 30: <https://www.sageappliances.com/content/dam/sage/ie/en/assets/miscellaneous/instruction-manual/espresso/BES875-instruction-manual.pdf>
+- [Sage Barista Express instruction manual, pages 18-19 and 30](https://www.sageappliances.com/content/dam/sage/ie/en/assets/miscellaneous/instruction-manual/espresso/BES875-instruction-manual.pdf)
 
 The setup I ended up with is pretty simple:
 
