@@ -12,16 +12,16 @@
 <meta name="viewport" content="width=device-width" />
 <meta name="theme-color" content="#ffffff" />
 <meta name="twitter:site" content="@kopiro91" />
-<meta name="description" content="I wanted a simple way to have my Sage Barista already warm when I wake up." />
+<meta name="description" content="The goal is simple: having my Sage Barista already warm when I wake up." />
 <meta name="og:title" content="My Sage Barista espresso machine is now smart" />
 <meta name="og:type" content="article" />
 <meta name="og:url" content="https://www.kopiro.me/press/sage-barista-via-zigbee/index.html" />
 <meta name="og:site_name" content="kopiro" />
-<meta name="og:description" content="I wanted a simple way to have my Sage Barista already warm when I wake up." />
+<meta name="og:description" content="The goal is simple: having my Sage Barista already warm when I wake up." />
 <meta name="og:image" content="https://www.kopiro.me/press/sage-barista-via-zigbee/media/top_module_wago_plus_zigbee.jpeg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="My Sage Barista espresso machine is now smart" />
-<meta name="twitter:description" content="I wanted a simple way to have my Sage Barista already warm when I wake up." />
+<meta name="twitter:description" content="The goal is simple: having my Sage Barista already warm when I wake up." />
 <meta name="twitter:image" content="https://www.kopiro.me/press/sage-barista-via-zigbee/media/top_module_wago_plus_zigbee.jpeg" />
 <link rel="canonical" href="https://www.kopiro.me/press/sage-barista-via-zigbee/index.html" />
 </head>
@@ -47,10 +47,14 @@
 <div id="content">
 <h1 id="my-sage-barista-espresso-machine-is-now-smart">My Sage Barista espresso machine is now smart</h1>
 <p><img src="/press/sage-barista-via-zigbee/media/top_module_wago_plus_zigbee.jpeg" alt="Final wiring with WAGO connectors and Zigbee module attached" /></p>
-<p>I wanted a simple way to have my Sage Barista already warm when I wake up.</p>
+<p>The goal is simple: having my Sage Barista already warm when I wake up.</p>
 <p>The boiler on this machine heats up quite quickly, but the rest of the machine really needs another 15 to 20 minutes before it is properly ready. If you want a good first espresso, that extra warm-up time matters.</p>
+<p>This project was inspired by this Home Assistant Community thread:</p>
+<p><a href="https://community.home-assistant.io/t/modifying-a-breville-sage-barista-express-coffee-machine-to-integrate-with-home-assistant/487575" rel="noopener noreferrer" target="_blank">https://community.home-assistant.io/t/modifying-a-breville-sage-barista-express-coffee-machine-to-integrate-with-home-assistant/487575</a></p>
+<p>The idea is the same, but what follows is the exact process I used on my own machine.</p>
 <h2 id="why-turn-it-on-about-20-minutes-early">Why turn it on about 20 minutes early</h2>
-<p>Sage does not give a hard <code>20 minute</code> number for the Barista Express, but the official manual is very clear about the reason: espresso quality suffers when the parts touching the coffee are still cold.</p>
+<p>Sage does not give a hard <code>20 minute</code> number for the Barista Express, but the official manual is very clear about the reason: <em>espresso quality suffers when the parts touching the coffee are still cold.</em></p>
+<p>I’ve personally verified this myself, the result of the espresso is night and day if you just shoot it right away.</p>
 <p>From the Sage Barista Express manual:</p>
 <blockquote>
   <p>"A cold portafilter and filter basket can reduce the extraction temperature enough to significantly affect the quality of your espresso."</p>
@@ -61,7 +65,8 @@
 <blockquote>
   <p>"This will stabilise the temperature prior to extraction."</p>
 </blockquote>
-<p>So the practical reason to wake the machine roughly <code>20 minutes</code> before making coffee is that the heating system may be ready quickly, while the group head, portafilter, filter basket, and surrounding metal still need time to absorb heat. That extra time makes the first shot more temperature-stable and helps avoid a sour, under-heated first espresso.</p>
+<p>So the practical reason to wake the machine ~20m before making coffee is that the heating system may be ready quickly, while the group head, portafilter, filter basket, and surrounding metal still need time to absorb heat. </p>
+<p>That extra time makes the first shot more temperature-stable and helps avoid a sour, under-heated first espresso.</p>
 <p>Official reference:</p>
 <ul>
 <li>Sage Barista Express instruction manual, pages 18-19 and 30: <a href="https://www.sageappliances.com/content/dam/sage/ie/en/assets/miscellaneous/instruction-manual/espresso/BES875-instruction-manual.pdf" rel="noopener noreferrer" target="_blank">https://www.sageappliances.com/content/dam/sage/ie/en/assets/miscellaneous/instruction-manual/espresso/BES875-instruction-manual.pdf</a></li>
@@ -75,6 +80,7 @@
 <p>In practice, the relay does not power the machine itself. It just "presses" the original power button for me.</p>
 <p>Before doing this, I had a much more improvised setup: a small servo taped on top of the front panel, positioned over the power button so it could physically press and release it.</p>
 <p>It actually worked, but it was clumsy. Every now and then the tape would give up, the servo would move out of place, and the whole thing looked exactly as elegant as it sounds. That was the point where I decided I wanted to do this properly from the inside.</p>
+<p>This is how is going to look like: simple and elegant.</p>
 <video controls src="/press/sage-barista-via-zigbee/media/pres.mov"></video>
 <h2 id="how-it-works">How it works</h2>
 <p>In plain English, this is the full chain:</p>
@@ -84,43 +90,38 @@
 <li>the relay briefly closes the same two contacts used by the original power button</li>
 <li>the coffee machine behaves exactly as if you pressed that button by hand</li>
 </ul>
-<p>The relay is not switching the whole coffee machine on and off at the wall. It is just simulating a quick button press on the low-voltage control side.</p>
-<p>Two terms matter here:</p>
+<p>We are just simulating a quick button press on the low-voltage control side.</p>
+<p>Two important thing here regarding the “switch” we’re going to use - it has to be:</p>
 <ul>
 <li><code>Momentary</code>: the relay closes for a short time, then opens again automatically, like a quick press and release</li>
-<li><code>Dry Contact</code>: the relay behaves like an isolated switch and does not inject voltage into the coffee machine button circuit</li>
+<li><code>Dry Contact</code>: the relay behaves like an isolated switch and does not inject voltage into the coffee machine button circuit.</li>
 </ul>
-<p>That is why this approach is cleaner than using a smart plug. The machine still powers up through its own logic, exactly the way it was designed to.</p>
 <h2 id="what-you-need">What you need</h2>
-<p>Before starting, this is what you need for this mod:</p>
+<p>This is what you need for this mod:</p>
 <ul>
-<li>a Sage Barista, or the equivalent Breville model</li>
-<li>a switch module that accepts <code>100-240V AC</code> input and exposes <code>COM</code> and <code>NO</code> dry-contact terminals</li>
+<li>a Sage Barista, or the equivalent Breville model :)</li>
+<li>a Zigbee switch module that accepts <code>100-240V AC</code> input and exposes <code>COM</code> and <code>NO</code> dry-contact terminals</li>
 <li>a Zigbee network with a coordinator</li>
 <li>Home Assistant with either ZHA or Zigbee2MQTT</li>
 <li>a multimeter with continuity mode</li>
-<li>mains-rated wire</li>
+<li>mains-rated wire for 220V</li>
 <li>connectors such as WAGO blocks</li>
+<li>connectors for the 5V (or use the WAGO connectors as I did)</li>
 <li>zip ties or another way to secure the added wiring</li>
 </ul>
-<p>In my case, the relay paired with ZHA, but I could not configure it as <code>momentary</code> there. That is one of the reasons why I migrated to Zigbee2MQTT for this setup.</p>
+<p>In my case, the relay paired with ZHA, but I could not configure it as <code>momentary</code> there. </p>
+<p>I actually ended up migrating to Zigbee2MQTT for this setup, just because I wanted to have all the features exposed and controllable.</p>
 <h2 id="final-wiring">Final wiring</h2>
 <p>This is the final wiring in plain terms:</p>
 <ul>
-<li>machine mains <code>live</code> -&gt; Zigbee module <code>L</code></li>
-<li>machine mains <code>neutral</code> -&gt; Zigbee module <code>N</code></li>
+<li>machine mains <code>live</code> (brown/black wire) -&gt; Zigbee module <code>L</code></li>
+<li>machine mains <code>neutral</code> (blue wire) -&gt; Zigbee module <code>N</code></li>
 <li>power button signal wire -&gt; Zigbee module <code>NO</code></li>
 <li>board ground wire -&gt; Zigbee module <code>COM</code></li>
 </ul>
 <p>The only important bit here is that <code>COM</code> and <code>NO</code> must behave like a dry contact. The relay should only close the original button circuit, not send power into it.</p>
-<h2 id="inspiration">Inspiration</h2>
-<p>This project was inspired by this Home Assistant Community thread:</p>
-<p><a href="https://community.home-assistant.io/t/modifying-a-breville-sage-barista-express-coffee-machine-to-integrate-with-home-assistant/487575" rel="noopener noreferrer" target="_blank">https://community.home-assistant.io/t/modifying-a-breville-sage-barista-express-coffee-machine-to-integrate-with-home-assistant/487575</a></p>
-<p>The idea is the same, but what follows is the exact process I used on my own machine.</p>
 <h2 id="hardware">Hardware</h2>
-<p>I used this Tuya Zigbee relay module:</p>
-<p><a href="https://www.aliexpress.com/item/1005007913776935.html?spm=a2g0o.order_list.order_list_main.89.11cb1802DIYa2W" rel="noopener noreferrer" target="_blank">https://www.aliexpress.com/item/1005007913776935.html?spm=a2g0o.order_list.order_list_main.89.11cb1802DIYa2W</a></p>
-<p>but you do not need this exact module.</p>
+<p>I used this <a href="https://www.aliexpress.com/item/1005007913776935.html?spm=a2g0o.order_list.order_list_main.89.11cb1802DIYa2W" rel="noopener noreferrer" target="_blank">Tuya Zigbee relay module</a>, but you do not need this exact module.</p>
 <p>In general, any switch module should work as long as:</p>
 <ul>
 <li>it accepts <code>100-240V AC</code> input so it can stay powered from the machine mains</li>
@@ -128,82 +129,68 @@
 <li>those <code>COM</code> and <code>NO</code> terminals behave like a dry contact</li>
 </ul>
 <p><img src="/press/sage-barista-via-zigbee/media/zigbee_module.png" alt="Zigbee switch module" /></p>
-<p>It was cheap and it worked fine for me, but I have also read reports from other people having problems with it, so I would not treat this exact model as special or required.</p>
-<p>The only terminals that matter for this kind of mod are:</p>
-<ul>
-<li><code>L</code> and <code>N</code> to power the module</li>
-<li><code>COM</code> and <code>NO</code> to simulate the button press</li>
-</ul>
-<p>From my experience, these modules are pretty simple internally: one side powers the Zigbee radio and the relay electronics, and the other side is just the relay contact itself. In other words, the module stays online all the time, and when you trigger it from Home Assistant or Zigbee2MQTT, it simply closes <code>COM</code> and <code>NO</code> for a moment, exactly like pressing a button.</p>
-<p>That is why this works well here. We are not trying to feed power into the coffee machine logic board. We are just asking the relay to short the same two points the original button already shorts.</p>
+<p>This Tuya module was cheap and it worked fine for me, but I have also read reports from other people having problems with it, so I would not treat this exact model as special or required.</p>
 <h2 id="open-the-machine">Open the machine</h2>
-<p>I first removed the screws and opened the back of the machine so I could see how everything was laid out.</p>
+<p>Alright, time to start!</p>
+<p>I first removed all the possible screws (watch out, there is a screw hidden below a circled plastic tap below the water tank - I spent half hour trying to understand why the back panel was not falling off) and opened the back of the machine so I could see how everything was laid out.</p>
 <p><img src="/press/sage-barista-via-zigbee/media/back_machine.jpeg" alt="Back of the machine fully opened" /></p>
-<p>Then I opened the white control box to expose the main board.</p>
+<p>In the white box you’re going to find the motherboard. You don’t 100% need to open this, but it’s easier to do it so you can probe the PINS instead of the wires later. If you manage to probe the wired of the top module directly, you can skip this step.</p>
 <p><img src="/press/sage-barista-via-zigbee/media/back_machine_with_chip_exposed.jpeg" alt="Main control board exposed" /></p>
-<p>This is where you will eventually identify the button wires and where the relay connection will end up.</p>
-<p>As you can see, there are two connectors, one for each front panel section. The one I cared about was the connector for the side where the power button sits.</p>
+<p>As you can see, there are two connectors, one for each front panel section. The one we cared about was the connector for the side where the power button sits.</p>
 <p>On my machine, the first wire had a different color and that was <code>GND</code>.</p>
 <h2 id="my-first-attempt-did-not-work">My first attempt did not work</h2>
 <p>Before cutting anything, I tried to avoid soldering and avoid touching the original wiring too much.</p>
 <p>I inserted a couple of wires directly into the jumper connector and fixed them in place with hot glue. In theory that sounded fine. In practice it was not reliable at all. After about two hours I had to open the machine again because the contact had come loose.</p>
-<p>That was enough to convince me to do it properly.</p>
+<p><em>That was enough to convince me to do it properly.</em></p>
 <p><img src="/press/sage-barista-via-zigbee/media/first_attempt_wires_not_soldered.jpeg" alt="First failed attempt using inserted wires without soldering" /></p>
 <h2 id="power-the-zigbee-module-from-the-machine-mains">Power the Zigbee module from the machine mains</h2>
-<p>Since I wanted the relay to always be available, I powered it directly from the AC feed that enters the machine, instead of having an extra external power supply.</p>
+<p>We are going to power the ZigBee module directly from the AC feed that enters the machine, instead of having an extra external power supply.</p>
 <p>Inside the machine there is already a brown live wire and a blue neutral wire coming from the main cable. Those were the easiest points to tap into for the relay <code>L</code> and <code>N</code>.</p>
 <p><img src="/press/sage-barista-via-zigbee/media/ac_before_splicing.jpeg" alt="Original AC wiring before splicing" /></p>
-<p>I spliced into those two wires and left enough length so I could place the relay near the top of the machine. That makes future access much easier.</p>
-<p>This is the part where you need to be careful: these are mains wires. If you do this, make sure everything is properly insulated, mechanically secure, and not routed near anything hot or moving.</p>
+<p>I spliced into those two wires and added a WAGO connector that would expose an additional pair of L+N wires.</p>
+<p>This is the part where you need to be careful: these are 220V wires. Make sure everything is properly insulated, mechanically secure, and not routed near anything hot or moving.</p>
 <p><em>Make sure you use wire rated for mains voltage.</em></p>
+<p>The new wires will be routed and secure via zip ties toward the top of the machine.</p>
 <p><img src="/press/sage-barista-via-zigbee/media/ac_connectors_spliced.jpeg" alt="AC wires spliced to feed the relay module" /></p>
 <p>I noticed too late that this photo was not great, and I really did not want to open the machine again just to retake it.</p>
-<h2 id="mount-the-relay">Mount the relay</h2>
-<p>Bring these wires toward the top of the machine. To keep the build clean, use zip ties to secure them properly.</p>
-<p>I connected the module:</p>
+<p>Once you have these wires up, connect them:</p>
 <ul>
 <li>brown live wire -&gt; <code>L</code></li>
 <li>blue neutral wire -&gt; <code>N</code></li>
 </ul>
 <p>At that point the relay stays powered all the time and is reachable from Zigbee whenever needed.</p>
-<h2 id="find-the-power-button-wire">Find the power button wire</h2>
-<p>This is the most important part of the whole mod.</p>
-<p>You need to identify which wire becomes connected to ground when the power button is pressed. The method I used was:</p>
-<ol>
-<li>Hold the target button down.</li>
-<li>Put the multimeter in continuity mode.</li>
-<li>Keep one probe on ground (which is usually the black wire coming from the connector)</li>
-<li>Probe the pins on the motherboard one by one.</li>
-<li>Find the pin that starts beeping, then trace that wire back to the harness so you know which wire to cut higher up</li>
-</ol>
-<p>Once you find it, the rest is straightforward. But this is also the point where you need to be sure of what you are doing, because the next step is cutting into that wire.</p>
-<h2 id="break-out-the-button-wire">Break out the button wire</h2>
-<p>After identifying the correct wire, I cut it and rejoined it using a WAGO connector, adding a third branch that goes to the Zigbee relay.</p>
-<p>That extra lead goes to <code>NO</code>.</p>
-<p>This way, the original circuit remains intact, but the relay can also close the same contact when triggered.</p>
-<h2 id="break-out-ground-too">Break out ground too</h2>
-<p>I then did exactly the same thing for ground. In my machine this was the black wire shown in the photo.</p>
-<p>I cut it, rejoined it with another WAGO connector, and added a third lead going to <code>COM</code> on the Zigbee module.</p>
-<p>At that point the relay is sitting across the exact same two points used by the physical power button.</p>
-<p><img src="/press/sage-barista-via-zigbee/media/top_module_wago.jpeg" alt="Relay mounted in the upper section with mains wiring nearby" /></p>
-<h2 id="configure-it-correctly-in-zigbee">Configure it correctly in Zigbee</h2>
-<p>Before closing the machine, I strongly recommend testing everything while it is still open. If something is wrong, reopening it is annoying.</p>
-<p>The first issue I hit was the Zigbee configuration itself.</p>
+<p>If you want, this is the time you can carefully connect the power cable to 220V so that the ZigBee module turns on - then you can pair it.</p>
+<p>It’s better doing it now before connecting the power button because of some quirks on how these modules behave.</p>
+<h2 id="configure-the-module-correctly">Configure the module correctly</h2>
 <p>Out of the box, the module behaves like a normal on/off relay. That is not what we want here. The machine power button needs a short pulse, not a relay that stays closed.</p>
 <p>You could solve this in Home Assistant with an automation that turns the relay back off after one second. I did not like that approach. If the automation breaks, the relay could stay closed and keep "holding" the button.</p>
 <p>The better solution is to configure the module itself as a momentary switch, so it automatically goes back to off after each trigger.</p>
-<p>I also made sure the module does not restore to <code>on</code> after a power outage.</p>
+<p>Also, you need to make sure that the module does not restore to <code>on</code> after a power outage. In my case, that was the default - meaning that whenever I gave power, the module was constantly pressing the power button - that’s not what we want!</p>
 <p><img src="/press/sage-barista-via-zigbee/media/zigbee_zigbee2mqtt_screen.png" alt="Zigbee2MQTT settings showing momentary mode" /></p>
-<p>Mandatory settings:</p>
+<p>So - mandatory settings:</p>
 <ul>
 <li><code>Switch type</code>: <code>momentary</code></li>
-<li><code>Power outage memory</code>: not forced to <code>on</code></li>
+<li><code>Power outage memory</code>: <code>off</code></li>
 </ul>
-<p>In theory this module is compatible with ZHA too, but in practice I could not get the switch to behave in momentary mode there. That was actually one of the reasons why I migrated from ZHA to Zigbee2MQTT for this setup.</p>
-<p>With Zigbee2MQTT, configuring the switch behavior was straightforward and I could set the module to behave the way I wanted. For this specific use case, that matters more than simple pairing support. A relay that pairs but cannot be configured as momentary is not really the right tool here.</p>
-<h2 id="result">Result</h2>
-<p>The end result is exactly what I wanted: the coffee machine can now be turned on remotely before I get to it, but the original power button still works exactly as before.</p>
-<p>Since the relay only simulates a quick button press, the mod feels much cleaner than externally switching mains power.</p>
+<h2 id="find-the-power-button-wire">Find the power button wire</h2>
+<p>You need to identify which wire becomes connected to ground when the power button is pressed. </p>
+<p>The method I used was:</p>
+<ol>
+<li>Hold the power button</li>
+<li>Put the multimeter in continuity mode.</li>
+<li>Keep one probe on the GND pin or wire (which is usually the black wire coming from the connector)</li>
+<li>Probe all the pins on the motherboard one by one (or every wire coming from that connector)</li>
+<li>Find the pin that starts beeping, then trace that wire back to the harness so you know which wire to cut higher up</li>
+</ol>
+<p>Once you find it, the rest is straightforward. But this is also the point where you need to be sure of what you are doing, because the next step is cutting into that wire.</p>
+<p>I did make the mistake of cutting the wrong wire myself - No big deal, you can just reconnect it back with some tape or shrinking tube - but that’s not what we want, right?</p>
+<h2 id="break-out-the-button-wires">Break out the button wires</h2>
+<p>After identifying the correct wire, cut it and rejoined it using a simple connector, and expose  a third branch that goes to the ZigBee relay. That extra lead goes to <code>NO</code>.</p>
+<p>This way, the original circuit remains intact, but the relay can also close the same contact when triggered.</p>
+<p>Then, do the same with the GND wire. Cut it, rejoin it with another connector, add a third lead going to <code>COM</code> on the ZigBee module.</p>
+<p>At that point the relay is sitting across the exact same two points used by the physical power button.</p>
+<p><img src="/press/sage-barista-via-zigbee/media/top_module_wago.jpeg" alt="Relay mounted in the upper section with mains wiring nearby" /></p>
+<p>Now, go test it! It’s done!</p>
 <h2 id="morning-automation-in-home-assistant">Morning automation in Home Assistant</h2>
 <p>Once the relay is exposed in Home Assistant, this can also be automated.</p>
 <p>For example, you can warm up the machine automatically in the morning, about 20 minutes before waking up, but only if someone is home:</p>
@@ -247,13 +234,6 @@ actions:
       entity_id: switch.sage_barista
     data: {}
 mode: single</code></pre>
-<h2 id="things-i-learned">Things I learned</h2>
-<ul>
-<li>trying to avoid cutting wires cost me more time than it saved</li>
-<li>leaving extra cable length for the relay placement was worth it</li>
-<li>identifying the right button wire is the only truly tricky step</li>
-<li>making the relay momentary at the device level is much safer than relying on an automation</li>
-</ul>
 <h2 id="safety-notes">Safety notes</h2>
 <p>This machine contains mains voltage, heaters, pumps, and a lot of conductive metal. Treat it like mains electrical work, because that is what it is.</p>
 <ul>
