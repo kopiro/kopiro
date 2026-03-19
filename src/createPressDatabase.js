@@ -42,6 +42,14 @@ function extractFirstParagraph(markdown) {
   return null;
 }
 
+function resolvePublicAssetPath(markdownFile, assetPath) {
+  if (!assetPath || /^(?:[a-z]+:)?\/\//i.test(assetPath) || assetPath.startsWith("/")) {
+    return assetPath;
+  }
+
+  return `/${path.posix.normalize(path.posix.join(path.posix.dirname(markdownFile), assetPath))}`;
+}
+
 const listMarkdownFromPublicFolder = () => {
   const mdFiles = walkMarkdowns();
 
@@ -54,7 +62,7 @@ const listMarkdownFromPublicFolder = () => {
     const content = fs.readFileSync(absolutePath, "utf-8").trim();
 
     const title = content.match(/^# (.+)$/m)?.[1];
-    const coverImage = content.match(/^!\[.*?\]\((.+?)\)$/m)?.[1];
+    const coverImage = resolvePublicAssetPath(file, content.match(/^!\[.*?\]\((.+?)\)$/m)?.[1]);
     const description = extractFirstParagraph(content) || title;
     const creationTimestamp = fs.statSync(absolutePath).birthtime;
 

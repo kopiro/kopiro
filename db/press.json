@@ -129,5 +129,14 @@
     "description": "I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable.",
     "publishedAt": "2026-03-13T14:39:23.159Z",
     "htmlPath": "/press/ikea-varmblixt-donut-lamp-zigbee/index.html"
+  },
+  {
+    "slug": "sage-barista-via-zigbee",
+    "title": "My Sage Barista espresso machine is now smart",
+    "path": "/press/sage-barista-via-zigbee/index.md",
+    "coverImage": "/press/sage-barista-via-zigbee/media/top_module_wago_plus_zigbee.jpeg",
+    "description": "I wanted a simple way to have my Sage Barista already warm when I wake up.",
+    "publishedAt": "2026-03-19T10:58:01.162Z",
+    "htmlPath": "/press/sage-barista-via-zigbee/index.html"
   }
 ]

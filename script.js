@@ -6,20 +6,26 @@ smileAvatar.src = "/static/avatar-smile.jpg";
 
 // Store original avatar src
 let originalAvatarSrc;
+let smallAvatarOriginalSrc;
 
 document.addEventListener("DOMContentLoaded", () => {
   const avatar = $("#avatar");
+  const smallAvatar = $(".small-avatar");
+
   const buyMeCoffee = $(".buymeacoffee");
 
-  if (avatar && buyMeCoffee) {
+  if ((avatar || smallAvatar) && buyMeCoffee) {
     originalAvatarSrc = avatar.src;
+    smallAvatarOriginalSrc = smallAvatar.src;
 
     buyMeCoffee.addEventListener("mouseenter", () => {
-      avatar.src = "/static/avatar-smile.jpg";
+      if (avatar) avatar.src = "/static/avatar-smile.jpg";
+      if (smallAvatar) smallAvatar.src = "/static/avatar-smile.jpg";
     });
 
     buyMeCoffee.addEventListener("mouseleave", () => {
-      avatar.src = originalAvatarSrc;
+      if (avatar) avatar.src = originalAvatarSrc;
+      if (smallAvatar) smallAvatar.src = smallAvatarOriginalSrc;
     });
   }
 

@@ -54,7 +54,7 @@ async function cleanBuildDir() {
 }
 
 async function renderPress(article) {
-  const { title, coverImage, htmlPath, description } = article;
+  const { title, coverImage, htmlPath, description, slug } = article;
   const content = await fs.readFile(path.join(paths.root, article.path), "utf-8");
   const articleUrl = `${baseUrl}${htmlPath}`;
   const absoluteCoverImage = coverImage ? `${baseUrl}${coverImage}` : null;
@@ -81,7 +81,7 @@ async function renderPress(article) {
       },
     },
     content,
-  );
+  ).replace(/((?:src|href)=["'])(?:\.\/)?media\//g, `$1/press/${slug}/media/`);
 
   const htmlFilePath = path.join(paths.build, htmlPath);
   await fs.mkdir(path.dirname(htmlFilePath), { recursive: true });

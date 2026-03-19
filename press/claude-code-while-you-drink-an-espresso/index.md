@@ -1,6 +1,6 @@
 # Claude Code while you drink an espresso
 
-![Claude Code Meme](/press/claude-code-while-you-drink-an-espresso/media/claude-code-meme.png)
+![Claude Code Meme](./media/claude-code-meme.png)
 
 We have all been there: you are on a 4 hour session with Claude Code and you really need a break; it's in the middle of a big refactoring and you desperately want an espresso.
 

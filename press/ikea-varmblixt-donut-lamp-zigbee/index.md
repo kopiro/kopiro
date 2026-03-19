@@ -1,6 +1,6 @@
 # Make the IKEA VARMBLIXT Donut lamp smart with Zigbee
 
-![IKEA VARMBLIXT donut lamp](/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg)
+![IKEA VARMBLIXT donut lamp](./media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg)
 
 I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable.
 
@@ -29,7 +29,7 @@ On the controller side, the wiring is straightforward:
 
 This is what the internal wiring looked like once I had the replacement controller in place:
 
-![Internal wiring of the IKEA VARMBLIXT lamp with the Zigbee controller](/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-01-2.jpg)
+![Internal wiring of the IKEA VARMBLIXT lamp with the Zigbee controller](./media/ikea-varmblixt-donut-lamp-zigbee-01-2.jpg)
 
 Before powering it on, verify the polarity with a multimeter. 
 
@@ -41,10 +41,10 @@ Once you power on the Zigbee adapter, it should automatically be in pairing mode
 
 After pairing the controller, the lamp shows up correctly in Zigbee2MQTT:
 
-![The lamp in Zigbee2MQTT](/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-01.jpg)
+![The lamp in Zigbee2MQTT](./media/ikea-varmblixt-donut-lamp-zigbee-01.jpg)
 
 From there I exposed it to Home Assistant, and then to HomeKit through the Home Assistant HomeKit Bridge:
 
-![The lamp in Home Assistant](/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-02.jpg)
+![The lamp in Home Assistant](./media/ikea-varmblixt-donut-lamp-zigbee-02.jpg)
 
 And that was it. 

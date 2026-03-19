@@ -1,6 +1,6 @@
 # Hey Siri, make coffee!
 
-![Hey Siri, make coffee!](/press/hey-siri-make-coffee/media/cefa0d21.jpeg)
+![Hey Siri, make coffee!](./media/cefa0d21.jpeg)
 
 *“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the morning) to actually get up and make it. Therefore, I automated it.”*
 
@@ -21,7 +21,7 @@ I soon realized though that to make the most of it, your coffee shouldn’t be m
 
 In my case, I end up drinking the coffee every day as soon as I stop my alarm; that’s the moment when the button should be pressed; in order to do that, we can take advantage of some of the recent automation that Apple put in the latest iOS. I’m quite sure there is a similar concept in Android, but since I own an iPhone I’ll describe the procedure for this one.
 
-![Alt Text](/press/hey-siri-make-coffee/media/b481227b.jpeg)
+![Alt Text](./media/b481227b.jpeg)
 
 ### Connect the servo
 
@@ -29,7 +29,7 @@ That's pretty straightforward; your servo motor should have 3 pins: 3V, GROUND, 
 
 Connect these to your board, choose the controller pin and write it down; if you have a NodeMCU and the HXT900, you can use this schema:
 
-![Alt Text](/press/hey-siri-make-coffee/media/11098536.png)
+![Alt Text](./media/11098536.png)
 
 ### Download the sketch and flash it
 
@@ -47,7 +47,7 @@ If you want to make sure you can update the board via OTA (over-the-air; without
 
 Once you have flashed your board, it should be accessible via the `MDNS_NAME` you choose in your browser.
 
-![Alt Text](/press/hey-siri-make-coffee/media/0504cf51.png)
+![Alt Text](./media/0504cf51.png)
 
 This is a simple dashboard where you can play with the software to choose the right values based on your coffee machine, on how long, how far, and how many times the button should be pressed.
 
@@ -105,7 +105,7 @@ This is the simplest and funniest part; we’re gonna just take advantage of the
 
 Create a new shortcut with the action of *”Get Contents of URL”* and put these values:
 
-![Alt Text](/press/hey-siri-make-coffee/media/63030355.jpeg)
+![Alt Text](./media/63030355.jpeg)
 
 You can now test this shortcut by saying to Siri, or just by pressing the button.
 
@@ -113,11 +113,11 @@ How to do the automation though?
 
 That’s even simpler, go to the *Automation* tab, and select *When my alarm has stopped* > *Run shortcut* and select the shortcut you’ve previously created!
 
-![Alt Text](/press/hey-siri-make-coffee/media/b1a35e18.png)
+![Alt Text](./media/b1a35e18.png)
 
-![Alt Text](/press/hey-siri-make-coffee/media/5360e78e.png)
+![Alt Text](./media/5360e78e.png)
 
-![Alt Text](/press/hey-siri-make-coffee/media/3e90d0b5.png)
+![Alt Text](./media/3e90d0b5.png)
 
 That’s all, for real... Happy morning coffee!
 

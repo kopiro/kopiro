@@ -228,9 +228,9 @@ pre {
   line-height: 1.5;
   color: #333;
   border-radius: 6px;
-  padding: 0.5em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1em 1.4em;
   margin: 1.5em 0;
-  border-left: 3px solid rgb(14, 132, 31);
 }
 
 pre code.hljs {

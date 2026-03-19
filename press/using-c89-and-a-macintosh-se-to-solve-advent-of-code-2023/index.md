@@ -1,6 +1,6 @@
 # Using C89 on a '80s Macintosh SE to solve Advent of Code 2023
 
-![Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/media/6930e2ea.jpeg)
+![Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](./media/6930e2ea.jpeg)
 
 For this year [AdventOfCode](https://adventofcode.com/), I want to try to solve some problems using an old Macintosh SE I have lying around and the ThinkC compiler.
 
