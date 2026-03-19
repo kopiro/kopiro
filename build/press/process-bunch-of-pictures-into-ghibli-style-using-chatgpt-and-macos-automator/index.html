@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Convert a batch of images into Ghibli style using ChatGPT and macOS Automator | kopiro</title>
+<link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" />
+<link rel="alternate" type="application/rss+xml" title="Convert a batch of images into Ghibli style using ChatGPT and macOS Automator | kopiro RSS Feed" href="/rss.xml" />
+<script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<meta name="author" content="kopiro" />
+<meta name="viewport" content="width=device-width" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="twitter:site" content="@kopiro91" />
+<meta name="description" content="If you love the warm, dreamy visuals of Studio Ghibli films, here's a powerful automation trick: an AppleScript automation that lets you select multiple imag..." />
+<meta name="og:title" content="Convert a batch of images into Ghibli style using ChatGPT and macOS Automator" />
+<meta name="og:type" content="article" />
+<meta name="og:url" content="https://www.kopiro.me/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.html" />
+<meta name="og:site_name" content="kopiro" />
+<meta name="og:description" content="If you love the warm, dreamy visuals of Studio Ghibli films, here's a powerful automation trick: an AppleScript automation that lets you select multiple imag..." />
+<meta name="og:image" content="https://www.kopiro.me/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/media/363923ee.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Convert a batch of images into Ghibli style using ChatGPT and macOS Automator" />
+<meta name="twitter:description" content="If you love the warm, dreamy visuals of Studio Ghibli films, here's a powerful automation trick: an AppleScript automation that lets you select multiple imag..." />
+<meta name="twitter:image" content="https://www.kopiro.me/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/media/363923ee.png" />
+<link rel="canonical" href="https://www.kopiro.me/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.html" />
+</head>
+<body class="article">
+<nav id="menu">
+  <ul>
+    <li class="username">
+      <a href="/"><img class="small-avatar" src="/static/avatar.jpg" alt="" />@kopiro</a>
+    </li>
+    <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
+    <li><a target="_blank" href="https://threads.com/@kopiro91">Threads</a></li>
+    <li><a target="_blank" href="https://discordapp.com/users/kopiro91">Discord</a></li>
+    <li><a href="/rss.xml">RSS</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
+  </ul>
+</nav>
+
+<img id="avatar" src="/static/avatar.jpg" />
+<div id="content">
+<h1 id="convert-a-batch-of-images-into-ghibli-style-using-chatgpt-and-macos-automator">Convert a batch of images into Ghibli style using ChatGPT and macOS Automator</h1>
+<p><img src="/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/media/363923ee.png" alt="Convert a batch of images into Ghibli style using ChatGPT and macOS Automator" /></p>
+<p>If you love the warm, dreamy visuals of Studio Ghibli films, here's a powerful automation trick: an AppleScript automation that lets you select multiple images from Finder, apply a Ghibli-style transformation using ChatGPT, and process them unattended — even overnight.</p>
+<p>You can also use this script while working/using your Mac: the script will warn you when not to touch the keyboard or the mouse because it's working for you!</p>
+<p>This setup uses native macOS tools like AppleScript, Automator, and Notification Center, and it respects API rate limits to avoid disruptions.</p>
+<h4 id="applescript--automator">AppleScript &amp; Automator</h4>
+<p>AppleScript is Apple’s native scripting language for automating actions across macOS apps. It can simulate user actions, trigger shell commands, and communicate with apps like Finder, Preview, and Automator. Automator is an application that can be used to run AppleScript.</p>
+<h4 id="about-rate-limiting">About Rate Limiting</h4>
+<p>Rate limiting is a mechanism used by APIs and services like ChatGPT to prevent overuse or abuse. </p>
+<p>It controls how many requests you can send in a given time frame. If you exceed these limits, ChatGPT may suspend your user or not process the request correctly.</p>
+<p>To avoid this, the script includes a fixed delay of 180s between each image. This pause ensures each image is processed without hitting the rate limits.</p>
+<p>⚠️ Do not reduce or remove this delay. If you try to speed things up, the script may break mid-process or get you temporarily blocked from uploading.</p>
+<h3 id="the-script-and-the-workflow">The script and the workflow</h3>
+<p>First of all, you need to install the web-app of ChatGPT from Chrome. When I tried to do this with the native ChatGPT macOS app, it wouldn't generate restyle of images correctly.</p>
+<p>Therefore, just head to <a href="https://chat.com" rel="noopener noreferrer" target="_blank">chat.com</a>, and in the Chrome menu hit "Install Page as App"</p>
+<p><img src="/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/media/7eee23f2.png" alt="Image description" /></p>
+<p>Now, let's  install the workflow into Automator:</p>
+<p><img src="/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/media/7c95fa5e.png" alt="Image description" /></p>
+<p>You can download the workflow directly from <a href="https://cdn.kopiro.me/var/FilesToChatGPT.workflow.zip" rel="noopener noreferrer" target="_blank">this link</a> - extract it and Automator will open; then <strong>Press Run</strong>.</p>
+<p><img src="/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/media/709d6b66.png" alt="Image description" /></p>
+<p>And that's it - the script should go into each file, paste it into ChatGPT, generate the request and wait 3 minutes until next request.</p>
+<h3 id="alternative-installation">Alternative installation</h3>
+<p>If you don't trust downloading semi-executable files into your system, you can create a new workflow manually. </p>
+<p>Make sure as first step you add "Ask For Finder Items", then "Run AppleScript" and paste this code:</p>
+<p><img src="/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/media/60df2591.png" alt="Image description" /></p>
+<script src="https://gist.github.com/kopiro/992558b306e8fd813860634c0d7e13d2.js"></script>
+<h3 id="using-another-style">Using another style</h3>
+<p>The prompt you use is highly customizable. Just change that in the code to add some details or to make images into another completely different style.</p>
+</div>
+<div id="footer">
+  © 2025 kopiro - <a href="https://www.kopiro.me/gpg.txt">0xEDE51005D982268E</a> -
+  <a href="https://www.kopiro.me/rss.xml">RSS</a>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-20NDLVTCNE");
+</script>
+</body>
+</html>

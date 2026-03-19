@@ -12,6 +12,6 @@ server_pid=$!
 
 npm run build
 
-fswatch -o ./press ./img ./src ./media ./script.js ./style.css ./img | while read; do
+fswatch -o ./press ./static ./src ./script.js ./style.css | while read; do
 	npm run build
 done

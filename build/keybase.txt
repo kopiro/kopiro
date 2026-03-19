@@ -1,0 +1,55 @@
+https://keybase.io/kopiro
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.kopiro.me
+  * I am kopiro (https://keybase.io/kopiro) on keybase.
+  * I have a public key ASAcPljhFmiL5sjGoV0ol_FuY0Me50KT6m8ZgpZxZbCSSAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101cd0bc14251fd8b8e834f9629eacccbb41b8b8a90ad41e0e3e9058c6dc9ab37540a",
+      "host": "keybase.io",
+      "kid": "01201c3e58e116688be6c8c6a15d2897f16e63431ee74293ea6f1982967165b092480a",
+      "uid": "5c5f71e2115b7012140dfae4cd220519",
+      "username": "kopiro"
+    },
+    "merkle_root": {
+      "ctime": 1592302802,
+      "hash": "d6dad9b09465ea8c97011838479631b97b7cbc2bdee77d99375e2cb57ade2da0737c7f306ac6b81c4acffb4d3de6e1eae9275263cb9dab0977c21ce0ef91c2bd",
+      "hash_meta": "f9da1188b9a9656fd5e5b8ba5b175e0ca6fb7f724aa827a5738f2782dfb39ca8",
+      "seqno": 16680474
+    },
+    "service": {
+      "entropy": "OKR0wbeqbFvbMF+iAo1cO0he",
+      "hostname": "www.kopiro.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1592302809,
+  "expire_in": 504576000,
+  "prev": "ba70ae3cd614697ca277615158cf70b23e88f01a02067c6e049327d264c40030",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgHD5Y4RZoi+bIxqFdKJfxbmNDHudCk+pvGYKWcWWwkkgKp3BheWxvYWTESpcCEMQgunCuPNYUaXyid2FRWM9wsj6I8BoCBnxuBJMn0mTEADDEIAgU7shz9Eeav0XE8iTFPBriHhkR70hHHfgjbPRTuFalAgHCo3NpZ8RAjuDldmTc4HZDZZdsLvmHZqpcULJXCSkClGNMeu0fUrMVudhWoKxSPv3/8pvIzonWxGuu2PAAopx8+maSmeD3AqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOJzK0L5GwiXGCGbwnRXxiDc+VWvKtphvrBN8bQ2hDkKo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kopiro
+
+==================================================================

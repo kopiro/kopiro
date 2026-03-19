@@ -14,14 +14,6 @@ const paths = {
 };
 
 // Assets to copy from root to build
-paths.publicAssets = [
-  "favicon.ico",
-  "gpg.txt",
-  "img",
-  "keybase.txt",
-  "media",
-  "script.js",
-  "style.css",
-];
+paths.publicAssets = ["favicon.ico", "gpg.txt", "static", "keybase.txt", "script.js", "style.css"];
 
 module.exports = paths;

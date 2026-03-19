@@ -47,7 +47,8 @@ const listMarkdownFromPublicFolder = () => {
 
   return mdFiles.map((file) => {
     const baseName = path.basename(file);
-    const htmlPath = "/" + file.replace(/\.md$/, ".html");
+    const slug = baseName === "index.md" ? path.basename(path.dirname(file)) : baseName.replace(/\.md$/, "");
+    const htmlPath = `/press/${slug}/index.html`;
 
     const absolutePath = path.join(paths.root, file);
     const content = fs.readFileSync(absolutePath, "utf-8").trim();
@@ -55,7 +56,6 @@ const listMarkdownFromPublicFolder = () => {
     const title = content.match(/^# (.+)$/m)?.[1];
     const coverImage = content.match(/^!\[.*?\]\((.+?)\)$/m)?.[1];
     const description = extractFirstParagraph(content) || title;
-    const slug = baseName.replace(/\.md$/, "");
     const creationTimestamp = fs.statSync(absolutePath).birthtime;
 
     return {
@@ -101,6 +101,8 @@ function createPressDatabase() {
       // Always overwrite title, description and coverImage from markdown
       updatedData.push({
         ...existing,
+        path,
+        htmlPath,
         title,
         coverImage,
         description,

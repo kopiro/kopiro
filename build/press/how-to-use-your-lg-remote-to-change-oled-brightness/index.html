@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>How to use your LG remote to change OLED brightness | kopiro</title>
+<link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" />
+<link rel="alternate" type="application/rss+xml" title="How to use your LG remote to change OLED brightness | kopiro RSS Feed" href="/rss.xml" />
+<script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<meta name="author" content="kopiro" />
+<meta name="viewport" content="width=device-width" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="twitter:site" content="@kopiro91" />
+<meta name="description" content="This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV." />
+<meta name="og:title" content="How to use your LG remote to change OLED brightness" />
+<meta name="og:type" content="article" />
+<meta name="og:url" content="https://www.kopiro.me/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.html" />
+<meta name="og:site_name" content="kopiro" />
+<meta name="og:description" content="This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to use your LG remote to change OLED brightness" />
+<meta name="twitter:description" content="This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV." />
+<link rel="canonical" href="https://www.kopiro.me/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.html" />
+</head>
+<body class="article">
+<nav id="menu">
+  <ul>
+    <li class="username">
+      <a href="/"><img class="small-avatar" src="/static/avatar.jpg" alt="" />@kopiro</a>
+    </li>
+    <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
+    <li><a target="_blank" href="https://threads.com/@kopiro91">Threads</a></li>
+    <li><a target="_blank" href="https://discordapp.com/users/kopiro91">Discord</a></li>
+    <li><a href="/rss.xml">RSS</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
+  </ul>
+</nav>
+
+<img id="avatar" src="/static/avatar.jpg" />
+<div id="content">
+<h1 id="how-to-use-your-lg-remote-to-change-oled-brightness">How to use your LG remote to change OLED brightness</h1>
+<p>This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV.</p>
+<p>Why would someone want to do this? Well, these OLED LG TVs these days are so bright that they can be a bit overwhelming at night, and I want something quick and easy to use.</p>
+<p>It's very convenient to map this function to the channel up and down buttons, as most of the time you don't need these channels if you (like me) use an Apple TV or something similar, and Live TV is just a relic of the past.</p>
+<p>But, first of all, you need to root your TV - you can find several methods, a good place to start is <a href="https://github.com/RootMyTV/RootMyTV.github.io" rel="noopener noreferrer" target="_blank">this guide</a>.</p>
+<p>Once you have root, SSH into your TV and use the following command to install the <a href="https://github.com/andrewfraley/magic_mapper" rel="noopener noreferrer" target="_blank">Magic Mapper</a>.</p>
+<p>Magic Mapper is a script that will let you remap unused buttons on the LG Magic Remote. The script itself runs on your rooted LG TV, detects button presses, and allows you to control anything available via the luna-send api. Note your TV must be rooted to use this.</p>
+<p>The installation is straightforward, just download the script and the mapping config:</p>
+<pre><code class="bash language-bash">cd /home/root
+wget https://raw.githubusercontent.com/andrewfraley/magic_mapper/main/magic_mapper.py
+wget https://gist.githubusercontent.com/kopiro/083d975ae2c49d26bf6b0880a0de46d9/raw/992fa86c945e383d88cec5714e02feac15c862a0/lg_magic_mapper_config.json</code></pre>
+<p>The mapping config is taken from <a href="https://gist.github.com/kopiro/083d975ae2c49d26bf6b0880a0de46d9" rel="noopener noreferrer" target="_blank">my gist</a>:</p>
+<pre><code class="json language-json">{
+  "ch_up": {
+    "function": "increase_oled_light",
+    "inputs": {
+      "increment": 10,
+      "disable_energy_savings": "no"
+    }
+  },
+  "ch_down": {
+    "function": "reduce_oled_light",
+    "inputs": {
+      "increment": 10,
+      "disable_energy_savings": "no"
+    }
+  }
+}</code></pre>
+<p>Start the mapper manually with <code>/usr/bin/python -u /home/root/magic_mapper.py</code> and you should be able to use your remote to change the brightness of your OLED TV.</p>
+<p>Then, to set up autostart of the mapper, use the script provided in the project:</p>
+<pre><code class="bash language-bash">cd /var/lib/webosbrew/init.d
+wget https://raw.githubusercontent.com/andrewfraley/magic_mapper/main/start_magic_mapper
+chmod +x /var/lib/webosbrew/init.d/start_magic_mapper</code></pre>
+<p>Tip: if you want to change the mapper without installing any editor via SSH, you can always connect via SFTP and edit the files directly - I love <a href="https://cyberduck.io/" rel="noopener noreferrer" target="_blank">Cyberduck</a> for this.</p>
+</div>
+<div id="footer">
+  © 2025 kopiro - <a href="https://www.kopiro.me/gpg.txt">0xEDE51005D982268E</a> -
+  <a href="https://www.kopiro.me/rss.xml">RSS</a>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-20NDLVTCNE");
+</script>
+</body>
+</html>

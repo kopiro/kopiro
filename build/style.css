@@ -1,0 +1,344 @@
+body {
+  background: #fff;
+  font-family:
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  color: #555;
+  max-width: 820px;
+  margin: 0 auto;
+  position: relative;
+  padding: 30px;
+  font-size: 14px;
+  line-height: 1.35em;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgb(14, 132, 31);
+  color: #fff;
+}
+
+a {
+  color: #000;
+  font-weight: 400;
+}
+
+a:hover {
+  color: rgb(14, 132, 31);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+}
+
+section {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#content * {
+  max-width: 100%;
+}
+
+#content img {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+body.article #content img {
+  display: block;
+  max-width: 100%;
+  max-height: 500px;
+}
+
+body.index .username {
+  display: none !important;
+}
+
+#kopiro {
+  font-size: 10em;
+  margin-top: 20px;
+  line-height: 0.95em;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #000;
+  position: relative;
+  line-height: 1em;
+  min-height: 100px;
+}
+
+#avatar {
+  display: none;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  border: 8px solid white;
+  outline: 1px solid #ddd;
+  cursor: pointer;
+  scale: 1;
+  z-index: 2;
+  transition: scale ease-out 200ms;
+}
+
+#avatar:hover {
+  scale: 1.05;
+}
+
+body.index #avatar {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1em;
+  color: #000;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1em;
+  color: #000;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1em;
+  font-weight: normal;
+  color: black;
+}
+
+h4 {
+  font-size: 1.5em;
+  line-height: 1em;
+  font-weight: normal;
+  color: rgb(14, 132, 31);
+}
+
+h5 {
+  font-size: 1.25em;
+  line-height: 1em;
+  font-weight: normal;
+  color: rgb(14, 132, 31);
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: normal;
+  color: rgb(14, 132, 31);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 0.8em;
+}
+
+body.index ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.index li {
+  margin-bottom: 0.15em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 2em 0;
+}
+
+blockquote {
+  margin: 1.5em 0;
+  padding: 0.75em 1.25em;
+  border-left: 3px solid rgb(14, 132, 31);
+  background: #f9f9f9;
+  color: #444;
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+blockquote p + p {
+  margin-top: 0.5em;
+}
+
+.username a {
+  color: rgb(14, 132, 31);
+  font-weight: bold !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.small-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+code {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
+  font-size: 0.85em;
+  background: #f5f5f5;
+  color: #333;
+  padding: 0.2em 0.45em;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+pre {
+  background: #f6f8fa !important;
+  overflow-x: auto;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #333;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  margin: 1.5em 0;
+  border-left: 3px solid rgb(14, 132, 31);
+}
+
+pre code.hljs {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  white-space: pre;
+  font-size: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+
+th {
+  background: #f9f9f9;
+  font-weight: 600;
+  color: #000;
+}
+
+tr:hover {
+  background: #fafafa;
+}
+
+body.article ul,
+body.article ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+body.article li {
+  margin-bottom: 0.35em;
+}
+
+.gist {
+  border: 1px solid #eee;
+  padding-top: 1em;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 0 2em;
+  flex-wrap: wrap;
+}
+
+#menu li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 5px;
+}
+
+#menu li a {
+  font-weight: normal;
+}
+
+.buymeacoffee {
+  display: inline-flex;
+  margin-left: auto;
+  width: 140px;
+}
+
+.buymeacoffee img {
+  width: 100%;
+}
+
+#footer {
+  margin-top: 2em;
+  font-size: 0.8em;
+  color: #999;
+  padding-top: 2em;
+  border-top: 1px solid #eee;
+}
+
+/* On iPhone, reduce the font size of the h1 */
+@media only screen and (max-width: 768px) {
+  #kopiro {
+    font-size: 5em;
+    width: 100%;
+    text-align: center;
+  }
+
+  #avatar {
+    display: none !important;
+  }
+
+  #menu ul {
+    justify-content: center;
+  }
+
+  .buymeacoffee {
+    display: none !important;
+  }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music | kopiro</title>
+<link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" />
+<link rel="alternate" type="application/rss+xml" title="Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music | kopiro RSS Feed" href="/rss.xml" />
+<script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<meta name="author" content="kopiro" />
+<meta name="viewport" content="width=device-width" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="twitter:site" content="@kopiro91" />
+<meta name="description" content="I recently tried a Google Home Mini and the most interesting feature is the ability to play music by Spotify directly on a Chromecast." />
+<meta name="og:title" content="Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music" />
+<meta name="og:type" content="article" />
+<meta name="og:url" content="https://www.kopiro.me/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music/index.html" />
+<meta name="og:site_name" content="kopiro" />
+<meta name="og:description" content="I recently tried a Google Home Mini and the most interesting feature is the ability to play music by Spotify directly on a Chromecast." />
+<meta name="og:image" content="https://www.kopiro.mehttps://cdn-images-1.medium.com/max/4840/1*OvPWrkcBq0y3teTmNLvdxg.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music" />
+<meta name="twitter:description" content="I recently tried a Google Home Mini and the most interesting feature is the ability to play music by Spotify directly on a Chromecast." />
+<meta name="twitter:image" content="https://www.kopiro.mehttps://cdn-images-1.medium.com/max/4840/1*OvPWrkcBq0y3teTmNLvdxg.png" />
+<link rel="canonical" href="https://www.kopiro.me/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music/index.html" />
+</head>
+<body class="article">
+<nav id="menu">
+  <ul>
+    <li class="username">
+      <a href="/"><img class="small-avatar" src="/static/avatar.jpg" alt="" />@kopiro</a>
+    </li>
+    <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
+    <li><a target="_blank" href="https://threads.com/@kopiro91">Threads</a></li>
+    <li><a target="_blank" href="https://discordapp.com/users/kopiro91">Discord</a></li>
+    <li><a href="/rss.xml">RSS</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
+  </ul>
+</nav>
+
+<img id="avatar" src="/static/avatar.jpg" />
+<div id="content">
+<h1 id="reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music">Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music</h1>
+<p>I recently tried a Google Home Mini and the most interesting feature is the ability to play music by Spotify directly on a Chromecast.</p>
+<blockquote>
+  <p>Ok Google, play Arcade Fire on Chromecast!</p>
+</blockquote>
+<p>From my point of view, this is the most interesting feature simply because I couldn’t instantly replicate it on my personal assistant.</p>
+<p>*Yes, I’m building a personal vocal assistant just for fun, and most probably that’s what I’ll talk about in my next posts. Check it out <a href="https://github.com/kopiro/otto-ai" rel="noopener noreferrer" target="_blank">preview code on Github</a> or <a href="https://dev.to/kopiro/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant-1gaa" rel="noopener noreferrer" target="_blank">if you’re interested about its hardware</a>.</p>
+<p>Why couldn’t I replicate it? It’s simple, there’s no public Spotify API to stream music without a browser, and the CastV2 protocol to play music on Chromecast is private too.</p>
+<p>But let’s do a step back.</p>
+<h3 id="a-little-bit-of-history">A little bit of history</h3>
+<p>Originally, you could use <strong>LibSpotify SDK</strong>, a C library to build your own personal streaming application.</p>
+<p>There are a lot of great projects using this SDK: <a href="https://github.com/mopidy/mopidy-spotify" rel="noopener noreferrer" target="_blank">Mopidy</a>, <a href="https://github.com/fabiofalci/sconsify" rel="noopener noreferrer" target="_blank">Sconsify</a> and many others that work like a charm.</p>
+<p>The problem is that LibSpotify was deprecated two years ago, in fact, if you visit the <a href="https://developer.spotify.com/technologies/libspotify/" rel="noopener noreferrer" target="_blank">official page</a>, a warning informs you that:</p>
+<blockquote>
+  <p>LibSpotify and CocoaLibSpotify are no longer under active development on any platform and are considered deprecated. […] Please note that we have removed the LibSpotify binaries from our website in an effort to phase out the usage of this deprecated library. LibSpotify has been considered deprecated since 2015 and will be shut down in 2017, so we want to ensure that all developers’ efforts and attention are focused on newer and better APIs that we actively support and maintain. […]</p>
+</blockquote>
+<p>You could say that the deprecation and the shutdown of a library is in flavor of a modern library. But this is not exactly the case.</p>
+<p>The Web API doesn’t support the playback of full tracks, as quoted in <a href="https://github.com/spotify/web-api/issues/57" rel="noopener noreferrer" target="_blank">this memorable issue</a> that <a href="https://twitter.com/SpotifyCares/status/798181185943781376" rel="noopener noreferrer" target="_blank">escalated quickly</a>.</p>
+<p>Spotify team suggests to use the <a href="https://developer.spotify.com/technologies/spotify-ios-sdk/" rel="noopener noreferrer" target="_blank">iOS/Android SDK</a> to get the streaming of tracks, but another brilliant warning informs you that:</p>
+<blockquote>
+  <p>The iOS SDK is explicitly prohibited from use for in-car apps, re-streaming aka “listen together” apps, alarm tones, ring-tones, voice-assistants, and offline experiences for wearable or other devices.</p>
+</blockquote>
+<p><strong>Ok, but what if my application is not iOS/Android based?</strong></p>
+<p>On Dec 11 2017, <a href="https://beta.developer.spotify.com/documentation/web-playback-sdk/" rel="noopener noreferrer" target="_blank">Spotify team announced the release of the Web Playback SDK</a>:</p>
+<blockquote>
+  <p>The Web Playback SDK is a client-side JavaScript library which allows you to create a new player in <a href="https://www.spotify.com/connect/" rel="noopener noreferrer" target="_blank">Spotify Connect</a> and play any audio track from Spotify in the browser via <a href="https://developers.google.com/web/fundamentals/media/eme" rel="noopener noreferrer" target="_blank">Encrypted Media Extensions</a>.</p>
+</blockquote>
+<p><strong>Ok, but what if my application is not web based?</strong></p>
+<p>Well, you can clearly read <a href="https://beta.developer.spotify.com/documentation/web-playback-sdk/quick-start/" rel="noopener noreferrer" target="_blank">here</a> that t<em>he Web Playback SDK only works in client-side JavaScript.</em></p>
+<p><em>Node.JS is not supported.</em></p>
+<p>Thank you Spotify.</p>
+<h3 id="so-what-now">So, what now?</h3>
+<p>Appreciating that Spotify doesn’t want my personal assistant capable of playing songs for me, let’s do it anyway with reverse engineering.</p>
+<p><em>Please note that this is only a proof-of-concept hack, don’t use in your commercial applications.</em></p>
+<p>I didn’t want to listen to music directly via my personal assistant speaker, I only wanted to listen on Chromecast and control by voice.</p>
+<p>So the first thing to do is understanding how Spotify communicates with a Chromecast.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*c5FGV8sSGrr-zKpRAIkOmg.png" alt="Spotify Web Player: Google Cast" /><em>Spotify Web Player: Google Cast</em></p>
+<p>You are capable to use this feature from <a href="https://open.spotify.com/browse" rel="noopener noreferrer" target="_blank">Spotify Web Player</a>; you have to simply click on the bottom-right corner and select Google Cast:</p>
+<p>Once the transmission is established, you’ll notice the Spotify black screen that is waiting for you.</p>
+<p><img src="https://cdn-images-1.medium.com/max/3140/1*VwLSv8KOMu6ODIYg9MHAXA.png" alt="Spotify on a Chromecast waiting for control" /><em>Spotify on a Chromecast waiting for control</em></p>
+<p>And, of course, you can <strong>control</strong> music from all of your devices. Spotify will always play music from the current device, that is now available in the devices list.</p>
+<p><img src="https://cdn-images-1.medium.com/max/3068/1*jlh9ELmIT_9lTQ75vjd60A.png" alt="Spotify on a Chromecast playing music" /><em>Spotify on a Chromecast playing music</em></p>
+<p>Pretty awesome right? Perfect, let’s inspect how it works.</p>
+<p>To understand the protocol, I tried to debug the Chromecast itself, but it turns out that you can only debug your own applications.</p>
+<p>Remember that browser is the easiest platform where hacks can occur, because all Javascript code is always in clear.</p>
+<blockquote>
+  <p>You can obfuscate your code, minify it, do some magic with it, but for an expert Javascript developer will always be in clear.</p>
+</blockquote>
+<p>Let’s open Chrome Developers Tools, go to Sources and after some searches with the simplest keyword: <em>“chromecast”</em> I ended up with this part of the code found in the main script (Check out the original script: <a href="https://open.scdn.co/static/web-player.acc65e1b.js" rel="noopener noreferrer" target="_blank">https://open.scdn.co/static/web-player.acc65e1b.js</a>)</p>
+<p><img src="https://cdn-images-1.medium.com/max/4840/1*OvPWrkcBq0y3teTmNLvdxg.png" alt="" /></p>
+<pre><code class="js language-js">n.addMessageListener(t, function(r, i) {
+   var a = JSON.parse(i);
+   switch (a.type) {
+      case "setCredentialsResponse":
+      n.sendMessage(t, { type: "getInfo", payload: {} })
+      break;
+      case "getInfoResponse":
+      e.dispatch((0, o.setActiveDecide)(a.payload.deviceID))
+      }
+   })
+   n.sendMessage(t, {
+      type: "setCredentials",
+      credentials: e.getState().session.accessToken
+   })
+   ...</code></pre>
+<p>After the insertion of some breakpoints inserted and a 5-minute debugging session, it turns out that when you request to cast, the Web player sends one simple message:</p>
+<pre><code class="js language-js">{ "type": "setCredentials", "credentials": {ACCESSTOKEN} }</code></pre>
+<p>After that, it listens for an incoming message from the Chromecast likesetCredentialsResponse, and pong with another getInfo message.</p>
+<p>Once received the latest getInfoResponse message, it calls the API to set the active device.</p>
+<p>Perfecto, so let’s build a CastV2 Client and replicate this communication.</p>
+<h2 id="build-a-castv2-spotify-client">Build a CastV2 Spotify Client</h2>
+<p>We know how Spotify protocol works with the Chromecast, so we have all information to replicate in a standalone project.</p>
+<p>I used this awesome Node.js library that encapsulates the CASTV2 Protocol: <a href="https://github.com/thibauts/node-castv2#protocol-description" rel="noopener noreferrer" target="_blank">https://github.com/thibauts/node-castv2#protocol-description</a></p>
+<p>To create a custom receiver you basically extends the base <strong>DefaultMediaReceiver</strong> to provide custom features. In this case, we abstract from <strong>RequestResponseController.</strong></p>
+<p>The URN is obviously copied from the <em>web-player.js</em>* **<em>file and is ‘</em>urn:x-cast:com.spotify.chromecast.secure.v1*’.</p>
+<pre><code class="js language-js">    function SpotifyController(client, sourceId, destinationId) {
+       RequestResponseController.call(this, client, sourceId, destinationId, ‘urn:x-cast:com.spotify.chromecast.secure.v1’);
+    }</code></pre>
+<p>We’ll provide an authentication function that should be called a-priori:</p>
+<pre><code class="js language-js">SpotifyController.prototype.authenticate = function ({ accesss_token, device_name }) {
+   this.send({
+      type: ‘setCredentials’,
+      credentials: access_token
+   });
+}</code></pre>
+<p>Furthermore, to cast correctly you have to use the original Spotify AppID for Chromecast. You can just find it in the same main javascript file (<em>web-player.js): CC32E753.</em></p>
+<p>We can now wrap our <em>SpotifyController</em> in a *Spotify Receiver *(complete code <a href="https://github.com/kopiro/spotify-castv2-client/blob/master/Spotify.js#L18" rel="noopener noreferrer" target="_blank">here</a>)</p>
+<pre><code class="js language-js">function Spotify(client, session) { 
+   Application.apply(this, arguments); 
+   this.media = this.createController(MediaController); 
+   this.spotify = this.createController(SpotifyController);
+   this.media.on(‘status’, (status) =&gt; { 
+   this.emit(‘status’, status); 
+   });
+}
+
+Spotify.APP_ID = ‘CC32E753’;
+util.inherits(Spotify, Application);
+
+Spotify.prototype.authenticate = function() { 
+   return this.spotify.authenticate.apply(this.spotify, arguments);
+};</code></pre>
+<p>Question. Where can we find an access token? By copying my access token in the Javascript console with the debugger, it works like a charm.</p>
+<p>I tried to implement the OAuth flow described <a href="https://developer.spotify.com/web-api/authorization-guide/" rel="noopener noreferrer" target="_blank">here</a> with a registered Spotify applications, using all kinds of <a href="https://developer.spotify.com/web-api/authorization-guide/#scopes" rel="noopener noreferrer" target="_blank">scopes</a> (<em>streaming</em>* ***included), but when I tried to use this fresh access token in this CastV2 client, Spotify simply replies with this beautiful error message.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2128/1*Y4tEkGW0gK8YxIrI22hkLg.png" alt="Spotify on Chromecast with a non-valid access token" /><em>Spotify on Chromecast with a non-valid access token</em></p>
+<p>I think that my access token doesn’t have enough permission to run on a external Spotify device, even if it has <em>streaming</em> permissions. So, the unique access token I can use is the one provided by the Web Player.</p>
+<h2 id="grab-a-valid-access-token-from-spotify-web-player">Grab a valid access token from Spotify Web Player</h2>
+<p>I noticed that Spotify Web Player sends a Bearer access token to its API to authenticate them. Further investigations find out that Web players receive this access token in a Cookie named wp_access_token</p>
+<p><img src="https://cdn-images-1.medium.com/max/2006/1*nuQGCDDiT_VAU7xJn2uo-A.png" alt="Cookie storage for Spotify web Player" /><em>Cookie storage for Spotify web Player</em></p>
+<p>To grab this “extended” access token, we have to mimic the entire login flow into the Spotify Web Player and then inspect where is it stored.</p>
+<p>Using my favorite tool: <a href="https://www.charlesproxy.com/" rel="noopener noreferrer" target="_blank">Charles</a>, I inspected every HTTPs request to the Spotify website and replicated the entire login flow in a Node.js library.</p>
+<p>You can view the full code here: <a href="https://github.com/kopiro/node-spotify-webplayer-accesstoken" rel="noopener noreferrer" target="_blank">https://github.com/kopiro/node-spotify-webplayer-accesstoken</a></p>
+<p>The login flow consists of three parts:</p>
+<ul>
+<li>Grab CSRF token from login page</li>
+<li>Do a POST to the login API</li>
+<li>Navigate to the Web Player page and grab the magic access token</li>
+</ul>
+<p>One interesting thing is that the website checks if the User-Agent is compatible, <a href="https://github.com/kopiro/node-spotify-webplayer-accesstoken/blob/master/index.js#L4" rel="noopener noreferrer" target="_blank">so you have to spoof with a valid one</a>.</p>
+<p>The other one is that the login API simply says incorrectCredentials if you don’t pass a valid __bon Cookie in the request.<br />
+As you can notice <a href="https://github.com/kopiro/node-spotify-webplayer-accesstoken/blob/master/index.js#L56" rel="noopener noreferrer" target="_blank">here</a>, I simply put a static value that the API accept. By inspecting the code, it turns out the is base64 encoded string with some configurations values.</p>
+<h2 id="put-things-together">Put things together</h2>
+<p>Now we have a valid access token that works with the CastV2 Client.</p>
+<p>This solution obviously is not valid for production applications, because you have to provide your Spotify credentials to your app and I think that this violates Spotify terms (OAuth exists for a reason).<br />
+But, I think that for an internal project could work.</p>
+<p>Let’s complete the flow by using the previous package:</p>
+<pre><code class="js language-js">this.device_name = device_name;
+this.access_token = await SpotifyWPAT.getAccessToken(username, password);
+
+// Instantiate Spotify Web API
+this.api = new SpotifyWebApi({
+   accessToken: this.access_token
+});
+
+// Send setCredentials request using web AT
+this.send({
+   type: 'setCredentials',
+   credentials: access_token
+});</code></pre>
+<p>Perfecto! Now that our Chromecast is connected, our Spotify account has a new device in our playable device list, and we call the Web API to grab its ID by its device name:</p>
+<pre><code class="js language-js">this.on('message', async(message) =&gt; {
+   if (message.type === 'setCredentialsResponse') {
+      const devices = (await this.api.getMyDevices()).body.devices;
+      this.device = devices.find(e =&gt; e.name === this.device_name);
+   }
+});</code></pre>
+<p>Let’s complete the flow by adding the code to play some music.</p>
+<p><em>I did a pull request to support the deviceId option in the Spotify Web API library for Node.js: <a href="https://github.com/thelinmichael/spotify-web-api-node/pull/183" rel="noopener noreferrer" target="_blank">https://github.com/thelinmichael/spotify-web-api-node/pull/183</a></em></p>
+<p>You can find the full code of <em>SpotifyController</em> <a href="https://github.com/kopiro/spotify-castv2-client/blob/master/SpotifyController.js" rel="noopener noreferrer" target="_blank">here</a>.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>You can now finally control your Spotify over a Chromecast from your Node.js application.</p>
+<p>The Spotify CastV2 Client is available on <a href="https://github.com/kopiro/spotify-castv2-client" rel="noopener noreferrer" target="_blank">Github</a> and on NPM with the spotify-castv2-client package name.</p>
+<p>Build great stuff!</p>
+</div>
+<div id="footer">
+  © 2025 kopiro - <a href="https://www.kopiro.me/gpg.txt">0xEDE51005D982268E</a> -
+  <a href="https://www.kopiro.me/rss.xml">RSS</a>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-20NDLVTCNE");
+</script>
+</body>
+</html>

@@ -21,7 +21,7 @@ const PressList = (data) =>
     getTitle: (e) => e.title,
     getDesc: (e) => null,
     getSubtitle: (e) => getDateHumanFormat(e.publishedAt),
-    getLink: (e) => e.path,
+    getLink: (e) => e.htmlPath,
   });
 
 const ProjectsList = (data) =>

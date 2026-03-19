@@ -23,6 +23,36 @@ async function copyAssets() {
   }
 }
 
+async function copyPressMedia(press) {
+  await Promise.all(
+    press.map(async (article) => {
+      const sourceMediaDir = path.join(paths.root, path.dirname(article.path), "media");
+      const destMediaDir = path.join(paths.build, "press", article.slug, "media");
+
+      try {
+        await fs.access(sourceMediaDir);
+      } catch {
+        return;
+      }
+
+      await fs.mkdir(path.dirname(destMediaDir), { recursive: true });
+      await fs.cp(sourceMediaDir, destMediaDir, { recursive: true });
+      console.log(`Copied press media for "${article.slug}"`);
+    }),
+  );
+}
+
+async function cleanBuildDir() {
+  await fs.mkdir(paths.build, { recursive: true });
+  const entries = await fs.readdir(paths.build);
+
+  await Promise.all(
+    entries
+      .filter((entry) => entry !== ".gitignore")
+      .map((entry) => fs.rm(path.join(paths.build, entry), { recursive: true, force: true })),
+  );
+}
+
 async function renderPress(article) {
   const { title, coverImage, htmlPath, description } = article;
   const content = await fs.readFile(path.join(paths.root, article.path), "utf-8");
@@ -110,7 +140,7 @@ ${items}
 }
 
 async function main() {
-  await fs.mkdir(paths.build, { recursive: true });
+  await cleanBuildDir();
 
   const indexMarkdownContent = await fs.readFile(paths.readme, "utf-8");
 
@@ -143,6 +173,7 @@ async function main() {
   await Promise.all(press.map(renderPress));
 
   await generateRssFeed();
+  await copyPressMedia(press);
   await copyAssets();
 }
 

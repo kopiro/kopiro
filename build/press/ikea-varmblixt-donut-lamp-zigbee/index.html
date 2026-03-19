@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Make the IKEA VARMBLIXT Donut lamp smart with Zigbee | kopiro</title>
+<link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" />
+<link rel="alternate" type="application/rss+xml" title="Make the IKEA VARMBLIXT Donut lamp smart with Zigbee | kopiro RSS Feed" href="/rss.xml" />
+<script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<meta name="author" content="kopiro" />
+<meta name="viewport" content="width=device-width" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="twitter:site" content="@kopiro91" />
+<meta name="description" content="I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable." />
+<meta name="og:title" content="Make the IKEA VARMBLIXT Donut lamp smart with Zigbee" />
+<meta name="og:type" content="article" />
+<meta name="og:url" content="https://www.kopiro.me/press/ikea-varmblixt-donut-lamp-zigbee/index.html" />
+<meta name="og:site_name" content="kopiro" />
+<meta name="og:description" content="I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable." />
+<meta name="og:image" content="https://www.kopiro.me/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Make the IKEA VARMBLIXT Donut lamp smart with Zigbee" />
+<meta name="twitter:description" content="I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable." />
+<meta name="twitter:image" content="https://www.kopiro.me/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg" />
+<link rel="canonical" href="https://www.kopiro.me/press/ikea-varmblixt-donut-lamp-zigbee/index.html" />
+</head>
+<body class="article">
+<nav id="menu">
+  <ul>
+    <li class="username">
+      <a href="/"><img class="small-avatar" src="/static/avatar.jpg" alt="" />@kopiro</a>
+    </li>
+    <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
+    <li><a target="_blank" href="https://threads.com/@kopiro91">Threads</a></li>
+    <li><a target="_blank" href="https://discordapp.com/users/kopiro91">Discord</a></li>
+    <li><a href="/rss.xml">RSS</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
+  </ul>
+</nav>
+
+<img id="avatar" src="/static/avatar.jpg" />
+<div id="content">
+<h1 id="make-the-ikea-varmblixt-donut-lamp-smart-with-zigbee">Make the IKEA VARMBLIXT Donut lamp smart with Zigbee</h1>
+<p><img src="/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg" alt="IKEA VARMBLIXT donut lamp" /></p>
+<p>I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable.</p>
+<p>The working setup ended up being much simpler than I expected: replace the low-voltage side with a 24V DC Zigbee LED controller, then expose it through Zigbee to <a href="https://www.home-assistant.io/" rel="noopener noreferrer" target="_blank">Home Assistant</a>, and finally HomeKit.</p>
+<p>The final wiring is:</p>
+<pre><code class="text language-text">230V AC -&gt; 24V DC power supply -&gt; Zigbee LED controller -&gt; lamp</code></pre>
+<p>In practice, this means the original mains power is converted from <code>230V AC</code> to <code>24V DC</code> at the socket, and then the controller handles switching and dimming on the low-voltage side. That is the only part I replaced.</p>
+<p><a href="https://csa-iot.org/all-solutions/zigbee/" rel="noopener noreferrer" target="_blank">Zigbee</a> is the wireless protocol used by the replacement controller, which makes the lamp show up like any other smart light in my home. <a href="https://www.home-assistant.io/" rel="noopener noreferrer" target="_blank">Home Assistant</a> is the local automation hub I use to bring devices together and expose them again to HomeKit. In my case I used Zigbee2MQTT, but you do not really need it for this setup, as the integrated ZHA support in Home Assistant works too.</p>
+<h2 id="hardware">Hardware</h2>
+<p>The only thing you need is a generic 24V Zigbee LED controller from AliExpress, something like <a href="https://www.aliexpress.com/item/1005007469988139.html" rel="noopener noreferrer" target="_blank">https://www.aliexpress.com/item/1005007469988139.html</a>.</p>
+<p>The controller I got supports dimming, which is a nice bonus.</p>
+<p>On the controller side, the wiring is straightforward:</p>
+<ul>
+<li>Power supply to controller input: <code>24V DC</code></li>
+<li>Controller output to lamp: <code>V+</code> and <code>V-</code></li>
+</ul>
+<p>This is what the internal wiring looked like once I had the replacement controller in place:</p>
+<p><img src="/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-01-2.jpg" alt="Internal wiring of the IKEA VARMBLIXT lamp with the Zigbee controller" /></p>
+<p>Before powering it on, verify the polarity with a multimeter. </p>
+<h2 id="pairing">Pairing</h2>
+<p>Once you power on the Zigbee adapter, it should automatically be in pairing mode. At that point, enable permit join on your Zigbee setup and the controller should show up for pairing. I used Zigbee2MQTT, but the built-in ZHA integration in Home Assistant should work just as well if you prefer to keep everything inside Home Assistant.</p>
+<h2 id="result">Result</h2>
+<p>After pairing the controller, the lamp shows up correctly in Zigbee2MQTT:</p>
+<p><img src="/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-01.jpg" alt="The lamp in Zigbee2MQTT" /></p>
+<p>From there I exposed it to Home Assistant, and then to HomeKit through the Home Assistant HomeKit Bridge:</p>
+<p><img src="/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-02.jpg" alt="The lamp in Home Assistant" /></p>
+<p>And that was it. </p>
+</div>
+<div id="footer">
+  © 2025 kopiro - <a href="https://www.kopiro.me/gpg.txt">0xEDE51005D982268E</a> -
+  <a href="https://www.kopiro.me/rss.xml">RSS</a>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-20NDLVTCNE");
+</script>
+</body>
+</html>
