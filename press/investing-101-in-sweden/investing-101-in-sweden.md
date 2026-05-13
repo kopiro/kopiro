@@ -1,12 +1,10 @@
 # Investing 101 in Sweden
 
-A simple guide to start investing in Sweden as a long-term, passive investor. No finance degree needed.
-
----
+A simple guide to start investing in Sweden as someone who doesn't know anything about this.
 
 ## Why invest at all?
 
-![Stock goes up](./media/stock-goes-up.png)
+![Stock goes up](./media/stock-goes-up.jpg)
 
 Before anything else, there is one fundamental belief you need to accept. Everything in this guide builds on it:
 
@@ -31,7 +29,7 @@ A savings account paying 1-2% interest doesn't even keep up with that. Investing
 
 ## Why picking stocks is a bad idea
 
-![Cherry picking](./media/cherry-picking.png)
+![Cherry picking](./media/cherry-picking.jpg)
 
 You might be tempted to skip index funds and pick individual stocks yourself. A company looks cheap, another one is "obviously" going to grow, and you feel like you can spot a good deal. The problem is that everyone else is looking at the same information and thinking the same thing.
 
@@ -45,7 +43,7 @@ We are still investing in the stock market, though. The difference is that inste
 
 ## The 3 pillars: organize your money before investing
 
-![3 pillars](./media/pillars.png)
+![3 pillars](./media/pillars.jpg)
 
 Before you put a single krona into the stock market, you need to organize your finances into three pillars. Think of them as layers: you build them in order, and you only invest what's left after the first two are solid.
 
@@ -80,7 +78,7 @@ Everything left after pillars 1 and 2 is your investable capital. This is the mo
 
 ## Pillar 2: The emergency fund
 
-![Emergency fund](./media/emergency-fund.png)
+![Emergency fund](./media/emergency-fund.jpg)
 
 Your emergency fund needs to sit in a flexible savings account (sparkonto utan bindningstid), never a fixed-term one. If your money is locked for 12 months, it's not an emergency fund.
 
@@ -96,7 +94,7 @@ Filter for flexible accounts only. Ignore fixed-term offers, they pay more but d
 
 ## Pillar 3: The investment fund
 
-![Mutual fund](./media/mutual-fund.png)
+![Mutual fund](./media/mutual-fund.jpg)
 
 ## Open an ISK on Avanza
 
@@ -105,8 +103,6 @@ Filter for flexible accounts only. Ignore fixed-term offers, they pay more but d
 When you sign up, open an **[ISK](https://en.wikipedia.org/wiki/Investeringssparkonto)** (Investeringssparkonto). This is the account type designed for passive investing in Sweden. You pay a small flat annual tax on what you hold, Avanza reports everything to Skatteverket automatically, and you never have to deal with tax declarations for your investments. No K4 forms, no tracking of individual buy/sell transactions. You just invest and forget.
 
 One important thing: don't leave uninvested cash sitting in your ISK. The flat tax applies to everything in the account, including cash. If you have money in your ISK that isn't invested, you're paying tax on it for no return. Either invest it or keep it in your regular bank account until you're ready to buy.
-
----
 
 ## Pick a fund (the 85%)
 
@@ -166,36 +162,25 @@ Since this is an ETC and not a fund, you cannot set up automatic monthly purchas
 
 ## Set up monthly investing
 
+![Monthly saving](./media/monthly-saving.jpg)
+
 Once your ISK is open and you've picked your fund, the last step is to automate everything so you never have to think about it.
 
 ### How much to invest
 
 In theory, your investable amount each month is your salary minus your expenses. In practice, you might not want to invest all of that. Pick a percentage you're comfortable with and that still leaves room for planned expenses (travel, bigger purchases, etc.). Even a smaller amount invested consistently is better than a larger amount invested sporadically.
 
-### Set up auto-giro and månadssparande
+### Set up månadssparande
 
-Go to [Avanza's månadssparande page](https://www.avanza.se/manadssparande.html) and set up two things:
+Go to [Avanza's månadssparande page](https://www.avanza.se/manadssparande.html) and set up a monthly auto-invest. You pick which fund(s), how much goes into each, and the day of the month. Avanza handles the auto-giro from your bank automatically as part of the same setup.
 
-1. **Auto-giro from your bank to your ISK.** This transfers a fixed amount from your regular bank account to your Avanza ISK every month, automatically. You pick the amount and the day of the month.
-2. **Månadssparande (monthly auto-invest).** This tells Avanza to automatically buy your chosen fund(s) with the money that arrives in your ISK. You select which funds and how much goes into each.
-
-Once both are in place, money flows from your bank to your ISK to your fund every month without you doing anything. The only manual step is buying the gold ETC, since ETCs cannot be part of månadssparande.
+Once it's running, money flows from your bank to your ISK to your fund every month without you doing anything. The only manual step is buying the gold ETC, since ETCs cannot be part of månadssparande.
 
 This approach is called **[dollar-cost averaging](https://en.wikipedia.org/wiki/Dollar_cost_averaging)**: by investing the same amount at regular intervals, you buy more shares when prices are low and fewer when prices are high. Over time, this smooths out volatility and removes the temptation to time the market. The most important thing is consistency.
 
----
-
-## Don't forget your tjänstepension
-
-If you work in Sweden, your employer is almost certainly contributing to a [tjänstepension](https://en.wikipedia.org/wiki/Pensions_in_Sweden) (occupational pension) on your behalf. This is money that gets invested for your retirement, and in most cases you get to choose *how* it's invested.
-
-The same rules apply here. Pick a cheap global index fund, avoid actively managed funds with high fees, and don't overthink it. There is no reason to apply a different strategy to your tjänstepension than to your ISK. It's the same stock market, the same long time horizon, and the same math.
-
-The default option your employer or pension provider picks for you is often an actively managed fund with fees above 1%. Log in to your pension provider, check what you're invested in, and switch to the cheapest global index fund they offer. You do this once and forget about it.
-
----
-
 ## What to do during a crash
+
+![Crash](./media/crash.jpg)
 
 At some point, the market will drop 20%, 30%, maybe more. Your portfolio will be deep in the red and every headline will tell you it's going to get worse. This is normal. It has happened before and it will happen again.
 
@@ -204,6 +189,14 @@ The most important thing you can do is **nothing**. Keep your månadssparande ru
 If you have extra money set aside, a crash is actually a great opportunity to buy more. Everything is on sale. But don't try to time the bottom, because you won't. And don't keep money on the side *waiting* for the next crash either, because the next crash could come after the market has already doubled from here. You'd be sitting on cash losing value to inflation while waiting for a dip that might not come for years.
 
 The best approach is boring: invest consistently every month regardless of what the market is doing. Your dollar-cost averaging setup handles this automatically. The people who lose money in the stock market are the ones who panic sell at the bottom and buy back in after the recovery.
+
+## Don't forget your tjänstepension
+
+If you work in Sweden, your employer is almost certainly contributing to a [tjänstepension](https://en.wikipedia.org/wiki/Pensions_in_Sweden) (occupational pension) on your behalf. This is money that gets invested for your retirement, and in most cases you get to choose *how* it's invested.
+
+The same rules apply here. Pick a cheap global index fund, avoid actively managed funds with high fees, and don't overthink it. There is no reason to apply a different strategy to your tjänstepension than to your ISK. It's the same stock market, the same long time horizon, and the same math.
+
+The default option your employer or pension provider picks for you is often an actively managed fund with fees above 1%. Log in to your pension provider, check what you're invested in, and switch to the cheapest global index fund they offer. You do this once and forget about it.
 
 ---
 
@@ -235,20 +228,9 @@ Re-selling is also straightforward. The bostadsrätt market in Stockholm is liqu
 
 ---
 
-## TL;DR
-
-1. **3 pillars first:** 3 months liquidity in checking, 6-12 months emergency fund in savings, then invest the rest.
-2. Open an **ISK** account on **Avanza**.
-3. Split your investments: **~85%** in **Storebrand Global All Countries A SEK** (0.30% fee) + **~15%** in **Invesco Physical Gold ETC** (0.12% fee).
-4. Set up **auto-giro** from your bank to your ISK, then **månadssparande** to auto-invest into your fund. Buy gold manually to maintain the 15% target.
-5. ISK flat tax (~1.065% in 2026, first 300k tax-free) beats AF's 30% capital gains tax for any decent long-term return.
-6. Check your **tjänstepension** and switch to a cheap global index fund there too.
-7. During a crash: **do nothing**. Keep investing. Don't sell.
-8. Let [compound interest](https://en.wikipedia.org/wiki/Compound_interest) do the work. Check back in 10 years.
-
----
-
 ## For the experts
+
+If you've made it this far and set everything up, you're already in great shape. What follows are topics worth understanding but not strictly necessary to get started. Fair warning: the deeper you go, the more nuanced things get, and my own understanding of some of these details may not be 100% precise. Take it as a starting point, not gospel.
 
 ### ISK vs AF
 
@@ -266,7 +248,7 @@ For a buy-and-hold investor in a global equity fund that historically returns 7-
 
 ISK also lets you rebalance without triggering a tax event and requires zero paperwork. Unless you expect your investments to consistently underperform the schablonintäkt rate (3.55% in 2026), ISK is the better choice.
 
-### Why [mutual funds](https://en.wikipedia.org/wiki/Mutual_fund) beat [ETFs](https://en.wikipedia.org/wiki/Exchange-traded_fund) in Sweden
+### Why mutual funds beat ETFs in Sweden
 
 If you're coming from an international investing background, you might wonder why not just buy a cheap Vanguard or iShares ETF instead of a Swedish mutual fund.
 
@@ -313,7 +295,7 @@ The fees are hard to argue with. The tradeoff is always the same: fewer holdings
 
 That said, some people find it easier to stay committed to their investment strategy when they understand and control the pieces. If seeing "70% USA" in a global fund makes you nervous, splitting it into regional funds lets you dial that number to whatever you're comfortable with. You'll probably underperform the market, but **an imperfect strategy you stick with beats a perfect strategy you abandon.**
 
-#### A Sweden tilt
+### A Sweden tilt
 
 You might want to add a small Sweden allocation. This is a common form of "[home bias](https://en.wikipedia.org/wiki/Home_bias)" but there are reasonable arguments for it: your salary and expenses are in SEK, and Sweden has a disproportionately high number of globally competitive companies. If you do, keep it to **~10% of your equity** and use **[Avanza Zero](https://www.avanza.se/fonder/om-fonden.html/41567/avanza-zero)** (0% fee, tracks the 30 most traded Swedish stocks). Don't go higher than 10-15%, as Sweden is only ~1% of the global stock market.
 
