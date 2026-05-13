@@ -1,6 +1,6 @@
 # kopiro
   
-### SWE at Spotify. I like RJ45 cables.
+### I like RJ45 cables.
   
 ## apps
   
