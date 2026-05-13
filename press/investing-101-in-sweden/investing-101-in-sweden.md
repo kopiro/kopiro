@@ -202,6 +202,8 @@ The default option your employer or pension provider picks for you is often an a
 
 ## Diversify beyond stocks: buy an apartment
 
+![House](./media/house.jpg)
+
 Everything in this guide so far is about the stock market. But putting all your wealth into one [asset class](https://en.wikipedia.org/wiki/Asset_class) is itself a risk. Real estate is one of the best ways to diversify, and in Sweden, buying an apartment (bostadsrätt) is particularly attractive.
 
 ### Why it matters
@@ -341,16 +343,9 @@ If you want exposure, keep it to **no more than 2-5% of your total invested capi
 
 On Avanza, you can buy Bitcoin exposure through an [ETP (Exchange Traded Product)](https://en.wikipedia.org/wiki/Exchange-traded_product):
 
-**[CoinShares Physical Bitcoin](https://www.avanza.se/borshandlade-produkter/certifikat-torg/om-certifikatet.html/1451066/coinshares-digital-securities-ltd)** (ticker: BITC)
+**[CoinShares Physical Bitcoin](https://www.avanza.se/borshandlade-produkter/certifikat-torg/om-certifikatet.html/1451066/coinshares-digital-securities-ltd)** (ticker: BITC, ISIN: GB00BLD4ZL17) — 0.15% annual fee, physically backed by actual Bitcoin. You buy it in SEK on Avanza even though it's denominated in USD, and the 0.25% currency conversion fee applies.
 
-| Detail | Value |
-|---|---|
-| Annual fee | 0.15% |
-| Type | ETN (physically backed by actual Bitcoin) |
-| ISIN | GB00BLD4ZL17 |
-| Currency | USD (bought in SEK on Avanza) |
-
-Like the gold ETC, you buy it manually on Avanza (no auto-invest) and the 0.25% currency conversion fee applies since it trades in USD.
+Like the gold ETC, you buy it manually (no auto-invest).
 
 Buy a small fixed amount once a quarter and don't check the price daily. If you find yourself constantly checking the Bitcoin price, your allocation is too large.
 
