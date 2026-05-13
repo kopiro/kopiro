@@ -5,12 +5,12 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-  color: #555;
+  color: #222;
   max-width: 820px;
   margin: 0 auto;
   position: relative;
   padding: 30px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.35em;
   -webkit-font-smoothing: antialiased;
 }
@@ -96,24 +96,24 @@ body.index #avatar {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   line-height: 1em;
   color: #000;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 h2 {
   font-size: 2em;
   line-height: 1em;
   color: #000;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h3 {
   font-size: 1.5em;
   line-height: 1em;
-  font-weight: normal;
   color: black;
+  font-weight: 600;
 }
 
 h4 {
@@ -135,6 +135,11 @@ h6 {
   line-height: 1em;
   font-weight: normal;
   color: rgb(14, 132, 31);
+}
+
+b,
+strong {
+  font-weight: 600;
 }
 
 h1,
@@ -256,7 +261,7 @@ table {
 th,
 td {
   border: 1px solid #ddd;
-  padding: 0.5em 0.75em;
+  padding: 0.25em 0.5em;
   text-align: left;
 }
 

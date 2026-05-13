@@ -11,6 +11,7 @@
   
 ## blog
   
+* <span class="title">[Investing 101 in Sweden](/press/investing-101-in-sweden/index.html)</span><span class="subtitle"> (May 2026)</span>
 * <span class="title">[My Sage Barista espresso machine is now smart](/press/sage-barista-via-zigbee/index.html)</span><span class="subtitle"> (March 2026)</span>
 * <span class="title">[Make the IKEA VARMBLIXT Donut lamp smart with Zigbee](/press/ikea-varmblixt-donut-lamp-zigbee/index.html)</span><span class="subtitle"> (March 2026)</span>
 * <span class="title">[How to use different Git identities per directory](/press/how-to-use-different-git-identities-per-directory/index.html)</span><span class="subtitle"> (January 2026)</span>

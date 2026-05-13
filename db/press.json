@@ -138,5 +138,14 @@
     "description": "The goal is simple: having my Sage Barista already warm when I wake up.",
     "publishedAt": "2026-03-19T10:58:01.162Z",
     "htmlPath": "/press/sage-barista-via-zigbee/index.html"
+  },
+  {
+    "slug": "investing-101-in-sweden",
+    "title": "Investing 101 in Sweden",
+    "path": "/press/investing-101-in-sweden/investing-101-in-sweden.md",
+    "description": "A simple guide to start investing in Sweden as a long-term, passive investor. No finance degree needed.",
+    "publishedAt": "2026-05-13T10:17:08.688Z",
+    "htmlPath": "/press/investing-101-in-sweden/index.html",
+    "coverImage": "/press/investing-101-in-sweden/media/stock-goes-up.png"
   }
 ]
