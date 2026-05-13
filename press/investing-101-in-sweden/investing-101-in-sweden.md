@@ -208,6 +208,24 @@ If you work in Sweden, you probably have pension money invested in two places ou
 
 The same rule applies: pick a cheap global index fund and avoid expensive actively managed funds. For PPM, AP7 Såfa is already a good default, so leaving it alone is fine. Use [minpension.se](https://www.minpension.se) to see everything in one place, then log in to your actual pension provider or [pensionsmyndigheten.se](https://www.pensionsmyndigheten.se) if you want to change anything.
 
+## Consider job insurance
+
+One way to reduce the pressure on your emergency fund is to insure part of your income if you lose your job. In Sweden, this usually means **a-kassa** first, then **income insurance** if your salary is above the a-kassa cap.
+
+These are the current Unionen-related numbers as of 2026:
+
+| Setup | Monthly cost | When it matters |
+|---|---:|---|
+| [Unionens a-kassa](https://www.unionensakassa.se/om-medlemskapet/medlemsavgift/) only | **160 SEK** | Basic unemployment insurance. Covers income up to the a-kassa cap, currently **34,000 SEK/month**. |
+| A-kassa + [Unionen](https://www.unionen.se/fragor-och-svar-om-medlemsavgiften) | **395 SEK** total | Worth considering if you earn above **34,000 SEK/month**. Unionen includes [income insurance](https://www.unionen.se/medlemskapet/inkomstforsakring) up to **60,000 SEK/month** if you also belong to a Swedish a-kassa. |
+| Add [top-up insurance](https://www.unionen.se/medlemskapet/inkomstforsakring/teckna-tillaggsforsakring) | **+50 / +200 / +450 SEK** depending on salary | Adds 50 extra benefit days and, for salaries above **60,000 SEK/month**, can raise the insured income cap up to **150,000 SEK/month**. |
+
+The top-up prices are extra: **50 SEK/month** for insured income of 34,001-60,000 SEK, **200 SEK/month** for 60,001-100,000 SEK, and **450 SEK/month** for 100,001-150,000 SEK or above. So the most expensive combination is roughly **845 SEK/month**: 160 for a-kassa, 235 for Unionen, and 450 for the top-up.
+
+The replacement level also steps down over time. Roughly: 80% at first, then 70% after day 100. A-kassa can continue longer at the capped level, eventually stepping down to 65%, while Unionen's income insurance lasts up to 150 benefit days without top-up or 200 benefit days with top-up. Actual payouts depend on eligibility, taxes, and what a-kassa approves.
+
+This does not replace an emergency fund. You still need cash for waiting periods, paperwork delays, broken appliances, medical costs, moving, and all the non-job emergencies that insurance does not solve. But if you have good unemployment coverage and a stable job, you may not need to hold the full 8 months in cash.
+
 ---
 
 ## Diversify beyond stocks: buy an apartment
