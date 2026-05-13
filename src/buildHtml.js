@@ -1,10 +1,10 @@
-const { title: siteName, baseUrl } = require("./config");
+const { title: siteName, baseUrl, disqusShortname } = require("./config");
 
 const fs = require("fs/promises");
 const path = require("path");
 const paths = require("./paths");
 const { renderHtmlFromMd } = require("./baseTemplates");
-const { readDbFile, readPartial, deepMerge } = require("./utils");
+const { readDbFile, readPartial, deepMerge, parseFrontmatter } = require("./utils");
 
 const escapeXml = (str) =>
   str
@@ -13,6 +13,36 @@ const escapeXml = (str) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
+
+const jsString = (value) => JSON.stringify(value).replace(/</g, "\\u003C");
+
+const renderDisqusComments = ({ articleUrl, slug, title }) => {
+  if (!disqusShortname) {
+    return "";
+  }
+
+  const embedUrl = `https://${disqusShortname}.disqus.com/embed.js`;
+
+  return `
+<section id="comments" class="comments">
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+  this.page.url = ${jsString(articleUrl)};
+  this.page.identifier = ${jsString(slug)};
+  this.page.title = ${jsString(title)};
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = ${jsString(embedUrl)};
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+</section>`;
+};
 
 async function copyAssets() {
   for (const asset of paths.publicAssets) {
@@ -56,6 +86,7 @@ async function cleanBuildDir() {
 async function renderPress(article) {
   const { title, coverImage, htmlPath, description, slug } = article;
   const content = await fs.readFile(path.join(paths.root, article.path), "utf-8");
+  const { body } = parseFrontmatter(content, article.path);
   const articleUrl = `${baseUrl}${htmlPath}`;
   const absoluteCoverImage = coverImage ? `${baseUrl}${coverImage}` : null;
 
@@ -80,7 +111,7 @@ async function renderPress(article) {
         canonical: { rel: "canonical", href: articleUrl },
       },
     },
-    content,
+    `${body}\n\n${renderDisqusComments({ articleUrl, slug, title })}`,
   ).replace(/((?:src|href)=["'])(?:\.\/)?media\//g, `$1/press/${slug}/media/`);
 
   const htmlFilePath = path.join(paths.build, htmlPath);

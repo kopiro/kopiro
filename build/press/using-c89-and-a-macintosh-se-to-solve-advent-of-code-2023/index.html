@@ -77,6 +77,24 @@ char line[128];</code></pre>
 <p>My <code>int sum</code> went negative as soon I hit the number 32k. </p>
 <p>I thought that this CPU was 32bit, but something it telling me that it's rather 16bit.</p>
 <p>Switching to <code>unsigned long</code> and also making sure I use <code>printf("%lu", sum)</code> (took 20m to realize I was still using <code>%d</code>) made it work.</p>
+<section id="comments" class="comments">
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+  this.page.url = "https://www.kopiro.me/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.html";
+  this.page.identifier = "using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023";
+  this.page.title = "Using C89 on a '80s Macintosh SE to solve Advent of Code 2023";
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = "https://kopiro.disqus.com/embed.js";
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+</section>
 </div>
 <div id="footer">
   © 2025 kopiro - <a href="https://www.kopiro.me/gpg.txt">0xEDE51005D982268E</a> -

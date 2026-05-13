@@ -1,3 +1,9 @@
+---
+title: "Convert a batch of images into Ghibli style using ChatGPT and macOS Automator"
+publishedAt: "2025-04-12T00:00:00.000Z"
+description: "If you love the warm, dreamy visuals of Studio Ghibli films, here's a powerful automation trick: an AppleScript automation that lets you select multiple imag..."
+coverImage: "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/media/363923ee.png"
+---
 # Convert a batch of images into Ghibli style using ChatGPT and macOS Automator
 
 ![Convert a batch of images into Ghibli style using ChatGPT and macOS Automator](./media/363923ee.png)

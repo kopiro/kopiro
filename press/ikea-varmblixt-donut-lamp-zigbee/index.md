@@ -1,3 +1,9 @@
+---
+title: "Make the IKEA VARMBLIXT Donut lamp smart with Zigbee"
+publishedAt: "2026-03-13T14:39:23.159Z"
+description: "I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable."
+coverImage: "/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg"
+---
 # Make the IKEA VARMBLIXT Donut lamp smart with Zigbee
 
 ![IKEA VARMBLIXT donut lamp](./media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg)

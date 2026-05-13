@@ -12,22 +12,22 @@
 ## blog
   
 * <span class="title">[Investing 101 in Sweden](/press/investing-101-in-sweden/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[The hardware behind Otto: a monkey plush which became my vocal assistant](/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[What I learned hacking the Facebook Messenger Soccer game](/press/what-i-learned-hacking-the-facebook-messenger-soccer-game/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music](/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[My Sage Barista espresso machine is now smart](/press/sage-barista-via-zigbee/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[Kata resolution: Next bigger number with the same digits](/press/kata-resolution-next-bigger-number-with-the-same-digits/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[Convert a batch of images into Ghibli style using ChatGPT and macOS Automator](/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[How to use different Git identities per directory](/press/how-to-use-different-git-identities-per-directory/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[How to use your LG remote to change OLED brightness](/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[Make the IKEA VARMBLIXT Donut lamp smart with Zigbee](/press/ikea-varmblixt-donut-lamp-zigbee/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[How to easily run any Linux tool on any machine](/press/how-to-easily-run-any-linux-tool-on-any-machine/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)](/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[How I built the SiriWaveJS library: a look at the math and the code](/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[How to correctly publish your Mac apps outside of the App Store](/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[Hey Siri, make coffee!](/press/hey-siri-make-coffee/index.html)</span><span class="subtitle"> (May 2026)</span>
-* <span class="title">[Claude Code while you drink an espresso](/press/claude-code-while-you-drink-an-espresso/index.html)</span><span class="subtitle"> (May 2026)</span>
+* <span class="title">[My Sage Barista espresso machine is now smart](/press/sage-barista-via-zigbee/index.html)</span><span class="subtitle"> (March 2026)</span>
+* <span class="title">[Make the IKEA VARMBLIXT Donut lamp smart with Zigbee](/press/ikea-varmblixt-donut-lamp-zigbee/index.html)</span><span class="subtitle"> (March 2026)</span>
+* <span class="title">[How to use different Git identities per directory](/press/how-to-use-different-git-identities-per-directory/index.html)</span><span class="subtitle"> (January 2026)</span>
+* <span class="title">[Claude Code while you drink an espresso](/press/claude-code-while-you-drink-an-espresso/index.html)</span><span class="subtitle"> (January 2026)</span>
+* <span class="title">[How to use your LG remote to change OLED brightness](/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.html)</span><span class="subtitle"> (January 2026)</span>
+* <span class="title">[Convert a batch of images into Ghibli style using ChatGPT and macOS Automator](/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.html)</span><span class="subtitle"> (April 2025)</span>
+* <span class="title">[How to correctly publish your Mac apps outside of the App Store](/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/index.html)</span><span class="subtitle"> (April 2025)</span>
+* <span class="title">[Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.html)</span><span class="subtitle"> (December 2023)</span>
+* <span class="title">[Hey Siri, make coffee!](/press/hey-siri-make-coffee/index.html)</span><span class="subtitle"> (January 2021)</span>
+* <span class="title">[How I built the SiriWaveJS library: a look at the math and the code](/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/index.html)</span><span class="subtitle"> (August 2020)</span>
+* <span class="title">[How to easily run any Linux tool on any machine](/press/how-to-easily-run-any-linux-tool-on-any-machine/index.html)</span><span class="subtitle"> (November 2018)</span>
+* <span class="title">[Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music](/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music/index.html)</span><span class="subtitle"> (July 2018)</span>
+* <span class="title">[The hardware behind Otto: a monkey plush which became my vocal assistant](/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant/index.html)</span><span class="subtitle"> (April 2018)</span>
+* <span class="title">[How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)](/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox/index.html)</span><span class="subtitle"> (January 2018)</span>
+* <span class="title">[What I learned hacking the Facebook Messenger Soccer game](/press/what-i-learned-hacking-the-facebook-messenger-soccer-game/index.html)</span><span class="subtitle"> (January 2017)</span>
+* <span class="title">[Kata resolution: Next bigger number with the same digits](/press/kata-resolution-next-bigger-number-with-the-same-digits/index.html)</span><span class="subtitle"> (July 2016)</span>
 
 ## websites
   

@@ -1,3 +1,9 @@
+---
+title: "What I learned hacking the Facebook Messenger Soccer game"
+publishedAt: "2017-01-01T00:00:00.000Z"
+description: "Recently, during the last European Football Championship, Facebook introduced a little game in the Messenger app that makes you lose hours and hours despite..."
+coverImage: "https://cdn-images-1.medium.com/max/2564/1*rHRhqfl0hZSYHdEsrJLF_A.png"
+---
 # What I learned hacking the Facebook Messenger Soccer game
 
 Recently, during the last European Football Championship, Facebook introduced a little game in the Messenger app that makes you lose hours and hours despite its simplicity.

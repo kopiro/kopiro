@@ -1,3 +1,9 @@
+---
+title: "How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)"
+publishedAt: "2018-01-01T00:00:00.000Z"
+description: "This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Mac(s). This is not intended to perform a Live Kali instal..."
+coverImage: "https://cdn-images-1.medium.com/max/2000/0*MzOP02pAieEe6wqE.png"
+---
 # How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)
 
 This tutorial is for everyone who wants a USB stick with a **full Kali installation** to use with your Mac(s). This is not intended to perform a Live Kali installation with persistence.

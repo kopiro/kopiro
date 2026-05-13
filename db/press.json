@@ -1,150 +1,150 @@
 [
   {
-    "slug": "claude-code-while-you-drink-an-espresso",
-    "title": "Claude Code while you drink an espresso",
-    "path": "/press/claude-code-while-you-drink-an-espresso/index.md",
-    "coverImage": "/press/claude-code-while-you-drink-an-espresso/media/claude-code-meme.png",
-    "description": "We have all been there: you are on a 4 hour session with Claude Code and you really need a break; it's in the middle of a big refactoring and you desperately...",
-    "publishedAt": "2026-05-13T09:26:51.387Z",
-    "htmlPath": "/press/claude-code-while-you-drink-an-espresso/index.html"
-  },
-  {
-    "slug": "hey-siri-make-coffee",
-    "title": "Hey Siri, make coffee!",
-    "path": "/press/hey-siri-make-coffee/index.md",
-    "coverImage": "/press/hey-siri-make-coffee/media/cefa0d21.jpeg",
-    "description": "“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the morning) to actually get up and make it. Therefore, I aut...",
-    "publishedAt": "2026-05-13T09:26:51.395Z",
-    "htmlPath": "/press/hey-siri-make-coffee/index.html"
-  },
-  {
-    "slug": "how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code",
-    "title": "How I built the SiriWaveJS library: a look at the math and the code",
-    "path": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/index.md",
-    "coverImage": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/media/fe41712c.png",
-    "description": "It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iPhone 4S) in the browser using pure Javascript.",
-    "publishedAt": "2026-05-13T09:26:51.401Z",
-    "htmlPath": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/index.html"
-  },
-  {
-    "slug": "how-to-correctly-publish-your-mac-apps-outside-of-the-app-store",
-    "title": "How to correctly publish your Mac apps outside of the App Store",
-    "path": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/index.md",
-    "coverImage": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/media/4e069123.png",
-    "description": "Distributing Mac apps outside of the App Store requires more than just building and zipping your .app.",
-    "publishedAt": "2026-05-13T09:26:51.401Z",
-    "htmlPath": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/index.html"
-  },
-  {
-    "slug": "how-to-easily-run-any-linux-tool-on-any-machine",
-    "title": "How to easily run any Linux tool on any machine",
-    "path": "/press/how-to-easily-run-any-linux-tool-on-any-machine/index.md",
-    "description": "Have you ever encountered a situation like the ones below?",
-    "publishedAt": "2026-05-13T09:26:51.403Z",
-    "htmlPath": "/press/how-to-easily-run-any-linux-tool-on-any-machine/index.html"
-  },
-  {
-    "slug": "how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox",
-    "title": "How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)",
-    "path": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox/index.md",
-    "coverImage": "https://cdn-images-1.medium.com/max/2000/0*MzOP02pAieEe6wqE.png",
-    "description": "This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Mac(s). This is not intended to perform a Live Kali instal...",
-    "publishedAt": "2026-05-13T09:26:51.403Z",
-    "htmlPath": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox/index.html"
-  },
-  {
-    "slug": "how-to-use-different-git-identities-per-directory",
-    "title": "How to use different Git identities per directory",
-    "path": "/press/how-to-use-different-git-identities-per-directory/index.md",
-    "description": "If you're like me, you have a personal email for your side projects and a work email for... well, work. And if you've ever accidentally committed to your com...",
-    "publishedAt": "2026-05-13T09:26:51.404Z",
-    "htmlPath": "/press/how-to-use-different-git-identities-per-directory/index.html"
-  },
-  {
-    "slug": "how-to-use-your-lg-remote-to-change-oled-brightness",
-    "title": "How to use your LG remote to change OLED brightness",
-    "path": "/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.md",
-    "description": "This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV.",
-    "publishedAt": "2026-05-13T09:26:51.404Z",
-    "htmlPath": "/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.html"
-  },
-  {
-    "slug": "ikea-varmblixt-donut-lamp-zigbee",
-    "title": "Make the IKEA VARMBLIXT Donut lamp smart with Zigbee",
-    "path": "/press/ikea-varmblixt-donut-lamp-zigbee/index.md",
-    "coverImage": "/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg",
-    "description": "I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable.",
-    "publishedAt": "2026-05-13T09:26:51.404Z",
-    "htmlPath": "/press/ikea-varmblixt-donut-lamp-zigbee/index.html"
-  },
-  {
+    "path": "/press/kata-resolution-next-bigger-number-with-the-same-digits/index.md",
+    "htmlPath": "/press/kata-resolution-next-bigger-number-with-the-same-digits/index.html",
     "slug": "kata-resolution-next-bigger-number-with-the-same-digits",
     "title": "Kata resolution: Next bigger number with the same digits",
-    "path": "/press/kata-resolution-next-bigger-number-with-the-same-digits/index.md",
     "description": "I would like to share with you my solution of a Kata on CodeWars.",
-    "publishedAt": "2026-05-13T09:26:51.414Z",
-    "htmlPath": "/press/kata-resolution-next-bigger-number-with-the-same-digits/index.html"
+    "publishedAt": "2016-07-29T00:00:00.000Z"
   },
   {
-    "slug": "process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator",
-    "title": "Convert a batch of images into Ghibli style using ChatGPT and macOS Automator",
-    "path": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.md",
-    "coverImage": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/media/363923ee.png",
-    "description": "If you love the warm, dreamy visuals of Studio Ghibli films, here's a powerful automation trick: an AppleScript automation that lets you select multiple imag...",
-    "publishedAt": "2026-05-13T09:26:51.414Z",
-    "htmlPath": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.html"
-  },
-  {
-    "slug": "reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music",
-    "title": "Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music",
-    "path": "/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music/index.md",
-    "coverImage": "https://cdn-images-1.medium.com/max/4840/1*OvPWrkcBq0y3teTmNLvdxg.png",
-    "description": "I recently tried a Google Home Mini and the most interesting feature is the ability to play music by Spotify directly on a Chromecast.",
-    "publishedAt": "2026-05-13T09:26:51.417Z",
-    "htmlPath": "/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music/index.html"
-  },
-  {
-    "slug": "sage-barista-via-zigbee",
-    "title": "My Sage Barista espresso machine is now smart",
-    "path": "/press/sage-barista-via-zigbee/index.md",
-    "coverImage": "/press/sage-barista-via-zigbee/media/top_module_wago_plus_zigbee.jpeg",
-    "description": "The goal is simple: having my Sage Barista already warm when I wake up.",
-    "publishedAt": "2026-05-13T09:26:51.417Z",
-    "htmlPath": "/press/sage-barista-via-zigbee/index.html"
-  },
-  {
-    "slug": "the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant",
-    "title": "The hardware behind Otto: a monkey plush which became my vocal assistant",
-    "path": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant/index.md",
-    "description": "Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February 2017.",
-    "publishedAt": "2026-05-13T09:26:51.441Z",
-    "htmlPath": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant/index.html"
-  },
-  {
-    "slug": "using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023",
-    "title": "Using C89 on a '80s Macintosh SE to solve Advent of Code 2023",
-    "path": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.md",
-    "coverImage": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/media/6930e2ea.jpeg",
-    "description": "For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have lying around and the ThinkC compiler.",
-    "publishedAt": "2026-05-13T09:26:51.441Z",
-    "htmlPath": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.html"
-  },
-  {
+    "path": "/press/what-i-learned-hacking-the-facebook-messenger-soccer-game/index.md",
+    "htmlPath": "/press/what-i-learned-hacking-the-facebook-messenger-soccer-game/index.html",
     "slug": "what-i-learned-hacking-the-facebook-messenger-soccer-game",
     "title": "What I learned hacking the Facebook Messenger Soccer game",
-    "path": "/press/what-i-learned-hacking-the-facebook-messenger-soccer-game/index.md",
     "coverImage": "https://cdn-images-1.medium.com/max/2564/1*rHRhqfl0hZSYHdEsrJLF_A.png",
     "description": "Recently, during the last European Football Championship, Facebook introduced a little game in the Messenger app that makes you lose hours and hours despite...",
-    "publishedAt": "2026-05-13T09:26:51.441Z",
-    "htmlPath": "/press/what-i-learned-hacking-the-facebook-messenger-soccer-game/index.html"
+    "publishedAt": "2017-01-01T00:00:00.000Z"
   },
   {
+    "path": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox/index.md",
+    "htmlPath": "/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox/index.html",
+    "slug": "how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox",
+    "title": "How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)",
+    "coverImage": "https://cdn-images-1.medium.com/max/2000/0*MzOP02pAieEe6wqE.png",
+    "description": "This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Mac(s). This is not intended to perform a Live Kali instal...",
+    "publishedAt": "2018-01-01T00:00:00.000Z"
+  },
+  {
+    "path": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant/index.md",
+    "htmlPath": "/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant/index.html",
+    "slug": "the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant",
+    "title": "The hardware behind Otto: a monkey plush which became my vocal assistant",
+    "description": "Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February 2017.",
+    "publishedAt": "2018-04-13T00:00:00.000Z"
+  },
+  {
+    "path": "/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music/index.md",
+    "htmlPath": "/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music/index.html",
+    "slug": "reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music",
+    "title": "Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music",
+    "coverImage": "https://cdn-images-1.medium.com/max/4840/1*OvPWrkcBq0y3teTmNLvdxg.png",
+    "description": "I recently tried a Google Home Mini and the most interesting feature is the ability to play music by Spotify directly on a Chromecast.",
+    "publishedAt": "2018-07-31T00:00:00.000Z"
+  },
+  {
+    "path": "/press/how-to-easily-run-any-linux-tool-on-any-machine/index.md",
+    "htmlPath": "/press/how-to-easily-run-any-linux-tool-on-any-machine/index.html",
+    "slug": "how-to-easily-run-any-linux-tool-on-any-machine",
+    "title": "How to easily run any Linux tool on any machine",
+    "description": "Have you ever encountered a situation like the ones below?",
+    "publishedAt": "2018-11-29T00:00:00.000Z"
+  },
+  {
+    "path": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/index.md",
+    "htmlPath": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/index.html",
+    "slug": "how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code",
+    "title": "How I built the SiriWaveJS library: a look at the math and the code",
+    "coverImage": "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/media/fe41712c.png",
+    "description": "It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iPhone 4S) in the browser using pure Javascript.",
+    "publishedAt": "2020-08-03T00:00:00.000Z"
+  },
+  {
+    "path": "/press/hey-siri-make-coffee/index.md",
+    "htmlPath": "/press/hey-siri-make-coffee/index.html",
+    "slug": "hey-siri-make-coffee",
+    "title": "Hey Siri, make coffee!",
+    "coverImage": "/press/hey-siri-make-coffee/media/cefa0d21.jpeg",
+    "description": "“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the morning) to actually get up and make it. Therefore, I aut...",
+    "publishedAt": "2021-01-20T23:00:00.000Z"
+  },
+  {
+    "path": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.md",
+    "htmlPath": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.html",
+    "slug": "using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023",
+    "title": "Using C89 on a '80s Macintosh SE to solve Advent of Code 2023",
+    "coverImage": "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/media/6930e2ea.jpeg",
+    "description": "For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have lying around and the ThinkC compiler.",
+    "publishedAt": "2023-12-02T23:00:00.000Z"
+  },
+  {
+    "path": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/index.md",
+    "htmlPath": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/index.html",
+    "slug": "how-to-correctly-publish-your-mac-apps-outside-of-the-app-store",
+    "title": "How to correctly publish your Mac apps outside of the App Store",
+    "coverImage": "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/media/4e069123.png",
+    "description": "Distributing Mac apps outside of the App Store requires more than just building and zipping your .app.",
+    "publishedAt": "2025-04-10T00:00:00.000Z"
+  },
+  {
+    "path": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.md",
+    "htmlPath": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.html",
+    "slug": "process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator",
+    "title": "Convert a batch of images into Ghibli style using ChatGPT and macOS Automator",
+    "coverImage": "/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/media/363923ee.png",
+    "description": "If you love the warm, dreamy visuals of Studio Ghibli films, here's a powerful automation trick: an AppleScript automation that lets you select multiple imag...",
+    "publishedAt": "2025-04-12T00:00:00.000Z"
+  },
+  {
+    "path": "/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.md",
+    "htmlPath": "/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.html",
+    "slug": "how-to-use-your-lg-remote-to-change-oled-brightness",
+    "title": "How to use your LG remote to change OLED brightness",
+    "description": "This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV.",
+    "publishedAt": "2026-01-05T20:30:25.011Z"
+  },
+  {
+    "path": "/press/claude-code-while-you-drink-an-espresso/index.md",
+    "htmlPath": "/press/claude-code-while-you-drink-an-espresso/index.html",
+    "slug": "claude-code-while-you-drink-an-espresso",
+    "title": "Claude Code while you drink an espresso",
+    "coverImage": "/press/claude-code-while-you-drink-an-espresso/media/claude-code-meme.png",
+    "description": "We have all been there: you are on a 4 hour session with Claude Code and you really need a break; it's in the middle of a big refactoring and you desperately...",
+    "publishedAt": "2026-01-07T04:29:54.356Z"
+  },
+  {
+    "path": "/press/how-to-use-different-git-identities-per-directory/index.md",
+    "htmlPath": "/press/how-to-use-different-git-identities-per-directory/index.html",
+    "slug": "how-to-use-different-git-identities-per-directory",
+    "title": "How to use different Git identities per directory",
+    "description": "If you're like me, you have a personal email for your side projects and a work email for... well, work. And if you've ever accidentally committed to your com...",
+    "publishedAt": "2026-01-08T14:15:59.930Z"
+  },
+  {
+    "path": "/press/ikea-varmblixt-donut-lamp-zigbee/index.md",
+    "htmlPath": "/press/ikea-varmblixt-donut-lamp-zigbee/index.html",
+    "slug": "ikea-varmblixt-donut-lamp-zigbee",
+    "title": "Make the IKEA VARMBLIXT Donut lamp smart with Zigbee",
+    "coverImage": "/press/ikea-varmblixt-donut-lamp-zigbee/media/ikea-varmblixt-donut-lamp-zigbee-cover-2.jpg",
+    "description": "I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable.",
+    "publishedAt": "2026-03-13T14:39:23.159Z"
+  },
+  {
+    "path": "/press/sage-barista-via-zigbee/index.md",
+    "htmlPath": "/press/sage-barista-via-zigbee/index.html",
+    "slug": "sage-barista-via-zigbee",
+    "title": "My Sage Barista espresso machine is now smart",
+    "coverImage": "/press/sage-barista-via-zigbee/media/top_module_wago_plus_zigbee.jpeg",
+    "description": "The goal is simple: having my Sage Barista already warm when I wake up.",
+    "publishedAt": "2026-03-19T10:58:01.162Z"
+  },
+  {
+    "path": "/press/investing-101-in-sweden/investing-101-in-sweden.md",
+    "htmlPath": "/press/investing-101-in-sweden/index.html",
     "slug": "investing-101-in-sweden",
     "title": "Investing 101 in Sweden",
-    "path": "/press/investing-101-in-sweden/investing-101-in-sweden.md",
     "coverImage": "/press/investing-101-in-sweden/media/stock-goes-up.jpg",
     "description": "A simple guide to start managing your finances better in Sweden.",
-    "publishedAt": "2026-05-13T13:05:31.123Z",
-    "htmlPath": "/press/investing-101-in-sweden/index.html"
+    "publishedAt": "2026-05-13T10:17:08.688Z"
   }
 ]

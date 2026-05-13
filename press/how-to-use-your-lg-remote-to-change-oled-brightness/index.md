@@ -1,3 +1,8 @@
+---
+title: "How to use your LG remote to change OLED brightness"
+publishedAt: "2026-01-05T20:30:25.011Z"
+description: "This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV."
+---
 # How to use your LG remote to change OLED brightness
 
 This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV.

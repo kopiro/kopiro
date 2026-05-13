@@ -1,3 +1,8 @@
+---
+title: "Kata resolution: Next bigger number with the same digits"
+publishedAt: "2016-07-29T00:00:00.000Z"
+description: "I would like to share with you my solution of a Kata on CodeWars."
+---
 # Kata resolution: Next bigger number with the same digits
 
 I would like to share with you my solution of a Kata on CodeWars.

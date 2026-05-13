@@ -1,3 +1,9 @@
+---
+title: "Claude Code while you drink an espresso"
+publishedAt: "2026-01-07T04:29:54.356Z"
+description: "We have all been there: you are on a 4 hour session with Claude Code and you really need a break; it's in the middle of a big refactoring and you desperately..."
+coverImage: "/press/claude-code-while-you-drink-an-espresso/media/claude-code-meme.png"
+---
 # Claude Code while you drink an espresso
 
 ![Claude Code Meme](./media/claude-code-meme.png)

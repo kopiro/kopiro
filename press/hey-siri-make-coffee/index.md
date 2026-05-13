@@ -1,3 +1,9 @@
+---
+title: "Hey Siri, make coffee!"
+publishedAt: "2021-01-20T23:00:00.000Z"
+description: "“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the morning) to actually get up and make it. Therefore, I aut..."
+coverImage: "/press/hey-siri-make-coffee/media/cefa0d21.jpeg"
+---
 # Hey Siri, make coffee!
 
 ![Hey Siri, make coffee!](./media/cefa0d21.jpeg)

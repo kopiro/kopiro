@@ -1,3 +1,8 @@
+---
+title: "The hardware behind Otto: a monkey plush which became my vocal assistant"
+publishedAt: "2018-04-13T00:00:00.000Z"
+description: "Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February 2017."
+---
 # The hardware behind Otto: a monkey plush which became my vocal assistant
 
 Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February 2017.

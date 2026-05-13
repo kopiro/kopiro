@@ -1,3 +1,9 @@
+---
+title: "My Sage Barista espresso machine is now smart"
+publishedAt: "2026-03-19T10:58:01.162Z"
+description: "The goal is simple: having my Sage Barista already warm when I wake up."
+coverImage: "/press/sage-barista-via-zigbee/media/top_module_wago_plus_zigbee.jpeg"
+---
 # My Sage Barista espresso machine is now smart
 
 ![Final wiring with WAGO connectors and Zigbee module attached](./media/top_module_wago_plus_zigbee.jpeg)

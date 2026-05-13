@@ -1,3 +1,9 @@
+---
+title: "How to correctly publish your Mac apps outside of the App Store"
+publishedAt: "2025-04-10T00:00:00.000Z"
+description: "Distributing Mac apps outside of the App Store requires more than just building and zipping your .app."
+coverImage: "/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/media/4e069123.png"
+---
 # How to correctly publish your Mac apps outside of the App Store
 
 Distributing Mac apps outside of the App Store requires more than just building and zipping your .app. 

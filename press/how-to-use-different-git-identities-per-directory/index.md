@@ -1,3 +1,8 @@
+---
+title: "How to use different Git identities per directory"
+publishedAt: "2026-01-08T14:15:59.930Z"
+description: "If you're like me, you have a personal email for your side projects and a work email for... well, work. And if you've ever accidentally committed to your com..."
+---
 # How to use different Git identities per directory
 
 If you're like me, you have a personal email for your side projects and a work email for... well, work. And if you've ever accidentally committed to your company's repo with `cooldude42@gmail.com`, you know the pain.

@@ -3,44 +3,7 @@ require("./config");
 const fs = require("fs");
 const path = require("path");
 const paths = require("./paths");
-const { walkMarkdowns } = require("./utils");
-
-const MAX_DESCRIPTION_LENGTH = 160;
-
-/**
- * Extracts the first meaningful paragraph from markdown content.
- * Skips: headings, images, empty lines, embeds.
- */
-function extractFirstParagraph(markdown) {
-  const lines = markdown.split("\n");
-
-  for (const line of lines) {
-    const trimmed = line.trim();
-    if (!trimmed) continue;
-    if (trimmed.startsWith("#")) continue;
-    if (trimmed.startsWith("![")) continue;
-    if (trimmed.startsWith("{%")) continue;
-    if (/^[-*_]{3,}$/.test(trimmed)) continue;
-
-    // Clean up markdown formatting
-    let description = trimmed
-      .replace(/^\*["'](.*)["']\*$/, "$1")
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
-      .replace(/`([^`]+)`/g, "$1")
-      .replace(/\*\*([^*]+)\*\*/g, "$1")
-      .replace(/\*([^*]+)\*/g, "$1")
-      .replace(/__([^_]+)__/g, "$1")
-      .replace(/_([^_]+)_/g, "$1");
-
-    if (description.length > MAX_DESCRIPTION_LENGTH) {
-      description = description.substring(0, MAX_DESCRIPTION_LENGTH - 3).trim() + "...";
-    }
-
-    return description;
-  }
-
-  return null;
-}
+const { parseFrontmatter, walkMarkdowns } = require("./utils");
 
 function resolvePublicAssetPath(markdownFile, assetPath) {
   if (!assetPath || /^(?:[a-z]+:)?\/\//i.test(assetPath) || assetPath.startsWith("/")) {
@@ -59,88 +22,51 @@ const listMarkdownFromPublicFolder = () => {
     const htmlPath = `/press/${slug}/index.html`;
 
     const absolutePath = path.join(paths.root, file);
-    const content = fs.readFileSync(absolutePath, "utf-8").trim();
+    const content = fs.readFileSync(absolutePath, "utf-8");
+    const { attributes } = parseFrontmatter(content, file);
 
-    const title = content.match(/^# (.+)$/m)?.[1];
-    const coverImage = resolvePublicAssetPath(file, content.match(/^!\[.*?\]\((.+?)\)$/m)?.[1]);
-    const description = extractFirstParagraph(content) || title;
-    const creationTimestamp = fs.statSync(absolutePath).birthtime;
+    for (const key of ["title", "publishedAt", "description"]) {
+      if (typeof attributes[key] !== "string" || !attributes[key].trim()) {
+        throw new Error(`Missing required frontmatter field "${key}" in ${file}`);
+      }
+    }
 
-    return {
+    if (Number.isNaN(new Date(attributes.publishedAt).getTime())) {
+      throw new Error(`Invalid publishedAt frontmatter value in ${file}: ${attributes.publishedAt}`);
+    }
+
+    const coverImage =
+      typeof attributes.coverImage === "string" && attributes.coverImage.trim()
+        ? resolvePublicAssetPath(file, attributes.coverImage)
+        : undefined;
+
+    const article = {
       path: "/" + file,
       htmlPath,
       slug,
-      publishedAt: creationTimestamp,
-      title,
+      title: attributes.title,
       coverImage,
-      description,
+      description: attributes.description,
+      publishedAt: attributes.publishedAt,
     };
+
+    if (attributes.hidden === true) {
+      article.hidden = true;
+    }
+
+    return article;
   });
 };
 
 function createPressDatabase() {
   const filePath = path.join(paths.db, "press.json");
-
-  // Read existing press.json if it exists
-  let existingData = [];
-  try {
-    const content = fs.readFileSync(filePath, "utf-8");
-    existingData = JSON.parse(content);
-  } catch {
-    // File doesn't exist or is invalid, start fresh
-  }
-
-  // Create a map of existing entries by slug for easy lookup
-  const existingBySlug = new Map(existingData.map((e) => [e.slug, e]));
-
   const press = listMarkdownFromPublicFolder();
 
-  // Track which slugs we've processed from markdown files
-  const processedSlugs = new Set();
-  let addedCount = 0;
-  const updatedData = [];
-
-  // Process markdown files, merging with existing data
-  for (const { path, htmlPath, slug, publishedAt, title, coverImage, description } of press) {
-    processedSlugs.add(slug);
-    const existing = existingBySlug.get(slug);
-
-    if (existing) {
-      // Always overwrite title, description and coverImage from markdown
-      updatedData.push({
-        ...existing,
-        path,
-        htmlPath,
-        title,
-        coverImage,
-        description,
-      });
-    } else {
-      updatedData.push({
-        slug,
-        title,
-        path,
-        coverImage,
-        description,
-        publishedAt,
-        htmlPath,
-      });
-      addedCount++;
-    }
-  }
-
-  // Also preserve entries from the database that don't have markdown files
-  for (const existing of existingData) {
-    if (!processedSlugs.has(existing.slug)) {
-      updatedData.push(existing);
-    }
-  }
-
   // Sort by publishedAt date (oldest first, newest at the end)
-  updatedData.sort((a, b) => new Date(a.publishedAt) - new Date(b.publishedAt));
+  press.sort((a, b) => new Date(a.publishedAt) - new Date(b.publishedAt));
 
-  fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2));
-  console.log(`Press database generated in ${filePath} (${updatedData.length} entries, ${addedCount} new)`);
+  fs.writeFileSync(filePath, JSON.stringify(press, null, 2) + "\n");
+  console.log(`Press database generated in ${filePath} (${press.length} entries)`);
 
   return press;
 }

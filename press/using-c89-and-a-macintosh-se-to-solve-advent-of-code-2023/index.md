@@ -1,3 +1,9 @@
+---
+title: "Using C89 on a '80s Macintosh SE to solve Advent of Code 2023"
+publishedAt: "2023-12-02T23:00:00.000Z"
+description: "For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have lying around and the ThinkC compiler."
+coverImage: "/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/media/6930e2ea.jpeg"
+---
 # Using C89 on a '80s Macintosh SE to solve Advent of Code 2023
 
 ![Using C89 on a '80s Macintosh SE to solve Advent of Code 2023](./media/6930e2ea.jpeg)

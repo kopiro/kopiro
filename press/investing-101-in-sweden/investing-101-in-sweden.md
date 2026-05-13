@@ -1,6 +1,14 @@
+---
+title: "Investing 101 in Sweden"
+publishedAt: "2026-05-13T10:17:08.688Z"
+description: "A simple guide to start managing your finances better in Sweden."
+coverImage: "/press/investing-101-in-sweden/media/stock-goes-up.jpg"
+---
 # Investing 101 in Sweden
 
 A simple guide to start managing your finances better in Sweden.
+
+This guide is split in two parts. The first part gives you the simple setup and the decisions that matter most. The second part, **[For the nerds](#for-the-nerds)**, contains the details, caveats, and deeper explanations if you want to understand the mechanics.
 
 ## Why invest at all?
 
@@ -37,9 +45,7 @@ After 20 years, more than half of your portfolio is returns. After 30, it's over
 
 Those returns are not free money. They are compensation for taking risk: the market can fall, sometimes for years, and you only get the long-term return if you can stay invested through the bad periods.
 
----
-
-## Investing does not have to become a hobby
+### Investing does not have to become a hobby
 
 Many people avoid investing because they think it means picking stocks, reading company reports, watching the market every day, and constantly deciding what to buy or sell. That sounds exhausting, and honestly, it is not what most people should be doing.
 
@@ -59,8 +65,6 @@ Before you put a single krona into the stock market, you need to organize your f
 - **Pillar 2: Emergency fund.** 4-8 months of unpredictable expenses in a savings account. Money you never touch unless something goes seriously wrong.
 - **Pillar 3: Invest the rest.** Everything left goes into your ISK on Avanza. ~85% global equity fund, ~15% gold.
 
----
-
 ## Pillar 1: Liquidity
 
 ![Cannolo](./media/cannolo.jpg)
@@ -74,8 +78,6 @@ For banking, I recommend two accounts:
 2. [**Revolut**](https://www.revolut.com/referral/?referral-code=flaviovve%21MAR1-24-AR-LL) for daily spending. This is a referral link. If you ever move out of Sweden, your Revolut account stays with you — all your transaction history, statistics, and cards remain intact, unlike a Swedish bank account you'd close on the way out. It's also the best option for traveling abroad: the exchange rates are close to interbank rates with minimal fees, and the app is genuinely well designed for tracking what you spend. I use it as my primary card for everything except Swish.
 
 One thing: don't use Revolut for investing. They don't offer ISK accounts, so you'd be stuck with worse tax treatment compared to Avanza. Keep Revolut for spending, keep Avanza for investing.
-
----
 
 ## Pillar 2: The emergency fund
 
@@ -99,27 +101,23 @@ Use this official comparison tool from Konsumenternas (the Swedish consumer fina
 
 Filter for flexible accounts only. Ignore fixed-term offers, they pay more but defeat the purpose.
 
----
-
 ## Pillar 3: The investment fund
-
-![Mutual fund](./media/mutual-fund.jpg)
-
-Before investing, separate long-term money from short-term money. Only invest money you do not need for at least **5-10 years**. If you already know you will need the money soon — moving costs, a car, an apartment down payment, taxes, a wedding, a big trip, a large purchase — keep it in a savings account instead. The stock market is for money that can survive bad timing.
-
-## Why picking stocks is a bad idea
 
 ![Cherry picking](./media/cherry-picking.jpg)
 
-You might be tempted to skip index funds and pick individual stocks yourself. A company looks cheap, another one is "obviously" going to grow, and you feel like you can spot a good deal. The problem is that everyone else is looking at the same information and thinking the same thing.
 
-This is what the [Efficient-market hypothesis](https://en.wikipedia.org/wiki/Efficient-market_hypothesis) describes: stock prices already reflect all publicly available information. If a company looks undervalued to you, it looks undervalued to thousands of professional analysts too, and that assessment is already baked into the price. The only way to consistently have an edge is to know something the market doesn't, which is [insider trading](https://en.wikipedia.org/wiki/Insider_trading) and it's illegal.
+Before investing, separate long-term money from short-term money. Only invest money you do not need for at least **5-10 years**. If you already know you will need the money soon — moving costs, a car, an apartment down payment, taxes, a wedding, a big trip, a large purchase — keep it in a savings account instead. The stock market is for money that can survive bad timing.
 
-Even professional fund managers, who do this full-time with teams of analysts, fail to beat the market consistently. Study after study shows that the majority of actively managed funds underperform their benchmark index over a 10-year period.
+### Why picking stocks is a bad idea
 
-We are still investing in the stock market, though. The difference is that instead of concentrating our money in a few companies we think will win, we spread it across thousands. This gives us the market's return while minimizing the risk that any single company drags us down. In finance, the measure of how much return you get per unit of risk is called the [Sharpe ratio](https://en.wikipedia.org/wiki/Sharpe_ratio). A broadly diversified index fund has a much better Sharpe ratio than a handful of stocks you picked because you "had a feeling".
 
-## Open an ISK on Avanza
+You might be tempted to skip funds and pick individual stocks yourself. A company looks cheap, another one is "obviously" going to grow, and you feel like you can spot a good deal.
+
+The problem is simple: everyone else is looking at the same information. If a company looks like a bargain to you, it probably looks like a bargain to thousands of people who do this full-time.
+
+We are still investing in the stock market, though. The difference is that we are not betting everything on a few companies we think will win. We spread the money across thousands of companies, so one bad company cannot ruin the whole plan.
+
+### Open an ISK on Avanza
 
 [Avanza](https://www.avanza.se) is the recommended broker. It's Sweden's largest investment platform, with zero commission on fund purchases and the ability to set up automatic monthly investments.
 
@@ -127,73 +125,61 @@ When you sign up, open an **[ISK](https://en.wikipedia.org/wiki/Investeringsspar
 
 One important thing: don't leave uninvested cash sitting in your ISK. The flat tax applies to everything in the account, including cash. If you have money in your ISK that isn't invested, you're paying tax on it for no return. Either invest it or keep it in your regular bank account until you're ready to buy.
 
-## Pick a fund (the 85%)
+### Pick a fund (the 85%)
 
-### What is a fund?
+#### What is a fund?
 
 Buying a single stock is like buying one cherry. If that cherry is rotten, you're out. A [mutual fund](https://en.wikipedia.org/wiki/Mutual_fund) is a basket with hundreds or thousands of cherries. Some will be rotten, some will be great, but the basket as a whole does fine.
 
-In practice, a fund pools money from thousands of investors and uses it to buy stocks according to a set of rules. You buy a share of the fund, and that share represents a tiny slice of everything the fund holds. The difference between fund types comes down to who writes the rules. In an [index fund](https://en.wikipedia.org/wiki/Index_fund), the rules are mechanical: buy every stock in a given list (the [index](https://en.wikipedia.org/wiki/Stock_market_index)), weighted by company size. In an actively managed fund, a human decides what to buy and when. As you'll see below, the human almost always loses.
+In practice, a fund pools money from many investors and uses it to buy many stocks. You buy a share of the fund, and that share represents a tiny slice of everything the fund owns.
 
-### Why a passive index fund?
+#### Why a passive index fund?
 
-You want a single fund that gives you the entire world, charges almost nothing, and requires zero maintenance. That means a passive index fund, not an actively managed one.
+Some funds are run by people who try to pick winners. Those are actively managed funds. Other funds just follow a broad list of companies automatically. Those are passive index funds.
 
-The data on this is overwhelming. The [SPIVA Scorecard](https://www.spglobal.com/spdji/en/research-insights/spiva/), published twice a year by S&P Global, has tracked active fund performance against their benchmarks since 2002. The numbers are consistent across every region and every time period: over 15 years, roughly [87% of actively managed funds in Europe underperform their index](https://www.spglobal.com/spdji/en/spiva/). In the US, it's over 90%. The longer the time horizon, the worse active funds do. You're paying higher fees for a manager who is statistically likely to lose to a computer that just buys everything.
-
-[Warren Buffett](https://en.wikipedia.org/wiki/Warren_Buffett) bet a hedge fund manager $1 million in 2007 that a simple S&P 500 index fund would beat a basket of hedge funds over 10 years. [He won easily.](https://en.wikipedia.org/wiki/Buffett%27s_bet) The index fund returned 125.8% vs 36% for the hedge funds. And the hedge funds charged 2% management fees plus 20% of profits on top of that.
+For this strategy, you want the boring automatic version: one fund that gives you the world, charges very little, and requires almost no maintenance.
 
 The fund you pick should be:
 
 - **Global.** Not just the US, not just Europe. You want exposure to as many countries and companies as possible, including emerging markets. Nobody knows which region will outperform next decade, so you buy all of them.
-- **Cheap.** Fees compound just like returns. A fund charging 1.5% vs 0.30% costs you tens of thousands of SEK over a 20-year horizon. The [2024 Morningstar fee study](https://www.morningstar.com/lp/annual-us-fund-fee-study) found that fees are the single best predictor of future fund performance — not past returns, not the manager's track record.
-- **Passive / index-tracking.** You want a fund that mechanically follows a broad index, weighted by market cap. No human picking winners, no "smart beta", and no narrow theme pretending to be the market. If the fund applies ESG or sustainability filters, make sure you understand what they exclude.
-- **Denominated in SEK.** This avoids the broker currency conversion fees discussed in the expert section below. It does **not** remove currency risk: a global fund still owns US, European, Japanese, and other foreign assets underneath, and their values move with USD, EUR, JPY, and other currencies.
+- **Cheap.** Fees are boring, but they matter a lot. A high fee quietly eats your return every year.
+- **Passive / index-tracking.** The fund should follow a broad list of companies automatically instead of relying on a manager to guess winners.
+- **Bought in SEK.** This keeps monthly buying simple and avoids Avanza converting currency on every purchase. More detail in the expert section.
 
-### Storebrand Global All Countries A SEK
+#### Storebrand Global All Countries A SEK
 
 **Link:** [Avanza fund page](https://www.avanza.se/fonder/om-fonden.html/2332/storebrand-global-all-countries-a-sek)
 
-| Detail | Value |
-|---|---|
-| Annual fee | 0.30% |
-| Index tracked | [MSCI ACWI](https://en.wikipedia.org/wiki/MSCI) (All Countries World Index) |
-| Number of holdings | ~1,700-2,300 companies |
-| Markets | Developed + Emerging (global) |
-| AUM | ~50 billion SEK |
-| [Morningstar](https://en.wikipedia.org/wiki/Morningstar,_Inc.) rating | 4/5 |
+This is the main fund I recommend. It gives you thousands of companies across developed markets and emerging markets in one purchase. That means the US, Europe, Japan, China, India, Brazil, and more.
 
-The [MSCI ACWI](https://en.wikipedia.org/wiki/MSCI) index covers approximately 85% of the global investable equity market: the US, Europe, Japan, emerging markets like China, India, Brazil, and more. By buying this one [index fund](https://en.wikipedia.org/wiki/Index_fund), you own a tiny piece of thousands of companies worldwide. No single country, sector, or company can sink you, and you don't need to guess which region will outperform next year.
+By buying this one fund, you own a tiny piece of many companies worldwide. No single country, sector, or company can sink you, and you don't need to guess which region will outperform next year.
 
-At 0.30%, the fee is low for a SEK-denominated fund that includes emerging markets. The expert section below explains why a Swedish mutual fund often ends up cheaper than a Vanguard ETF despite the higher headline fee.
+The annual fee is 0.30%, which is low for a global SEK fund that includes emerging markets.
 
----
 
-## Pick your gold (the 15%)
+### Pick your gold (the 15%)
 
-Gold doesn't pay [dividends](https://en.wikipedia.org/wiki/Dividend) or generate earnings. You hold it as a [hedge](https://en.wikipedia.org/wiki/Hedge_(finance)). A hedge is an investment that tends to move in the opposite direction of the rest of your portfolio. You're not buying it to make money — you're buying it so that when everything else drops, something in your portfolio goes up (or at least holds steady) instead. It's insurance you get paid back for over time.
+Gold is not there to make you rich. It is there to make the ride less scary.
 
-Gold specifically tends to keep its value or rise when stock markets fall, which makes it a hedge against inflation, [currency devaluation](https://en.wikipedia.org/wiki/Devaluation), and geopolitical instability.
+When stocks crash, gold often holds its value better or goes up. That means your total portfolio drops less, and you panic less. That matters, because the biggest risk to a long-term investor is *selling during a crash*.
 
-Allocating ~15% to gold smooths out the ride. When stocks crash 30%, gold often goes up, which means your total portfolio drops less, and you panic less. That matters, because the biggest risk to a long-term investor is *selling during a crash*.
+In Sweden, there are no normal mutual funds that invest directly in physical gold. So the simplest option on Avanza is a stock-exchange product that tracks physical gold:
 
-In Sweden, there are no mutual funds that invest directly in physical gold. So you need to use an [ETC (Exchange Traded Commodity)](https://en.wikipedia.org/wiki/Exchange-traded_commodity) instead:
+**[Invesco Physical Gold ETC](https://www.avanza.se/borshandlade-produkter/certifikat-torg/om-certifikatet.html/1182097/invesco-physical-gold-etc)** (ticker: SGLD, ISIN: IE00B579F325) — 0.12% annual fee, physically backed by gold bars in vaults.
 
-**[Invesco Physical Gold ETC](https://www.avanza.se/borshandlade-produkter/certifikat-torg/om-certifikatet.html/1182097/invesco-physical-gold-etc)** (ticker: SGLD, ISIN: IE00B579F325) — 0.12% annual fee, physically backed by gold bars in vaults. You buy it in SEK on Avanza even though it's denominated in USD.
+You cannot put this in Avanza's automatic monthly fund purchase flow, so buy it manually once in a while and keep it around the ~15% target.
 
-Since this is an ETC and not a fund, you cannot set up automatic monthly purchases for it on Avanza. You'll need to buy it manually, once a month, once a quarter, or whenever you add new money. Just maintain the ~15% target over time.
-
-## Set up monthly investing
+### Set up monthly investing
 
 ![Monthly saving](./media/monthly-saving.jpg)
 
 Once your ISK is open and you've picked your fund, the last step is to automate everything so you never have to think about it.
 
-### How much to invest
+#### How much to invest
 
 In theory, your investable amount each month is your salary minus your expenses. In practice, you might not want to invest all of that. Pick a percentage you're comfortable with and that still leaves room for planned expenses (travel, bigger purchases, etc.). Even a smaller amount invested consistently is better than a larger amount invested sporadically.
 
-### Set up månadssparande
+#### Set up månadssparande
 
 Go to [Avanza's månadssparande page](https://www.avanza.se/manadssparande.html) and set up a monthly auto-invest. You pick which fund(s), how much goes into each, and the day of the month. Avanza handles the auto-giro from your bank automatically as part of the same setup.
 
@@ -213,19 +199,14 @@ If you have extra money set aside, a crash is actually a great opportunity to bu
 
 The best approach is boring: invest consistently every month regardless of what the market is doing. Your dollar-cost averaging setup handles this automatically. The people who lose money in the stock market are the ones who panic sell at the bottom and buy back in after the recovery.
 
-## Don't forget your Tjänstepension (TJP)
+## Don't forget your pensions
 
-If you work in Sweden, your employer is almost certainly contributing to a [tjänstepension](https://en.wikipedia.org/wiki/Pensions_in_Sweden) (occupational pension) on your behalf. This is money that gets invested for your retirement, and in most cases you get to choose *how* it's invested.
+If you work in Sweden, you probably have pension money invested in two places outside your ISK:
 
-The same rules apply here. Pick a cheap global index fund, avoid actively managed funds with high fees, and don't overthink it. There is no reason to apply a different strategy to your tjänstepension than to your ISK. It's the same stock market, the same long time horizon, and the same math.
+- **Tjänstepension:** extra retirement money paid by your employer.
+- **Premiepension (PPM):** part of the Swedish state pension that you can invest yourself.
 
-The default option your employer or pension provider picks for you is often an actively managed fund with fees above 1%. Log in to your pension provider, check what you're invested in, and switch to the cheapest global index fund they offer. You do this once and forget about it.
-
-## Don't forget your Premiepension (PPM)
-
-On top of tjänstepension, the Swedish state pension system ([allmän pension](https://en.wikipedia.org/wiki/Pensions_in_Sweden)) takes 2.5% of your salary and puts it into a [premiepension](https://www.pensionsmyndigheten.se/ga-i-pension/om-premiepensionen) account. You get to choose up to 5 funds for this money. If you never make a choice, it goes into AP7 Såfa, which is actually a decent default — it's a global equity fund with low fees that automatically shifts toward bonds as you get older.
-
-If you want to pick your own funds, log in to [pensionsmyndigheten.se](https://www.pensionsmyndigheten.se) with BankID. The fund selection is more limited than Avanza, but the same principle applies: pick a cheap global index fund. AP7 Såfa is honestly fine for most people, so if you're already there, you can leave it. You can use [minpension.se](https://www.minpension.se) to get an overview of all your pensions in one place, but you can't change your PPM funds there.
+The same rule applies: pick a cheap global index fund and avoid expensive actively managed funds. For PPM, AP7 Såfa is already a good default, so leaving it alone is fine. Use [minpension.se](https://www.minpension.se) to see everything in one place, then log in to your actual pension provider or [pensionsmyndigheten.se](https://www.pensionsmyndigheten.se) if you want to change anything.
 
 ---
 
@@ -259,9 +240,37 @@ The details matter, of course: mortgages, taxes, monthly cash flow, and selling 
 
 ---
 
-## For the experts
+## For the nerds
 
 If you've made it this far and set everything up, you're already in great shape. What follows are topics worth understanding but not strictly necessary to get started. Fair warning: the deeper you go, the more nuanced things get, and my own understanding of some of these details may not be 100% precise. Take it as a starting point, not gospel.
+
+### Why stock picking is hard
+
+This is what the [Efficient-market hypothesis](https://en.wikipedia.org/wiki/Efficient-market_hypothesis) describes: stock prices already reflect all publicly available information. If a company looks undervalued to you, it looks undervalued to thousands of professional analysts too, and that assessment is already baked into the price.
+
+The only way to consistently have an edge is to know something the market doesn't, which is [insider trading](https://en.wikipedia.org/wiki/Insider_trading) and it's illegal.
+
+Even professional fund managers, who do this full-time with teams of analysts, fail to beat the market consistently. Study after study shows that the majority of actively managed funds underperform their benchmark index over a 10-year period.
+
+We are still investing in the stock market, though. The difference is that instead of concentrating our money in a few companies we think will win, we spread it across thousands. This gives us the market's return while minimizing the risk that any single company drags us down. In finance, the measure of how much return you get per unit of risk is called the [Sharpe ratio](https://en.wikipedia.org/wiki/Sharpe_ratio). A broadly diversified index fund has a much better Sharpe ratio than a handful of stocks you picked because you "had a feeling".
+
+### Evidence for passive funds
+
+In an [index fund](https://en.wikipedia.org/wiki/Index_fund), the rules are mechanical: buy every stock in a given list (the [index](https://en.wikipedia.org/wiki/Stock_market_index)), usually weighted by company size. In an actively managed fund, a human decides what to buy and when. Over long periods, the human usually loses after fees.
+
+The data on this is overwhelming. The [SPIVA Scorecard](https://www.spglobal.com/spdji/en/research-insights/spiva/), published twice a year by S&P Global, has tracked active fund performance against their benchmarks since 2002. The numbers are consistent across every region and every time period: over 15 years, roughly [87% of actively managed funds in Europe underperform their index](https://www.spglobal.com/spdji/en/spiva/). In the US, it's over 90%. The longer the time horizon, the worse active funds do. You're paying higher fees for a manager who is statistically likely to lose to a computer that just buys everything.
+
+[Warren Buffett](https://en.wikipedia.org/wiki/Warren_Buffett) bet a hedge fund manager $1 million in 2007 that a simple S&P 500 index fund would beat a basket of hedge funds over 10 years. [He won easily.](https://en.wikipedia.org/wiki/Buffett%27s_bet) The index fund returned 125.8% vs 36% for the hedge funds. And the hedge funds charged 2% management fees plus 20% of profits on top of that.
+
+Fees compound just like returns. A fund charging 1.5% vs 0.30% costs you tens of thousands of SEK over a 20-year horizon. The [2024 Morningstar fee study](https://www.morningstar.com/lp/annual-us-fund-fee-study) found that fees are the single best predictor of future fund performance — not past returns, not the manager's track record.
+
+### Gold details
+
+Gold doesn't pay [dividends](https://en.wikipedia.org/wiki/Dividend) or generate earnings. You hold it as a [hedge](https://en.wikipedia.org/wiki/Hedge_(finance)). A hedge is an investment that tends to move in the opposite direction of the rest of your portfolio. You're not buying it to make money — you're buying it so that when everything else drops, something in your portfolio goes up (or at least holds steady) instead. It's insurance you get paid back for over time.
+
+Gold specifically tends to keep its value or rise when stock markets fall, which makes it a hedge against inflation, [currency devaluation](https://en.wikipedia.org/wiki/Devaluation), and geopolitical instability.
+
+The Invesco product is an [ETC (Exchange Traded Commodity)](https://en.wikipedia.org/wiki/Exchange-traded_commodity), not a mutual fund. You buy it in SEK on Avanza even though it's denominated in USD.
 
 ### Apartment details: costs, tax, and risk
 
@@ -307,7 +316,22 @@ For a monthly auto-investor, the fee is still 0.25% of each ETF purchase, not 12
 
 In Sweden, mutual funds are often cheaper in practice than ETFs, even when the headline fee is higher.
 
-### Why Storebrand Global over Avanza Global?
+### Storebrand, Avanza Global, and fund details
+
+The fund you pick should mechanically follow a broad index, weighted by [market capitalization](https://en.wikipedia.org/wiki/Market_capitalization). No human picking winners, no "smart beta", and no narrow theme pretending to be the market. If the fund applies ESG or sustainability filters, make sure you understand what they exclude.
+
+| Detail | Value |
+|---|---|
+| Annual fee | 0.30% |
+| Index tracked | [MSCI ACWI](https://en.wikipedia.org/wiki/MSCI) (All Countries World Index) |
+| Number of holdings | ~1,700-2,300 companies |
+| Markets | Developed + Emerging (global) |
+| AUM | ~50 billion SEK |
+| [Morningstar](https://en.wikipedia.org/wiki/Morningstar,_Inc.) rating | 4/5 |
+
+The [MSCI ACWI](https://en.wikipedia.org/wiki/MSCI) index covers approximately 85% of the global investable equity market: the US, Europe, Japan, emerging markets like China, India, Brazil, and more. By buying this one [index fund](https://en.wikipedia.org/wiki/Index_fund), you own a tiny piece of thousands of companies worldwide. No single country, sector, or company can sink you, and you don't need to guess which region will outperform next year.
+
+At 0.30%, the fee is low for a SEK-denominated fund that includes emerging markets. The ETF section above explains why a Swedish mutual fund often ends up cheaper than a Vanguard ETF despite the higher headline fee.
 
 [Avanza Global](https://www.avanza.se/fonder/om-fonden.html/878733/avanza-global) is tempting: it has a rock-bottom fee of just **0.08%**. But the cheaper fee hides what you're actually buying.
 

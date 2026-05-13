@@ -1,3 +1,8 @@
+---
+title: "How to easily run any Linux tool on any machine"
+publishedAt: "2018-11-29T00:00:00.000Z"
+description: "Have you ever encountered a situation like the ones below?"
+---
 # How to easily run any Linux tool on any machine
 
 Have you ever encountered a situation like the ones below?

@@ -4,6 +4,47 @@ const paths = require("./paths");
 
 const readPartial = (file) => fs.readFileSync(path.join(paths.partials, file), "utf-8").trim();
 
+const parseFrontmatterValue = (value, filePath, key) => {
+  if (value === "true") return true;
+  if (value === "false") return false;
+
+  try {
+    return JSON.parse(value);
+  } catch {
+    throw new Error(`Invalid frontmatter value for "${key}" in ${filePath}: ${value}`);
+  }
+};
+
+const parseFrontmatter = (markdown, filePath = "markdown content") => {
+  if (!markdown.startsWith("---\n")) {
+    return { attributes: {}, body: markdown };
+  }
+
+  const endMarker = "\n---\n";
+  const endIndex = markdown.indexOf(endMarker, 4);
+  if (endIndex === -1) {
+    throw new Error(`Unclosed frontmatter in ${filePath}`);
+  }
+
+  const rawFrontmatter = markdown.slice(4, endIndex);
+  const body = markdown.slice(endIndex + endMarker.length);
+  const attributes = {};
+
+  for (const line of rawFrontmatter.split("\n")) {
+    if (!line.trim()) continue;
+
+    const match = line.match(/^([A-Za-z][A-Za-z0-9_-]*):\s*(.+)$/);
+    if (!match) {
+      throw new Error(`Invalid frontmatter line in ${filePath}: ${line}`);
+    }
+
+    const [, key, value] = match;
+    attributes[key] = parseFrontmatterValue(value, filePath, key);
+  }
+
+  return { attributes, body };
+};
+
 const deepMerge = (a, b) => {
   const result = { ...a };
   Object.keys(b).forEach((key) => {
@@ -88,4 +129,11 @@ function getDateHumanFormat(date) {
   return `${months[date.getMonth()]} ${date.getFullYear()}`;
 }
 
-module.exports = { readDbFile, readPartial, getDateHumanFormat, walkMarkdowns, deepMerge };
+module.exports = {
+  readDbFile,
+  readPartial,
+  getDateHumanFormat,
+  walkMarkdowns,
+  deepMerge,
+  parseFrontmatter,
+};

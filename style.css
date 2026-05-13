@@ -96,7 +96,7 @@ body.index #avatar {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   line-height: 1em;
   color: #000;
   font-weight: 800;
@@ -117,7 +117,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1em;
   font-weight: normal;
   color: rgb(14, 132, 31);
@@ -165,7 +165,7 @@ body.index li {
 hr {
   border: 0;
   border-top: 1px solid #ddd;
-  margin: 2em 0;
+  margin: 2em 2em;
 }
 
 blockquote {

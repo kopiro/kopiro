@@ -1,3 +1,9 @@
+---
+title: "How I built the SiriWaveJS library: a look at the math and the code"
+publishedAt: "2020-08-03T00:00:00.000Z"
+description: "It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iPhone 4S) in the browser using pure Javascript."
+coverImage: "/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/media/fe41712c.png"
+---
 # How I built the SiriWaveJS library: a look at the math and the code
 
 ![How I built the SiriWaveJS library: a look at the math and the code](./media/fe41712c.png)
