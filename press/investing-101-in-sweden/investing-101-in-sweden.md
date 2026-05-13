@@ -10,7 +10,7 @@ Before anything else, there is one fundamental belief you need to accept. Everyt
 
 **Over long periods of time, the [global stock market](https://en.wikipedia.org/wiki/Stock_market) goes up.**
 
-Looking at any rolling 10-year period in the history of global equity markets, there has never been one where a [diversified portfolio](https://en.wikipedia.org/wiki/Diversification_(finance)) ended in the negative. The market crashes, sometimes hard, but it always recovers. The [2008 financial crisis](https://en.wikipedia.org/wiki/Financial_crisis_of_2007%E2%80%932008), the [dot-com bubble](https://en.wikipedia.org/wiki/Dot-com_bubble), COVID-19: every single one was followed by a recovery that surpassed the previous highs.
+Historically, broadly diversified global equity markets have rewarded patient investors over long periods, but not on a predictable schedule. Markets crash, sometimes hard, and there can be long stretches where returns are flat or negative. The point is not that recovery is guaranteed or that it always arrives within exactly 10 years. The point is that if you invest across thousands of companies and give it 10, 20, 30 years, you are betting on global business growth rather than one company, one country, or one lucky trade. The [2008 financial crisis](https://en.wikipedia.org/wiki/Financial_crisis_of_2007%E2%80%932008), the [dot-com bubble](https://en.wikipedia.org/wiki/Dot-com_bubble), COVID-19: every single one was followed by a recovery that surpassed the previous highs.
 
 You don't need to believe that *tomorrow* will be a good day, or that *this year* will be great. You need to believe that *over 10, 20, 30 years*, the world economy will continue to grow. Companies will keep innovating, people will keep consuming, and that growth will be reflected in stock prices.
 
@@ -31,23 +31,21 @@ Here's what 5,000 SEK per month looks like at 8% average annual return:
 |---|---|---|---|
 | You put in | 600,000 SEK | 1,200,000 SEK | 1,800,000 SEK |
 | Portfolio value | ~915,000 SEK | ~2,945,000 SEK | ~7,450,000 SEK |
-| Free money (returns) | ~315,000 SEK | ~1,745,000 SEK | ~5,650,000 SEK |
+| Investment returns | ~315,000 SEK | ~1,745,000 SEK | ~5,650,000 SEK |
 
-After 20 years, more than half of your portfolio is money you never earned from working. After 30, it's over 75%. That's compounding: your returns start generating their own returns, and the longer you let it run, the more it snowballs.
+After 20 years, more than half of your portfolio is returns. After 30, it's over 75%. That's compounding: your returns start generating their own returns, and the longer you let it run, the more it snowballs.
+
+Those returns are not free money. They are compensation for taking risk: the market can fall, sometimes for years, and you only get the long-term return if you can stay invested through the bad periods.
 
 ---
 
-## Why picking stocks is a bad idea
+## Investing does not have to become a hobby
 
-![Cherry picking](./media/cherry-picking.jpg)
+Many people avoid investing because they think it means picking stocks, reading company reports, watching the market every day, and constantly deciding what to buy or sell. That sounds exhausting, and honestly, it is not what most people should be doing.
 
-You might be tempted to skip index funds and pick individual stocks yourself. A company looks cheap, another one is "obviously" going to grow, and you feel like you can spot a good deal. The problem is that everyone else is looking at the same information and thinking the same thing.
+This guide is built around the opposite idea: make a few conservative decisions once, automate the monthly flow, and then avoid tinkering. The goal is not to become "good at finance". The goal is to build a system where your money is organized, your emergency fund is separate, and your long-term money goes into broad diversified funds.
 
-This is what the [Efficient-market hypothesis](https://en.wikipedia.org/wiki/Efficient-market_hypothesis) describes: stock prices already reflect all publicly available information. If a company looks undervalued to you, it looks undervalued to thousands of professional analysts too, and that assessment is already baked into the price. The only way to consistently have an edge is to know something the market doesn't, which is [insider trading](https://en.wikipedia.org/wiki/Insider_trading) and it's illegal.
-
-Even professional fund managers, who do this full-time with teams of analysts, fail to beat the market consistently. Study after study shows that the majority of actively managed funds underperform their benchmark index over a 10-year period.
-
-We are still investing in the stock market, though. The difference is that instead of concentrating our money in a few companies we think will win, we spread it across thousands. This gives us the market's return while minimizing the risk that any single company drags us down. In finance, the measure of how much return you get per unit of risk is called the [Sharpe ratio](https://en.wikipedia.org/wiki/Sharpe_ratio). A broadly diversified index fund has a much better Sharpe ratio than a handful of stocks you picked because you "had a feeling".
+The boring version is the feature. Fewer decisions means fewer emotions, fewer mistakes, and fewer chances to do something stupid during a crash. That's why the next step is not to find the perfect stock. It's to organize your money into three simple pillars.
 
 ---
 
@@ -73,7 +71,7 @@ For banking, I recommend two accounts:
 
 1. A **Swedish bank** where you receive your salary and have [Swish](https://www.swish.nu/) set up. You need this for everyday life in Sweden — Swish is how everyone pays each other here, and your employer will deposit your salary into a Swedish account. I honestly recommend [Nordea](https://www.nordea.se/) - great app, in English and great customer support. You may also consider of having your mortgage there once it's time. 
 
-2. [**Revolut**](https://www.revolut.com/referral/?referral-code=flaviovve%21MAR1-24-AR-LL) for daily spending. If you ever move out of Sweden, your Revolut account stays with you — all your transaction history, statistics, and cards remain intact, unlike a Swedish bank account you'd close on the way out. It's also the best option for traveling abroad: the exchange rates are close to interbank rates with minimal fees, and the app is genuinely well designed for tracking what you spend. I use it as my primary card for everything except Swish.
+2. [**Revolut**](https://www.revolut.com/referral/?referral-code=flaviovve%21MAR1-24-AR-LL) for daily spending. This is a referral link. If you ever move out of Sweden, your Revolut account stays with you — all your transaction history, statistics, and cards remain intact, unlike a Swedish bank account you'd close on the way out. It's also the best option for traveling abroad: the exchange rates are close to interbank rates with minimal fees, and the app is genuinely well designed for tracking what you spend. I use it as my primary card for everything except Swish.
 
 One thing: don't use Revolut for investing. They don't offer ISK accounts, so you'd be stuck with worse tax treatment compared to Avanza. Keep Revolut for spending, keep Avanza for investing.
 
@@ -93,7 +91,7 @@ How much depends on your situation:
 
 Your emergency fund needs to sit in a flexible savings account (sparkonto utan bindningstid), never a fixed-term one. If your money is locked for 12 months, it's not an emergency fund.
 
-Pick the flexible account with the highest interest rate. Every bank in Sweden is covered by the [deposit guarantee](https://en.wikipedia.org/wiki/Deposit_insurance) (insättningsgaranti), which insures your money up to 1,050,000 SEK per person per bank. This is an [EU-wide rule](https://en.wikipedia.org/wiki/Deposit_Guarantee_Schemes_Directive), so even a tiny bank you've never heard of is just as safe as the big ones. Don't worry about it — just pick the best rate.
+Pick the flexible account with the highest interest rate. Most Swedish savings accounts from licensed banks and credit institutions are covered by the [deposit guarantee](https://www.riksgalden.se/var-verksamhet/insattningsgarantin-och-investerarskyddet/sa-fungerar-insattningsgarantin/fragor-och-svar-om-insattningsgarantin/) (insättningsgaranti), which insures your money up to 1,150,000 SEK per person per institution as of 2026. Check that the account is covered, then pick the best rate.
 
 Use this official comparison tool from Konsumenternas (the Swedish consumer finance bureau) to find the current best rate:
 
@@ -106,6 +104,20 @@ Filter for flexible accounts only. Ignore fixed-term offers, they pay more but d
 ## Pillar 3: The investment fund
 
 ![Mutual fund](./media/mutual-fund.jpg)
+
+Before investing, separate long-term money from short-term money. Only invest money you do not need for at least **5-10 years**. If you already know you will need the money soon — moving costs, a car, an apartment down payment, taxes, a wedding, a big trip, a large purchase — keep it in a savings account instead. The stock market is for money that can survive bad timing.
+
+## Why picking stocks is a bad idea
+
+![Cherry picking](./media/cherry-picking.jpg)
+
+You might be tempted to skip index funds and pick individual stocks yourself. A company looks cheap, another one is "obviously" going to grow, and you feel like you can spot a good deal. The problem is that everyone else is looking at the same information and thinking the same thing.
+
+This is what the [Efficient-market hypothesis](https://en.wikipedia.org/wiki/Efficient-market_hypothesis) describes: stock prices already reflect all publicly available information. If a company looks undervalued to you, it looks undervalued to thousands of professional analysts too, and that assessment is already baked into the price. The only way to consistently have an edge is to know something the market doesn't, which is [insider trading](https://en.wikipedia.org/wiki/Insider_trading) and it's illegal.
+
+Even professional fund managers, who do this full-time with teams of analysts, fail to beat the market consistently. Study after study shows that the majority of actively managed funds underperform their benchmark index over a 10-year period.
+
+We are still investing in the stock market, though. The difference is that instead of concentrating our money in a few companies we think will win, we spread it across thousands. This gives us the market's return while minimizing the risk that any single company drags us down. In finance, the measure of how much return you get per unit of risk is called the [Sharpe ratio](https://en.wikipedia.org/wiki/Sharpe_ratio). A broadly diversified index fund has a much better Sharpe ratio than a handful of stocks you picked because you "had a feeling".
 
 ## Open an ISK on Avanza
 
@@ -135,8 +147,8 @@ The fund you pick should be:
 
 - **Global.** Not just the US, not just Europe. You want exposure to as many countries and companies as possible, including emerging markets. Nobody knows which region will outperform next decade, so you buy all of them.
 - **Cheap.** Fees compound just like returns. A fund charging 1.5% vs 0.30% costs you tens of thousands of SEK over a 20-year horizon. The [2024 Morningstar fee study](https://www.morningstar.com/lp/annual-us-fund-fee-study) found that fees are the single best predictor of future fund performance — not past returns, not the manager's track record.
-- **Passive / index-tracking.** You want a fund that mechanically buys every stock in the index, weighted by market cap. No human picking winners, no "smart beta", no ESG filtering unless you specifically want it.
-- **Denominated in SEK.** This avoids the currency conversion fees discussed in the expert section below.
+- **Passive / index-tracking.** You want a fund that mechanically follows a broad index, weighted by market cap. No human picking winners, no "smart beta", and no narrow theme pretending to be the market. If the fund applies ESG or sustainability filters, make sure you understand what they exclude.
+- **Denominated in SEK.** This avoids the broker currency conversion fees discussed in the expert section below. It does **not** remove currency risk: a global fund still owns US, European, Japanese, and other foreign assets underneath, and their values move with USD, EUR, JPY, and other currencies.
 
 ### Storebrand Global All Countries A SEK
 
@@ -231,9 +243,9 @@ It's also a genuinely different type of investment. Real estate and stocks don't
 
 ### Prioritize saving for the down payment
 
-In Sweden, you need a minimum [down payment](https://en.wikipedia.org/wiki/Down_payment) (kontantinsats) of **15%** of the apartment's price. The rest is covered by a mortgage.
+In Sweden, you need a minimum [down payment](https://www.konsumenternas.se/lan--betalningar/lan/bolan/kontantinsats-och-handpenning/) (kontantinsats) of **10%** of the apartment's price as of 2026. The rest is covered by a mortgage if the bank approves you.
 
-Once your emergency fund is solid and your monthly investing is running, your next big goal should be saving for that 15%. This is one of the few cases where it makes sense to temporarily slow down your stock market investments and build up cash for a specific purpose. An apartment is a leveraged investment in an asset you actually use every day.
+Once your emergency fund is solid and your monthly investing is running, your next big goal should be saving for that 10%. This is one of the few cases where it makes sense to temporarily slow down your stock market investments and build up cash for a specific purpose. An apartment is a leveraged investment in an asset you actually use every day.
 
 There is a valid [rent vs. buy](https://en.wikipedia.org/wiki/Renting#Renting_versus_buying) argument that keeping the down payment invested in the stock market could yield higher returns in the long run. Purely on the numbers, that might be true. But having a roof over your head that nobody can take away from you gives you flexibility, stability, and diversification that a stock portfolio simply can't. Those things are worth more than a few extra percentage points on a spreadsheet.
 
@@ -241,11 +253,9 @@ There is a valid [rent vs. buy](https://en.wikipedia.org/wiki/Renting#Renting_ve
 
 Sweden, and Stockholm in particular, has a notoriously broken rental market. First-hand contracts (förstahandskontrakt) have queues measured in decades. Second-hand rentals (andrahand) are expensive, insecure, and often time-limited. You can spend years bouncing between temporary contracts.
 
-Buying solves this entirely. You have a permanent home, your monthly costs (mortgage interest + avgift) are often comparable to or lower than renting, and a portion of what you pay goes toward building equity instead of disappearing into someone else's pocket.
+Buying solves a lot of this. You have a permanent home, and a portion of what you pay goes toward building equity instead of disappearing into someone else's pocket. If you expect to stay in Sweden for several years, saving for a down payment is worth treating as a serious financial goal.
 
-On top of that, Sweden gives you a 30% tax deduction on mortgage interest ([ränteavdrag](https://www.skatteverket.se/privat/fastigheterochbostad/avdragforrantor.4.233f91f71260075abe8800020817.html)). If you pay 50,000 SEK in interest per year, you get 15,000 SEK back on your taxes. This makes the effective cost of borrowing significantly lower than the headline rate, and it's one of the reasons monthly mortgage payments often end up cheaper than rent for a comparable apartment.
-
-Re-selling is also straightforward. The bostadsrätt market in Stockholm is liquid and well-established. Apartments sell quickly, prices are transparent via Hemnet, and there's no complicated process. If your situation changes, you sell and move on.
+The details matter, of course: mortgages, taxes, monthly cash flow, and selling risk all affect the final math. But you don't need to master all of that before accepting the basic idea: owning the home you live in can be a useful second pillar of wealth next to your stock portfolio.
 
 ---
 
@@ -253,11 +263,25 @@ Re-selling is also straightforward. The bostadsrätt market in Stockholm is liqu
 
 If you've made it this far and set everything up, you're already in great shape. What follows are topics worth understanding but not strictly necessary to get started. Fair warning: the deeper you go, the more nuanced things get, and my own understanding of some of these details may not be 100% precise. Take it as a starting point, not gospel.
 
+### Apartment details: costs, tax, and risk
+
+The simplified apartment section above hides some details you should understand before making an offer.
+
+First, compare the full monthly cost, not just mortgage interest plus avgift. Include amortization, home insurance, electricity, repairs, possible avgift increases from the bostadsrättsförening, and broker fees when you eventually sell.
+
+Under the current Swedish [amortization rules](https://www.konsumenternas.se/lan--betalningar/lan/bolan/amorteringskrav/), mortgages above 70% loan-to-value must be amortized by 2% per year, mortgages between 50-70% by 1% per year, and mortgages below 50% have no mandatory amortization. The old extra amortization rule based on borrowing more than 4.5 times your gross income was removed in 2026. Amortization is not a cost in the same way as interest, but it is real monthly cash flow.
+
+Sweden gives you a tax reduction for mortgage interest ([ränteavdrag](https://www.skatteverket.se/skattereduktioner)). For most people, the reduction is 30% on a capital deficit up to 100,000 SEK. Above that, the reduction is 21% on the excess. If you pay 50,000 SEK in interest per year and have no other capital income offsetting it, you usually get 15,000 SEK back on your taxes. This makes the effective cost of borrowing significantly lower than the headline rate.
+
+Re-selling is usually straightforward. The bostadsrätt market in Stockholm is liquid and well-established, and prices are transparent via Hemnet. But apartment prices can fall, especially if interest rates rise or you need to sell quickly. If your time horizon is short, buying is much riskier.
+
 ### ISK vs AF
 
 Sweden has two main account types for investing: **ISK** and **AF** (Aktie- och fondkonto). The difference is how they are taxed.
 
-**ISK** uses a **flat annual tax** based on how much money you *have* in the account, not on how much profit you *make*. This is called *schablonbeskattning*. For 2026, the effective tax is **~1.065%** on your capital (first 300,000 SEK is tax-free). You never pay tax when you sell or switch funds, and dividends are covered by the flat rate.
+**ISK** uses a **flat annual tax** based on how much money you *have* in the account, not on how much profit you *make*. This is called *schablonbeskattning*. For 2026, the effective tax is **~1.065%** on the capital base that exceeds the tax-free level. The first 300,000 SEK is tax-free, but according to [Skatteverket](https://www.skatteverket.se/privat/skatter/vardepapper/investeringssparkontoisk.4.5fc8c94513259a4ba1d800037851.html), that limit applies to your **combined** savings across ISK, kapitalförsäkring, and PEPP, not 300,000 SEK per account. You never pay Swedish tax when you sell or switch funds inside the ISK, and dividends are covered by the flat rate.
+
+ISK is mainly attractive if you are a Swedish tax resident. If you move abroad, Sweden may stop taxing the ISK schablonintäkt in the same way, but your new country may treat the account like a normal taxable brokerage account. Before moving, check both Swedish rules and the rules in the country you're moving to.
 
 **AF** uses **traditional [capital gains taxation](https://en.wikipedia.org/wiki/Capital_gains_tax)**: you pay **30% tax on realized profits** when you sell, and **30% tax on dividends**. Losses can be deducted against gains. AF makes sense if your returns are very low or negative, or if you need to deduct capital losses against other income.
 
@@ -277,9 +301,9 @@ The answer is **currency conversion fees** (växlingsavgift).
 
 Most ETFs trade in EUR or USD. When you buy them on Avanza with your SEK, the broker charges a **0.25% currency conversion fee** on each transaction (**0.5% total with buy and sell**).
 
-A Swedish mutual fund trades in SEK. The fund itself handles currency conversion internally at institutional rates, which are far cheaper than what a retail broker charges you. So even though the fund's annual fee (0.30%) is higher than, say, a Vanguard FTSE All-World ETF (0.22%), the total cost of ownership is often lower because you avoid the 0.25% conversion fee on every purchase.
+A Swedish mutual fund trades in SEK. The fund itself handles currency conversion internally at institutional rates, which are far cheaper than what a retail broker charges you. So even though the fund's annual fee (0.30%) is higher than, say, a Vanguard FTSE All-World ETF (0.22%), the total cost of ownership is often lower because you avoid the 0.25% conversion fee on every purchase. This only avoids the broker FX fee; it does not remove currency exposure, because the fund still owns foreign stocks underneath.
 
-For a monthly auto-investor making 12 purchases per year, that's 12 x 0.25% = **3% in hidden fees** on newly invested capital every year with ETFs, versus zero with a SEK-denominated mutual fund.
+For a monthly auto-investor, the fee is still 0.25% of each ETF purchase, not 12 x 0.25% on the same money. If you invest 10,000 SEK per month, you pay roughly 25 SEK in currency conversion each month, or 300 SEK over the year on 120,000 SEK invested. That's still a real drag compared to a SEK-denominated mutual fund, especially because you usually pay another 0.25% when you eventually sell.
 
 In Sweden, mutual funds are often cheaper in practice than ETFs, even when the headline fee is higher.
 
@@ -293,11 +317,11 @@ In Sweden, mutual funds are often cheaper in practice than ETFs, even when the h
 | Index | MSCI ACWI (All Countries World) | Morningstar Developed Markets [Paris Aligned](https://en.wikipedia.org/wiki/Paris_Agreement) |
 | Holdings | ~1,700-2,300 companies | ~1,100 companies |
 | Emerging markets | Yes (China, India, Brazil, etc.) | **No** |
-| Approach | Broad market-cap weighted | Sustainability-filtered, Paris-aligned |
+| Approach | Broad market-cap weighted with Storebrand exclusions | Sustainability-filtered, Paris-aligned |
 
-The real difference is that Avanza Global does not include [emerging markets](https://en.wikipedia.org/wiki/Emerging_market) and applies Paris-aligned sustainability filtering that excludes companies from the index. Storebrand Global All Countries tracks the MSCI ACWI, the true "whole world" index. Yes, it costs 0.22% more per year. On a 500,000 SEK portfolio, that's an extra 1,100 SEK/year. In exchange, you get exposure to the entire global economy, not just the developed world.
+The real difference is that Avanza Global does not include [emerging markets](https://en.wikipedia.org/wiki/Emerging_market) and applies Paris-aligned sustainability filtering that excludes companies from the index. Storebrand Global All Countries tracks the MSCI ACWI, which is much closer to a "whole world" index because it includes both developed and emerging markets. Yes, it costs 0.22% more per year. On a 500,000 SEK portfolio, that's an extra 1,100 SEK/year. In exchange, you get exposure to a broader slice of the global economy, not just the developed world.
 
-My personal preference is Storebrand precisely because I don't want any Paris-aligned or [ESG](https://en.wikipedia.org/wiki/Environmental,_social,_and_corporate_governance) filtering applied to what I own. The more companies in the fund, the better. I want the broadest possible market exposure, not someone else's opinion on which companies deserve to be included.
+My personal preference is Storebrand because I want the broader global exposure, including emerging markets, and I prefer that over a cheaper developed-markets-only fund. Storebrand still applies its own sustainability exclusions, so this is not a completely unfiltered market portfolio. The tradeoff is simply different: broader geography and more companies, but not zero filtering.
 
 That said, Avanza's own funds are significantly cheaper and perfectly fine if you don't mind the sustainability filtering. The same applies to their regional funds:
 
@@ -347,9 +371,9 @@ If this sounds like too much hassle, it probably is. Just buy Storebrand Global 
 
 You might have noticed this guide doesn't include any [bond](https://en.wikipedia.org/wiki/Bond_(finance)) allocation. If you've read other investing guides, they probably told you to hold some percentage in bonds for safety. Here's why I skip them.
 
-Your emergency fund in a savings account already fills the "safe money" role. A Swedish sparkonto gives you a guaranteed return (around 3-4% on the best flexible accounts right now), is covered by the deposit guarantee up to 1,050,000 SEK, and has zero volatility. A bond fund in your ISK gives you a similar or slightly higher return, but with price fluctuations, and you pay the ISK flat tax on top of it. For the safe portion of your money, a savings account is strictly better.
+Your emergency fund in a savings account already fills the "safe money" role. A Swedish sparkonto gives you a guaranteed return (around 3-4% on the best flexible accounts right now), is covered by the deposit guarantee up to 1,150,000 SEK, and has zero volatility. A bond fund in your ISK gives you a similar or slightly higher return, but with price fluctuations, and you pay the ISK flat tax on top of it. For the safe portion of your money, a savings account is strictly better.
 
-Bonds start to make sense if you have more than 1,050,000 SEK in safe money (above the deposit guarantee limit), or if you're approaching retirement and want to gradually de-risk inside your pension accounts. For a long-term investor who already has an emergency fund in a sparkonto, they don't add much.
+Bonds start to make sense if you have more than 1,150,000 SEK in safe money (above the deposit guarantee limit), or if you're approaching retirement and want to gradually de-risk inside your pension accounts. For a long-term investor who already has an emergency fund in a sparkonto, they don't add much.
 
 ### A small Bitcoin allocation
 
