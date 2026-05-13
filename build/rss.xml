@@ -8,114 +8,121 @@
     <item>
       <title>Investing 101 in Sweden</title>
       <link>https://www.kopiro.me/press/investing-101-in-sweden/index.html</link>
-      <description>A simple guide to start investing in Sweden as someone who doesn&apos;t know anything about this.</description>
-      <pubDate>Wed, 13 May 2026 10:17:08 GMT</pubDate>
+      <description>A simple guide to start managing your finances better in Sweden.</description>
+      <pubDate>Wed, 13 May 2026 13:05:31 GMT</pubDate>
       <guid>https://www.kopiro.me/press/investing-101-in-sweden/index.html</guid>
-    </item>
-    <item>
-      <title>My Sage Barista espresso machine is now smart</title>
-      <link>https://www.kopiro.me/press/sage-barista-via-zigbee/index.html</link>
-      <description>The goal is simple: having my Sage Barista already warm when I wake up.</description>
-      <pubDate>Thu, 19 Mar 2026 10:58:01 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/sage-barista-via-zigbee/index.html</guid>
-    </item>
-    <item>
-      <title>Make the IKEA VARMBLIXT Donut lamp smart with Zigbee</title>
-      <link>https://www.kopiro.me/press/ikea-varmblixt-donut-lamp-zigbee/index.html</link>
-      <description>I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable.</description>
-      <pubDate>Fri, 13 Mar 2026 14:39:23 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/ikea-varmblixt-donut-lamp-zigbee/index.html</guid>
-    </item>
-    <item>
-      <title>How to use different Git identities per directory</title>
-      <link>https://www.kopiro.me/press/how-to-use-different-git-identities-per-directory/index.html</link>
-      <description>If you&apos;re like me, you have a personal email for your side projects and a work email for... well, work. And if you&apos;ve ever accidentally committed to your com...</description>
-      <pubDate>Thu, 08 Jan 2026 14:15:59 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/how-to-use-different-git-identities-per-directory/index.html</guid>
-    </item>
-    <item>
-      <title>Claude Code while you drink an espresso</title>
-      <link>https://www.kopiro.me/press/claude-code-while-you-drink-an-espresso/index.html</link>
-      <description>We have all been there: you are on a 4 hour session with Claude Code and you really need a break; it&apos;s in the middle of a big refactoring and you desperately...</description>
-      <pubDate>Wed, 07 Jan 2026 04:29:54 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/claude-code-while-you-drink-an-espresso/index.html</guid>
-    </item>
-    <item>
-      <title>How to use your LG remote to change OLED brightness</title>
-      <link>https://www.kopiro.me/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.html</link>
-      <description>This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV.</description>
-      <pubDate>Mon, 05 Jan 2026 20:30:25 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.html</guid>
-    </item>
-    <item>
-      <title>Convert a batch of images into Ghibli style using ChatGPT and macOS Automator</title>
-      <link>https://www.kopiro.me/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.html</link>
-      <description>If you love the warm, dreamy visuals of Studio Ghibli films, here&apos;s a powerful automation trick: an AppleScript automation that lets you select multiple imag...</description>
-      <pubDate>Sat, 12 Apr 2025 00:00:00 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.html</guid>
-    </item>
-    <item>
-      <title>How to correctly publish your Mac apps outside of the App Store</title>
-      <link>https://www.kopiro.me/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/index.html</link>
-      <description>Distributing Mac apps outside of the App Store requires more than just building and zipping your .app.</description>
-      <pubDate>Thu, 10 Apr 2025 00:00:00 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/index.html</guid>
-    </item>
-    <item>
-      <title>Using C89 on a &apos;80s Macintosh SE to solve Advent of Code 2023</title>
-      <link>https://www.kopiro.me/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.html</link>
-      <description>For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have lying around and the ThinkC compiler.</description>
-      <pubDate>Sat, 02 Dec 2023 23:00:00 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.html</guid>
-    </item>
-    <item>
-      <title>Hey Siri, make coffee!</title>
-      <link>https://www.kopiro.me/press/hey-siri-make-coffee/index.html</link>
-      <description>“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the morning) to actually get up and make it. Therefore, I aut...</description>
-      <pubDate>Wed, 20 Jan 2021 23:00:00 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/hey-siri-make-coffee/index.html</guid>
-    </item>
-    <item>
-      <title>How I built the SiriWaveJS library: a look at the math and the code</title>
-      <link>https://www.kopiro.me/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/index.html</link>
-      <description>It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iPhone 4S) in the browser using pure Javascript.</description>
-      <pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/index.html</guid>
-    </item>
-    <item>
-      <title>How to easily run any Linux tool on any machine</title>
-      <link>https://www.kopiro.me/press/how-to-easily-run-any-linux-tool-on-any-machine/index.html</link>
-      <description>Have you ever encountered a situation like the ones below?</description>
-      <pubDate>Thu, 29 Nov 2018 00:00:00 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/how-to-easily-run-any-linux-tool-on-any-machine/index.html</guid>
     </item>
     <item>
       <title>The hardware behind Otto: a monkey plush which became my vocal assistant</title>
       <link>https://www.kopiro.me/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant/index.html</link>
       <description>Otto is a monkey plush that we found in a highway store during a trip with my girlfriend in February 2017.</description>
-      <pubDate>Fri, 13 Apr 2018 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
       <guid>https://www.kopiro.me/press/the-hardware-behind-otto-a-monkey-plush-which-became-my-vocal-assistant/index.html</guid>
     </item>
     <item>
-      <title>How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)</title>
-      <link>https://www.kopiro.me/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox/index.html</link>
-      <description>This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Mac(s). This is not intended to perform a Live Kali instal...</description>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 GMT</pubDate>
-      <guid>https://www.kopiro.me/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox/index.html</guid>
+      <title>Using C89 on a &apos;80s Macintosh SE to solve Advent of Code 2023</title>
+      <link>https://www.kopiro.me/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.html</link>
+      <description>For this year AdventOfCode, I want to try to solve some problems using an old Macintosh SE I have lying around and the ThinkC compiler.</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/using-c89-and-a-macintosh-se-to-solve-advent-of-code-2023/index.html</guid>
     </item>
     <item>
       <title>What I learned hacking the Facebook Messenger Soccer game</title>
       <link>https://www.kopiro.me/press/what-i-learned-hacking-the-facebook-messenger-soccer-game/index.html</link>
       <description>Recently, during the last European Football Championship, Facebook introduced a little game in the Messenger app that makes you lose hours and hours despite...</description>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
       <guid>https://www.kopiro.me/press/what-i-learned-hacking-the-facebook-messenger-soccer-game/index.html</guid>
+    </item>
+    <item>
+      <title>Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music</title>
+      <link>https://www.kopiro.me/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music/index.html</link>
+      <description>I recently tried a Google Home Mini and the most interesting feature is the ability to play music by Spotify directly on a Chromecast.</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/reverse-engineer-spotify-and-chromecast-protocols-to-let-my-vocal-assistant-play-music/index.html</guid>
+    </item>
+    <item>
+      <title>My Sage Barista espresso machine is now smart</title>
+      <link>https://www.kopiro.me/press/sage-barista-via-zigbee/index.html</link>
+      <description>The goal is simple: having my Sage Barista already warm when I wake up.</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/sage-barista-via-zigbee/index.html</guid>
     </item>
     <item>
       <title>Kata resolution: Next bigger number with the same digits</title>
       <link>https://www.kopiro.me/press/kata-resolution-next-bigger-number-with-the-same-digits/index.html</link>
       <description>I would like to share with you my solution of a Kata on CodeWars.</description>
-      <pubDate>Fri, 29 Jul 2016 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
       <guid>https://www.kopiro.me/press/kata-resolution-next-bigger-number-with-the-same-digits/index.html</guid>
+    </item>
+    <item>
+      <title>Convert a batch of images into Ghibli style using ChatGPT and macOS Automator</title>
+      <link>https://www.kopiro.me/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.html</link>
+      <description>If you love the warm, dreamy visuals of Studio Ghibli films, here&apos;s a powerful automation trick: an AppleScript automation that lets you select multiple imag...</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/process-bunch-of-pictures-into-ghibli-style-using-chatgpt-and-macos-automator/index.html</guid>
+    </item>
+    <item>
+      <title>How to use different Git identities per directory</title>
+      <link>https://www.kopiro.me/press/how-to-use-different-git-identities-per-directory/index.html</link>
+      <description>If you&apos;re like me, you have a personal email for your side projects and a work email for... well, work. And if you&apos;ve ever accidentally committed to your com...</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/how-to-use-different-git-identities-per-directory/index.html</guid>
+    </item>
+    <item>
+      <title>How to use your LG remote to change OLED brightness</title>
+      <link>https://www.kopiro.me/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.html</link>
+      <description>This tutorial is for everyone who wants to use their LG remote to change the brightness of their OLED TV.</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/how-to-use-your-lg-remote-to-change-oled-brightness/index.html</guid>
+    </item>
+    <item>
+      <title>Make the IKEA VARMBLIXT Donut lamp smart with Zigbee</title>
+      <link>https://www.kopiro.me/press/ikea-varmblixt-donut-lamp-zigbee/index.html</link>
+      <description>I recently bought the IKEA VARMBLIXT donut lamp, but to my disappointment this light is not smart and not dimmable.</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/ikea-varmblixt-donut-lamp-zigbee/index.html</guid>
+    </item>
+    <item>
+      <title>How to easily run any Linux tool on any machine</title>
+      <link>https://www.kopiro.me/press/how-to-easily-run-any-linux-tool-on-any-machine/index.html</link>
+      <description>Have you ever encountered a situation like the ones below?</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/how-to-easily-run-any-linux-tool-on-any-machine/index.html</guid>
+    </item>
+    <item>
+      <title>How to install Kali on a USB stick with pure EFI boot on a Mac (and with virtualization via USB on Virtualbox)</title>
+      <link>https://www.kopiro.me/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox/index.html</link>
+      <description>This tutorial is for everyone who wants a USB stick with a full Kali installation to use with your Mac(s). This is not intended to perform a Live Kali instal...</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/how-to-install-kali-on-a-usb-stick-with-pure-efi-boot-on-a-mac-and-with-virtualization-via-usb-on-virtualbox/index.html</guid>
+    </item>
+    <item>
+      <title>How I built the SiriWaveJS library: a look at the math and the code</title>
+      <link>https://www.kopiro.me/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/index.html</link>
+      <description>It was 4 years ago when I had the idea to replicate the Apple® Siri wave-form (introduced with the iPhone 4S) in the browser using pure Javascript.</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/how-i-built-the-siriwavejs-library-a-look-at-the-math-and-the-code/index.html</guid>
+    </item>
+    <item>
+      <title>How to correctly publish your Mac apps outside of the App Store</title>
+      <link>https://www.kopiro.me/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/index.html</link>
+      <description>Distributing Mac apps outside of the App Store requires more than just building and zipping your .app.</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/how-to-correctly-publish-your-mac-apps-outside-of-the-app-store/index.html</guid>
+    </item>
+    <item>
+      <title>Hey Siri, make coffee!</title>
+      <link>https://www.kopiro.me/press/hey-siri-make-coffee/index.html</link>
+      <description>“my wife was tired of bringing me coffee in bed every morning. But I am too lazy (especially in the morning) to actually get up and make it. Therefore, I aut...</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/hey-siri-make-coffee/index.html</guid>
+    </item>
+    <item>
+      <title>Claude Code while you drink an espresso</title>
+      <link>https://www.kopiro.me/press/claude-code-while-you-drink-an-espresso/index.html</link>
+      <description>We have all been there: you are on a 4 hour session with Claude Code and you really need a break; it&apos;s in the middle of a big refactoring and you desperately...</description>
+      <pubDate>Wed, 13 May 2026 09:26:51 GMT</pubDate>
+      <guid>https://www.kopiro.me/press/claude-code-while-you-drink-an-espresso/index.html</guid>
     </item>
   </channel>
 </rss>

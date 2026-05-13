@@ -1,6 +1,6 @@
 # Investing 101 in Sweden
 
-A simple guide to start investing in Sweden as someone who doesn't know anything about this.
+A simple guide to start managing your finances better in Sweden.
 
 ## Why invest at all?
 
@@ -23,7 +23,17 @@ Money sitting in a bank account feels safe, but it's quietly losing value every 
 - 100,000 SEK today will have the purchasing power of roughly 82,000 SEK in 10 years at 2% inflation.
 - In 20 years, it's worth about 67,000 SEK in today's money.
 
-A savings account paying 1-2% interest doesn't even keep up with that. Investing in a [global equity fund](https://en.wikipedia.org/wiki/Equity_fund) with historical returns of 7-10% per year doesn't just beat inflation, it [compounds](https://en.wikipedia.org/wiki/Compound_interest) your wealth. The difference over a 20-year horizon is enormous.
+A savings account paying 1-2% interest doesn't even keep up with that. Investing in a [global equity fund](https://en.wikipedia.org/wiki/Equity_fund) with historical returns of 7-10% per year doesn't just beat inflation, it [compounds](https://en.wikipedia.org/wiki/Compound_interest) your wealth.
+
+Here's what 5,000 SEK per month looks like at 8% average annual return:
+
+| | 10 years | 20 years | 30 years |
+|---|---|---|---|
+| You put in | 600,000 SEK | 1,200,000 SEK | 1,800,000 SEK |
+| Portfolio value | ~915,000 SEK | ~2,945,000 SEK | ~7,450,000 SEK |
+| Free money (returns) | ~315,000 SEK | ~1,745,000 SEK | ~5,650,000 SEK |
+
+After 20 years, more than half of your portfolio is money you never earned from working. After 30, it's over 75%. That's compounding: your returns start generating their own returns, and the longer you let it run, the more it snowballs.
 
 ---
 
@@ -47,32 +57,25 @@ We are still investing in the stock market, though. The difference is that inste
 
 Before you put a single krona into the stock market, you need to organize your finances into three pillars. Think of them as layers: you build them in order, and you only invest what's left after the first two are solid.
 
-### Pillar 1: Liquidity (3 months of expenses)
+- **Pillar 1: Liquidity.** 1-3 months of predictable expenses in your checking account. Everyday spending money — rent, groceries, bills.
+- **Pillar 2: Emergency fund.** 4-8 months of unpredictable expenses in a savings account. Money you never touch unless something goes seriously wrong.
+- **Pillar 3: Invest the rest.** Everything left goes into your ISK on Avanza. ~85% global equity fund, ~15% gold.
 
-This is your everyday spending money. Rent, groceries, bills, transport. Keep at least 3 months of expenses in your regular checking account, always accessible.
+---
+
+## Pillar 1: Liquidity
+
+![Cannolo](./media/cannolo.jpg)
 
 You just want a buffer so you never have to sell investments to pay for lunch.
 
-### Pillar 2: Emergency fund (6-12 months of expenses)
+For banking, I recommend two accounts:
 
-This is money you never touch unless something truly unexpected and unavoidable happens: losing your job, a medical emergency, your car breaking down, an urgent home repair.
+1. A **Swedish bank** where you receive your salary and have [Swish](https://www.swish.nu/) set up. You need this for everyday life in Sweden — Swish is how everyone pays each other here, and your employer will deposit your salary into a Swedish account. I honestly recommend [Nordea](https://www.nordea.se/) - great app, in English and great customer support. You may also consider of having your mortgage there once it's time. 
 
-How much depends on your situation:
+2. [**Revolut**](https://www.revolut.com/referral/?referral-code=flaviovve%21MAR1-24-AR-LL) for daily spending. If you ever move out of Sweden, your Revolut account stays with you — all your transaction history, statistics, and cards remain intact, unlike a Swedish bank account you'd close on the way out. It's also the best option for traveling abroad: the exchange rates are close to interbank rates with minimal fees, and the app is genuinely well designed for tracking what you spend. I use it as my primary card for everything except Swish.
 
-- **Single, no kids, stable job:** 6 months is more than enough.
-- **Family with dependents:** aim for 12 months.
-- **Have good insurance coverage** (hemförsäkring, inkomstförsäkring via your union, etc.)? That lowers the amount you need, as insurance replaces some of the cushion.
-
-Keep this in a savings account (sparkonto), not invested, not locked up. It needs to be accessible within a day or two, but it doesn't need to be in your daily checking account.
-
-One important distinction: planned expenses (vacation, new phone, car service) are not emergencies. Budget for those separately. The emergency fund is for things you *cannot predict*.
-
-### Pillar 3: Invest the rest
-
-Everything left after pillars 1 and 2 is your investable capital. This is the money that goes into your ISK on Avanza, split as follows:
-
-- ~85% in a global equity fund
-- ~15% in gold, as a hedge
+One thing: don't use Revolut for investing. They don't offer ISK accounts, so you'd be stuck with worse tax treatment compared to Avanza. Keep Revolut for spending, keep Avanza for investing.
 
 ---
 
@@ -80,9 +83,17 @@ Everything left after pillars 1 and 2 is your investable capital. This is the mo
 
 ![Emergency fund](./media/emergency-fund.jpg)
 
+This is money you never touch unless something truly unexpected and unavoidable happens: losing your job, a medical emergency, your car breaking down, an urgent home repair. Planned expenses (vacation, new phone, car service) are not emergencies — budget for those separately.
+
+How much depends on your situation:
+
+- **Single, no kids, stable job:** 4 months is more than enough.
+- **Family with dependents:** aim for 8 months.
+- **Have good insurance coverage** (hemförsäkring, inkomstförsäkring via your union, etc.)? That lowers the amount you need, as insurance replaces some of the cushion.
+
 Your emergency fund needs to sit in a flexible savings account (sparkonto utan bindningstid), never a fixed-term one. If your money is locked for 12 months, it's not an emergency fund.
 
-Pick the flexible account with the highest interest rate. These accounts are all covered by the Swedish [deposit guarantee](https://en.wikipedia.org/wiki/Deposit_insurance) (insättningsgaranti) up to 1,050,000 SEK, so there's no extra risk in choosing a smaller bank.
+Pick the flexible account with the highest interest rate. Every bank in Sweden is covered by the [deposit guarantee](https://en.wikipedia.org/wiki/Deposit_insurance) (insättningsgaranti), which insures your money up to 1,050,000 SEK per person per bank. This is an [EU-wide rule](https://en.wikipedia.org/wiki/Deposit_Guarantee_Schemes_Directive), so even a tiny bank you've never heard of is just as safe as the big ones. Don't worry about it — just pick the best rate.
 
 Use this official comparison tool from Konsumenternas (the Swedish consumer finance bureau) to find the current best rate:
 
@@ -140,8 +151,6 @@ The fund you pick should be:
 | AUM | ~50 billion SEK |
 | [Morningstar](https://en.wikipedia.org/wiki/Morningstar,_Inc.) rating | 4/5 |
 
-### Why this fund?
-
 The [MSCI ACWI](https://en.wikipedia.org/wiki/MSCI) index covers approximately 85% of the global investable equity market: the US, Europe, Japan, emerging markets like China, India, Brazil, and more. By buying this one [index fund](https://en.wikipedia.org/wiki/Index_fund), you own a tiny piece of thousands of companies worldwide. No single country, sector, or company can sink you, and you don't need to guess which region will outperform next year.
 
 At 0.30%, the fee is low for a SEK-denominated fund that includes emerging markets. The expert section below explains why a Swedish mutual fund often ends up cheaper than a Vanguard ETF despite the higher headline fee.
@@ -150,7 +159,9 @@ At 0.30%, the fee is low for a SEK-denominated fund that includes emerging marke
 
 ## Pick your gold (the 15%)
 
-Gold doesn't pay [dividends](https://en.wikipedia.org/wiki/Dividend) or generate earnings. You hold it because it tends to keep its value or rise when stock markets fall, which makes it a hedge against inflation, [currency devaluation](https://en.wikipedia.org/wiki/Devaluation), and geopolitical instability.
+Gold doesn't pay [dividends](https://en.wikipedia.org/wiki/Dividend) or generate earnings. You hold it as a [hedge](https://en.wikipedia.org/wiki/Hedge_(finance)). A hedge is an investment that tends to move in the opposite direction of the rest of your portfolio. You're not buying it to make money — you're buying it so that when everything else drops, something in your portfolio goes up (or at least holds steady) instead. It's insurance you get paid back for over time.
+
+Gold specifically tends to keep its value or rise when stock markets fall, which makes it a hedge against inflation, [currency devaluation](https://en.wikipedia.org/wiki/Devaluation), and geopolitical instability.
 
 Allocating ~15% to gold smooths out the ride. When stocks crash 30%, gold often goes up, which means your total portfolio drops less, and you panic less. That matters, because the biggest risk to a long-term investor is *selling during a crash*.
 
@@ -190,13 +201,19 @@ If you have extra money set aside, a crash is actually a great opportunity to bu
 
 The best approach is boring: invest consistently every month regardless of what the market is doing. Your dollar-cost averaging setup handles this automatically. The people who lose money in the stock market are the ones who panic sell at the bottom and buy back in after the recovery.
 
-## Don't forget your tjänstepension
+## Don't forget your Tjänstepension (TJP)
 
 If you work in Sweden, your employer is almost certainly contributing to a [tjänstepension](https://en.wikipedia.org/wiki/Pensions_in_Sweden) (occupational pension) on your behalf. This is money that gets invested for your retirement, and in most cases you get to choose *how* it's invested.
 
 The same rules apply here. Pick a cheap global index fund, avoid actively managed funds with high fees, and don't overthink it. There is no reason to apply a different strategy to your tjänstepension than to your ISK. It's the same stock market, the same long time horizon, and the same math.
 
 The default option your employer or pension provider picks for you is often an actively managed fund with fees above 1%. Log in to your pension provider, check what you're invested in, and switch to the cheapest global index fund they offer. You do this once and forget about it.
+
+## Don't forget your Premiepension (PPM)
+
+On top of tjänstepension, the Swedish state pension system ([allmän pension](https://en.wikipedia.org/wiki/Pensions_in_Sweden)) takes 2.5% of your salary and puts it into a [premiepension](https://www.pensionsmyndigheten.se/ga-i-pension/om-premiepensionen) account. You get to choose up to 5 funds for this money. If you never make a choice, it goes into AP7 Såfa, which is actually a decent default — it's a global equity fund with low fees that automatically shifts toward bonds as you get older.
+
+If you want to pick your own funds, log in to [pensionsmyndigheten.se](https://www.pensionsmyndigheten.se) with BankID. The fund selection is more limited than Avanza, but the same principle applies: pick a cheap global index fund. AP7 Såfa is honestly fine for most people, so if you're already there, you can leave it. You can use [minpension.se](https://www.minpension.se) to get an overview of all your pensions in one place, but you can't change your PPM funds there.
 
 ---
 
@@ -225,6 +242,8 @@ There is a valid [rent vs. buy](https://en.wikipedia.org/wiki/Renting#Renting_ve
 Sweden, and Stockholm in particular, has a notoriously broken rental market. First-hand contracts (förstahandskontrakt) have queues measured in decades. Second-hand rentals (andrahand) are expensive, insecure, and often time-limited. You can spend years bouncing between temporary contracts.
 
 Buying solves this entirely. You have a permanent home, your monthly costs (mortgage interest + avgift) are often comparable to or lower than renting, and a portion of what you pay goes toward building equity instead of disappearing into someone else's pocket.
+
+On top of that, Sweden gives you a 30% tax deduction on mortgage interest ([ränteavdrag](https://www.skatteverket.se/privat/fastigheterochbostad/avdragforrantor.4.233f91f71260075abe8800020817.html)). If you pay 50,000 SEK in interest per year, you get 15,000 SEK back on your taxes. This makes the effective cost of borrowing significantly lower than the headline rate, and it's one of the reasons monthly mortgage payments often end up cheaper than rent for a comparable apartment.
 
 Re-selling is also straightforward. The bostadsrätt market in Stockholm is liquid and well-established. Apartments sell quickly, prices are transparent via Hemnet, and there's no complicated process. If your situation changes, you sell and move on.
 
@@ -256,9 +275,9 @@ If you're coming from an international investing background, you might wonder wh
 
 The answer is **currency conversion fees** (växlingsavgift).
 
-Most ETFs trade in EUR or USD. When you buy them on Avanza with your SEK, the broker charges a **0.25% currency conversion fee** on each transaction. This fee is hidden: it's baked into the exchange rate, not shown as a separate line item. And it applies every time you buy, sell, or have dividends reinvested.
+Most ETFs trade in EUR or USD. When you buy them on Avanza with your SEK, the broker charges a **0.25% currency conversion fee** on each transaction (**0.5% total with buy and sell**).
 
-A Swedish mutual fund like Storebrand Global All Countries trades in SEK. The fund itself handles currency conversion internally at institutional rates, which are far cheaper than what a retail broker charges you. So even though the fund's annual fee (0.30%) is higher than, say, a Vanguard FTSE All-World ETF (0.22%), the total cost of ownership is often lower because you avoid the 0.25% conversion fee on every purchase.
+A Swedish mutual fund trades in SEK. The fund itself handles currency conversion internally at institutional rates, which are far cheaper than what a retail broker charges you. So even though the fund's annual fee (0.30%) is higher than, say, a Vanguard FTSE All-World ETF (0.22%), the total cost of ownership is often lower because you avoid the 0.25% conversion fee on every purchase.
 
 For a monthly auto-investor making 12 purchases per year, that's 12 x 0.25% = **3% in hidden fees** on newly invested capital every year with ETFs, versus zero with a SEK-denominated mutual fund.
 
@@ -282,14 +301,20 @@ My personal preference is Storebrand precisely because I don't want any Paris-al
 
 That said, Avanza's own funds are significantly cheaper and perfectly fine if you don't mind the sustainability filtering. The same applies to their regional funds:
 
-| Fund | Fee |
-|---|---|
-| [Avanza Global](https://www.avanza.se/fonder/om-fonden.html/878733/avanza-global) | 0.08% |
-| [Avanza USA](https://www.avanza.se/fonder/om-fonden.html/1025150/avanza-usa) | 0.05% |
-| [Avanza Europa](https://www.avanza.se/fonder/om-fonden.html/1041067/avanza-europa) | 0.05% |
-| [Avanza Emerging Markets](https://www.avanza.se/fonder/om-fonden.html/944976/avanza-emerging-markets) | 0.15% |
+| Fund | Region | Fee | Holdings | Index |
+|---|---|---|---|---|
+| [Avanza Global](https://www.avanza.se/fonder/om-fonden.html/878733/avanza-global) | Global (developed only) | 0.08% | ~1,100 | Morningstar Developed Markets Paris Aligned |
+| [Avanza USA](https://www.avanza.se/fonder/om-fonden.html/1025150/avanza-usa) | United States | 0.17% | ~400 | Morningstar US Large-Mid Cap Paris Aligned |
+| [Avanza Europa](https://www.avanza.se/fonder/om-fonden.html/1041067/avanza-europa) | Europe | 0.17% | ~350 | Morningstar Europe Large-Mid Cap Paris Aligned |
+| [Avanza Emerging Markets](https://www.avanza.se/fonder/om-fonden.html/944976/avanza-emerging-markets) | Emerging Markets | 0.30% | ~600 | Morningstar Emerging Markets Paris Aligned |
 
 The fees are hard to argue with. The tradeoff is always the same: fewer holdings due to ESG filtering. If that doesn't bother you, the Avanza funds are a great option.
+
+### A Sweden tilt
+
+You might want to add a small Sweden allocation. This is a common form of "[home bias](https://en.wikipedia.org/wiki/Equity_home_bias_puzzle)" but there are reasonable arguments for it: your salary and expenses are in SEK, and Sweden has a disproportionately high number of globally competitive companies. 
+
+If you do, keep it to **~5% of your equity** and use **[Avanza Zero](https://www.avanza.se/fonder/om-fonden.html/41567/avanza-zero)** (0% fee, tracks the 30 most traded Swedish stocks). Don't go higher than 10%, as Sweden is only ~1% of the global stock market.
 
 ### Building your own regional allocation
 
@@ -297,9 +322,7 @@ The fees are hard to argue with. The tradeoff is always the same: fewer holdings
 
 That said, some people find it easier to stay committed to their investment strategy when they understand and control the pieces. If seeing "70% USA" in a global fund makes you nervous, splitting it into regional funds lets you dial that number to whatever you're comfortable with. You'll probably underperform the market, but **an imperfect strategy you stick with beats a perfect strategy you abandon.**
 
-### A Sweden tilt
 
-You might want to add a small Sweden allocation. This is a common form of "[home bias](https://en.wikipedia.org/wiki/Home_bias)" but there are reasonable arguments for it: your salary and expenses are in SEK, and Sweden has a disproportionately high number of globally competitive companies. If you do, keep it to **~10% of your equity** and use **[Avanza Zero](https://www.avanza.se/fonder/om-fonden.html/41567/avanza-zero)** (0% fee, tracks the 30 most traded Swedish stocks). Don't go higher than 10-15%, as Sweden is only ~1% of the global stock market.
 
 Storebrand offers regional funds on Avanza that you can mix and match:
 
@@ -308,17 +331,7 @@ Storebrand offers regional funds on Avanza that you can mix and match:
 | [Storebrand USA A SEK](https://www.avanza.se/fonder/om-fonden.html/1505/storebrand-usa-a-sek) | United States | 0.20% | ~350-650 | MSCI USA |
 | [Storebrand Europa A SEK](https://www.avanza.se/fonder/om-fonden.html/599/storebrand-europa-a-sek) | Europe | 0.20% | ~300-450 | MSCI Europe |
 | [Storebrand Japan A SEK](https://www.avanza.se/fonder/om-fonden.html/1288/storebrand-japan-a-sek) | Japan | 0.20% | ~180-250 | MSCI Japan |
-| [Storebrand Emerging Markets A SEK](https://www.avanza.se/fonder/om-fonden.html/266309/storebrand-emerging-markets-a-sek) | Emerging Markets | 0.95% | ~700-950 | MSCI EM |
-
-For reference, the current MSCI ACWI market-cap weights are roughly:
-
-| Region | Market-cap weight |
-|---|---|
-| USA | ~65% |
-| Europe | ~15% |
-| Japan | ~5% |
-| Emerging Markets | ~10% |
-| Other (Canada, Australia, etc.) | ~5% |
+| [Storebrand Emerging Markets A SEK](https://www.avanza.se/fonder/om-fonden.html/266309/storebrand-emerging-markets-a-sek) | Emerging Markets | 0.40% | ~700-950 | MSCI EM |
 
 You could, for example, decide you think the US is overvalued and allocate 50% USA / 25% Europe / 10% Japan / 15% Emerging Markets. That's a conscious bet against the market. You might be right, you might not.
 
@@ -326,10 +339,17 @@ A few things to keep in mind:
 
 - **More funds = more work.** You need to rebalance manually, track multiple positions, and resist the urge to tinker.
 - **You lose the "other" bucket.** The regional funds above don't cover Canada, Australia, South Korea (in the developed index), and other smaller developed markets. A global fund does.
-- **The Emerging Markets fee is steep** at 0.95%, nearly 3x the cost of getting EM exposure through Storebrand Global All Countries (where it's baked into the 0.30% fee).
 - **All of these are mutual funds in SEK**, so you still avoid the currency conversion fees discussed earlier.
 
 If this sounds like too much hassle, it probably is. Just buy Storebrand Global All Countries and let the market decide the weights. That's the rational choice.
+
+### Why no bonds?
+
+You might have noticed this guide doesn't include any [bond](https://en.wikipedia.org/wiki/Bond_(finance)) allocation. If you've read other investing guides, they probably told you to hold some percentage in bonds for safety. Here's why I skip them.
+
+Your emergency fund in a savings account already fills the "safe money" role. A Swedish sparkonto gives you a guaranteed return (around 3-4% on the best flexible accounts right now), is covered by the deposit guarantee up to 1,050,000 SEK, and has zero volatility. A bond fund in your ISK gives you a similar or slightly higher return, but with price fluctuations, and you pay the ISK flat tax on top of it. For the safe portion of your money, a savings account is strictly better.
+
+Bonds start to make sense if you have more than 1,050,000 SEK in safe money (above the deposit guarantee limit), or if you're approaching retirement and want to gradually de-risk inside your pension accounts. For a long-term investor who already has an emergency fund in a sparkonto, they don't add much.
 
 ### A small Bitcoin allocation
 
