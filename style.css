@@ -1,11 +1,7 @@
 body {
   background: #fff;
-  font-family:
-    ui-sans-serif,
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
-  color: #222;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  color: #3b3b3b;
   max-width: 820px;
   margin: 0 auto;
   position: relative;
@@ -21,8 +17,10 @@ body {
 }
 
 a {
-  color: #000;
+  color: #1f1f1f;
   font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid gray;
 }
 
 a:hover {
@@ -59,7 +57,7 @@ body.index .username {
 }
 
 #kopiro {
-  font-size: 10em;
+  font-size: 7.7em;
   margin-top: 20px;
   line-height: 0.95em;
   font-weight: 900;
@@ -105,14 +103,14 @@ h1 {
 h2 {
   font-size: 2em;
   line-height: 1em;
-  color: #000;
+  color: #222;
   font-weight: 600;
 }
 
 h3 {
   font-size: 1.5em;
   line-height: 1em;
-  color: black;
+  color: #000000;
   font-weight: 600;
 }
 
@@ -120,7 +118,7 @@ h4 {
   font-size: 1.3em;
   line-height: 1em;
   font-weight: normal;
-  color: rgb(14, 132, 31);
+  color: #222;
 }
 
 h5 {
@@ -159,7 +157,7 @@ body.index ul {
 }
 
 body.index li {
-  margin-bottom: 0.15em;
+  margin-bottom: 0.6em;
 }
 
 hr {
@@ -192,6 +190,7 @@ blockquote p + p {
   align-items: center;
   gap: 6px;
   text-decoration: none;
+  border-bottom: none;
 }
 
 .small-avatar {
@@ -307,6 +306,7 @@ body.article li {
 
 #menu li a {
   font-weight: normal;
+  border-bottom: none;
 }
 
 .buymeacoffee {
