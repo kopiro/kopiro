@@ -40,7 +40,8 @@
     "title": "Reverse engineer Spotify and Chromecast protocols to let my vocal assistant play music",
     "coverImage": "https://cdn-images-1.medium.com/max/4840/1*OvPWrkcBq0y3teTmNLvdxg.png",
     "description": "I recently tried a Google Home Mini and the most interesting feature is the ability to play music by Spotify directly on a Chromecast.",
-    "publishedAt": "2018-07-31T00:00:00.000Z"
+    "publishedAt": "2018-07-31T00:00:00.000Z",
+    "hidden": true
   },
   {
     "path": "/press/how-to-easily-run-any-linux-tool-on-any-machine/index.md",
