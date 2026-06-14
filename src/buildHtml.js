@@ -84,10 +84,10 @@ async function cleanBuildDir() {
 }
 
 async function renderPress(article) {
-  const { title, coverImage, htmlPath, description, slug } = article;
+  const { title, coverImage, htmlPath, url, description, slug } = article;
   const content = await fs.readFile(path.join(paths.root, article.path), "utf-8");
   const { body } = parseFrontmatter(content, article.path);
-  const articleUrl = `${baseUrl}${htmlPath}`;
+  const articleUrl = `${baseUrl}${url}`;
   const absoluteCoverImage = coverImage ? `${baseUrl}${coverImage}` : null;
 
   const html = renderHtmlFromMd(
@@ -143,7 +143,7 @@ async function generateRssFeed() {
 
   const items = visibleArticles
     .map((article) => {
-      const articleUrl = `${baseUrl}${article.htmlPath}`;
+      const articleUrl = `${baseUrl}${article.url}`;
       const pubDate = new Date(article.publishedAt).toUTCString();
       return `    <item>
       <title>${escapeXml(article.title)}</title>

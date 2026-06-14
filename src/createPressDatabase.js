@@ -20,6 +20,7 @@ const listMarkdownFromPublicFolder = () => {
     const baseName = path.basename(file);
     const slug = baseName === "index.md" ? path.basename(path.dirname(file)) : baseName.replace(/\.md$/, "");
     const htmlPath = `/press/${slug}/index.html`;
+    const url = `/press/${slug}/`;
 
     const absolutePath = path.join(paths.root, file);
     const content = fs.readFileSync(absolutePath, "utf-8");
@@ -43,6 +44,7 @@ const listMarkdownFromPublicFolder = () => {
     const article = {
       path: "/" + file,
       htmlPath,
+      url,
       slug,
       title: attributes.title,
       coverImage,
