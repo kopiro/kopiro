@@ -163,5 +163,14 @@
     "coverImage": "/press/investing-101-in-sweden/media/stock-goes-up.jpg",
     "description": "A simple guide to start managing your finances better in Sweden.",
     "publishedAt": "2026-05-13T10:17:08.688Z"
+  },
+  {
+    "path": "/press/how-to-stop-neighbours-from-pairing-with-your-lg-tv/index.md",
+    "htmlPath": "/press/how-to-stop-neighbours-from-pairing-with-your-lg-tv/index.html",
+    "url": "/press/how-to-stop-neighbours-from-pairing-with-your-lg-tv/",
+    "slug": "how-to-stop-neighbours-from-pairing-with-your-lg-tv",
+    "title": "How to stop neighbours from pairing with your LG TV",
+    "description": "How I hide my rooted LG webOS TV from Bluetooth discovery so random neighbours cannot keep attempting to pair with it.",
+    "publishedAt": "2026-05-27T16:12:28.000Z"
   }
 ]

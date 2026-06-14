@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>How to stop neighbours from pairing with your LG TV | kopiro</title>
+<link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" />
+<link rel="alternate" type="application/rss+xml" title="How to stop neighbours from pairing with your LG TV | kopiro RSS Feed" href="/rss.xml" />
+<script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<meta name="author" content="kopiro" />
+<meta name="viewport" content="width=device-width" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="twitter:site" content="@kopiro91" />
+<meta name="description" content="How I hide my rooted LG webOS TV from Bluetooth discovery so random neighbours cannot keep attempting to pair with it." />
+<meta name="og:title" content="How to stop neighbours from pairing with your LG TV" />
+<meta name="og:type" content="article" />
+<meta name="og:url" content="https://www.kopiro.me/press/how-to-stop-neighbours-from-pairing-with-your-lg-tv/" />
+<meta name="og:site_name" content="kopiro" />
+<meta name="og:description" content="How I hide my rooted LG webOS TV from Bluetooth discovery so random neighbours cannot keep attempting to pair with it." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to stop neighbours from pairing with your LG TV" />
+<meta name="twitter:description" content="How I hide my rooted LG webOS TV from Bluetooth discovery so random neighbours cannot keep attempting to pair with it." />
+<link rel="canonical" href="https://www.kopiro.me/press/how-to-stop-neighbours-from-pairing-with-your-lg-tv/" />
+</head>
+<body class="article">
+<nav id="menu">
+  <ul>
+    <li class="username">
+      <a href="/"><img class="small-avatar" src="/static/avatar.jpg" alt="" />@kopiro</a>
+    </li>
+    <li><a target="_blank" href="https://github.com/kopiro">GitHub</a></li>
+    <li><a target="_blank" href="https://threads.com/@kopiro91">Threads</a></li>
+    <li><a target="_blank" href="https://discordapp.com/users/kopiro91">Discord</a></li>
+    <li><a href="/rss.xml">RSS</a></li>
+    <li class="buymeacoffee">
+      <a href="https://www.buymeacoffee.com/kopiro" target="_blank"
+        ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+      /></a>
+    </li>
+  </ul>
+</nav>
+
+<img id="avatar" src="/static/avatar.jpg" />
+<div id="content">
+<h1 id="how-to-stop-neighbours-from-pairing-with-your-lg-tv">How to stop neighbours from pairing with your LG TV</h1>
+<p>This tutorial is for everyone who has an LG webOS TV that keeps showing annoying Bluetooth pairing attempts from nearby devices.</p>
+<p>In my case, I do not want to disable Bluetooth completely, because the LG Magic Remote uses Bluetooth for the pointer, voice button, and other remote-specific features. I just want the TV to stop advertising itself as something that every phone nearby can try to pair with.</p>
+<p>The trick is to disable Bluetooth discoverability, not Bluetooth itself.</p>
+<p>But, first of all, you need to root your TV - you can find several methods, a good place to start is <a href="https://github.com/RootMyTV/RootMyTV.github.io" rel="noopener noreferrer" target="_blank">this guide</a>.</p>
+<p>Once you have root, SSH into your TV.</p>
+<h2 id="disable-bluetooth-discoverability">Disable Bluetooth discoverability</h2>
+<p>Run this command:</p>
+<pre><code class="bash language-bash">luna-send -n 1 -f luna://com.webos.service.bluetooth2/adapter/setState \
+  '{"discoverable":false}'</code></pre>
+<p>That's it.</p>
+<p>This does not power off Bluetooth. It only tells the Bluetooth adapter to stop being discoverable by new devices. The Magic Remote should keep working because already-paired devices are not affected by discoverability.</p>
+<p>To check the current state, run:</p>
+<pre><code class="bash language-bash">luna-send -n 1 -f luna://com.webos.service.bluetooth2/adapter/getStatus '{"subscribe":false}'</code></pre>
+<p>In the output, look for:</p>
+<pre><code class="json language-json">"discoverable": false</code></pre>
+<h2 id="make-it-survive-reboot">Make it survive reboot</h2>
+<p>The setting may not survive a reboot, so I recommend adding a small startup script.</p>
+<p>The important detail here is that the Bluetooth Luna service may not be ready immediately during boot. So instead of sleeping for a fixed amount of time and hoping for the best, I prefer a small retry loop.</p>
+<p>Create the script:</p>
+<pre><code class="bash language-bash">cat &gt;/var/lib/webosbrew/init.d/disable-bt-discoverable.sh &lt;&lt;'EOF'
+#!/bin/sh
+
+i=0
+while [ "$i" -lt 30 ]; do
+  if luna-send -n 1 -f luna://com.webos.service.bluetooth2/adapter/setState '{"discoverable":false}' | grep -q '"returnValue"[[:space:]]*:[[:space:]]*true'; then
+    exit 0
+  fi
+
+  i=$((i + 1))
+  sleep 2
+done
+
+exit 1
+EOF
+
+chmod +x /var/lib/webosbrew/init.d/disable-bt-discoverable.sh</code></pre>
+<p>This waits up to around 60 seconds, but it will stop as soon as the command succeeds.</p>
+<p>After rebooting the TV, SSH again and verify:</p>
+<pre><code class="bash language-bash">luna-send -n 1 -f luna://com.webos.service.bluetooth2/adapter/getStatus '{"subscribe":false}'</code></pre>
+<p>Again, you want to see:</p>
+<pre><code class="json language-json">"discoverable": false</code></pre>
+<h2 id="what-not-to-do">What not to do</h2>
+<p>I would not start by disabling Bluetooth power:</p>
+<pre><code class="bash language-bash">luna-send -n 1 -f luna://com.webos.service.bluetooth2/adapter/setState \
+  '{"powered":false}'</code></pre>
+<p>That is the one that can break the Magic Remote Bluetooth features. Maybe basic IR buttons will still work, depending on the remote and TV, but losing the pointer or voice button is not what we want here.</p>
+<section id="comments" class="comments">
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+  this.page.url = "https://www.kopiro.me/press/how-to-stop-neighbours-from-pairing-with-your-lg-tv/";
+  this.page.identifier = "how-to-stop-neighbours-from-pairing-with-your-lg-tv";
+  this.page.title = "How to stop neighbours from pairing with your LG TV";
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = "https://kopiro.disqus.com/embed.js";
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+</section>
+</div>
+<div id="footer">
+  © 2025 kopiro - <a href="https://www.kopiro.me/gpg.txt">0xEDE51005D982268E</a> -
+  <a href="https://www.kopiro.me/rss.xml">RSS</a>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-20NDLVTCNE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-20NDLVTCNE");
+</script>
+</body>
+</html>

@@ -68,6 +68,14 @@ body.index .username {
   min-height: 100px;
 }
 
+.gist {
+  font-family: monospace !important;
+  font-size: 12px !important;
+  line-height: 1rem !important;
+  border: 1px solid #eee;
+  padding: 0;
+}
+
 #avatar {
   display: none;
   width: 150px;
@@ -282,11 +290,6 @@ body.article ol {
 
 body.article li {
   margin-bottom: 0.35em;
-}
-
-.gist {
-  border: 1px solid #eee;
-  padding-top: 1em;
 }
 
 #menu ul {
